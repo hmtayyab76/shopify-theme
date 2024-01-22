@@ -214,9 +214,10 @@
     "card_ymQkVC": {
       "type": "card",
       "settings": {
-        "text1": "",
-        "text2": "",
-        "text3": ""
+        "prj-images": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
+        "text1": "Men's Collection",
+        "text2": "T Shirt",
+        "text3": "1500$"
       }
     }
   },
