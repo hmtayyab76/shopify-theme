@@ -1,6 +1,121 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+.banner-block {
+    position: relative;
+    border: 1px solid #e6e6e6;
+}
+
+.banner-text-div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 34px 38px 34px 38px !important;
+}
+
+.banner-text-div:hover {
+    background-color: rgba(103, 117, 214, .8);
+    transition: .5s;
+}
+
+.banner-text-top-1 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.1;
+    color: #333;
+    padding-bottom: 8px;
+}
+
+.banner-text-top-2 {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #555;
+}
+
+.banner-text-top-3 {
+    font-family: Poppins-Regular;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.banner-text-div:hover .block-link-1 {
+    animation: shop-trans .5s;
+}
+
+@keyframes shop-trans {
+    from {
+        transform: translate(0px, 10px);
+    }
+
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+<div class="col-md-6 col-xl-4 ml-auto mr-auto">
+          <div class="position-relative w-100 h-100 banner-block">
+            <img src="{{ section.settings.prj-images | img_url:'master' }}" class="w-100" alt="IMG-BANNER"
+              data-pagespeed-url-hash="3188288630"   onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+            <a href="#"
+              class="banner-text-div d-flex justify-content-between align-items-start flex-column w-100 h-100">
+              <div class="d-flex flex-column">
+                <span class="banner-text-top-1 ">
+                  {{ section.settings.text1 }}
+                </span>
+                <span class="banner-text-top-2">
+                 {{ section.settings.text2 }}
+                </span>
+              </div>
+              <div class="shop-transition">
+                <div class="banner-text-top-3 block-link-1">
+                {{ section.settings.text3 }}
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Card",
+    "settings": [
+      {
+        "type":"image_picker",
+        "id":"prj-images",
+        "label":"Upload Image"
+      },
+      {
+        "type":"text",
+        "id":"text1", 
+        "label":"Text Here"
+      }
+      ,
+      {
+        "type":"text",
+        "id":"text2", 
+        "label":"Text Here"
+      }
+      ,
+      {
+        "type":"text",
+        "id":"text3", 
+        "label":"Text Here"
+      }
+    ],
+    "presets":[{
+      "name":"Card"
+    }]
   }
 {% endschema %}
+
+
