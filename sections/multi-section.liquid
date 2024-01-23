@@ -1,46 +1,55 @@
 {% schema %}
 {
-  "name": "Multiple Blocks",
-  "blocks": [
+  "name": "Multicolumn Section",
+  "class": "section",
+  "settings": [
     {
-      "type": "block-1",
-      "name": "Block 1",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title"
-        }
-      ]
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Multicolumn Section"
     },
     {
-      "type": "block-2",
-      "name": "Block 2",
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Column",
       "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Column Image"
+        },
         {
           "type": "text",
           "id": "title",
-          "label": "Title"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "multi-section",
-      "category": "custom",
-      "blocks": [
-        {
-          "type": "block-1",
-          "settings": {
-            "title": "Default Title for Block 1"
-          }
+          "label": "Column Title"
         },
         {
-          "type": "block-2",
-          "settings": {
-            "title": "Default Title for Block 2"
-          }
+          "type": "richtext",
+          "id": "text",
+          "label": "Column Text"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link Label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
         }
       ]
     }
@@ -48,12 +57,39 @@
 }
 {% endschema %}
 
-{% for block in section.blocks %}
-  <div class="block-container">  {% if block.type == 'block-1' %}
-      <h2>{{ block.settings.title }}</h2>
-    {% elsif block.type == 'block-2' %}
-      <h3>{{ block.settings.title }}</h3>
+
+<div class="multicolumn-section">
+  <div class="multicolumn-container">
+    {% if section.settings.title != blank %}
+      <h2 class="section-title">{{ section.settings.title }}</h2>
     {% endif %}
+
+    <div class="multicolumn-content">
+      <div class="multicolumn-columns">
+        {% for block in section.blocks %}
+          <div class="column">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.title }}">
+            {% endif %}
+            {% if block.settings.title != blank %}
+              <h3>{{ block.settings.title }}</h3>
+            {% endif %}
+            {% if block.settings.text != blank %}
+              <p>{{ block.settings.text }}</p>
+            {% endif %}
+            {% if block.settings.link_label != blank and block.settings.link != blank %}
+              <a href="{{ block.settings.link }}">{{ block.settings.link_label }}</a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.button_label != blank and section.settings.button_link != blank %}
+        <div class="section-button">
+          <a href="{{ section.settings.button_link }}" class="button">{{ section.settings.button_label }}</a>
+        </div>
+      {% endif %}
+    </div>
   </div>
- 
-{% endfor %}
+</div>
+
