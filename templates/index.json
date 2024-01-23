@@ -233,8 +233,8 @@
         "column_8za9BA": {
           "type": "column",
           "settings": {
-            "title": "Titele",
-            "text": "",
+            "title": "Block One Here",
+            "text": "<p>Product Discription Here<\/p>",
             "link_label": "",
             "link": ""
           }
