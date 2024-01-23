@@ -56,7 +56,9 @@
   .card {
     width: 100px;
   }
-
+.img-style{
+    width: 100px;
+}
   @keyframes shop-trans {
     from {
       transform: translate(0px, 10px);
@@ -70,7 +72,7 @@
 
 <div class="card">
   <div class="position-relative w-100 h-100 banner-block">
-    <img src="{{ section.settings.prj-images | img_url:'master' }}" class="w-100" alt="IMG-BANNER">
+    <img src="{{ section.settings.prj-images | img_url:'master' }}" class="img-style" alt="IMG-BANNER">
     <a href="#" class="banner-text-div">
       <div class="d-flex flex-column">
         <span class="banner-text-top-1">
