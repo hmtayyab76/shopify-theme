@@ -230,15 +230,6 @@
     "multi_section_T9ernU": {
       "type": "multi-section",
       "blocks": {
-        "column_7mTfwK": {
-          "type": "column",
-          "settings": {
-            "title": "Tayyab",
-            "text": "<p>Tau as<\/p>",
-            "link_label": "kajsdhksa",
-            "link": ""
-          }
-        },
         "column_aLAdGh": {
           "type": "column",
           "settings": {
@@ -259,7 +250,6 @@
         }
       },
       "block_order": [
-        "column_7mTfwK",
         "column_aLAdGh",
         "column_fAierW"
       ],
