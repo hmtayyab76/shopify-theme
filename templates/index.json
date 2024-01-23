@@ -219,6 +219,26 @@
         "text2": "T Shirt",
         "text3": "1500$"
       }
+    },
+    "multi_section_hWfxnU": {
+      "type": "multi-section",
+      "custom_css": [
+
+      ],
+      "settings": {
+      }
+    },
+    "multi_section_f7NRj9": {
+      "type": "multi-section",
+      "disabled": true,
+      "settings": {
+      }
+    },
+    "multi_section_HtFHgx": {
+      "type": "multi-section",
+      "disabled": true,
+      "settings": {
+      }
     }
   },
   "order": [
@@ -228,6 +248,9 @@
     "collage",
     "video",
     "multicolumn",
-    "card_ymQkVC"
+    "card_ymQkVC",
+    "multi_section_hWfxnU",
+    "multi_section_f7NRj9",
+    "multi_section_HtFHgx"
   ]
 }
