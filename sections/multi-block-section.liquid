@@ -1,3 +1,20 @@
+<style>
+  .custom-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.custom-block {
+  width: 30%;
+}
+</style>
+<div class="custom-section">
+  {% for block in section.blocks %}
+    <div class="custom-block">
+      {{ block.settings.content }}
+    </div>
+  {% endfor %}
+</div>
 {% schema %}
   {
     "name": "Section name",
