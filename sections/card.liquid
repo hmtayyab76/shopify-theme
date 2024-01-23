@@ -1,124 +1,123 @@
 <style>
+  .banner-block {
+    position: relative;
+    width: 100px;
+    border: 1px solid #e6e6e6;
+  }
 
-.banner-block {
-  position: relative;
-  width:100px;
-  border: 1px solid #e6e6e6;
-}
-
-.banner-text-div {
+  .banner-text-div {
     position: absolute;
     left: 0;
     top: 0;
     padding: 34px 38px 34px 38px !important;
-}
+  }
 
-.banner-text-div:hover {
-    background-color: rgba(103, 117, 214, .8);
-    transition: .5s;
-}
+  .banner-text-div:hover {
+    background-color: rgba(103, 117, 214, 0.8);
+    transition: 0.5s;
+  }
 
-.banner-text-top-1 {
+  .banner-text-top-1 {
     font-weight: 700;
     font-size: 28px;
     line-height: 1.1;
     color: #333;
     padding-bottom: 8px;
-}
+  }
 
-.banner-text-top-2 {
-    font-family: Poppins-Regular;
+  .banner-text-top-2,
+  .banner-text-top-3 {
+    font-family: 'Poppins-Regular', sans-serif;
     font-size: 14px;
     line-height: 1.7;
+  }
+
+  .banner-text-top-2 {
     color: #555;
-}
+  }
 
-.banner-text-top-3 {
-    font-family: Poppins-Regular;
-    font-size: 14px;
-    line-height: 1.7;
+  .banner-text-top-3 {
     color: #fff;
     border-bottom: 2px solid #fff;
-}
+  }
 
-a {
+  a {
     text-decoration: none;
-}
+  }
 
-a:hover {
+  a:hover {
     text-decoration: none;
-}
+  }
 
-.banner-text-div:hover .block-link-1 {
-    animation: shop-trans .5s;
-}
-.card{
-  width:100px;
-}
-@keyframes shop-trans {
+  .banner-text-div:hover .block-link-1 {
+    animation: shop-trans 0.5s;
+  }
+
+  .card {
+    width: 100px;
+  }
+
+  @keyframes shop-trans {
     from {
-        transform: translate(0px, 10px);
+      transform: translate(0px, 10px);
     }
 
     to {
-        transform: translate(0px, 0px);
+      transform: translate(0px, 0px);
     }
-}
-
-</style>
-<div class="card">
-          <div class="position-relative w-100 h-100 banner-block">
-            <img src="{{ section.settings.prj-images | img_url:'master' }}" class="w-100" alt="IMG-BANNER" >
-            <a href="#"
-              class="banner-text-div d-flex justify-content-between align-items-start flex-column w-100 h-100">
-              <div class="d-flex flex-column">
-                <span class="banner-text-top-1 ">
-                  {{ section.settings.text1 }}
-                </span>
-                <span class="banner-text-top-2">
-                 {{ section.settings.text2 }}
-                </span>
-              </div>
-              <div class="shop-transition">
-                <div class="banner-text-top-3 block-link-1">
-                {{ section.settings.text3 }}
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-{% schema %}
-  {
-    "name": "Card",
-    "settings": [
-      {
-        
-        "type":"image_picker",
-        "id":"prj-images",
-        "label":"Upload Image"
-      },
-      {
-        "type":"text",
-        "id":"text1", 
-        "label":"Text Here"
-      }
-      ,
-      {
-        "type":"text",
-        "id":"text2", 
-        "label":"Text Here"
-      }
-      ,
-      {
-        "type":"text",
-        "id":"text3", 
-        "label":"Text Here"
-      }
-    ],
-    "presets":[{
-      "name":"Card"
-    }]
   }
+</style>
+
+<div class="card">
+  <div class="position-relative w-100 h-100 banner-block">
+    <img src="{{ section.settings.prj-images | img_url:'master' }}" class="w-100" alt="IMG-BANNER">
+    <a href="#" class="banner-text-div">
+      <div class="d-flex flex-column">
+        <span class="banner-text-top-1">
+          {{ section.settings.text1 }}
+        </span>
+        <span class="banner-text-top-2">
+          {{ section.settings.text2 }}
+        </span>
+      </div>
+      <div class="shop-transition">
+        <div class="banner-text-top-3 block-link-1">
+          {{ section.settings.text3 }}
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Card",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "prj-images",
+      "label": "Upload Image"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "Text Here"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "Text Here"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "Text Here"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Card"
+    }
+  ]
+}
 {% endschema %}
-
-
