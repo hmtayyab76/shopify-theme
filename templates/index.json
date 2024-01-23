@@ -238,10 +238,20 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_FPyqFb": {
+          "type": "column",
+          "settings": {
+            "title": "Women's Collection",
+            "text": "<p>Product Discription Here<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_8za9BA"
+        "column_8za9BA",
+        "column_FPyqFb"
       ],
       "settings": {
         "title": "Multicolumn Section",
