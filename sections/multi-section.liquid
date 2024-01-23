@@ -1,36 +1,51 @@
 {% schema %}
-  {
-    "name": "Multiple Blocks",
-    "blocks": [
-      {
-        "type": "block-1",
-        "name": "Block 1",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
+{
+  "name": "Multiple Blocks",
+  "blocks": [
+    {
+      "type": "block-1",
+      "name": "Block 1",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "block-2",
+      "name": "Block 2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "multi-section",
+      "category": "custom",
+      "blocks": [
+        {
+          "type": "block-1",
+          "settings": {
+            "title": "Default Title for Block 1"
           }
-        ]
-      },
-      {
-        "type": "block-2",
-        "name": "Block 2",
-        "settings": [
-          {
-            "type": "text",
-            "id": "title",
-            "label": "Title"
+        },
+        {
+          "type": "block-2",
+          "settings": {
+            "title": "Default Title for Block 2"
           }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "multi-section"
-      }
-    ]
-  }
+        }
+      ]
+    }
+  ]
+}
 {% endschema %}
 
 {% for block in section.blocks %}
