@@ -49,9 +49,10 @@
 {% endschema %}
 
 {% for block in section.blocks %}
-  {% if block.type == 'block-1' %}
-    <h2>{{ block.settings.title }}</h2>
-  {% elsif block.type == 'block-2' %}
-    <h3>{{ block.settings.title }}</h3>
-  {% endif %}
+  <div class="block-container">  {% if block.type == 'block-1' %}
+      <h2>{{ block.settings.title }}</h2>
+    {% elsif block.type == 'block-2' %}
+      <h3>{{ block.settings.title }}</h3>
+    {% endif %}
+  </div>
 {% endfor %}
