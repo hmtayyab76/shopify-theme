@@ -34,6 +34,7 @@
         "text",
         "button"
       ],
+      "disabled": true,
       "settings": {
         "image_overlay_opacity": 40,
         "image_height": "large",
@@ -68,6 +69,7 @@
         "heading",
         "text"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -79,6 +81,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
+      "disabled": true,
       "settings": {
         "title": "Featured products",
         "heading_size": "h2",
@@ -133,6 +136,7 @@
         "product",
         "collection-1"
       ],
+      "disabled": true,
       "settings": {
         "heading": "Multimedia collage",
         "heading_size": "h2",
@@ -146,6 +150,7 @@
     },
     "video": {
       "type": "video",
+      "disabled": true,
       "settings": {
         "heading": "",
         "heading_size": "h1",
@@ -194,6 +199,7 @@
         "column2",
         "column3"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -213,31 +219,12 @@
     },
     "card_ymQkVC": {
       "type": "card",
+      "disabled": true,
       "settings": {
         "prj-images": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
         "text1": "Men's Collections",
         "text2": "T Shirt",
         "text3": "1500$"
-      }
-    },
-    "multi_section_hWfxnU": {
-      "type": "multi-section",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
-    },
-    "multi_section_f7NRj9": {
-      "type": "multi-section",
-      "disabled": true,
-      "settings": {
-      }
-    },
-    "multi_section_HtFHgx": {
-      "type": "multi-section",
-      "disabled": true,
-      "settings": {
       }
     }
   },
@@ -248,9 +235,6 @@
     "collage",
     "video",
     "multicolumn",
-    "card_ymQkVC",
-    "multi_section_hWfxnU",
-    "multi_section_f7NRj9",
-    "multi_section_HtFHgx"
+    "card_ymQkVC"
   ]
 }
