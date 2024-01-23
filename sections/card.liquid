@@ -1,8 +1,13 @@
 <style>
+  .card {
+    width: 200px;
+    height: 200px;
+  }
+
   .banner-block {
     position: relative;
-    width: 200px;
-    height:200px;
+    width: 100%;
+    height: 100%;
     border: 1px solid #e6e6e6;
   }
 
@@ -10,12 +15,17 @@
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    height: 100%;
     padding: 34px 38px 34px 38px !important;
+    box-sizing: border-box; /* Include padding in width and height */
+    opacity: 0; /* Hide initially */
+    transition: background-color 0.5s, opacity 0.5s;
   }
 
-  .banner-text-div:hover {
+  .banner-block:hover .banner-text-div {
     background-color: rgba(103, 117, 214, 0.8);
-    transition: 0.5s;
+    opacity: 1;
   }
 
   .banner-text-top-1 {
@@ -31,6 +41,7 @@
     font-family: 'Poppins-Regular', sans-serif;
     font-size: 14px;
     line-height: 1.7;
+    color: #fff;
   }
 
   .banner-text-top-2 {
@@ -38,7 +49,6 @@
   }
 
   .banner-text-top-3 {
-    color: #fff;
     border-bottom: 2px solid #fff;
   }
 
@@ -53,10 +63,13 @@
   .banner-text-div:hover .block-link-1 {
     animation: shop-trans 0.5s;
   }
-.img-style{
-    width: 200px;
-   height:200px;
-}
+
+  .img-style {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+  }
+
   @keyframes shop-trans {
     from {
       transform: translate(0px, 10px);
@@ -72,7 +85,7 @@
   <div class="position-relative w-100 h-100 banner-block">
     <img src="{{ section.settings.prj-images | img_url:'master' }}" class="img-style" alt="IMG-BANNER">
     <a href="#" class="banner-text-div">
-      <div class="">
+      <div>
         <span class="banner-text-top-1">
           {{ section.settings.text1 }}
         </span>
