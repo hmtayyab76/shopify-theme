@@ -226,38 +226,6 @@
         "text2": "T Shirt",
         "text3": "1500$"
       }
-    },
-    "multi_section_T9ernU": {
-      "type": "multi-section",
-      "blocks": {
-        "column_aLAdGh": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_fAierW": {
-          "type": "column",
-          "settings": {
-            "title": "kjasbdkhfja",
-            "text": "<p>kajhds<\/p>",
-            "link_label": "kjADS",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_aLAdGh",
-        "column_fAierW"
-      ],
-      "settings": {
-        "title": "Card One",
-        "button_label": "Learn More",
-        "button_link": ""
-      }
     }
   },
   "order": [
@@ -267,7 +235,6 @@
     "collage",
     "video",
     "multicolumn",
-    "card_ymQkVC",
-    "multi_section_T9ernU"
+    "card_ymQkVC"
   ]
 }
