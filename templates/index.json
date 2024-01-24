@@ -242,6 +242,7 @@
         "column_FPyqFb": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
             "title": "Women's Collection",
             "text": "<p>Product Discription Here<\/p>",
             "link_label": "",
@@ -259,6 +260,7 @@
       "settings": {
         "title": "Multicolumn Section",
         "font_size": 39,
+        "background": "",
         "button_label": "Learn More",
         "button_link": ""
       }
