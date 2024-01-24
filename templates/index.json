@@ -233,6 +233,7 @@
         "column_8za9BA": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
             "title": "Men's Collection",
             "text": "<p>Product Discription Here<\/p>",
             "link_label": "",
@@ -248,11 +249,22 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_G7iBRM": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
+            "title": "Hat's Here",
+            "text": "<p>Discription Here<\/p>",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "column_8za9BA",
-        "column_FPyqFb"
+        "column_FPyqFb",
+        "column_G7iBRM"
       ],
       "custom_css": [
 
