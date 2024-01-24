@@ -253,9 +253,12 @@
         "column_8za9BA",
         "column_FPyqFb"
       ],
+      "custom_css": [
+        "h2 {font-size: 45px;}"
+      ],
       "settings": {
         "title": "Multicolumn Section",
-        "font_size": 33,
+        "font_size": 39,
         "button_label": "Learn More",
         "button_link": ""
       }
