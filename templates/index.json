@@ -272,7 +272,7 @@
       "settings": {
         "title": "Multicolumn Section",
         "font_size": 39,
-        "background": "",
+        "background": "linear-gradient(320deg, rgba(45, 71, 213, 1) 16%, rgba(203, 68, 194, 1) 52%, rgba(255, 201, 104, 1) 87%)",
         "button_label": "Learn More",
         "button_link": ""
       }
