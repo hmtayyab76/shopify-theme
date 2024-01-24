@@ -255,6 +255,7 @@
       ],
       "settings": {
         "title": "Multicolumn Section",
+        "font_size": 33,
         "button_label": "Learn More",
         "button_link": ""
       }
