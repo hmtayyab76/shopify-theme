@@ -71,40 +71,11 @@
       "type": "faq",
       "settings": {
       }
-    },
-    "custom_blog_BRd68x": {
-      "type": "custom-blog",
-      "blocks": {
-        "column_XpDRkx": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Tayyab",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
-            "blog_image": "shopify:\/\/shop_images\/xbanner-02.jpg.pagespeed.ic.MQuZq6F18q.webp"
-          }
-        },
-        "column_dCcCpa": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
-          }
-        }
-      },
-      "block_order": [
-        "column_XpDRkx",
-        "column_dCcCpa"
-      ],
-      "settings": {
-        "blog_title": "My Blog Title",
-        "blog_content": "This is a sample blog content."
-      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "faq_bRqLPP",
-    "custom_blog_BRd68x"
+    "faq_bRqLPP"
   ]
 }
