@@ -51,9 +51,35 @@
         "blog_preset": "preset1"
       }
     }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Blog",
+      "settings": [
+        {
+            "type": "text",
+            "id": "blog_title",
+            "label": "Blog Title",
+            "default": "Blog title"
+          },
+          {
+            "type": "textarea",
+            "id": "blog_content",
+            "label": "Blog Content",
+            "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+          },
+          {
+              "type": "image_picker",
+              "id": "blog_image",
+              "label": "Blog Image"
+          }
+      ]
+    }
   ]
 }
 {% endschema %}
+
 
 <style>
     .custom-blogs {
