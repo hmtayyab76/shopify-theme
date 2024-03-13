@@ -1,0 +1,67 @@
+{% comment %}
+  This is a Liquid file for adding custom blogs via the Shopify customizer.
+  It allows you to add blogs with title, content, and image one by one, with presets.
+{% endcomment %}
+
+{% schema %}
+{
+  "name": "Custom Blog",
+  "settings": [
+    {
+      "type": "text",
+      "id": "blog_title",
+      "label": "Blog Title",
+      "default": "Enter your blog title"
+    },
+    {
+      "type": "textarea",
+      "id": "blog_content",
+      "label": "Blog Content",
+      "default": "Enter your blog content"
+    },
+    {
+      "type": "select",
+      "id": "blog_preset",
+      "label": "Blog Presets",
+      "default": "preset1", 
+      "options": [
+        {
+          "value": "preset1",
+          "label": "Preset 1"
+        },
+        {
+          "value": "preset2",
+          "label": "Preset 2"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blog",
+      "category": "Blog",
+      "settings": {
+        "blog_title": "My Blog Title",
+        "blog_content": "This is a sample blog content.",
+        "blog_preset": "preset1"
+      }
+    }
+  ]
+}
+{% endschema %}
+
+
+{% comment %}
+  Render the added blogs.
+{% endcomment %}
+<div class="custom-blogs">
+  {% for block in section.blocks %}
+    <div class="custom-blog">
+      <h2>{{ block.settings.blog_title }}</h2>
+      <p>{{ block.settings.blog_content }}</p>
+      {% comment %} {% if block.settings.blog_image %} {% endcomment %}
+        {% comment %} <img src="{{ block.settings.blog_image | img_url: 'medium' }}" alt="{{ block.settings.blog_title }}"> {% endcomment %}
+      {% comment %} {% endif %} {% endcomment %}
+    </div>
+  {% endfor %}
+</div>
