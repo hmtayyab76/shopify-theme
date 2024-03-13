@@ -69,18 +69,6 @@
     },
     "faq_bRqLPP": {
       "type": "faq",
-      "blocks": {
-        "faq_nzcHEt": {
-          "type": "faq",
-          "settings": {
-            "question": "Do you have a question?",
-            "answer": "<p>I have an answer<\/p>"
-          }
-        }
-      },
-      "block_order": [
-        "faq_nzcHEt"
-      ],
       "settings": {
       }
     }
