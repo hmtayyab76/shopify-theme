@@ -65,10 +65,10 @@
 
 <style>
     .custom-blogs {
-        margin: 20px;
+        margin: 20px 50px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        {% comment %} justify-content: center; {% endcomment %}
       }
       
       .custom-blog {
@@ -76,8 +76,8 @@
         border-radius: 5px;
         width: 300px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 10px;
+        
+        margin: 10px 20px;
         margin-bottom: 20px;
         cursor: pointer; 
         transition: box-shadow 0.3s ease;
@@ -88,14 +88,18 @@
       .custom-blog h2 {
         color: #333;
         font-size: 24px;
-        margin-bottom: 10px;
+        margin:0px 10px;
+        margin-top:10px;
+        font-weight:700;
+        padding:0px 10px;
       }
       
       .custom-blog p {
         color: #666;
         font-size: 16px;
+        padding:0px 10px;
         line-height: 1.5;
-        margin-bottom: 20px;
+        margin:5px 10px 20px 10px;
       }
       
       .custom-blog img {
@@ -104,14 +108,21 @@
         display: block;
         margin-bottom: 10px;
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
       }
+      .heading{
+        margin:10px 70px;
+        font-weight:700;
+    }
 </style>
 
 {% comment %}
   Render the added blogs.
 {% endcomment %}
+<h1 class='heading'>
+    Blogs
+</h1>
 <div class="custom-blogs">
+    
     {%- for block in section.blocks -%}
         <div class="custom-blog">
             {% if block.settings.blog_image %}
