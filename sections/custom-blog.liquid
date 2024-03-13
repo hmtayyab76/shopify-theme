@@ -114,32 +114,3 @@
       </div>
     {% endfor %}
 </div>
-<div class="custom-blogs">
-    {% for i in (1..10) %}
-      {% assign blog_title_key = 'blog_title_' | append: i %}
-      {% assign blog_content_key = 'blog_content_' | append: i %}
-      {% assign blog_image_key = 'blog_image_' | append: i %}
-      {% assign blog_button_text_key = 'blog_button_text_' | append: i %}
-      {% assign blog_button_link_key = 'blog_button_link_' | append: i %}
-      
-      {% assign blog_title = section.settings[blog_title_key] %}
-      {% assign blog_content = section.settings[blog_content_key] %}
-      {% assign blog_image = section.settings[blog_image_key] %}
-      {% assign blog_button_text = section.settings[blog_button_text_key] %}
-      {% assign blog_button_link = section.settings[blog_button_link_key] %}
-      
-      {% if blog_title != "Blog title" and blog_content != "Blog content" and blog_image != "" %}
-        <div class="custom-blog">
-          <h2>{{ blog_title }}</h2>
-          <p>{{ blog_content }}</p>
-          {% if blog_image %}
-            <img src="{{ section.settings.blog_image | img_url: 'medium' }}" alt="{{ section.settings.blog_title }}" width="auto" height="auto">
-
-          {% endif %}
-          {% if blog_button_text and blog_button_link %}
-            <a href="{{ blog_button_link }}" class="custom-blog-button">{{ blog_button_text }}</a>
-          {% endif %}
-        </div>
-      {% endif %}
-    {% endfor %}
-  </div>
