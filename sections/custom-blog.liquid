@@ -23,22 +23,6 @@
         "type": "image_picker",
         "id": "blog_image",
         "label": "Blog Image"
-    },
-    {
-      "type": "select",
-      "id": "blog_preset",
-      "label": "Blog Presets",
-      "default": "preset1", 
-      "options": [
-        {
-          "value": "preset1",
-          "label": "Preset 1"
-        },
-        {
-          "value": "preset2",
-          "label": "Preset 2"
-        }
-      ]
     }
   ],
   "presets": [
@@ -47,8 +31,7 @@
       "category": "Blog",
       "settings": {
         "blog_title": "My Blog Title",
-        "blog_content": "This is a sample blog content.",
-        "blog_preset": "preset1"
+        "blog_content": "This is a sample blog content."
       }
     }
   ],
@@ -58,50 +41,49 @@
       "name": "Blog",
       "settings": [
         {
-            "type": "text",
-            "id": "blog_title",
-            "label": "Blog Title",
-            "default": "Blog title"
-          },
-          {
-            "type": "textarea",
-            "id": "blog_content",
-            "label": "Blog Content",
-            "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
-          },
-          {
-              "type": "image_picker",
-              "id": "blog_image",
-              "label": "Blog Image"
-          }
+          "type": "text",
+          "id": "blog_title",
+          "label": "Blog Title",
+          "default": "Blog title"
+        },
+        {
+          "type": "textarea",
+          "id": "blog_content",
+          "label": "Blog Content",
+          "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+        },
+        {
+          "type": "image_picker",
+          "id": "blog_image",
+          "label": "Blog Image"
+        }
       ]
     }
   ]
 }
 {% endschema %}
 
-
 <style>
     .custom-blogs {
         margin: 20px;
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       
       .custom-blog {
         background-color: #f9f9f9;
         border-radius: 5px;
-        width:300px;
+        width: 300px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         padding: 20px;
-        margin:10px;
+        margin: 10px;
         margin-bottom: 20px;
-        cursor:pointer; 
+        cursor: pointer; 
         transition: box-shadow 0.3s ease;
       }
       .custom-blog:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add animated shadow effect on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
       }
       .custom-blog h2 {
         color: #333;
@@ -130,13 +112,11 @@
   Render the added blogs.
 {% endcomment %}
 <div class="custom-blogs">
-    {% for i in (1..8) %}    
     <div class="custom-blog">
-        <h2>{{ section.settings.blog_title }} {{ i }}</h2>
+        <h2>{{ section.settings.blog_title }}</h2>
         <p>{{ section.settings.blog_content }}</p>
         {% if section.settings.blog_image %}
           <img src="{{ section.settings.blog_image | img_url: 'medium' }}" alt="{{ section.settings.blog_title }}" width="auto" height="auto">
         {% endif %}
-      </div>
-    {% endfor %}
+    </div>
 </div>
