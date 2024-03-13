@@ -71,15 +71,20 @@
       "type": "faq",
       "settings": {
       }
+    },
+    "custom_blog_BRd68x": {
+      "type": "custom-blog",
+      "settings": {
+        "blog_title": "My Blog Title",
+        "blog_content": "This is a sample blog content.",
+        "blog_preset": "preset1"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "faq_bRqLPP"
+    "faq_bRqLPP",
+    "custom_blog_BRd68x"
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> f67a4c717b88289c8df4eb09762571ff58f71ba1
