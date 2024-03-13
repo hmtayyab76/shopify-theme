@@ -112,11 +112,13 @@
   Render the added blogs.
 {% endcomment %}
 <div class="custom-blogs">
-    <div class="custom-blog">
-        <h2>{{ section.settings.blog_title }}</h2>
-        <p>{{ section.settings.blog_content }}</p>
-        {% if section.settings.blog_image %}
-          <img src="{{ section.settings.blog_image | img_url: 'medium' }}" alt="{{ section.settings.blog_title }}" width="auto" height="auto">
-        {% endif %}
-    </div>
+    {%- for block in section.blocks -%}
+        <div class="custom-blog">
+            <h2>{{ block.settings.blog_title }}</h2>
+            <p>{{ block.settings.blog_content }}</p>
+            {% if block.settings.blog_image %}
+                <img src="{{ block.settings.blog_image | img_url: 'medium' }}" alt="{{ block.settings.blog_title }}" width="auto" height="auto">
+            {% endif %}
+        </div>
+    {% endfor %}
 </div>
