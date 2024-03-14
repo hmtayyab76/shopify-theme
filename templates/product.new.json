@@ -94,20 +94,10 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "custom_liquid_xFEQCE": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{{product.metafields.custom.custom.name}}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "main",
-    "related-products",
-    "custom_liquid_xFEQCE"
+    "related-products"
   ]
 }
