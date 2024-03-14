@@ -1,1 +1,50 @@
-{"sections":{"main":{"type":"main-blog","settings":{"layout":"collage","show_image":true,"image_height":"medium","show_date":true,"show_author":false,"padding_top":36,"padding_bottom":36}}},"order":["main"]}
+{
+  "sections": {
+    "custom_blog_Df3NYn": {
+      "type": "custom-blog",
+      "blocks": {
+        "column_izkDHQ": {
+          "type": "column",
+          "settings": {
+            "blog_title": "Blog title",
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+            "blog_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
+          }
+        },
+        "column_DhPzJw": {
+          "type": "column",
+          "settings": {
+            "blog_title": "Why Books",
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+            "blog_image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp"
+          }
+        }
+      },
+      "block_order": [
+        "column_izkDHQ",
+        "column_DhPzJw"
+      ],
+      "settings": {
+        "blog_title": "My Blog Title",
+        "blog_content": "This is a sample blog content.",
+        "blog_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
+      }
+    },
+    "main": {
+      "type": "main-blog",
+      "settings": {
+        "layout": "collage",
+        "show_image": true,
+        "image_height": "medium",
+        "show_date": true,
+        "show_author": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "custom_blog_Df3NYn",
+    "main"
+  ]
+}
