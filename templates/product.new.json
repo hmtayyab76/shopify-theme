@@ -147,11 +147,21 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_yJzBYR": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{product.metafields.services.name}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "multicolumn_dRQYGU"
+    "multicolumn_dRQYGU",
+    "custom_liquid_yJzBYR"
   ]
 }

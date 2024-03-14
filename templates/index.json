@@ -75,7 +75,7 @@
     "custom_liquid_YxqCwm": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{product.metafields.custom.name.services.name.ty}}",
+        "custom_liquid": "{{product.metafields.custom.name.services.name.value}}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
