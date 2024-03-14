@@ -98,7 +98,7 @@
     "custom_liquid_xFEQCE": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "Hello World",
+        "custom_liquid": "{{product.metafields.custom.my_metafield}}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
