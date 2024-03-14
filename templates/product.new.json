@@ -151,7 +151,7 @@
     "custom_liquid_yJzBYR": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{{product.metafields.services.name}}",
+        "custom_liquid": "{{product.metafields.custom.name.services.name}}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
