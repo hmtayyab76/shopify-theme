@@ -71,11 +71,21 @@
       "type": "faq",
       "settings": {
       }
+    },
+    "custom_liquid_YxqCwm": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{product.metafields.custom.my_metafield}}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "faq_bRqLPP"
+    "faq_bRqLPP",
+    "custom_liquid_YxqCwm"
   ]
 }
