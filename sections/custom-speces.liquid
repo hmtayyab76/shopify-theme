@@ -24,8 +24,8 @@
       "name": "Custom Speces",
       "category": "Speces",
       "settings": {
-        "Speces_title": "My Speces Title",
-        "Speces_content": "This is a sample Speces content."
+        "speces_label": "",
+        "speces_value": ""
       }
     }
   ],
@@ -54,16 +54,26 @@
 
 <style>
    .speces{
-    border:0px 0px 2px 0px solid #efefef;
+    border-bottom:2px solid #efefef;
+    width:300px;
+}
+.custom-Specess{
+    padding:40px;
 }
 </style>
 
 
-<h2>Product Specifications</h2>
 <div class="custom-Specess">
+    {% if section.blocks > 0 %}
+        <h2>Product Specifications</h2>
+    {% endif %}
     <ul>  
         {%- for block in section.blocks -%}
-            <li class="speces">{{ product.metafields.custom.speces_rows custom.speces_rows }}</li>
+            <li class="speces">
+                <label>{{ block.settings.speces_label}}</label>
+                <p>{{ block.settings.speces_value }}</p>
+            </li>
+            
         {% endfor %}
     </ul>
 </div>
