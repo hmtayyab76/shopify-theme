@@ -97,23 +97,27 @@
     },
     "custom_speces_NU9Lf4": {
       "type": "custom-speces",
+      "blocks": {
+        "column_mNAgwH": {
+          "type": "column",
+          "settings": {
+            "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
+            "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
+          }
+        }
+      },
+      "block_order": [
+        "column_mNAgwH"
+      ],
       "settings": {
         "speces_label": "Speces title",
         "speces_value": "Speces title"
-      }
-    },
-    "custom_speces_cfD8mn": {
-      "type": "custom-speces",
-      "settings": {
-        "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
-        "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_speces_NU9Lf4",
-    "custom_speces_cfD8mn"
+    "custom_speces_NU9Lf4"
   ]
 }
