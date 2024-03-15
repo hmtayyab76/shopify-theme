@@ -78,15 +78,17 @@
    
     <ul>  
         {%- for block in section.blocks -%}
-            <li class="speces">
-                <h2>
-                    {{ block.settings.speces_label}}
-                    :
-                </h2>
-                <p>
-                    {{ block.settings.speces_value }}
-                </p>
-            </li>
+            {% if block %}
+                <li class="speces">
+                    <h2>
+                        {{ block.settings.speces_label}}
+                        :
+                    </h2>
+                    <p>
+                        {{ block.settings.speces_value }}
+                    </p>
+                </li>
+            {% endif %}
             
         {% endfor %}
     </ul>
