@@ -115,10 +115,20 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_azE6HQ": {
+          "type": "column",
+          "settings": {
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_RTdyha"
+        "column_RTdyha",
+        "column_azE6HQ"
       ],
       "settings": {
         "title": "Here we have speces",
@@ -127,12 +137,19 @@
         "button_label": "Learn More",
         "button_link": ""
       }
+    },
+    "custom_speces_NU9Lf4": {
+      "type": "custom-speces",
+      "settings": {
+        "blog_title": "Blog title"
+      }
     }
   },
   "order": [
     "main",
     "related-products",
     "custom_liquid_xFEQCE",
-    "multi_section_fA6PRq"
+    "multi_section_fA6PRq",
+    "custom_speces_NU9Lf4"
   ]
 }
