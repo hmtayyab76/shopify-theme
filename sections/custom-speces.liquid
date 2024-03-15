@@ -75,21 +75,20 @@
 <div class="custom-Specess">
    
         <h2>Product Specifications</h2>
-   
+        <h2>
+            {{ product.metafields.custom.spaces_row.value.value}}
+            Tayayb
+        </h2>
     <ul>  
         {%- for block in section.blocks -%}
             {% if section.blocks %}
                 <li class="speces">
-                    <h2>
-                        {{ block.settings.speces_label}}
-                        :
-                    </h2>
+                    
                     <p>
                         {{ block.settings.speces_value }}
                     </p>
                 </li>
             {% endif %}
-            
         {% endfor %}
     </ul>
 </div>
