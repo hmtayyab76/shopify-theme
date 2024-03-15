@@ -9,14 +9,12 @@
     {
       "type": "text",
       "id": "speces_label",
-      "label": "Speces Title",
-      "default": ""
+      "label": "Speces Title"
     },
     {
         "type": "text",
         "id": "speces_value",
-        "label": "Speces Title",
-        "default": ""
+        "label": "Speces Title"
     }
   ],
   "presets": [
@@ -37,14 +35,12 @@
         {
           "type": "text",
           "id": "speces_label",
-          "label": "Speces Title",
-          "default": ""
+          "label": "Speces Title"
         },
         {
             "type": "text",
             "id": "speces_value",
-            "label": "Speces Title",
-            "default": ""
+            "label": "Speces Title"
         }
       ]
     }
@@ -56,7 +52,6 @@
    .speces{
     border-bottom:2px solid #efefef;
     width:300px;
-    display:flex;
 }
 .custom-Specess{
     padding:40px;
@@ -66,11 +61,9 @@
 
 <div class="custom-Specess">
         <h2>Product Specifications</h2>
-   
     <ul>  
         {%- for block in section.blocks -%}
             <li class="speces">
-                <label></label>
                 <p>{{ block.settings.speces_label}}  {{ block.settings.speces_value }}</p>
             </li>
             
