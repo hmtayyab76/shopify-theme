@@ -52,7 +52,20 @@
    .speces{
     border-bottom:2px solid #efefef;
     width:300px;
+    display:flex;
+    align-items: center;
 }
+.speces h2{
+   font-size:16px;
+   font-weight: 700;
+   margin:8px;
+}
+.speces p{
+    font-size:14px;
+   margin:8px;
+
+    font-weight: 600;
+ }
 .custom-Specess{
     padding:40px;
 }
@@ -66,7 +79,13 @@
     <ul>  
         {%- for block in section.blocks -%}
             <li class="speces">
-                <p>{{ block.settings.speces_label}}  {{ block.settings.speces_value }}</p>
+                <h2>
+                    {{ block.settings.speces_label}}
+                    :
+                </h2>
+                <p>
+                    {{ block.settings.speces_value }}
+                </p>
             </li>
             
         {% endfor %}
