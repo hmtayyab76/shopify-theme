@@ -1,33 +1,69 @@
+
+
+
+
 {% schema %}
 {
-  "name": "Custom Blog",
+  "name": "Custom Speces",
   "settings": [
     {
       "type": "text",
-      "id": "blog_title",
-      "label": "Blog Title",
-      "default": "Blog title"
+      "id": "speces_label",
+      "label": "Speces Title",
+      "default": "Speces title"
+    },
+    {
+        "type": "text",
+        "id": "speces_value",
+        "label": "Speces Title",
+        "default": "Speces title"
     }
   ],
   "presets": [
     {
-      "name": "Custom Specs",
-      "category": "Specs"
+      "name": "Custom Speces",
+      "category": "Speces",
+      "settings": {
+        "Speces_title": "My Speces Title",
+        "Speces_content": "This is a sample Speces content."
+      }
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Speces",
+      "settings": [
+        {
+          "type": "text",
+          "id": "speces_label",
+          "label": "Speces Title",
+          "default": "Speces title"
+        },
+        {
+            "type": "text",
+            "id": "speces_value",
+            "label": "Speces Title",
+            "default": "Speces title"
+        }
+      ]
     }
   ]
 }
 {% endschema %}
 
 <style>
-  
+   .speces{
+    border:0px 0px 2px 0px solid #efefef;
+}
 </style>
 
-<div class="custom-blogs">
-  <h2>Product Specifications</h2>
-  <ul>
-    <li>Specification 1: {{ product.metafields.custom.speces_rows custom.speces_rows }}</li>
-    <li>Specification 2: [Add your specification here]</li>
-    <li>Specification 3: [Add your specification here]</li>
-    <!-- Add more specifications as needed -->
-  </ul>
+
+<h2>Product Specifications</h2>
+<div class="custom-Specess">
+    <ul>  
+        {%- for block in section.blocks -%}
+            <li class="speces">{{ product.metafields.custom.speces_rows custom.speces_rows }}</li>
+        {% endfor %}
+    </ul>
 </div>
