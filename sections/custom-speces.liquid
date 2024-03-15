@@ -10,13 +10,13 @@
       "type": "text",
       "id": "speces_label",
       "label": "Speces Title",
-      "default": "Speces title"
+      "default": ""
     },
     {
         "type": "text",
         "id": "speces_value",
         "label": "Speces Title",
-        "default": "Speces title"
+        "default": ""
     }
   ],
   "presets": [
@@ -38,13 +38,13 @@
           "type": "text",
           "id": "speces_label",
           "label": "Speces Title",
-          "default": "Speces title"
+          "default": ""
         },
         {
             "type": "text",
             "id": "speces_value",
             "label": "Speces Title",
-            "default": "Speces title"
+            "default": ""
         }
       ]
     }
@@ -65,9 +65,8 @@
 
 
 <div class="custom-Specess">
-    {% if section.blocks > 0 %}
         <h2>Product Specifications</h2>
-    {% endif %}
+   
     <ul>  
         {%- for block in section.blocks -%}
             <li class="speces">
