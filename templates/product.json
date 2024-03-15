@@ -125,7 +125,7 @@
     "custom_liquid_eh3BLa": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "{% assign metaobject = product.metafields.custom.speces_rows\n\n %}\n{{\nmetaobject.value.spaces_row.label.value\n}}\n\n{% for i in metaobject %}\n{{i.spaces_row.label.value}}\n{% endfor%}",
+        "custom_liquid": "{% assign metaobject = product.metafields.custom.speces_rows.value\n\n %}\n{{\nmetaobject.value\n}}\n\n{% for i in metaobject %}\n{{i.spaces_row.label.value}}\n{% endfor%}",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
