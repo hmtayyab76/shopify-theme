@@ -95,70 +95,29 @@
         "padding_bottom": 28
       }
     },
-    "custom_liquid_xFEQCE": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{{product.metafields.custom.custom.name}}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "multi_section_fA6PRq": {
-      "type": "multi-section",
+    "custom_speces_NU9Lf4": {
+      "type": "custom-speces",
       "blocks": {
-        "column_RTdyha": {
+        "column_mNAgwH": {
           "type": "column",
           "settings": {
-            "title": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
-            "text": "{{ product.metafields.custom.speces_rows | metafield_tag: field: 'value' }}",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_azE6HQ": {
-          "type": "column",
-          "settings": {
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
+            "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
+            "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
           }
         }
       },
       "block_order": [
-        "column_RTdyha",
-        "column_azE6HQ"
+        "column_mNAgwH"
       ],
-      "settings": {
-        "title": "Here we have speces",
-        "font_size": 25,
-        "background": "#eeeeee",
-        "button_label": "Learn More",
-        "button_link": ""
-      }
-    },
-    "custom_speces_NU9Lf4": {
-      "type": "custom-speces",
       "settings": {
         "speces_label": "Speces title",
         "speces_value": "Speces title"
-      }
-    },
-    "custom_speces_cfD8mn": {
-      "type": "custom-speces",
-      "settings": {
-        "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
-        "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_liquid_xFEQCE",
-    "multi_section_fA6PRq",
-    "custom_speces_NU9Lf4",
-    "custom_speces_cfD8mn"
+    "custom_speces_NU9Lf4"
   ]
 }
