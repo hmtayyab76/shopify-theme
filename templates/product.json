@@ -103,11 +103,36 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "multi_section_fA6PRq": {
+      "type": "multi-section",
+      "blocks": {
+        "column_RTdyha": {
+          "type": "column",
+          "settings": {
+            "title": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
+            "text": "{{ product.metafields.custom.speces_rows | metafield_tag: field: 'value' }}",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_RTdyha"
+      ],
+      "settings": {
+        "title": "Here we have speces",
+        "font_size": 25,
+        "background": "#eeeeee",
+        "button_label": "Learn More",
+        "button_link": ""
+      }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_liquid_xFEQCE"
+    "custom_liquid_xFEQCE",
+    "multi_section_fA6PRq"
   ]
 }
