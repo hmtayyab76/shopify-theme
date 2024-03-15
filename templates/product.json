@@ -95,10 +95,10 @@
         "padding_bottom": 28
       }
     },
-    "custom_speces_NU9Lf4": {
+    "custom_speces_My8THP": {
       "type": "custom-speces",
       "blocks": {
-        "column_mNAgwH": {
+        "column_XLTAwh": {
           "type": "column",
           "settings": {
             "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
@@ -107,17 +107,17 @@
         }
       },
       "block_order": [
-        "column_mNAgwH"
+        "column_XLTAwh"
       ],
       "settings": {
-        "speces_label": "Speces title",
-        "speces_value": "Speces title"
+        "speces_label": "",
+        "speces_value": ""
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_speces_NU9Lf4"
+    "custom_speces_My8THP"
   ]
 }
