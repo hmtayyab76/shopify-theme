@@ -141,7 +141,15 @@
     "custom_speces_NU9Lf4": {
       "type": "custom-speces",
       "settings": {
-        "blog_title": "Blog title"
+        "speces_label": "Speces title",
+        "speces_value": "Speces title"
+      }
+    },
+    "custom_speces_cfD8mn": {
+      "type": "custom-speces",
+      "settings": {
+        "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
+        "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
       }
     }
   },
@@ -150,6 +158,7 @@
     "related-products",
     "custom_liquid_xFEQCE",
     "multi_section_fA6PRq",
-    "custom_speces_NU9Lf4"
+    "custom_speces_NU9Lf4",
+    "custom_speces_cfD8mn"
   ]
 }
