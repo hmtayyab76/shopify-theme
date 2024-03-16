@@ -6,9 +6,8 @@
         "column_izkDHQ": {
           "type": "column",
           "settings": {
-            "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
-            "blog_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
+            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
           }
         },
         "column_DhPzJw": {
@@ -25,9 +24,9 @@
         "column_DhPzJw"
       ],
       "settings": {
-        "blog_title": "My Blog Title",
-        "blog_content": "This is a sample blog content.",
-        "blog_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
+        "blog_title": "My Blog Title{{ blog.metafields.custom.title.value.title.value }}",
+        "blog_content": "",
+        "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
       }
     },
     "main": {
