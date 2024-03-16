@@ -154,7 +154,7 @@
         "column_9kiLFp"
       ],
       "settings": {
-        "blog_title": "My Blog Title",
+        "blog_title": "{{ product.metafields.custom.title.value.title.value }}",
         "blog_content": "This is a sample blog content."
       }
     }
