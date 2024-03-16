@@ -11,7 +11,7 @@
       "default": "Blog title"
     },
     {
-      "type": "textarea",
+      "type": "text",
       "id": "blog_content",
       "label": "Blog Content",
       "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
@@ -44,10 +44,9 @@
           "default": "Blog title"
         },
         {
-          "type": "liquid",
+          "type": "text",
           "id": "blog_content",
-          "label": "Blog Content",
-          "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+          "label": "Blog Content"
         },
         {
           "type": "image_picker",
@@ -116,28 +115,6 @@
     Blogs
 </h1>
 {% assign metaobject = product.metafields.custom.title.value%}
-<h1>
-  
-</h1>
-{% for i in metaobject %}
-  {{i.label.value}}
-{% endfor %}
-
-  {% for i in metaobject %}
-  <br>
-  {{i.label.value}}
-  <br>
-  {{i.value.value}}
-  
-  <br>
-  {% for j in i.spece.value %}
-  {{j}}
-  <br>
-  {% endfor%}
- 
-  <br>
-  {{product.metafields.custom.speces_rows.value.lable.value}}
-  {% endfor%}
 <div class="custom-blogs">
   
     
