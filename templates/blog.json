@@ -7,6 +7,14 @@
           "type": "column",
           "settings": {
             "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_content": "",
+            "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
+          }
+        },
+        "column_Q9gpYi": {
+          "type": "column",
+          "settings": {
+            "blog_title": "Blog title",
             "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
           }
         },
@@ -21,6 +29,7 @@
       },
       "block_order": [
         "column_izkDHQ",
+        "column_Q9gpYi",
         "column_DhPzJw"
       ],
       "settings": {
