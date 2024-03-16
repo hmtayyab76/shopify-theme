@@ -1,34 +1,5 @@
 {
   "sections": {
-    "custom_blog_Df3NYn": {
-      "type": "custom-blog",
-      "blocks": {
-        "column_izkDHQ": {
-          "type": "column",
-          "settings": {
-            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
-          }
-        },
-        "column_DhPzJw": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Why Books",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
-            "blog_image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp"
-          }
-        }
-      },
-      "block_order": [
-        "column_izkDHQ",
-        "column_DhPzJw"
-      ],
-      "settings": {
-        "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-        "blog_content": "",
-        "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
-      }
-    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -49,11 +20,31 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_blog_eHjEHC": {
+      "type": "custom-blog",
+      "blocks": {
+        "column_T4yYtj": {
+          "type": "column",
+          "settings": {
+            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+            "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
+          }
+        }
+      },
+      "block_order": [
+        "column_T4yYtj"
+      ],
+      "settings": {
+        "blog_title": "My Blog Title",
+        "blog_content": "This is a sample blog content."
+      }
     }
   },
   "order": [
-    "custom_blog_Df3NYn",
     "main",
-    "custom_liquid_FtFw7f"
+    "custom_liquid_FtFw7f",
+    "custom_blog_eHjEHC"
   ]
 }
