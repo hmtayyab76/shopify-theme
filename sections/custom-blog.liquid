@@ -44,7 +44,7 @@
           "default": "Blog title"
         },
         {
-          "type": "textarea",
+          "type": "liquid",
           "id": "blog_content",
           "label": "Blog Content",
           "default": " Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
@@ -115,7 +115,7 @@
 <h1 class='heading'>
     Blogs
 </h1>
-{% assign metaobject = product.metafields.custom.speces_rows.value%}
+{% assign metaobject = product.metafields.custom.title.value%}
 <h1>
   
 </h1>
@@ -141,7 +141,7 @@
 <div class="custom-blogs">
   
     
-    {%- for block in section.blocks -%}
+    {%- for block in metaobject -%}
         <div class="custom-blog">
           {{ block.settings.blog_image }} 
             {% if block.settings.blog_image %}
