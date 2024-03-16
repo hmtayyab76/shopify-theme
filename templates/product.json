@@ -138,7 +138,8 @@
           "type": "column",
           "settings": {
             "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+            "blog_image": "{{ product.metafields.custom.title.value.image.value }}"
           }
         },
         "column_9kiLFp": {
