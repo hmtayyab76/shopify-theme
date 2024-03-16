@@ -1,42 +1,5 @@
 {
   "sections": {
-    "custom_blog_Df3NYn": {
-      "type": "custom-blog",
-      "blocks": {
-        "column_izkDHQ": {
-          "type": "column",
-          "settings": {
-            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-            "blog_content": "<p>{{ blog.metafields.custom.title.value.content | metafield_tag }}<\/p>",
-            "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
-          }
-        },
-        "column_Q9gpYi": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Blog title",
-            "blog_content": "<p>Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.<\/p>"
-          }
-        },
-        "column_DhPzJw": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Why Books",
-            "blog_content": "<p>{{ blog.metafields.custom.title.value.content | metafield_tag }}<\/p>",
-            "blog_image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp"
-          }
-        }
-      },
-      "block_order": [
-        "column_izkDHQ",
-        "column_Q9gpYi",
-        "column_DhPzJw"
-      ],
-      "settings": {
-        "blog_title": "Tayyab",
-        "blog_content": ""
-      }
-    },
     "main": {
       "type": "main-blog",
       "settings": {
@@ -60,7 +23,6 @@
     }
   },
   "order": [
-    "custom_blog_Df3NYn",
     "main",
     "custom_liquid_FtFw7f"
   ]
