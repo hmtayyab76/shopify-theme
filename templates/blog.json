@@ -7,7 +7,7 @@
           "type": "column",
           "settings": {
             "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-            "blog_content": "",
+            "blog_content": "<p>{{ blog.metafields.custom.title.value.content | metafield_tag }}<\/p>",
             "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
           }
         },
@@ -15,14 +15,14 @@
           "type": "column",
           "settings": {
             "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+            "blog_content": "<p>Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.<\/p>"
           }
         },
         "column_DhPzJw": {
           "type": "column",
           "settings": {
             "blog_title": "Why Books",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
+            "blog_content": "<p>{{ blog.metafields.custom.title.value.content | metafield_tag }}<\/p>",
             "blog_image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp"
           }
         }
@@ -33,9 +33,8 @@
         "column_DhPzJw"
       ],
       "settings": {
-        "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-        "blog_content": "",
-        "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
+        "blog_title": "Tayyab",
+        "blog_content": ""
       }
     },
     "main": {
