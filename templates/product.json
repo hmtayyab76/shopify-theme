@@ -155,7 +155,8 @@
       ],
       "settings": {
         "blog_title": "{{ product.metafields.custom.title.value.title.value }}",
-        "blog_content": "This is a sample blog content."
+        "blog_content": "This is a sample blog content.",
+        "blog_image": "{{ product.metafields.custom.title.value.image.value }}"
       }
     }
   },
