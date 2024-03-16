@@ -20,10 +20,30 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "custom_blog_eHjEHC": {
+      "type": "custom-blog",
+      "blocks": {
+        "column_T4yYtj": {
+          "type": "column",
+          "settings": {
+            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
+          }
+        }
+      },
+      "block_order": [
+        "column_T4yYtj"
+      ],
+      "settings": {
+        "blog_title": "My Blog Title",
+        "blog_content": "This is a sample blog content."
+      }
     }
   },
   "order": [
     "main",
-    "custom_liquid_FtFw7f"
+    "custom_liquid_FtFw7f",
+    "custom_blog_eHjEHC"
   ]
 }
