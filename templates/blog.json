@@ -41,10 +41,20 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "custom_liquid_FtFw7f": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{% assign metaobject = product.metafields.custom.speces_rows.value\n%}\n\n{% for i in metaobject %}\n<br>\n{{i.label.value}}\n<br>\n{{i.value.value}}\n\n<br>\n{% for j in i.spece.value %}\n{{j}}\n<br>\n{% endfor%}\n<br>\n{{product.metafields.custom.speces_rows.value.lable.value}}\n{% endfor%}",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "custom_blog_Df3NYn",
-    "main"
+    "main",
+    "custom_liquid_FtFw7f"
   ]
 }
