@@ -24,7 +24,7 @@
         "column_DhPzJw"
       ],
       "settings": {
-        "blog_title": "My Blog Title{{ blog.metafields.custom.title.value.title.value }}",
+        "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
         "blog_content": "",
         "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
       }
