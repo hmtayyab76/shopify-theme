@@ -27,15 +27,25 @@
         "column_ni8KbY": {
           "type": "column",
           "settings": {
-            "blog_url": "",
-            "blog_title": "Hafiz Muhammad Tayyab",
+            "blog_url": "https:\/\/tayyab-products.myshopify.com\/blogs\/news\/blog-title",
+            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
             "blog_content": "As a self-employed web developer, I initiated my journey in website design and development in 2021. Leveraging my educational background, I hold a Bachelor's degree in Computer Science from UMT Pakistan.",
             "blog_image": "shopify:\/\/shop_images\/TayyabPicture.png"
+          }
+        },
+        "column_QJCx64": {
+          "type": "column",
+          "settings": {
+            "blog_url": "",
+            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_content": "{{ blog.metafields.custom.title.value.title.value }}",
+            "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
           }
         }
       },
       "block_order": [
-        "column_ni8KbY"
+        "column_ni8KbY",
+        "column_QJCx64"
       ],
       "settings": {
         "blog_title": "My Blog Title",
