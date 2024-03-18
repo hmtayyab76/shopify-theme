@@ -69,7 +69,8 @@
       .custom-blog {
         background-color: #f9f9f9;
         border-radius: 5px;
-        width: 300px;
+        width: auto;
+        height:300px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         display:flex;
         margin: 10px 20px;
@@ -77,6 +78,10 @@
         margin-bottom: 20px;
         cursor: pointer; 
         transition: box-shadow 0.3s ease;
+      }
+      .ab{
+        width:400px;
+        overflow:hidden;
       }
       .custom-blog:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
@@ -118,11 +123,11 @@
 {% assign metaobject = blog.metafields.custom.title.value%}
 <div class="custom-blogs">
   <div class="custom-blog">
-    <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
-    <div>
+    <div class="ab">
       <h2>{{ metaobject.title }}</h2>
       <p>{{ metaobject.content }}</p>
     </div>
+    <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="200px" height="200px">
   </div>
     {%- for block in metaobject -%}
         <div class="custom-blog">
