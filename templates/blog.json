@@ -39,7 +39,7 @@
             "blog_url": "",
             "blog_title": "{{ blog.metafields.custom.second.value.title.value }}",
             "blog_content": "{{ blog.metafields.custom.second.value.paragraph.value }}",
-            "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
+            "blog_image": "{{ blog.metafields.custom.second.value.image.value }}"
           }
         }
       },
