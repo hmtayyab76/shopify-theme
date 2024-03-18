@@ -70,7 +70,9 @@
         display: flex;
         flex-wrap: wrap;
       }
-      
+      .custom-blogs a{
+        text-decoration:none;
+      }
       .custom-blog {
         background-color: #f9f9f9;
         border-radius: 5px;
@@ -127,7 +129,7 @@
 </h1>
 {% assign metaobject = blog.metafields.custom.title.value%}
 <div class="custom-blogs">
-  <a href="{{ settings.blog_url }}">
+  <a href="{{ blocks.settings.blog_url }}">
     <div class="custom-blog">
       <div class="ab">
           <p>{{ metaobject.content }}</p>
