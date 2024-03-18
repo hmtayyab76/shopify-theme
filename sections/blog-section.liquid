@@ -124,12 +124,13 @@
 {% endschema %}
 
 {% for block in section.blocks %}
-    <div>
-      Hello-{{ block.id }}
-      <br>
-      {{ block.settings.blog_url  }}
-      <a href="{{ block.settings.blog_url }}">
-        Click me
-        </a>
-    </div>
+    <a href="{{ settings.blog_url }}">
+        <div class="custom-blog">
+          <div class="ab">
+              <p>{{ metaobject.content }}</p>
+            <h2>{{ metaobject.title }}</h2>
+          </div>
+          <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="200px" height="200px">
+        </div>
+      </a>
   {% endfor %}
