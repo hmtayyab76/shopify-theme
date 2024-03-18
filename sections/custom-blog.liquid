@@ -71,8 +71,9 @@
         border-radius: 5px;
         width: 300px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        
+        display:flex;
         margin: 10px 20px;
+        align-items:center;
         margin-bottom: 20px;
         cursor: pointer; 
         transition: box-shadow 0.3s ease;
@@ -118,11 +119,14 @@
 <div class="custom-blogs">
   <div class="custom-blog">
     <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
-    <h2>{{ metaobject.title }}</h2>
+    <div>
+      <h2>{{ metaobject.title }}</h2>
       <p>{{ metaobject.content }}</p>
+    </div>
   </div>
     {%- for block in metaobject -%}
         <div class="custom-blog">
+
           <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
           <h2>{{ metaobject.title }}</h2>
             <p>{{ metaobject.content }}</p>
