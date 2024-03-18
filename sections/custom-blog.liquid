@@ -116,7 +116,7 @@
 </h1>
 {% assign metaobject = blog.metafields.custom.title.value%}
 <div class="custom-blogs">
-    {%- for block in metaobject -%}
+    
         <div class="custom-blog">
          
             
@@ -125,5 +125,4 @@
             <h2>{{ metaobject.blogs.title }}</h2>
             <p>{{ metaobject.content }}</p>
         </div>
-    {% endfor %}
 </div>
