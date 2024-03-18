@@ -124,7 +124,7 @@
 {% endschema %}
 <div class="custom-blogs">
     {% for block in section.blocks %}
-        <a href="{{ settings.blog_url }}">
+        <a href="{{ block.settings.blog_url }}">
             <div class="custom-blog">
                 <div class="ab">
                     <h2>{{ block.settings.blog_title }}</h2>
