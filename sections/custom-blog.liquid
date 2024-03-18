@@ -116,10 +116,16 @@
 </h1>
 {% assign metaobject = blog.metafields.custom.title.value%}
 <div class="custom-blogs">
-    
+  <div class="custom-blog">
+    <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
+    <h2>{{ metaobject.title }}</h2>
+      <p>{{ metaobject.content }}</p>
+  </div>
+    {%- for block in metaobject -%}
         <div class="custom-blog">
           <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
           <h2>{{ metaobject.title }}</h2>
             <p>{{ metaobject.content }}</p>
         </div>
+    {% endfor %}
 </div>
