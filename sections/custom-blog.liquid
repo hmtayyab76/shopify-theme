@@ -128,6 +128,7 @@
     Blogs
 </h1>
 {% assign metaobject = blog.metafields.custom.title.value%}
+{{ metaobject }}
 <div class="custom-blogs">
   <a href="{{ settings.blog_url }}">
     <div class="custom-blog">
@@ -140,10 +141,19 @@
   </a>
     {%- for block in metaobject -%}
         <div class="custom-blog">
-
           <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="100%" height="100%">
           <h2>{{ metaobject.title }}</h2>
             <p>{{ metaobject.content }}</p>
         </div>
+    {% endfor %}
+    {% for block in section.blocks %}
+      <div>
+        Hello-{{ block.id }}
+        <br>
+        {{ block.settings.blog_url  }}
+        <a href="{{ block.settings.blog_url }}">
+          Click me
+          </a>
+      </div>
     {% endfor %}
 </div>
