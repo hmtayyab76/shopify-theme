@@ -38,6 +38,11 @@
       "name": "Blog",
       "settings": [
         {
+          "type": "url",
+          "id": "blog_url",
+          "label": "Blog Link"
+        },
+        {
           "type": "text",
           "id": "blog_title",
           "label": "Blog Title",
@@ -122,13 +127,15 @@
 </h1>
 {% assign metaobject = blog.metafields.custom.title.value%}
 <div class="custom-blogs">
-  <div class="custom-blog">
-    <div class="ab">
-      <h2>{{ metaobject.title }}</h2>
-      <p>{{ metaobject.content }}</p>
+  <a href="{{ settings.blog_url }}">
+    <div class="custom-blog">
+      <div class="ab">
+          <p>{{ metaobject.content }}</p>
+        <h2>{{ metaobject.title }}</h2>
+      </div>
+      <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="200px" height="200px">
     </div>
-    <img src="{{ metaobject.image | img_url: 'medium' }}" alt="{{ metaobject.title }}" width="200px" height="200px">
-  </div>
+  </a>
     {%- for block in metaobject -%}
         <div class="custom-blog">
 
