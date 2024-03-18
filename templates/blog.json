@@ -27,7 +27,7 @@
         "column_T4yYtj": {
           "type": "column",
           "settings": {
-            "blog_url": "shopify:\/\/blogs\/news",
+            "blog_url": "https:\/\/tayyab-products.myshopify.com\/blogs\/news\/blog-title",
             "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
             "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
             "blog_image": "{{ blog.metafields.custom.title.value.image.value }}"
