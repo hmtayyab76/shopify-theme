@@ -13,15 +13,6 @@
         "padding_bottom": 36
       }
     },
-    "custom_liquid_FtFw7f": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% assign metaobject = product.metafields.custom.speces_rows.value\n%}\n\n{% for i in metaobject %}\n<br>\n{{i.label.value}}\n<br>\n{{i.value.value}}\n\n<br>\n{% for j in i.spece.value %}\n{{j}}\n<br>\n{% endfor%}\n<br>\n{{product.metafields.custom.speces_rows.value.lable.value}}\n{% endfor%}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "custom_blog_post_fCnjhr": {
       "type": "custom-blog-post",
       "blocks": {
@@ -29,6 +20,13 @@
           "type": "text",
           "settings": {
             "selected_blog_post": "news\/blog-title",
+            "published-date": true
+          }
+        },
+        "text_awHA6z": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/romaisa-anee",
             "published-date": true
           }
         },
@@ -49,6 +47,7 @@
       },
       "block_order": [
         "text_48G3T9",
+        "text_awHA6z",
         "text_eTdjhc",
         "text_YfWWkc"
       ],
@@ -62,7 +61,6 @@
   },
   "order": [
     "main",
-    "custom_liquid_FtFw7f",
     "custom_blog_post_fCnjhr"
   ]
 }
