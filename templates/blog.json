@@ -53,19 +53,35 @@
         "blog_image": "{{ blog.metafields.custom.second.value.image.value }}"
       }
     },
-    "custom_blog_post_JAcDJy": {
+    "custom_blog_post_fCnjhr": {
       "type": "custom-blog-post",
       "blocks": {
-        "text_7KnxHj": {
+        "text_48G3T9": {
           "type": "text",
           "settings": {
             "selected_blog_post": "news\/blog-title",
             "published-date": true
           }
+        },
+        "text_qXzYzr": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/blog-title",
+            "published-date": true
+          }
+        },
+        "text_FQrkWG": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "",
+            "published-date": true
+          }
         }
       },
       "block_order": [
-        "text_7KnxHj"
+        "text_48G3T9",
+        "text_qXzYzr",
+        "text_FQrkWG"
       ],
       "settings": {
         "main-blog-title": "From the blog",
@@ -79,6 +95,6 @@
     "main",
     "custom_liquid_FtFw7f",
     "blog_section_cGTDDR",
-    "custom_blog_post_JAcDJy"
+    "custom_blog_post_fCnjhr"
   ]
 }
