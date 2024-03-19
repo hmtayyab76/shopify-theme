@@ -59,7 +59,7 @@
         "text_7KnxHj": {
           "type": "text",
           "settings": {
-            "selected_blog_post": "",
+            "selected_blog_post": "news\/blog-title",
             "published-date": true
           }
         }
