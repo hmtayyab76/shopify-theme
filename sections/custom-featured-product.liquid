@@ -119,15 +119,24 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 30px;
+    padding: 10px 80px;
   }
   .content-div{
     display: flex;
     justify-content: space-between;
 
 }
+.heading{
+    margin:0px 100px;
+    justify-content:space-between;
+    font-weight:700;
+}
 </style>
+<div class="heading">
+    <h1 class="">Featured Products</h1>
+  </div>
 <div class="products">
+    
   {% for product in collections.all.products %}
     <div class="product-div">
       <div class="view-div trans-pro-btn-block hov-img">
