@@ -1,0 +1,171 @@
+<style>
+    .pro-btn {
+        min-width: 139px;
+        height: 40px;
+        border-radius: 25px;
+        left: 25%;
+        top: 80%;
+    }
+    
+    .trans-pro-btn {
+        display: none;
+    }
+    
+    .trans-pro-btn-block:hover .trans-pro-btn {
+        animation: quick-anmin .5s;
+        width: fit-content;
+        display: block;
+    }
+    
+    @keyframes quick-anmin {
+        from {
+            transform: translate(0px, 40px);
+        }
+    
+        to {
+            transform: translate(0px, 0px);
+        }
+    }
+    
+    .pro-a {
+        color: #999;
+        font-size: 14px;
+        line-height: 1.466667;
+    }
+    
+    .hov-img {
+        overflow: hidden;
+        display: block;
+    }
+    
+    .icon-img-block {
+        position: relative;
+    }
+    
+    .transi-img-pro {
+        transition: .9s;
+    }
+    
+    .trans-pro-btn-block:hover .transi-img-pro {
+        transform: scale(1.08, 1.08);
+    }
+    
+    .heart-icon-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        transition: .3s ease;
+    }
+    
+    .overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+        transition: .3s ease;
+    }
+    
+    .icon-img-block:hover .overlay {
+        opacity: 1;
+    }
+    
+    .heart-icon-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 1;
+        transition: .3s ease;
+    }
+    
+    .icon-img-block:hover .heart-icon-1 {
+        opacity: 0;
+    }
+    
+    .pro-btn-end {
+        font-weight: 550;
+        background-color: #e6e6e6;
+        min-width: 179px;
+        transition: .5s;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    
+</style>
+
+<div class="col-sm-6 col-md-4 col-lg-3">
+    <div class="position-relative trans-pro-btn-block hov-img">
+      <img src="prj-images/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp" class="w-100 transi-img-pro"
+        alt="IMG-PRODUCT" width="100%" height="100%">
+      <a href="#" class="pro-btn btn btn-light border-0 btn-outline-dark position-absolute trans-pro-btn">
+        Quick View</a>
+    </div>
+    <div class="d-flex justify-content-between mt-2">
+
+      <div class="d-flex flex-column mt-1">
+        <a href="#" class="pro-a"> Esprit Ruffle Shirt</a>
+        <span class="d-block">
+          $16.64
+        </span>
+      </div>
+      <div class="d-flex justify-content-between mt-2">
+        <a href="#" class="icon-img-block position-relative">
+          <img src="prj-images/xicon-heart-01.png.pagespeed.ic.KWX9kWp6gv.webp" alt="" class="heart-icon-1" width="100%" height="100%">
+          <img src="prj-images/xicon-heart-02.png.pagespeed.ic.PluCr4oDsd.webp" class="overlay" alt="" width="100%" height="100%">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  {% schema %}
+{
+  "name": "Custom Blog-post",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main-blog-title",
+      "label": "Main Title",
+      "default": "Blogs"
+    },
+    {
+      "type": "url",
+      "id": "blog_link",
+      "label": "Blog page link"
+    },
+    {
+      "type": "text",
+      "id": "min-title",
+      "label": "Posts Title"
+    },
+    {
+      "type": "article",
+      "id": "selected_main_blog_post",
+      "label": "Select a Blog Post"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Select Blog",
+      "settings": [
+        {
+          "type": "article",
+          "id": "selected_blog_post",
+          "label": "Select a Blog Post"
+        },
+        {
+          "type": "checkbox",
+          "id": "published-date",
+          "label": "Add Date",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Featured Product"
+    }
+  ]
+}
+{% endschema %}
