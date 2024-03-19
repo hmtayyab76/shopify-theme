@@ -30,18 +30,10 @@
             "selected_blog_post": "news\/blog-title",
             "published-date": true
           }
-        },
-        "text_qXzYzr": {
-          "type": "text",
-          "settings": {
-            "selected_blog_post": "news\/blog-title",
-            "published-date": true
-          }
         }
       },
       "block_order": [
-        "text_48G3T9",
-        "text_qXzYzr"
+        "text_48G3T9"
       ],
       "settings": {
         "main-blog-title": "From the blog",
