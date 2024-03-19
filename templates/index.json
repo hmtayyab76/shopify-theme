@@ -87,7 +87,7 @@
         "text_Q78JWJ": {
           "type": "text",
           "settings": {
-            "selected_featured_product": "",
+            "selected_featured_product": "caesar-multipurpose-tool-set",
             "published-date": true
           }
         }
@@ -96,8 +96,8 @@
         "text_Q78JWJ"
       ],
       "settings": {
-        "main-blog-title": "Blogs",
-        "blog_link": "",
+        "main-Product-title": "Product",
+        "Product_link": "",
         "min-title": "",
         "selected_main_featured_product": ""
       }
