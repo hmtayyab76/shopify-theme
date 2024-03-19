@@ -2,6 +2,7 @@
   "sections": {
     "main": {
       "type": "main-blog",
+      "disabled": true,
       "settings": {
         "layout": "collage",
         "show_image": true,
@@ -30,10 +31,26 @@
             "selected_blog_post": "news\/blog-title",
             "published-date": true
           }
+        },
+        "text_eTdjhc": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/robin-dave",
+            "published-date": true
+          }
+        },
+        "text_YfWWkc": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/rehana-dev",
+            "published-date": true
+          }
         }
       },
       "block_order": [
-        "text_48G3T9"
+        "text_48G3T9",
+        "text_eTdjhc",
+        "text_YfWWkc"
       ],
       "settings": {
         "main-blog-title": "From the blog",
