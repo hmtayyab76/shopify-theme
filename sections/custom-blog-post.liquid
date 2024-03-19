@@ -121,7 +121,7 @@ font-size: 13px;
 {% assign mainArticle = section.settings.selected_main_blog_post %}
 <a href="{{ mainArticle.url }}">
   <div class="blog-posts">
-    <img src="{{ mainArticle.image | img_url: 'master' }}" alt="loading image">
+    <img src="{{ mainArticle.image | img_url: 'master' }}" alt="loading image" width="200px" height="200px">
     <h1 class="main-blog-title">{{ mainArticle.title }}</h1>
     <p class="main-blog-date">{{ mainArticle.published_at }}</p>
   </div>
@@ -135,7 +135,7 @@ font-size: 13px;
     <a href="{{ selectedArticle.url }}">
       <div class="blog-post-1">
         <div class="blog-post-image">
-          <img src="{{ selectedArticle.image | img_url:'master'}}" alt="loading-image">
+          <img src="{{ selectedArticle.image | img_url:'master'}}" alt="loading-image" width="200px" height="200px">
         </div>
         <div class="blog-post-detail">
           <h5 class="post-title">{{ selectedArticle.title }}</h5>
