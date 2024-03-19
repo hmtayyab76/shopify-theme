@@ -94,7 +94,8 @@
 </style>
 
 {% for product in collection.products %}
-    <div class="col-sm-6 col-md-4 col-lg-3">
+    {{ product.title }}
+    {% comment %} <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="position-relative trans-pro-btn-block hov-img">
           <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="100%" height="100%">
           <a href="{{ product.url }}" class="pro-btn btn btn-light border-0 btn-outline-dark position-absolute trans-pro-btn">
@@ -115,7 +116,7 @@
             </a>
           </div>
         </div>
-      </div>
+      </div> {% endcomment %}
 {% endfor %}
 
 
