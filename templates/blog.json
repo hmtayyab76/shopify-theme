@@ -23,6 +23,13 @@
             "published-date": true
           }
         },
+        "text_awHA6z": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/romaisa-anee",
+            "published-date": true
+          }
+        },
         "text_eTdjhc": {
           "type": "text",
           "settings": {
@@ -40,6 +47,7 @@
       },
       "block_order": [
         "text_48G3T9",
+        "text_awHA6z",
         "text_eTdjhc",
         "text_YfWWkc"
       ],
