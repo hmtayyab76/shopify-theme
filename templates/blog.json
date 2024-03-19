@@ -52,11 +52,33 @@
         "blog_content": "This is a sample blog content.",
         "blog_image": "{{ blog.metafields.custom.second.value.image.value }}"
       }
+    },
+    "custom_blog_post_JAcDJy": {
+      "type": "custom-blog-post",
+      "blocks": {
+        "text_7KnxHj": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "",
+            "published-date": true
+          }
+        }
+      },
+      "block_order": [
+        "text_7KnxHj"
+      ],
+      "settings": {
+        "main-blog-title": "From the blog",
+        "blog_link": "",
+        "min-title": "",
+        "selected_main_blog_post": ""
+      }
     }
   },
   "order": [
     "main",
     "custom_liquid_FtFw7f",
-    "blog_section_cGTDDR"
+    "blog_section_cGTDDR",
+    "custom_blog_post_JAcDJy"
   ]
 }
