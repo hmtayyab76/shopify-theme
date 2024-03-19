@@ -21,38 +21,6 @@
         "padding_bottom": 52
       }
     },
-    "blog_section_cGTDDR": {
-      "type": "blog-section",
-      "blocks": {
-        "column_ni8KbY": {
-          "type": "column",
-          "settings": {
-            "blog_url": "https:\/\/tayyab-products.myshopify.com\/blogs\/news\/blog-title",
-            "blog_title": "{{ blog.metafields.custom.title.value.title.value }}",
-            "blog_content": "{{ blog.metafields.custom.title.value.paragraph.value }}",
-            "blog_image": "shopify:\/\/shop_images\/TayyabPicture.png"
-          }
-        },
-        "column_QJCx64": {
-          "type": "column",
-          "settings": {
-            "blog_url": "",
-            "blog_title": "{{ blog.metafields.custom.second.value.title.value }}",
-            "blog_content": "{{ blog.metafields.custom.second.value.paragraph.value }}",
-            "blog_image": "{{ blog.metafields.custom.second.value.image.value }}"
-          }
-        }
-      },
-      "block_order": [
-        "column_ni8KbY",
-        "column_QJCx64"
-      ],
-      "settings": {
-        "blog_title": "My Blog Title",
-        "blog_content": "This is a sample blog content.",
-        "blog_image": "{{ blog.metafields.custom.second.value.image.value }}"
-      }
-    },
     "custom_blog_post_fCnjhr": {
       "type": "custom-blog-post",
       "blocks": {
@@ -69,19 +37,11 @@
             "selected_blog_post": "news\/blog-title",
             "published-date": true
           }
-        },
-        "text_FQrkWG": {
-          "type": "text",
-          "settings": {
-            "selected_blog_post": "",
-            "published-date": true
-          }
         }
       },
       "block_order": [
         "text_48G3T9",
-        "text_qXzYzr",
-        "text_FQrkWG"
+        "text_qXzYzr"
       ],
       "settings": {
         "main-blog-title": "From the blog",
@@ -94,7 +54,6 @@
   "order": [
     "main",
     "custom_liquid_FtFw7f",
-    "blog_section_cGTDDR",
     "custom_blog_post_fCnjhr"
   ]
 }
