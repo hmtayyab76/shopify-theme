@@ -1,126 +1,165 @@
 <style>
-    .pro-btn {
-        min-width: 139px;
-        height: 40px;
-        border-radius: 25px;
-        left: 25%;
-        top: 80%;
+  .pro-btn {
+    min-width: 139px;
+    height: 40px;
+    border-radius: 25px;
+    left: 30%;
+    top: 80%;
+  }
+
+  .trans-pro-btn {
+    display: none;
+  }
+
+  .trans-pro-btn-block:hover .trans-pro-btn {
+    animation: quick-anmin 0.5s;
+    width: fit-content;
+    display: block;
+  }
+
+  @keyframes quick-anmin {
+    from {
+      transform: translate(0px, 40px);
     }
-    
-    .trans-pro-btn {
-        display: none;
+
+    to {
+      transform: translate(0px, 0px);
     }
-    
-    .trans-pro-btn-block:hover .trans-pro-btn {
-        animation: quick-anmin .5s;
-        width: fit-content;
-        display: block;
-    }
-    
-    @keyframes quick-anmin {
-        from {
-            transform: translate(0px, 40px);
-        }
-    
-        to {
-            transform: translate(0px, 0px);
-        }
-    }
-    
-    .pro-a {
-        color: #999;
-        font-size: 14px;
-        line-height: 1.466667;
-    }
-    
-    .hov-img {
-        overflow: hidden;
-        display: block;
-    }
-    
-    .icon-img-block {
-        position: relative;
-    }
-    
-    .transi-img-pro {
-        transition: .9s;
-    }
-    
-    .trans-pro-btn-block:hover .transi-img-pro {
-        transform: scale(1.08, 1.08);
-    }
-    
-    .heart-icon-1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 0;
-        transition: .3s ease;
-    }
-    
-    .overlay {
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 0;
-        transition: .3s ease;
-    }
-    
-    .icon-img-block:hover .overlay {
-        opacity: 1;
-    }
-    
-    .heart-icon-1 {
-        position: absolute;
-        top: 0;
-        right: 0;
-        opacity: 1;
-        transition: .3s ease;
-    }
-    
-    .icon-img-block:hover .heart-icon-1 {
-        opacity: 0;
-    }
-    
-    .pro-btn-end {
-        font-weight: 550;
-        background-color: #e6e6e6;
-        min-width: 179px;
-        transition: .5s;
-        font-size: 15px;
-        text-transform: uppercase;
-    }
-    
+  }
+
+  .pro-a {
+    color: #999;
+    font-size: 14px;
+    line-height: 1.466667;
+  }
+
+  .hov-img {
+    overflow: hidden;
+    display: block;
+  }
+
+  .icon-img-block {
+    position: relative;
+  }
+
+  .transi-img-pro {
+    transition: 0.9s;
+  }
+
+  .trans-pro-btn-block:hover .transi-img-pro {
+    transform: scale(1.08, 1.08);
+  }
+
+  .heart-icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.3s ease;
+  }
+
+  .icon-img-block:hover .overlay {
+    opacity: 1;
+  }
+
+  .heart-icon-1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1;
+    transition: 0.3s ease;
+  }
+
+  .icon-img-block:hover .heart-icon-1 {
+    opacity: 0;
+  }
+
+  .pro-btn-end {
+    font-weight: 550;
+    background-color: #e6e6e6;
+    min-width: 179px;
+    transition: 0.5s;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  a {
+    text-decoration: none;
+  }
+  .view-div {
+    position: relative;
+    text-align: center;
+  }
+  .view-btn {
+    position: absolute;
+    padding: 5px 0px 0px 0px;
+  }
+  .btn-outline-dark:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+  }
+  .product-div {
+    width: 22%;
+    margin: 10px 20px;
+  }
+  .btn-light {
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+  }
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 30px;
+  }
+  .content-div{
+    display: flex;
+    justify-content: space-between;
+
+}
 </style>
-
-{% for product in collection.products %}
-    {{ product.title }}
-    {% comment %} <div class="col-sm-6 col-md-4 col-lg-3">
-        <div class="position-relative trans-pro-btn-block hov-img">
-          <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}" width="100%" height="100%">
-          <a href="{{ product.url }}" class="pro-btn btn btn-light border-0 btn-outline-dark position-absolute trans-pro-btn">
-            Quick View</a>
-        </div>
-        <div class="d-flex justify-content-between mt-2">
-    
-          <div class="d-flex flex-column mt-1">
-            <a href="#" class="pro-a"> {{product.title}}</a>
-            <span class="d-block">
-                {{ product.price | money }}
-            </span>
-          </div>
-          <div class="d-flex justify-content-between mt-2">
-            <a href="#" class="icon-img-block position-relative">
-              <img src="{{ 'img_red.ico' | asset_url }}" alt="" class="heart-icon-1" width="100%" height="100%">
-              <img src="{{ 'heart.png' | asset_url }}" class="overlay" alt="" width="100%" height="100%">
-            </a>
+<div class="products">
+  {% for product in collections.all.products %}
+    <div class="product-div">
+      <div class="view-div trans-pro-btn-block hov-img">
+        <img
+          src="{{ product.featured_image | img_url: 'medium' }}"
+          alt="{{ product.title }}"
+          width="100%"
+          height="400px"
+        >
+        <a href="{{ product.url }}" class="pro-btn btn btn-light view-btn  btn-outline-dark trans-pro-btn">
+          Quick View</a
+        >
+      </div>
+      <div class="content-div">
+        <div class="">
+          <div href="#" class="pro-a">{{ product.title }}</div>
+          <div class="d-block">
+            {{ product.price | money }}
           </div>
         </div>
-      </div> {% endcomment %}
-{% endfor %}
+        <div class="">
+          <div class="icon-img-block">
+            <img src="{{ 'img_red.ico'  | asset_url }}" alt="" class="heart-icon-1" width="20px" height="20px">
+            <img src="{{ 'heart.png' | asset_url }}" class="overlay" alt="" width="20px" height="20px">
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
 
-
-  {% schema %}
+{% schema %}
 {
   "name": "Custom Featured Product",
   "settings": [
