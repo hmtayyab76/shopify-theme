@@ -93,29 +93,32 @@
     
 </style>
 
-<div class="col-sm-6 col-md-4 col-lg-3">
-    <div class="position-relative trans-pro-btn-block hov-img">
-      <img src="prj-images/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp" class="w-100 transi-img-pro"
-        alt="IMG-PRODUCT" width="100%" height="100%">
-      <a href="#" class="pro-btn btn btn-light border-0 btn-outline-dark position-absolute trans-pro-btn">
-        Quick View</a>
-    </div>
-    <div class="d-flex justify-content-between mt-2">
-
-      <div class="d-flex flex-column mt-1">
-        <a href="#" class="pro-a"> Esprit Ruffle Shirt</a>
-        <span class="d-block">
-          $16.64
-        </span>
+{% for block in section.blocks %}
+    {% assign selectedProduct = block.settings.selected_featured_product %}
+    <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="position-relative trans-pro-btn-block hov-img">
+          <img src="{{ selectedProduct.image }}" class="w-100 transi-img-pro"
+            alt="IMG-PRODUCT" width="100%" height="100%">
+          <a href="#" class="pro-btn btn btn-light border-0 btn-outline-dark position-absolute trans-pro-btn">
+            Quick View</a>
+        </div>
+        <div class="d-flex justify-content-between mt-2">
+    
+          <div class="d-flex flex-column mt-1">
+            <a href="#" class="pro-a"> {{selectedProduct.title}}</a>
+            <span class="d-block">
+              $16.64
+            </span>
+          </div>
+          <div class="d-flex justify-content-between mt-2">
+            <a href="#" class="icon-img-block position-relative">
+              <img src="prj-images/xicon-heart-01.png.pagespeed.ic.KWX9kWp6gv.webp" alt="" class="heart-icon-1" width="100%" height="100%">
+              <img src="prj-images/xicon-heart-02.png.pagespeed.ic.PluCr4oDsd.webp" class="overlay" alt="" width="100%" height="100%">
+            </a>
+          </div>
+        </div>
       </div>
-      <div class="d-flex justify-content-between mt-2">
-        <a href="#" class="icon-img-block position-relative">
-          <img src="prj-images/xicon-heart-01.png.pagespeed.ic.KWX9kWp6gv.webp" alt="" class="heart-icon-1" width="100%" height="100%">
-          <img src="prj-images/xicon-heart-02.png.pagespeed.ic.PluCr4oDsd.webp" class="overlay" alt="" width="100%" height="100%">
-        </a>
-      </div>
-    </div>
-  </div>
+{% endfor %}
 
   {% schema %}
 {
@@ -138,9 +141,9 @@
       "label": "Posts Title"
     },
     {
-      "type": "article",
-      "id": "selected_main_blog_post",
-      "label": "Select a Blog Post"
+      "type": "product",
+      "id": "selected_main_featured_product",
+      "label": "Select a Featured Product"
     }
   ],
   "blocks": [
@@ -150,8 +153,8 @@
       "settings": [
         {
           "type": "article",
-          "id": "selected_blog_post",
-          "label": "Select a Blog Post"
+          "id": "selected_featured_product",
+          "label": "Select a Featured Product"
         },
         {
           "type": "checkbox",
