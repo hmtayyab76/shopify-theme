@@ -104,68 +104,20 @@
             "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
             "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
           }
-        },
-        "column_gGcJfw": {
-          "type": "column",
-          "settings": {
-            "speces_label": "",
-            "speces_value": ""
-          }
         }
       },
       "block_order": [
-        "column_XLTAwh",
-        "column_gGcJfw"
+        "column_XLTAwh"
       ],
       "settings": {
         "speces_label": "",
         "speces_value": ""
-      }
-    },
-    "custom_liquid_eh3BLa": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{% assign metaobject = product.metafields.custom.speces_rows.value\n%}\n\n{% for i in metaobject %}\n<br>\n{{i.label.value}}\n<br>\n{{i.value.value}}\n\n<br>\n{% for j in i.spece.value %}\n{{j}}\n<br>\n{% endfor%}\n<br>\n{{product.metafields.custom.speces_rows.value.lable.value}}\n{% endfor%}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "custom_blog_Nq8hqd": {
-      "type": "custom-blog",
-      "blocks": {
-        "column_8yX48X": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.",
-            "blog_image": "{{ product.metafields.custom.title.value.image.value }}"
-          }
-        },
-        "column_9kiLFp": {
-          "type": "column",
-          "settings": {
-            "blog_title": "Blog title",
-            "blog_content": "Blog content Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator."
-          }
-        }
-      },
-      "block_order": [
-        "column_8yX48X",
-        "column_9kiLFp"
-      ],
-      "settings": {
-        "blog_title": "{{ product.metafields.custom.title.value.title.value }}",
-        "blog_content": "This is a sample blog content.",
-        "blog_image": "{{ product.metafields.custom.title.value.image.value }}"
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_speces_My8THP",
-    "custom_liquid_eh3BLa",
-    "custom_blog_Nq8hqd"
+    "custom_speces_My8THP"
   ]
 }
