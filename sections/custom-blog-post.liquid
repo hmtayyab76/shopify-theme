@@ -1,204 +1,288 @@
 <style>
-    #shopify-section-{{ section.id }}  * {
-         padding: 0;
-         margin: 0;
-         box-sizing: border-box;
-         text-decoration:none;
-     }
-#shopify-section-{{ section.id }} section{
- margin:50px 0 !important;
-}
-  #shopify-section-{{ section.id }} .title-btn{
-      display: flex;
-         justify-content: space-between;
-         width: 100%;
-         max-width: 1300px;
-         margin: 0 auto;
-         align-items: center;
-   }
- #shopify-section-{{ section.id }} .title-btn a{
-    color: black !important;
-    text-decoration: underline;
-  }
-    #shopify-section-{{ section.id }} .blog-post-flex {
-         display: flex;
-         justify-content: space-between;
-         width: 100%;
-         max-width: 1300px;
-     #shopify-section-{{ section.id }}  flex-wrap: wrap;
-         margin: 0 auto 30px auto;
-         padding: 30px 0 50px 0;
-     }
-
-    #shopify-section-{{ section.id }} .main-blog-post {
-         width: 65%;
-         height: 70vh;
-     }
-
-    #shopify-section-{{ section.id }} .blog-posts {
-         width: 100%;
-         text-align: center;
-         height: 100%;
-       padding: 0 0 30px 0;
-       color: black;
-     }
-
-    #shopify-section-{{ section.id }} .blog-posts img {
-         width: 100%;
-         object-fit: cover;
-         height: 100%;
-         border-radius: 20px;
-     }
-
-    #shopify-section-{{ section.id }} .latest-blog-posts {
-         width: 32%;
-      height: 100%;
-       border-left: 1px solid #d9dce2;
-       padding-left: 30px;
-     }
-
-    #shopify-section-{{ section.id }} .blog-post-1 {
-         display: flex;
-         justify-content: space-between;
-         margin: 0 auto;
-         width: 100%;
-         padding: 12px 0;
-       height: 120px;
-     }
-
-    #shopify-section-{{ section.id }} .blog-post-image {
-         width: 40%;
-       height: 100%;
-     }
-
-    #shopify-section-{{ section.id }} .blog-post-image img {
-         width: 100%;
-       height: 100%;
-       object-fit: cover;
-         border-radius: 20px;
-     }
-
-    #shopify-section-{{ section.id }} .blog-post-detail {
-         width: 55%;
-  color: black;
-     }
-     #shopify-section-{{ section.id }} .post-title{
-       font-size: 17px;
-       font-weight: bold;
-     }
-  @media (max-width: 767px) {
-   #shopify-section-{{ section.id }} .title-btn{
-      padding: 10px 20px;
+    .custom-blogs {
+        margin: 20px 50px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .custom-blogs a{
+        text-decoration:none;
+      }
+      .custom-blog {
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        width: auto;
+        padding:0px 10px;
+        height:300px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display:flex;
+        margin: 10px 20px;
+        align-items:center;
+        margin-bottom: 20px;
+        cursor: pointer; 
+        transition: box-shadow 0.3s ease;
+      }
+      .ab{
+        width:400px;
+        overflow:hidden;
+      }
+      .custom-blog:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+      }
+      .custom-blog h2 {
+        color: #333;
+        font-size: 24px;
+        margin:0px 10px;
+        margin-top:10px;
+        font-weight:700;
+        padding:0px 10px;
+      }
+      
+      .custom-blog p {
+        color: #666;
+        font-size: 16px;
+        padding:0px 10px;
+        line-height: 1.5;
+        margin:5px 10px 20px 10px;
+      }
+      
+      .custom-blog img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 5px;
+      }
+      .heading{
+        margin:10px 70px;
+        font-weight:700;
     }
-   #shopify-section-{{ section.id }} .blog-post-flex {
-    padding: 0 20px;
-     flex-direction: column;
-}
-     #shopify-section-{{ section.id }} .latest-blog-posts{
-        width: 100%;
-        padding: 100px 6px 0 0;
-  border-left: none;
-      }
-   #shopify-section-{{ section.id }} .main-blog-post{
-        width: 100%;
-      height: 30vh;
-      }
-   #shopify-section-{{ section.id }} h5.post-title {
-  font-size: 17px;
-}
-   #shopify-section-{{ section.id }} p.post-date {
-font-size: 13px;
-}
+      #shopify-section-{{ section.id }}  * {
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+           text-decoration:none;
+       }
+  #shopify-section-{{ section.id }} section{
+   margin:50px 0 !important;
   }
+    #shopify-section-{{ section.id }} .title-btn{
+        display: flex;
+           justify-content: space-between;
+           width: 100%;
+           max-width: 1300px;
+           margin: 0 auto;
+           align-items: center;
+     }
+   #shopify-section-{{ section.id }} .title-btn a{
+      color: black !important;
+      text-decoration: underline;
+    }
+      #shopify-section-{{ section.id }} .blog-post-flex {
+           display: flex;
+           justify-content: space-between;
+           width: 100%;
+           max-width: 1300px;
+       #shopify-section-{{ section.id }}  flex-wrap: wrap;
+           margin: 0 auto 30px auto;
+           padding: 30px 0 50px 0;
+       }
+
+      #shopify-section-{{ section.id }} .main-blog-post {
+           width: 65%;
+           height: 70vh;
+       }
+
+      #shopify-section-{{ section.id }} .blog-posts {
+           width: 100%;
+           text-align: center;
+           height: 100%;
+         padding: 0 0 30px 0;
+         color: black;
+       }
+
+      #shopify-section-{{ section.id }} .blog-posts img {
+           width: 100%;
+           object-fit: cover;
+           height: 100%;
+           border-radius: 20px;
+       }
+
+      #shopify-section-{{ section.id }} .latest-blog-posts {
+           width: 32%;
+        height: 100%;
+         border-left: 1px solid #d9dce2;
+         padding-left: 30px;
+       }
+
+      #shopify-section-{{ section.id }} .blog-post-1 {
+           display: flex;
+           justify-content: space-between;
+           margin: 0 auto;
+           width: 100%;
+           padding: 12px 0;
+         height: 120px;
+       }
+
+      #shopify-section-{{ section.id }} .blog-post-image {
+           width: 40%;
+         height: 100%;
+       }
+
+      #shopify-section-{{ section.id }} .blog-post-image img {
+           width: 100%;
+         height: 100%;
+         object-fit: cover;
+           border-radius: 20px;
+       }
+
+      #shopify-section-{{ section.id }} .blog-post-detail {
+           width: 55%;
+    color: black;
+       }
+       #shopify-section-{{ section.id }} .post-title{
+         font-size: 17px;
+         font-weight: bold;
+       }
+    @media (max-width: 767px) {
+     #shopify-section-{{ section.id }} .title-btn{
+        padding: 10px 20px;
+      }
+     #shopify-section-{{ section.id }} .blog-post-flex {
+      padding: 0 20px;
+       flex-direction: column;
+  }
+       #shopify-section-{{ section.id }} .latest-blog-posts{
+          width: 100%;
+          padding: 100px 6px 0 0;
+    border-left: none;
+        }
+     #shopify-section-{{ section.id }} .main-blog-post{
+          width: 100%;
+        height: 30vh;
+        }
+     #shopify-section-{{ section.id }} h5.post-title {
+    font-size: 17px;
+  }
+     #shopify-section-{{ section.id }} p.post-date {
+  font-size: 13px;
+  }
+    }
 </style>
 <section>
-<div class="title-btn">
-<h1 class="blog-main-title">{{ section.settings['main-blog-title'] }}</h1>
-<a href="{{ section.settings.blog_link }}">View all</a>
-</div>
-<div class="blog-post-flex">
-<div class="main-blog-post">
-{% assign mainArticle = section.settings.selected_main_blog_post %}
-<a href="{{ mainArticle.url }}">
-  <div class="blog-posts">
-    <img src="{{ mainArticle.image | img_url: 'master' }}" alt="loading image" width="200px" height="200px">
-    <h1 class="main-blog-title">{{ mainArticle.title }}</h1>
-    <p class="main-blog-date">{{ mainArticle.published_at }}</p>
+  <div class="title-btn">
+    <h1 class="blog-main-title">{{ section.settings['main-blog-title'] }}</h1>
+    <a href="{{ section.settings.blog_link }}">View all</a>
   </div>
-</a>
-</div>
-<div class="latest-blog-posts">
-<h2 class="latest-title">{{ section.settings['min-title'] }}</h2>
-{% for block in section.blocks %}
-  {% if block.settings.selected_blog_post %}
+  <div class="blog-post-flex">
+    <div class="main-blog-post">
+      {% assign mainArticle = section.settings.selected_main_blog_post %}
+      <a href="{{ mainArticle.url }}">
+        <div class="blog-posts">
+          <img src="{{ mainArticle.image | img_url: 'master' }}" alt="loading image" width="200px" height="200px">
+          <h1 class="main-blog-title">{{ mainArticle.title }}</h1>
+          <p class="main-blog-date">{{ mainArticle.published_at }}</p>
+        </div>
+      </a>
+    </div>
+    <div class="latest-blog-posts">
+      <h2 class="latest-title">{{ section.settings['min-title'] }}</h2>
+      {% for block in section.blocks %}
+        {% if block.settings.selected_blog_post %}
+          {% assign selectedArticle = block.settings.selected_blog_post %}
+          <a href="{{ selectedArticle.url }}">
+            <div class="blog-post-1">
+              <div class="blog-post-image">
+                <img
+                  src="{{ selectedArticle.image | img_url:'master'}}"
+                  alt="loading-image"
+                  width="200px"
+                  height="200px"
+                >
+              </div>
+              <div class="blog-post-detail">
+                <h5 class="post-title">{{ selectedArticle.title }}</h5>
+                {% if block.settings['published-date'] %}
+                  <p class="post-date">{{ selectedArticle.published_at }}</p>
+                {% endif %}
+              </div>
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<h1 class="heading">Blogs</h1>
+<div class="custom-blogs">
+  {% for block in section.blocks %}
     {% assign selectedArticle = block.settings.selected_blog_post %}
+
     <a href="{{ selectedArticle.url }}">
-      <div class="blog-post-1">
-        <div class="blog-post-image">
-          <img src="{{ selectedArticle.image | img_url:'master'}}" alt="loading-image" width="200px" height="200px">
+      <div class="custom-blog">
+        <div class="ab">
+          <h2>{{ selectedArticle.title }}</h2>
+          <p>{{ block.settings.content }}</p>
         </div>
-        <div class="blog-post-detail">
-          <h5 class="post-title">{{ selectedArticle.title }}</h5>
-          {% if block.settings['published-date'] %}
-            <p class="post-date">{{ selectedArticle.published_at }}</p>
-          {% endif %}
-        </div>
+        <img
+          src="{{ selectedArticle.image | img_url: 'medium' }}"
+          alt="{{ selectedArticle.title }}"
+          width="200px"
+          height="200px"
+        >
       </div>
     </a>
-  {% endif %}
-{% endfor %}
+  {% endfor %}
 </div>
-</div>
-</section>
 {% schema %}
 {
-"name": "Custom Blog-post",
-"settings": [
-{
-"type": "text",
-"id": "main-blog-title",
-"label": "Main Title",
-"default": "From the blog"
-},
-{
-"type": "url",
-"id": "blog_link",
-"label": "Blog page link"
-},
-{
-"type": "text",
-"id": "min-title",
-"label": "Posts Title"
-},
-{
-"type": "article",
-"id": "selected_main_blog_post",
-"label": "Select a Blog Post"
-}
-],
-"blocks":[
-{
-"type": "text",
-"name": "Select Blog",
-"settings":[
-   {
-"type": "article",
-"id": "selected_blog_post",
-"label": "Select a Blog Post"
-},
-  {
-    "type":"checkbox",
-    "id":"published-date",
-    "label": "Add Date",
-    "default": true
-  }
-]
-}
-],
-"presets":[
-{
-"name": "Custom Blog-post d10"
-}
-]
+  "name": "Custom Blog-post",
+  "settings": [
+    {
+      "type": "text",
+      "id": "main-blog-title",
+      "label": "Main Title",
+      "default": "From the blog"
+    },
+    {
+      "type": "url",
+      "id": "blog_link",
+      "label": "Blog page link"
+    },
+    {
+      "type": "text",
+      "id": "min-title",
+      "label": "Posts Title"
+    },
+    {
+      "type": "article",
+      "id": "selected_main_blog_post",
+      "label": "Select a Blog Post"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Select Blog",
+      "settings": [
+        {
+          "type": "article",
+          "id": "selected_blog_post",
+          "label": "Select a Blog Post"
+        },
+        {
+          "type": "checkbox",
+          "id": "published-date",
+          "label": "Add Date",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Blog-post d10"
+    }
+  ]
 }
 {% endschema %}
