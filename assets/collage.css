@@ -200,3 +200,9 @@
   outline: none;
   box-shadow: none;
 }
+
+@media (min-width: 1200px) {
+      .a{
+        
+      }
+}

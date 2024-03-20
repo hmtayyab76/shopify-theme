@@ -1,0 +1,230 @@
+{% schema %}
+{
+  "name": "Custom Renewal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "block_title_1",
+      "label": "Block 1 Title",
+      "default": "Title 1"
+    },
+    {
+      "type": "textarea",
+      "id": "block_paragraph_1",
+      "label": "Block 1 Paragraph",
+      "default": "Paragraph 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Select Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "block_title_1",
+          "label": "Block 1 Title",
+          "default": "Title 1"
+        },
+        {
+          "type": "textarea",
+          "id": "block_paragraph_1",
+          "label": "Block 1 Paragraph",
+          "default": "Paragraph 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Renewal"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .container-1 {
+    padding: 0px 40px;
+  }
+  .container {
+    width: 70%;
+  }
+  .container-1 h1 {
+    margin: 20px 0px;
+    color: #3d8f61;
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .container-1 h2 {
+    margin: 0px 0px 20px 0px;
+    color: #023811;
+    font-weight: 800;
+    font-size: 48px;
+  }
+  .block {
+    display: flex;
+    margin-bottom: 20px;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #f4efe9;
+  }
+
+  .block img {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .block .content {
+    padding: 0px 20px 0px 0px;
+  }
+
+  .block h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #023811;
+  }
+
+  .block p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #023811;
+    font-weight: 600;
+    margin: 0px;
+  }
+
+  .full-height {
+    height: 100%; /* Adjust as needed */
+    background-color: #f5f5f5; /* Change to desired background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .full-height h2 {
+    font-size: 36px;
+    color: #333;
+  }
+  .section {
+    display: flex;
+    width: 100%;
+  }
+  .side-image-class {
+    width: 30%;
+    padding: 30px 10px;
+  }
+  .side-image-class img {
+    border-radius: 20px;
+  }
+  @media (max-width: 576px) {
+    .container-1 h1 {
+      font-size: 14px;
+    }
+    .container-1 h2 {
+      font-size: 30px;
+    }
+
+    .content {
+      text-align: center;
+    }
+    .content p {
+      font-size: 14px;
+    }
+    .content h2 {
+      font-size: 20px;
+    }
+    .section {
+      display: block;
+      width: 100%;
+    }
+    .container {
+      width: 100%;
+    }
+    .container-1 {
+      padding: 0px 20px;
+    }
+    .block {
+      display: flex;
+      flex-direction: column;
+    }
+    .block img {
+      margin-bottom: 10px;
+    }
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (max-width: 768px) {
+    .section {
+      flex-direction: column;
+      flex-flow: column-reverse;
+      width: 100%;
+    }
+    .container {
+      width: 100%;
+    }
+    .side-image-class {
+      width: 100%;
+      padding: 30px 10px;
+    }
+    .side-image-class img {
+      border-radius: 20px;
+    }
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .section {
+      display: flex;
+      width: 100%;
+    }
+    .container {
+      width: 70%;
+    }
+  }
+</style>
+
+<div class="container-1">
+  <h1>EMBRACE RENEWAL WITH EVERY SIP</h1>
+  <h2>What Makes Daily Daisy Unique?</h2>
+
+  <div class="section">
+    <div class="container">
+      {% for block in section.blocks %}
+        <div class="block">
+          <img
+            src="{{ block.settings.image | img_url: 'large' }}"
+            alt="{{ block.settings.block_title_1 }}"
+            width="100%"
+            height="100%"
+          >
+          <div class="content">
+            {% if block.settings.block_title_1 %}
+              <h2>{{ block.settings.block_title_1 }}</h2>
+            {% endif %}
+            {% if block.settings.block_paragraph_1 %}
+              <p>{{ block.settings.block_paragraph_1 }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="side-image-class">
+      {% comment %} <img src="{{ 'images.jpeg' | asset_img_url: 'large' }}" alt="Description of the image" width="100%" height="100%"> {% endcomment %}
+    </div>
+  </div>
+</div>
