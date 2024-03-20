@@ -1,0 +1,117 @@
+<style>
+  /* Container for the feature product */
+  .feature-product-container {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  /* Styling for the product image */
+  .product-image {
+    flex: 1;
+    margin-right: 20px;
+  }
+
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Styling for the product details */
+  .product-details {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Styling for the product title */
+  .product-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  /* Styling for the product price */
+  .product-price {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+  }
+
+  /* Styling for the quantity selector */
+  .quantity-selector {
+    margin-bottom: 10px;
+  }
+
+  .quantity-selector label {
+    font-size: 1em;
+    margin-bottom: 5px;
+  }
+
+  .quantity-selector input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    font-size: 1em;
+  }
+
+  /* Styling for the "Add to Cart" button */
+  .add-to-cart-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .add-to-cart-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<div class="feature-product-container">
+  <div class="product-image">
+    <img src="{{ product.image | img_url: 'large' }}" alt="{{ product.title }}" width="100%" height="100%">
+  </div>
+  <div class="product-details">
+    <h2 class="product-title">{{ product.title }}</h2>
+    <p class="product-price">{{ product.price | money }}</p>
+    <div class="quantity-selector">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" value="1" min="1">
+    </div>
+    <button class="add-to-cart-button" onclick="addToCart('{{ product.id }}')">Add to Cart</button>
+  </div>
+</div>
+
+{% schema %}
+{
+    "name": "Custom Featured Product Cart",
+    "settings": [
+       
+    ],
+    "blocks": [
+        {
+          "type": "text",
+          "name": "Select Product",
+          "settings": [
+            {
+              "type": "product",
+              "id": "selected_featured_product",
+              "label": "Select a Featured Product"
+            },
+            {
+              "type": "checkbox",
+              "id": "published-date",
+              "label": "Add Date",
+              "default": true
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Custom Featured Product Cart"
+        }
+      ]
+}
+{% endschema %}
