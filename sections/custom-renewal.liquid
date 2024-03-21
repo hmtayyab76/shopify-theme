@@ -56,36 +56,57 @@
 <style>
   .container-1 {
     padding: 0px 40px;
+    max-width: 1440px;
+    margin: 20px auto;
   }
   .container {
     width: 70%;
   }
   .container-1 h1 {
-    margin: 20px 0px;
     color: #3d8f61;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
     font-weight: 700;
-    font-size: 16px;
+    line-height: 140%; /* 25.2px */
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
   }
   .container-1 h2 {
-    margin: 0px 0px 20px 0px;
     color: #023811;
+
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 50px;
+    font-style: normal;
     font-weight: 800;
-    font-size: 48px;
+    line-height: 120%;
+    margin: 47px 0px;
   }
   .block {
     display: flex;
-    margin-bottom: 20px;
-    padding: 10px;
+    padding: 30px 0px;
     align-items: center;
-    border-bottom: 1px solid #f4efe9;
+    gap: 30px;
+    align-self: stretch;
+    border-bottom: 1px solid rgba(216, 201, 179, 0.3);
   }
 
-  .block img {
-    width: 150px;
-    height: 150px;
-    margin-right: 20px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  .img-box {
+    display: flex;
+    width: 130px;
+    height: 130px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 80px;
+    background: #f9f3eb;
   }
 
   .block .content {
@@ -93,18 +114,29 @@
   }
 
   .block h2 {
-    font-size: 24px;
-    margin-bottom: 5px;
-    font-weight: 700;
     color: #023811;
+    margin: 0px;
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
   }
 
   .block p {
-    font-size: 18px;
-    line-height: 1.5;
     color: #023811;
-    font-weight: 600;
     margin: 0px;
+    leading-trim: both;
+
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
   }
 
   .full-height {
@@ -123,15 +155,23 @@
   .section {
     display: flex;
     width: 100%;
+    align-items: center;
+    align-content: center;
+    gap: 47px 61px;
   }
   .side-image-class {
     width: 30%;
     padding: 30px 10px;
+    margin: 0px auto;
   }
   .side-image-class img {
     border-radius: 20px;
+    margin: 0px auto;
   }
   @media (max-width: 576px) {
+    .side-image-class img {
+      height: 440px;
+    }
     .container-1 h1 {
       font-size: 14px;
     }
@@ -174,14 +214,16 @@
       flex-flow: column-reverse;
       width: 100%;
     }
-    .container {
+    '' .container {
       width: 100%;
     }
     .side-image-class {
       width: 100%;
       padding: 30px 10px;
     }
+
     .side-image-class img {
+      height: 440px;
       border-radius: 20px;
     }
   }
@@ -195,23 +237,31 @@
     .container {
       width: 70%;
     }
+    .container-1 {
+      padding: 100px 150px;
+    }
+    .side-image-class img {
+      width: 336px;
+    }
   }
 </style>
 
 <div class="container-1">
-  <h1>EMBRACE RENEWAL WITH EVERY SIP</h1>
-  <h2>What Makes Daily Daisy Unique?</h2>
+  <h1>Embrace Renewal with Every Sip</h1>
+  <h2>What Makes Daily Daisy™ Unique?</h2>
 
   <div class="section">
     <div class="container">
       {% for block in section.blocks %}
         <div class="block">
-          <img
-            src="{{ block.settings.image | img_url: 'large' }}"
-            alt="{{ block.settings.block_title_1 }}"
-            width="100%"
-            height="100%"
-          >
+          <div class="img-box">
+            <img
+              src="{{ block.settings.image | img_url: 'large' }}"
+              alt="{{ block.settings.block_title_1 }}"
+              width="82px"
+              height="70px"
+            >
+          </div>
           <div class="content">
             {% if block.settings.block_title_1 %}
               <h2>{{ block.settings.block_title_1 }}</h2>
@@ -224,7 +274,12 @@
       {% endfor %}
     </div>
     <div class="side-image-class">
-      {% comment %} <img src="{{ 'images.jpeg' | asset_img_url: 'large' }}" alt="Description of the image" width="100%" height="100%"> {% endcomment %}
+      <img
+        src="{{ 'Rectangle.png' | asset_img_url: 'large' }}"
+        alt="Description of the image"
+        width="100%"
+        height="100%"
+      >
     </div>
   </div>
 </div>
