@@ -56,7 +56,7 @@
 <style>
   .container-1 {
     padding: 0px 40px;
-    max-width: 1440px;
+    max-width: 1138px;
     margin: 20px auto;
   }
   .container {
@@ -68,7 +68,7 @@
     leading-trim: both;
 
     text-edge: cap;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
@@ -82,7 +82,7 @@
     leading-trim: both;
 
     text-edge: cap;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 50px;
     font-style: normal;
     font-weight: 800;
@@ -117,9 +117,8 @@
     color: #023811;
     margin: 0px;
     leading-trim: both;
-
     text-edge: cap;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 27px;
     font-style: normal;
     font-weight: 700;
@@ -132,7 +131,7 @@
     leading-trim: both;
 
     text-edge: cap;
-    font-family: Inter;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -155,21 +154,29 @@
   .section {
     display: flex;
     width: 100%;
-    align-items: center;
     align-content: center;
-    gap: 47px 61px;
   }
   .side-image-class {
     width: 30%;
     padding: 30px 10px;
     margin: 0px auto;
+    overflow: hidden;
+    /* height:770px; */
   }
   .side-image-class img {
     border-radius: 20px;
     margin: 0px auto;
+    width: 100%; /* Set the width to 100% to make the image responsive */
+    height: 100%;
   }
+
   @media (max-width: 576px) {
     .side-image-class img {
+      height: 440px;
+      padding-bottom: 30px;
+    }
+    .side-image-class {
+      width: 100%;
       height: 440px;
     }
     .container-1 h1 {
@@ -177,16 +184,18 @@
     }
     .container-1 h2 {
       font-size: 30px;
+      margin: 20px 0px;
+      text-align: center;
     }
 
     .content {
       text-align: center;
     }
     .content p {
-      font-size: 14px;
+      font-size: 21px;
     }
     .content h2 {
-      font-size: 20px;
+      font-size: 28px;
     }
     .section {
       display: block;
@@ -201,6 +210,7 @@
     .block {
       display: flex;
       flex-direction: column;
+      gap: 0;
     }
     .block img {
       margin-bottom: 10px;
@@ -208,47 +218,58 @@
   }
 
   /* Medium devices (tablets, 768px and up) */
-  @media (max-width: 768px) {
+  @media (max-width: 960px) {
     .section {
       flex-direction: column;
       flex-flow: column-reverse;
       width: 100%;
     }
-    '' .container {
+    .container-1 .h-11,
+    .h-12 {
+      margin: 0px;
+      text-align: center;
+    }
+    .container {
       width: 100%;
     }
     .side-image-class {
       width: 100%;
       padding: 30px 10px;
+      margin: auto;
     }
 
     .side-image-class img {
+      display: flex;
       height: 440px;
-      border-radius: 20px;
+      width: 400px;
+      margin: auto;
     }
   }
 
   /* Large devices (desktops, 992px and up) */
-  @media (min-width: 992px) {
+  @media (min-width: 1100px) {
     .section {
       display: flex;
       width: 100%;
+      gap: 47px 61px;
+    }
+    .container-1 {
+      padding: 150px 0px;
     }
     .container {
       width: 70%;
     }
-    .container-1 {
-      padding: 100px 150px;
-    }
+
     .side-image-class img {
-      width: 336px;
+      max-width: 336px;
+      height: 770px;
     }
   }
 </style>
 
 <div class="container-1">
-  <h1>Embrace Renewal with Every Sip</h1>
-  <h2>What Makes Daily Daisy™ Unique?</h2>
+  <h1 class="h-11">Embrace Renewal with Every Sip</h1>
+  <h2 class="h-12">What Makes Daily Daisy™ Unique?</h2>
 
   <div class="section">
     <div class="container">
@@ -275,7 +296,7 @@
     </div>
     <div class="side-image-class">
       <img
-        src="{{ 'Rectangle.png' | asset_img_url: 'large' }}"
+        src="https://cdn.shopify.com/s/files/1/0686/7360/1787/files/Rectangle_5.png?v=1711038594"
         alt="Description of the image"
         width="100%"
         height="100%"
