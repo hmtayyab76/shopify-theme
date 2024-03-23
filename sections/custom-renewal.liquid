@@ -4,20 +4,25 @@
   "settings": [
     {
       "type": "text",
-      "id": "block_title_1",
-      "label": "Block 1 Title",
-      "default": "Title 1"
+      "id": "block_title_0",
+      "label": "Title 1",
+      "default": "Embrace Renewal with Every Sip"
     },
     {
-      "type": "textarea",
-      "id": "block_paragraph_1",
-      "label": "Block 1 Paragraph",
-      "default": "Paragraph 1"
+      "type": "text",
+      "id": "block_title_main_0",
+      "label": "Title 2",
+      "default": "What Makes Daily Daisy™ Unique?"
     },
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Image"
+      "id": "side_image",
+      "label": "Side Image Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "side_image_mobile",
+      "label": "Side Image Mobile"
     }
   ],
   "blocks": [
@@ -28,14 +33,14 @@
         {
           "type": "text",
           "id": "block_title_1",
-          "label": "Block 1 Title",
-          "default": "Title 1"
+          "label": "Title",
+          "default": "Title"
         },
         {
           "type": "textarea",
           "id": "block_paragraph_1",
-          "label": "Block 1 Paragraph",
-          "default": "Paragraph 1"
+          "label": "Paragraph",
+          "default": "Paragraph"
         },
         {
           "type": "image_picker",
@@ -55,7 +60,7 @@
 
 <style>
   .container-1 {
-    padding: 0px 40px;
+    padding: 50px 20px;
     max-width: 1138px;
     margin: 20px auto;
   }
@@ -108,11 +113,6 @@
     border-radius: 80px;
     background: #f9f3eb;
   }
-
-  .block .content {
-    padding: 0px 20px 0px 0px;
-  }
-
   .block h2 {
     color: #023811;
     margin: 0px;
@@ -157,11 +157,11 @@
     align-content: center;
   }
   .side-image-class {
+    display:none;
     width: 30%;
     padding: 30px 10px;
     margin: 0px auto;
     overflow: hidden;
-    /* height:770px; */
   }
   .side-image-class img {
     border-radius: 20px;
@@ -169,16 +169,9 @@
     width: 100%; /* Set the width to 100% to make the image responsive */
     height: 100%;
   }
-
+  
   @media (max-width: 576px) {
-    .side-image-class img {
-      height: 440px;
-      padding-bottom: 30px;
-    }
-    .side-image-class {
-      width: 100%;
-      height: 440px;
-    }
+    
     .container-1 h1 {
       font-size: 14px;
     }
@@ -215,10 +208,32 @@
     .block img {
       margin-bottom: 10px;
     }
+    
   }
-
-  /* Medium devices (tablets, 768px and up) */
+@media (min-width: 960px) {
+  .side-image-class-0{
+      display:none;
+    }
+  .side-image-class {
+      display: flex;
+     
+    }
+    .side-image-class img {
+      display: flex;
+      margin: 0px auto;
+    }
+}
   @media (max-width: 960px) {
+    .side-image-class-0 img {
+       height: 440px;
+       margin:auto;
+       max-width: 410px;
+       padding-bottom: 30px;
+    }
+    .side-image-class-0 {
+      display:flex;
+      width: 100%;
+    }
     .section {
       flex-direction: column;
       flex-flow: column-reverse;
@@ -232,22 +247,14 @@
     .container {
       width: 100%;
     }
-    .side-image-class {
-      width: 100%;
-      padding: 30px 10px;
-      margin: auto;
-    }
-
-    .side-image-class img {
-      display: flex;
-      height: 440px;
-      width: 400px;
-      margin: auto;
-    }
+    
   }
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 1100px) {
+    .side-image-class-0{
+      display:none;
+    }
     .section {
       display: flex;
       width: 100%;
@@ -268,8 +275,16 @@
 </style>
 
 <div class="container-1">
-  <h1 class="h-11">Embrace Renewal with Every Sip</h1>
-  <h2 class="h-12">What Makes Daily Daisy™ Unique?</h2>
+   <div class="side-image-class-0">
+      <img
+        src="{{ section.settings.side_image_mobile | img_url: 'large'  }}"
+        alt="Description of the image"
+        width="100%"
+        height="100%"
+      >
+    </div>
+  <h1 class="h-11">{{ section.settings.block_title_0 }}</h1>
+  <h2 class="h-12">{{ section.settings.block_title_main_0 }}</h2>
 
   <div class="section">
     <div class="container">
@@ -296,7 +311,7 @@
     </div>
     <div class="side-image-class">
       <img
-        src="https://cdn.shopify.com/s/files/1/0686/7360/1787/files/Rectangle_5.png?v=1711038594"
+        src="{{ section.settings.side_image | img_url: 'large'  }}"
         alt="Description of the image"
         width="100%"
         height="100%"
