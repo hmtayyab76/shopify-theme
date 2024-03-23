@@ -67,20 +67,6 @@
         "padding_bottom": 36
       }
     },
-    "faq_bRqLPP": {
-      "type": "faq",
-      "settings": {
-      }
-    },
-    "custom_liquid_YxqCwm": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "{{product.metafields.custom.name.services.name.value}}",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
     "custom_featured_product_FDKEYP": {
       "type": "custom-featured-product",
       "blocks": {
@@ -101,13 +87,21 @@
         "min-title": "",
         "selected_main_featured_product": ""
       }
+    },
+    "custom_renewal_UHnRLh": {
+      "type": "custom-renewal",
+      "settings": {
+        "block_title_0": "Embrace Renewal with Every Sip",
+        "block_title_main_0": "What Makes Daily Daisy™ Unique?",
+        "side_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
+        "side_image_mobile": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
+      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "faq_bRqLPP",
-    "custom_liquid_YxqCwm",
-    "custom_featured_product_FDKEYP"
+    "custom_featured_product_FDKEYP",
+    "custom_renewal_UHnRLh"
   ]
 }
