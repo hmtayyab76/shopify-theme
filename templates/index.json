@@ -90,6 +90,18 @@
     },
     "custom_renewal_UHnRLh": {
       "type": "custom-renewal",
+      "blocks": {
+        "text_aakaPd": {
+          "type": "text",
+          "settings": {
+            "block_title_1": "Title",
+            "block_paragraph_1": "Paragraph"
+          }
+        }
+      },
+      "block_order": [
+        "text_aakaPd"
+      ],
       "settings": {
         "block_title_0": "Embrace Renewal with Every Sip",
         "block_title_main_0": "What Makes Daily Daisy™ Unique?",
