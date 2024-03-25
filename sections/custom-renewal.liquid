@@ -59,51 +59,47 @@
 {% endschema %}
 
 <style>
-  .container-1 {
+  .dev-11-container-1 {
     padding: 50px 20px;
     max-width: 1138px;
     margin: 20px auto;
   }
-  .container {
+  .dev-11-container {
     width: 70%;
   }
-  .container-1 h1 {
+  .dev-11-container-1 .dev-11-h-11 {
     color: #3d8f61;
-
     leading-trim: both;
-
     text-edge: cap;
     font-family: 'Inter', sans-serif;
-    font-size: 18px;
+
     font-style: normal;
     font-weight: 700;
     line-height: 140%; /* 25.2px */
     letter-spacing: 1.8px;
     text-transform: uppercase;
   }
-  .container-1 h2 {
+  .dev-11-container-1 .dev-11-h-12 {
     color: #023811;
 
     leading-trim: both;
 
     text-edge: cap;
     font-family: 'Inter', sans-serif;
-    font-size: 50px;
+
     font-style: normal;
     font-weight: 800;
     line-height: 120%;
-    margin: 47px 0px;
   }
-  .block {
+  .dev-11-block {
     display: flex;
-    padding: 30px 0px;
     align-items: center;
-    gap: 30px;
+
+    padding: 30px 0px;
     align-self: stretch;
-    border-bottom: 1px solid rgba(216, 201, 179, 0.3);
   }
 
-  .img-box {
+  .dev-11-img-box {
     display: flex;
     width: 130px;
     height: 130px;
@@ -113,7 +109,7 @@
     border-radius: 80px;
     background: #f9f3eb;
   }
-  .block h2 {
+  .dev-11-block h2 {
     color: #023811;
     margin: 0px;
     leading-trim: both;
@@ -125,7 +121,7 @@
     line-height: 140%;
   }
 
-  .block p {
+  .dev-11-block p {
     color: #023811;
     margin: 0px;
     leading-trim: both;
@@ -138,7 +134,7 @@
     line-height: 140%;
   }
 
-  .full-height {
+  .dev-11-full-height {
     height: 100%; /* Adjust as needed */
     background-color: #f5f5f5; /* Change to desired background color */
     display: flex;
@@ -147,150 +143,170 @@
     text-align: center;
   }
 
-  .full-height h2 {
+  .dev-11-full-height h2 {
     font-size: 36px;
     color: #333;
   }
-  .section {
+  .dev-11-section {
     display: flex;
     width: 100%;
     align-content: center;
   }
-  .side-image-class {
-    display:none;
+  .dev-11-side-image-class {
+    display: none;
     width: 30%;
     padding: 30px 10px;
     margin: 0px auto;
     overflow: hidden;
   }
-  .side-image-class img {
+  .dev-11-side-image-class img {
     border-radius: 20px;
     margin: 0px auto;
     width: 100%; /* Set the width to 100% to make the image responsive */
     height: 100%;
   }
-  
+
   @media (max-width: 576px) {
-    
-    .container-1 h1 {
+    .dev-11-container-1 h1 {
       font-size: 14px;
     }
-    .container-1 h2 {
+    .dev-11-container-1 h2 {
       font-size: 30px;
       margin: 20px 0px;
       text-align: center;
     }
 
-    .content {
+    .dev-11-content {
       text-align: center;
     }
-    .content p {
+    .dev-11-content p {
       font-size: 21px;
     }
-    .content h2 {
+    .dev-11-content h2 {
       font-size: 28px;
     }
-    .section {
+    .dev-11-section {
       display: block;
       width: 100%;
     }
-    .container {
+    .dev-11-container {
       width: 100%;
     }
-    .container-1 {
+    .dev-11-container-1 {
       padding: 0px 20px;
     }
-    .block {
+    .dev-11-block {
       display: flex;
       flex-direction: column;
       gap: 0;
     }
-    .block img {
+    .dev-11-block img {
       margin-bottom: 10px;
     }
-    
   }
-@media (min-width: 960px) {
-  .side-image-class-0{
-      display:none;
+
+  @media (min-width: 960px) {
+    .dev-11-side-image-class-0 {
+      display: none;
     }
-  .side-image-class {
+    .dev-11-side-image-class {
       display: flex;
-     
     }
-    .side-image-class img {
+    .dev-11-block {
+      gap: 20px;
+      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
+    }
+    .dev-11-side-image-class img {
       display: flex;
       margin: 0px auto;
     }
-}
+  }
   @media (max-width: 960px) {
-    .side-image-class-0 img {
-       height: 440px;
-       margin:auto;
-       max-width: 410px;
-       padding-bottom: 30px;
+    .dev-11-block {
+      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
+      gap: 20px;
     }
-    .side-image-class-0 {
-      display:flex;
+    .dev-11-side-image-class-0 img {
+      height: 440px;
+      margin: auto;
+      max-width: 410px;
+      padding-bottom: 30px;
+    }
+    .dev-11-side-image-class-0 {
+      display: flex;
       width: 100%;
     }
-    .section {
+    .dev-11-section {
       flex-direction: column;
       flex-flow: column-reverse;
       width: 100%;
     }
-    .container-1 .h-11,
-    .h-12 {
-      margin: 0px;
+    .dev-11-dev-11-container-1 .dev-11-h-11,
+    .dev-11-h-11 {
+      text-align: center;
+      font-size: 16px;
+    }
+    .dev-11-h-12 {
+      margin: 15px 0px 35px 0px;
+      font-size: 35px;
       text-align: center;
     }
-    .container {
+    .dev-11-container {
       width: 100%;
     }
-    
   }
 
   /* Large devices (desktops, 992px and up) */
   @media (min-width: 1100px) {
-    .side-image-class-0{
-      display:none;
+    .dev-11-block {
+      gap: 30px;
+      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
     }
-    .section {
+    .dev-11-h-12 {
+      margin: 47px 0px;
+      font-size: 50px;
+    }
+    .dev-11-h-11 {
+      font-size: 16px;
+    }
+    .dev-11-side-image-class-0 {
+      display: none;
+    }
+    .dev-11-section {
       display: flex;
       width: 100%;
       gap: 47px 61px;
     }
-    .container-1 {
+    .dev-11-container-1 {
       padding: 150px 0px;
     }
-    .container {
+    .dev-11-container {
       width: 70%;
     }
-
-    .side-image-class img {
+    .dev-11-side-image-class img {
       max-width: 336px;
       height: 770px;
     }
   }
 </style>
 
-<div class="container-1">
-   <div class="side-image-class-0">
-      <img
-        src="{{ section.settings.side_image_mobile | img_url: 'large'  }}"
-        alt="Description of the image"
-        width="100%"
-        height="100%"
-      >
-    </div>
-  <h1 class="h-11">{{ section.settings.block_title_0 }}</h1>
-  <h2 class="h-12">{{ section.settings.block_title_main_0 }}</h2>
+<div class="dev-11-container-1">
+  <div class="dev-11-side-image-class-0">
+    <img
+      src="{{ section.settings.side_image_mobile | img_url: 'large'  }}"
+      alt="Description of the image"
+      width="100%"
+      height="100%"
+    >
+  </div>
+  <h1 class="dev-11-h-11">{{ section.settings.block_title_0 }}</h1>
+  <h2 class="dev-11-h-12">{{ section.settings.block_title_main_0 }}</h2>
 
-  <div class="section">
-    <div class="container">
+  <div class="dev-11-section">
+    <div class="dev-11-container">
       {% for block in section.blocks %}
-        <div class="block">
-          <div class="img-box">
+        <div class="dev-11-block">
+          <div class="dev-11-img-box">
             <img
               src="{{ block.settings.image | img_url: 'large' }}"
               alt="{{ block.settings.block_title_1 }}"
@@ -298,7 +314,7 @@
               height="70px"
             >
           </div>
-          <div class="content">
+          <div class="dev-11-content">
             {% if block.settings.block_title_1 %}
               <h2>{{ block.settings.block_title_1 }}</h2>
             {% endif %}
@@ -309,7 +325,7 @@
         </div>
       {% endfor %}
     </div>
-    <div class="side-image-class">
+    <div class="dev-11-side-image-class">
       <img
         src="{{ section.settings.side_image | img_url: 'large'  }}"
         alt="Description of the image"
