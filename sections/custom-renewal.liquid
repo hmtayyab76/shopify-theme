@@ -59,241 +59,285 @@
 {% endschema %}
 
 <style>
-  .dev-11-container-1 {
-    padding: 50px 20px;
-    max-width: 1138px;
-    margin: 20px auto;
-  }
-  .dev-11-container {
-    width: 70%;
-  }
-  .dev-11-container-1 .dev-11-h-11 {
-    color: #3d8f61;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: 'Inter', sans-serif;
-
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%; /* 25.2px */
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-  }
-  .dev-11-container-1 .dev-11-h-12 {
-    color: #023811;
-
-    leading-trim: both;
-
-    text-edge: cap;
-    font-family: 'Inter', sans-serif;
-
-    font-style: normal;
-    font-weight: 800;
-    line-height: 120%;
-  }
-  .dev-11-block {
-    display: flex;
-    align-items: center;
-
-    padding: 30px 0px;
-    align-self: stretch;
-  }
-
-  .dev-11-img-box {
-    display: flex;
-    width: 130px;
-    height: 130px;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 80px;
-    background: #f9f3eb;
-  }
-  .dev-11-block h2 {
-    color: #023811;
-    margin: 0px;
-    leading-trim: both;
-    text-edge: cap;
-    font-family: 'Inter', sans-serif;
-    font-size: 27px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 140%;
-  }
-
-  .dev-11-block p {
-    color: #023811;
-    margin: 0px;
-    leading-trim: both;
-
-    text-edge: cap;
-    font-family: 'Inter', sans-serif;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-  }
-
-  .dev-11-full-height {
-    height: 100%; /* Adjust as needed */
-    background-color: #f5f5f5; /* Change to desired background color */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .dev-11-full-height h2 {
-    font-size: 36px;
-    color: #333;
-  }
-  .dev-11-section {
-    display: flex;
-    width: 100%;
-    align-content: center;
-  }
-  .dev-11-side-image-class {
-    display: none;
-    width: 30%;
-    padding: 30px 10px;
-    margin: 0px auto;
-    overflow: hidden;
-  }
-  .dev-11-side-image-class img {
-    border-radius: 20px;
-    margin: 0px auto;
-    width: 100%; /* Set the width to 100% to make the image responsive */
-    height: 100%;
-  }
-
-  @media (max-width: 576px) {
-    .dev-11-container-1 h1 {
-      font-size: 14px;
-    }
-    .dev-11-container-1 h2 {
-      font-size: 30px;
-      margin: 20px 0px;
-      text-align: center;
-    }
-
-    .dev-11-content {
-      text-align: center;
-    }
-    .dev-11-content p {
-      font-size: 21px;
-    }
-    .dev-11-content h2 {
-      font-size: 28px;
-    }
-    .dev-11-section {
-      display: block;
-      width: 100%;
-    }
-    .dev-11-container {
-      width: 100%;
-    }
     .dev-11-container-1 {
-      padding: 0px 20px;
-    }
-    .dev-11-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-    .dev-11-block img {
-      margin-bottom: 10px;
-    }
-  }
-
-  @media (min-width: 960px) {
-    .dev-11-side-image-class-0 {
-      display: none;
-    }
-    .dev-11-side-image-class {
-      display: flex;
-    }
-    .dev-11-block {
-      gap: 20px;
-      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
-    }
-    .dev-11-side-image-class img {
-      display: flex;
+      padding: 50px 20px;
+      max-width: 1138px;
       margin: 0px auto;
-    }
-  }
-  @media (max-width: 960px) {
-    .dev-11-block {
-      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
-      gap: 20px;
-    }
-    .dev-11-side-image-class-0 img {
-      height: 440px;
-      margin: auto;
-      max-width: 410px;
-      padding-bottom: 30px;
-    }
-    .dev-11-side-image-class-0 {
-      display: flex;
-      width: 100%;
-    }
-    .dev-11-section {
-      flex-direction: column;
-      flex-flow: column-reverse;
-      width: 100%;
-    }
-    .dev-11-dev-11-container-1 .dev-11-h-11,
-    .dev-11-h-11 {
-      text-align: center;
-      font-size: 16px;
-    }
-    .dev-11-h-12 {
-      margin: 15px 0px 35px 0px;
-      font-size: 35px;
-      text-align: center;
-    }
-    .dev-11-container {
-      width: 100%;
-    }
-  }
-
-  /* Large devices (desktops, 992px and up) */
-  @media (min-width: 1100px) {
-    .dev-11-block {
-      gap: 30px;
-      border-bottom: 1px solid rgba(216, 201, 179, 0.3);
-    }
-    .dev-11-h-12 {
-      margin: 47px 0px;
-      font-size: 50px;
-    }
-    .dev-11-h-11 {
-      font-size: 16px;
-    }
-    .dev-11-side-image-class-0 {
-      display: none;
-    }
-    .dev-11-section {
-      display: flex;
-      width: 100%;
-      gap: 47px 61px;
-    }
-    .dev-11-container-1 {
-      padding: 150px 0px;
     }
     .dev-11-container {
       width: 70%;
     }
-    .dev-11-side-image-class img {
-      max-width: 336px;
-      height: 770px;
+    .dev-11-container-1 .dev-11-h-11 {
+      color: #3d8f61;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: 'Inter', sans-serif;
+      font-size:18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%; /* 25.2px */
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
     }
+    .dev-11-container-1 .dev-11-h-12 {
+      color: #023811;
+
+      leading-trim: both;
+
+      text-edge: cap;
+      font-family: 'Inter', sans-serif;
+
+      font-style: normal;
+      font-weight: 800;
+      line-height: 120%;
+    }
+    .dev-11-block {
+      display: flex;
+      align-items: center;
+      padding: 30px 0;
+      align-self: stretch;
+    }
+
+    .dev-11-block:first-child {
+      padding-top: 0;
+    }
+
+    .dev-11-block:last-child {
+      padding-bottom: 0;
+      border-bottom:0px;
+    }
+
+
+    .dev-11-block h2 {
+      color: #023811;
+      margin: 0px;
+      leading-trim: both;
+      text-edge: cap;
+      font-family: 'Inter', sans-serif;
+      font-size: 27px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .dev-11-block p {
+      color: #023811;
+      margin: 0px;
+      leading-trim: both;
+
+      text-edge: cap;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 140%;
+    }
+
+    .dev-11-full-height {
+      height: 100%; /* Adjust as needed */
+      background-color: #f5f5f5; /* Change to desired background color */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .dev-11-full-height h2 {
+      font-size: 36px;
+      color: #333;
+    }
+    .dev-11-section {
+      display: flex;
+      width: 100%;
+      align-content: center;
+    }
+    .dev-11-side-image-class {
+      display: none;
+       width: 360px;
+      margin: 0px auto;
+      border-radius: 20px;
+    }
+    .dev-11-side-image-class img {
+      border-radius: 20px;
+      margin: 0px auto;
+      width: 360px; /* Set the width to 100% to make the image responsive */
+       height:770px;
+    }
+
+    @media (min-width: 576px) {
+       .dev-11-block {
+        gap: 20px;
+        border-bottom: 1px solid rgba(216, 201, 179, 0.3);
+      }
+
+      .dev-11-img-box {
+      display: flex;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 80px;
+      background: #f9f3eb;
+    }
+    .dev-11-img-box img{
+      width: 70px;
+      height: 70px;
+    }
+
   }
+    @media (max-width: 576px) {
+      .dev-11-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        flex: 1 0 0;
+      }
+
+      .dev-11-img-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 80px;
+      background: none;
+    }
+      .dev-11-img-box img{
+        object-fit:fill;
+        width: 104px;
+        height: 89px;
+    }
+      .dev-11-container-1 h1 {
+        font-size: 14px;
+      }
+      .dev-11-container-1 h2 {
+        font-size: 30px;
+        margin: 0px 0px;
+        text-align: center;
+      }
+
+      .dev-11-content {
+        text-align: center;
+        align-items: center;
+
+      }
+      .dev-11-content p {
+        font-size: 21px;
+      }
+      .dev-11-content h2 {
+        font-size: 28px;
+      }
+      .dev-11-section {
+        display: block;
+        width: 100%;
+      }
+      .dev-11-container {
+        padding:35px 0px;
+        width: 100%;
+      }
+      .dev-11-container-1 {
+        padding: 0px 20px;
+      }
+      .dev-11-block {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+    }
+
+    @media (min-width: 960px) {
+      .dev-11-side-image-class-0 {
+        display: none;
+      }
+      .dev-11-side-image-class {
+        display: flex;
+      }
+
+      .dev-11-side-image-class img {
+        display: flex;
+        object-fit: cover;
+        margin: 0px auto;
+      }
+    }
+    @media (max-width: 960px) {
+
+      .dev-11-h-11 {
+        font-size: 18px;
+      }
+      .dev-11-side-image-class-0 img {
+        height: 440px;
+        margin: auto;
+        max-width: 410px;
+        padding-bottom: 30px;
+        object-fit: fill;
+      }
+      .dev-11-side-image-class-0 {
+        display: flex;
+        width: 100%;
+      }
+      .dev-11-section {
+        flex-direction: column;
+        flex-flow: column-reverse;
+        width: 100%;
+      }
+      .dev-11-dev-11-container-1 .dev-11-h-11,
+      .dev-11-h-11 {
+        text-align: center;
+        font-size: 16px;
+      }
+      .dev-11-h-12 {
+        margin: 15px 0px 35px 0px;
+        font-size: 35px;
+        text-align: center;
+      }
+      .dev-11-container {
+        width: 100%;
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 1100px) {
+      .dev-11-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        flex: 1 0 0;
+      }
+      .dev-11-block {
+        gap: 30px;
+        border-bottom: 1px solid rgba(216, 201, 179, 0.3);
+      }
+      .dev-11-h-12 {
+        margin: 47px 0px;
+        font-size: 50px;
+      }
+      .dev-11-h-11 {
+        font-size: 18px;
+      }
+      .dev-11-side-image-class-0 {
+        display: none;
+      }
+      .dev-11-section {
+        display: flex;
+        width: 100%;
+        gap: 47px 61px;
+      }
+      .dev-11-container-1 {
+        padding: 100px 0px;
+      }
+      .dev-11-container {
+        width: 70%;
+      }
+      .dev-11-side-image-class img {
+        max-width: 360px;
+        height:770px;
+      }
+    }
 </style>
 
 <div class="dev-11-container-1">
   <div class="dev-11-side-image-class-0">
     <img
-      src="{{ section.settings.side_image_mobile | img_url: 'large'  }}"
+      src="{{ section.settings.side_image_mobile | image_url }}"
       alt="Description of the image"
       width="100%"
       height="100%"
@@ -308,7 +352,7 @@
         <div class="dev-11-block">
           <div class="dev-11-img-box">
             <img
-              src="{{ block.settings.image | img_url: 'large' }}"
+              src="{{ block.settings.image | image_url }}"
               alt="{{ block.settings.block_title_1 }}"
               width="82px"
               height="70px"
@@ -327,7 +371,7 @@
     </div>
     <div class="dev-11-side-image-class">
       <img
-        src="{{ section.settings.side_image | img_url: 'large'  }}"
+        src="{{ section.settings.side_image | image_url  }}"
         alt="Description of the image"
         width="100%"
         height="100%"
