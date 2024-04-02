@@ -17,10 +17,18 @@
             "question": "Tayyab",
             "answer": "<p>Tayyab<\/p>"
           }
+        },
+        "faq_block_MdAHiD": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Tayya",
+            "answer": "<p>Aba<\/p>"
+          }
         }
       },
       "block_order": [
-        "faq_block_JBcWDJ"
+        "faq_block_JBcWDJ",
+        "faq_block_MdAHiD"
       ],
       "settings": {
         "section_title": "Frequently Asked Questions"
