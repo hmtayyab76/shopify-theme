@@ -37,13 +37,21 @@
             "quest-text": "How do I get started with setting up a Shopify store?",
             "ans-text": "Getting started with Shopify is easy! Simply sign up for an account on the Shopify website, choose a plan that fits your needs, and follow the step-by-step setup process. You'll be guided through adding products, customizing your store's design, and configuring payment and shipping options."
           }
+        },
+        "faq_QBkFXU": {
+          "type": "FAQ",
+          "settings": {
+            "quest-text": "Can I use my own domain name with Shopify?",
+            "ans-text": "Yes, Shopify allows you to use your own custom domain name for your store. You can either purchase a domain directly through Shopify or connect an existing domain that you own."
+          }
         }
       },
       "block_order": [
         "faq_QHbcky",
         "faq_zaY9hn",
         "faq_AxXaWL",
-        "faq_wmdCaN"
+        "faq_wmdCaN",
+        "faq_QBkFXU"
       ],
       "settings": {
       }
