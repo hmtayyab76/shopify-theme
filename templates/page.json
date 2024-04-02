@@ -38,13 +38,21 @@
             "question": "Can I return or exchange an item?",
             "answer": "<p>Yes, we have a hassle-free return and exchange policy. If you're not satisfied with your purchase, you can return the item within 30 days for a full refund or exchange. Please refer to our Returns & Exchanges page for more details.<\/p>"
           }
+        },
+        "faq_block_hJL4Qf": {
+          "type": "faq_block",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Shipping times vary depending on your location and the products ordered. Typically, orders are processed within 1-2 business days, and shipping can take between 3-7 business days for domestic orders. International shipping may take longer.<\/p>"
+          }
         }
       },
       "block_order": [
         "faq_block_JBcWDJ",
         "faq_block_MdAHiD",
         "faq_block_n6UYqJ",
-        "faq_block_GbX9dQ"
+        "faq_block_GbX9dQ",
+        "faq_block_hJL4Qf"
       ],
       "settings": {
         "section_title": "Frequently Asked Questions"
