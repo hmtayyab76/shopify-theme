@@ -7,67 +7,9 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
-    },
-    "custom_faq_section_RrMqFj": {
-      "type": "custom-faq-section",
-      "blocks": {
-        "faq_QHbcky": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "Are there any additional fees besides the monthly subscription cost?",
-            "ans-text": "While Shopify's monthly subscription plans cover most of the essential features and functionalities, there may be additional fees for certain add-ons, transaction fees on sales made through third-party payment gateways (if not using Shopify Payments), and shipping fees. It's important to review the pricing details and any additional costs associated with the specific features or services you require for your store."
-          }
-        },
-        "faq_zaY9hn": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "Does Shopify provide customer support for store owners?",
-            "ans-text": "Yes, Shopify offers 24\/7 customer support via live chat, email, and phone. Whether you have questions about setting up your store, managing orders, or troubleshooting technical issues, Shopify's support team is available to assist you at any time"
-          }
-        },
-        "faq_AxXaWL": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "Can I sell products internationally with Shopify?",
-            "ans-text": "Absolutely! Shopify offers built-in support for selling products internationally. You can set up multiple currencies, configure shipping rates for different regions, and even translate your store into multiple languages to cater to a global audience."
-          }
-        },
-        "faq_wmdCaN": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "How do I get started with setting up a Shopify store?",
-            "ans-text": "Getting started with Shopify is easy! Simply sign up for an account on the Shopify website, choose a plan that fits your needs, and follow the step-by-step setup process. You'll be guided through adding products, customizing your store's design, and configuring payment and shipping options."
-          }
-        },
-        "faq_QBkFXU": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "Can I use my own domain name with Shopify?",
-            "ans-text": "Yes, Shopify allows you to use your own custom domain name for your store. You can either purchase a domain directly through Shopify or connect an existing domain that you own."
-          }
-        },
-        "faq_Mnek8t": {
-          "type": "FAQ",
-          "settings": {
-            "quest-text": "What payment methods can I accept on my Shopify store?",
-            "ans-text": "Shopify supports a wide range of payment gateways, including popular options like Shopify Payments, PayPal, Stripe, and more. You can choose the payment methods that best suit your customers' preferences and your business needs."
-          }
-        }
-      },
-      "block_order": [
-        "faq_QHbcky",
-        "faq_zaY9hn",
-        "faq_AxXaWL",
-        "faq_wmdCaN",
-        "faq_QBkFXU",
-        "faq_Mnek8t"
-      ],
-      "settings": {
-      }
     }
   },
   "order": [
-    "main",
-    "custom_faq_section_RrMqFj"
+    "main"
   ]
 }
