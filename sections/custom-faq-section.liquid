@@ -2,7 +2,19 @@
 {
     "name": "FAQs Section",
     "settings": [
-        {
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Frequently Asked Questions"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "faq_block",
+        "name": "FAQ Block",
+        "settings": [
+          {
             "type": "text",
             "id": "question",
             "label": "Question"
@@ -12,8 +24,8 @@
             "id": "answer",
             "label": "Answer"
           }
-
-      
+        ]
+      }
     ],
     "presets": [
       {
@@ -21,6 +33,7 @@
       }
     ]
   }
+  
   
 {% endschema %}
 <style>
@@ -79,12 +92,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <div class="faq-section">
     <h2>{{ section.settings.section_title }}</h2>
     <div class="faq-list">
-      {% for faq in section.settings.faqs %}
+      {% for block in section.blocks %}
         <div class="faq-item">
-          <div class="question">{{ faq.question }}</div>
-          <div class="answer">{{ faq.answer }}</div>
+          <div class="question">{{ block.settings.question }}</div>
+          <div class="answer">{{ block.settings.answer }}</div>
         </div>
       {% endfor %}
     </div>
-  </div>
+</div>
+
   
