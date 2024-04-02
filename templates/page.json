@@ -24,11 +24,19 @@
             "question": "How can I track my order?",
             "answer": "<p>Once your order has been shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status and location of your package. Alternatively, you can log in to your account on our website to track your order in real-time.<\/p>"
           }
+        },
+        "faq_block_n6UYqJ": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Do you offer discounts or promotions?",
+            "answer": "<p>Yes, we occasionally run promotions and offer discounts on select products. Sign up for our newsletter or follow us on social media to stay updated on the latest deals and offers.<\/p>"
+          }
         }
       },
       "block_order": [
         "faq_block_JBcWDJ",
-        "faq_block_MdAHiD"
+        "faq_block_MdAHiD",
+        "faq_block_n6UYqJ"
       ],
       "settings": {
         "section_title": "Frequently Asked Questions"
