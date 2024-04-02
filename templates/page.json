@@ -44,6 +44,13 @@
             "quest-text": "Can I use my own domain name with Shopify?",
             "ans-text": "Yes, Shopify allows you to use your own custom domain name for your store. You can either purchase a domain directly through Shopify or connect an existing domain that you own."
           }
+        },
+        "faq_Mnek8t": {
+          "type": "FAQ",
+          "settings": {
+            "quest-text": "What payment methods can I accept on my Shopify store?",
+            "ans-text": "Shopify supports a wide range of payment gateways, including popular options like Shopify Payments, PayPal, Stripe, and more. You can choose the payment methods that best suit your customers' preferences and your business needs."
+          }
         }
       },
       "block_order": [
@@ -51,7 +58,8 @@
         "faq_zaY9hn",
         "faq_AxXaWL",
         "faq_wmdCaN",
-        "faq_QBkFXU"
+        "faq_QBkFXU",
+        "faq_Mnek8t"
       ],
       "settings": {
       }
