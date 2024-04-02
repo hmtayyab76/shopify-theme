@@ -14,8 +14,8 @@
         "faq_block_JBcWDJ": {
           "type": "faq_block",
           "settings": {
-            "question": "Tayyab",
-            "answer": "<p>Tayyab<\/p>"
+            "question": "Is my personal information secure?",
+            "answer": "<p>Yes, we take the security of your personal information seriously. Our website is equipped with SSL encryption to ensure that your data is protected during transmission. We also adhere to strict privacy policies to safeguard your information.<\/p>"
           }
         },
         "faq_block_MdAHiD": {
