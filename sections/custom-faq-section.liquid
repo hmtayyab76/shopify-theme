@@ -1,0 +1,213 @@
+<style>
+  #shopify-section-{{ section.id }} .main-faqs-sect{
+    margin:0;
+    background: #FBF9F6;
+    padding:10px 0;
+  }
+  #shopify-section-{{ section.id }} *{
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+  --faqs-green: #023811;
+  }
+  #shopify-section-{{ section.id }} .main-faqs {
+    width: 100%;
+    max-width:1000px;
+    margin: 20px auto;
+    padding: 60px 10px;
+    transition: all 0.3s;
+  }
+  #shopify-section-{{ section.id }} .faq-inner-faqs{
+    width:95%;
+    margin: 0 auto !important;
+  }
+  #shopify-section-{{ section.id }} .main-faqs h1{
+    text-align: center;
+    color:  #023811;
+    font-weight:800;
+    font-size:50px;
+    margin-bottom:40px;
+    padding: 0 15px;
+    line-height:60px;
+  }
+
+  #shopify-section-{{ section.id }} .faq-selector {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    margin: 5px 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+  }
+  #shopify-section-{{ section.id }} .faq-selector:last-child {
+    border:none !important;
+  }
+
+  #shopify-section-{{ section.id }} .quest-faqs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top:20px;
+    transition: all 0.3s;
+    padding: 25px 16px;
+  }
+  #shopify-section-{{ section.id }} .quest-faqs h3{
+    font-weight: 600;
+    font-size:24px;
+    color:  #023811;
+  }
+
+  #shopify-section-{{ section.id }} .answer-faqs {
+    padding: 0px 25px;
+    color:  #023811;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+   #shopify-section-{{ section.id }} .answer-faqs p{
+     padding: 5px 0 15px;
+     font-size: 21px;
+     font-weight: 500;
+     line-height: 29.4px;
+     color:#023811;
+   }
+
+  #shopify-section-{{ section.id }} .faq-selector.active-tab .answer-faqs {
+    max-height: 500px;
+  }
+
+  #shopify-section-{{ section.id }} .faq-selector.active-tab .icon-faqs {
+    transform:rotate(180deg);
+  }
+
+  #shopify-section-{{ section.id }} .icon-faqs {
+    background:transparent;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    transition: all .3s;
+  }
+   #shopify-section-{{ section.id }} .icon-faqs svg{
+     fill:   #023811;
+   }
+
+    @media (max-width:768px){
+   #shopify-section-{{ section.id }} .faq-inner-faqs{
+     background: #FBF9F6;
+     border-radius: 12px;
+     overflow:hidden;
+     display:block;
+   }
+   #shopify-section-{{ section.id }} .main-faqs-sect{
+    margin:0;
+    background: #e5faqscc;
+  }
+    #shopify-section-{{ section.id }} .bg-main-faqs{
+      background: #e5faqscc;
+      padding: 30px 5px;
+    }
+    #shopify-section-{{ section.id }} .main-faqs{
+      padding:0;
+    }
+    #shopify-section-{{ section.id }} .main-faqs h1{
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 40.8px;
+      margin:15px 0 10px;
+
+    }
+    #shopify-section-{{ section.id }} .quest-faqs{
+       margin: 0;
+     }
+    #shopify-section-{{ section.id }} .quest-faqs h3{
+    font-size:21px;
+    line-height: 25.2px;
+    font-weight:600;
+  }
+     #shopify-section-{{ section.id }} .answer-faqs p{
+       font-size:19px;
+     }
+  }
+</style>
+<section class="main-faqs-sect">
+  <div class="main-faqs">
+    <h1>Frequently Asked Questions</h1>
+    <div class="bg-main-faqs">
+      <div class="faq-inner-faqs">
+        {% for block in section.blocks %}
+          <div class="faq-selector">
+            <div class="quest-faqs">
+              <h3>{{ block.settings['quest-text'] }}</h3>
+              <div class="icon-open-faqs">
+                <div class="icon-faqs">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="28" height="28">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="answer-faqs answer0">
+              <p>{{ block.settings['ans-text'] }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+  const faqs = document.querySelectorAll('.faq-selector');
+
+  faqs.forEach((faq) => {
+    faq.addEventListener('click', () => {
+      // Close all other FAQs
+      faqs.forEach((otherFaq) => {
+        if (otherFaq !== faq) {
+          otherFaq.classList.remove('active-tab');
+        }
+      });
+
+      faq.classList.toggle('active-tab');
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "FAQs",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "FAQ",
+      "type": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "quest-text",
+          "label": "Your Question"
+        },
+        {
+          "type": "text",
+          "id": "ans-text",
+          "label": "Your Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQs"
+    }
+  ]
+}
+{% endschema %}
