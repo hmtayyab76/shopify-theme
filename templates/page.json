@@ -31,12 +31,20 @@
             "question": "Do you offer discounts or promotions?",
             "answer": "<p>Yes, we occasionally run promotions and offer discounts on select products. Sign up for our newsletter or follow us on social media to stay updated on the latest deals and offers.<\/p>"
           }
+        },
+        "faq_block_GbX9dQ": {
+          "type": "faq_block",
+          "settings": {
+            "question": "Can I return or exchange an item?",
+            "answer": "<p>Yes, we have a hassle-free return and exchange policy. If you're not satisfied with your purchase, you can return the item within 30 days for a full refund or exchange. Please refer to our Returns & Exchanges page for more details.<\/p>"
+          }
         }
       },
       "block_order": [
         "faq_block_JBcWDJ",
         "faq_block_MdAHiD",
-        "faq_block_n6UYqJ"
+        "faq_block_n6UYqJ",
+        "faq_block_GbX9dQ"
       ],
       "settings": {
         "section_title": "Frequently Asked Questions"
