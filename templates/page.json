@@ -1,1 +1,32 @@
-{"sections":{"main":{"type":"main-page","settings":{"padding_top":28,"padding_bottom":28}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "custom_faq_section_RrMqFj": {
+      "type": "custom-faq-section",
+      "blocks": {
+        "faq_QHbcky": {
+          "type": "FAQ",
+          "settings": {
+            "quest-text": "Are there any additional fees besides the monthly subscription cost?",
+            "ans-text": "While Shopify's monthly subscription plans cover most of the essential features and functionalities, there may be additional fees for certain add-ons, transaction fees on sales made through third-party payment gateways (if not using Shopify Payments), and shipping fees. It's important to review the pricing details and any additional costs associated with the specific features or services you require for your store."
+          }
+        }
+      },
+      "block_order": [
+        "faq_QHbcky"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_faq_section_RrMqFj"
+  ]
+}
