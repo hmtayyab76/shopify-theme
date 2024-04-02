@@ -1,100 +1,131 @@
 <style>
+  .custom-blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px;
+    gap: 20px;
+  }
+  .custom-blogs a {
+    text-decoration: none;
+  }
+  .custom-blog-p{
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .custom-blog {
+    display: flex;
+    margin: 10px 0px;
+  }
+  .custom-blog-p:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .custom-blog h2 {
+    color: #333;
+    font-size: 24px;
+    margin: 0px 10px;
+    margin-top: 10px;
+    font-weight: 700;
+  }
+
+  .custom-blog p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 10px 0px 10px; 
+  }
+  .blog-image {
+    min-width: 150px;
+    height: 150px;
+    border-radius:100px;
+    background:#efefef;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .blog-image img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 80px;
+  }
+  .image-p{
+    height: 160px;
+    box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.1);
+  }
+  .heading {
+    font-weight: 700;
+    color: #023811;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    line-height: 120%;
+  }
+  .ab {
+    flex: 1; /* Allow content div to grow */
+  }
+  .post-date {
+    font-weight: 700;
+    text-align:end;
+    margin:0px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .c-b-section {
+    padding: 50px 20px;
+    max-width: 1138px;
+    margin: 0px auto;
+  }
+  .blog-content {
+    height: 160px;
+    overflow: scroll;
+  }
+  .blog-content::-webkit-scrollbar {
+    width: 0px;
+  }
+  @media screen and (max-width: 768px) {
     .custom-blogs {
-        margin: 20px 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-around;
-
-      }
-      .custom-blogs a{
-        text-decoration:none;
-      }
-      .custom-blog {
-        background-color: #f9f9f9;
-        border-radius: 5px;
-        width: auto;
-        padding:0px 20px;
-        height:300px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        display:flex;
-        margin: 10px 0px;
-        align-items: center;
-        margin-bottom: 20px;
-        cursor: pointer; 
-        transition: box-shadow 0.3s ease;
-      }
-      .ab{
-        width:400px;
-        overflow:hidden;
-      }
-      .custom-blog:hover {
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
-      }
-      .custom-blog h2 {
-        color: #333;
-        font-size: 24px;
-        margin:0px 10px;
-        margin-top:10px;
-        font-weight:700;
-        padding:0px 10px;
-      }
-      
-      .custom-blog p {
-        color: #666;
-        font-size: 16px;
-        padding:0px 10px;
-        line-height: 1.5;
-        margin:5px 10px 20px 10px;
-      }
-      
-      .custom-blog img {
-        max-width: 100%;
-        display: block;
-        margin-bottom: 10px;
-        border-radius: 5px;
-      }
-      .heading{
-        margin:0px 70px;
-        justify-content:space-between;
-        font-weight:700;
-        display:flex;
-        align-items:center;
+      grid-template-columns: 1fr; /* Display one column on smaller screens */
     }
-    .post-date{
-        font-weight:700;
-
-    }
-     
+  }
 </style>
-
-<div class="heading">
-    <h1 class="">Blogs</h1>
-    <a href="{{ section.settings.blog_link }}">View all</a>
+<div class="c-b-section">
+  <div>
+    <h1 class="heading">Blogs</h1>
   </div>
-<div class="custom-blogs">
-  {% for block in section.blocks %}
-    {% if block.settings.selected_blog_post %}
+  <div class="custom-blogs">
+    {% for block in section.blocks %}
+      {% if block.settings.selected_blog_post %}
         {% assign selectedArticle = block.settings.selected_blog_post %}
-        
+
         <a href="{{ selectedArticle.url }}">
+          <div class="custom-blog-p">
             <div class="custom-blog">
-                <div class="ab">
-                    <h2>{{ selectedArticle.title }}</h2>
-                    <p>{{ selectedArticle.content }}</p>
-                    {% if block.settings['published-date'] %}
-                        <p class="post-date">{{ selectedArticle.published_at }}</p>
-                      {% endif %}
-                </div>
-                <img
-                    src="{{ selectedArticle.image | img_url: 'medium' }}"
+              <div class="ab">
+                <h2>{{ selectedArticle.title }}</h2>
+                <p class="blog-content">{{ selectedArticle.content }}</p>
+              </div>
+              <div class="image-p">
+                <div class="blog-image">
+                  <img
+                    src="{{ selectedArticle.image | image_url }}"
                     alt="{{ selectedArticle.title }}"
-                    width="200px"
-                    height="200px"
-                >
+                    width="100%"
+                    height="100%"
+                  >
                 </div>
-            </a>
-    {% endif %}
-  {% endfor %}
+              </div>
+            </div>
+            {% if block.settings['published-date'] %}
+              <p class="post-date">{{ selectedArticle.published_at }}</p>
+            {% endif %}
+          </div>
+          
+        </a>
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 {% schema %}
 {
