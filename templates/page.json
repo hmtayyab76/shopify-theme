@@ -23,11 +23,19 @@
             "quest-text": "Does Shopify provide customer support for store owners?",
             "ans-text": "Yes, Shopify offers 24\/7 customer support via live chat, email, and phone. Whether you have questions about setting up your store, managing orders, or troubleshooting technical issues, Shopify's support team is available to assist you at any time"
           }
+        },
+        "faq_AxXaWL": {
+          "type": "FAQ",
+          "settings": {
+            "quest-text": "Can I sell products internationally with Shopify?",
+            "ans-text": "Absolutely! Shopify offers built-in support for selling products internationally. You can set up multiple currencies, configure shipping rates for different regions, and even translate your store into multiple languages to cater to a global audience."
+          }
         }
       },
       "block_order": [
         "faq_QHbcky",
-        "faq_zaY9hn"
+        "faq_zaY9hn",
+        "faq_AxXaWL"
       ],
       "settings": {
       }
