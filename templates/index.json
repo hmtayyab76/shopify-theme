@@ -69,10 +69,18 @@
             "block_title_1": "Shopify's Streamlined Platform",
             "block_paragraph_1": "Shopify stands out in the e-commerce landscape for its unparalleled ease of use and accessibility. Unlike many other platforms that require extensive technical knowledge or coding skills, Shopify empowers users of all backgrounds to set up and manage their online stores effortlessly."
           }
+        },
+        "text_xaahGX": {
+          "type": "text",
+          "settings": {
+            "block_title_1": "Scaling Heights with Shopify's Platform",
+            "block_paragraph_1": "One of the most remarkable aspects of Shopify is its versatility and scalability. Whether you're a small startup testing the waters of e-commerce or a large enterprise with complex needs, Shopify offers solutions tailored to your requirements. Its extensive App Store provides a plethora of add-ons and integrations, allowing users to customize their stores with additional functionalities such as accounting, marketing, inventory management, and more."
+          }
         }
       },
       "block_order": [
-        "text_aakaPd"
+        "text_aakaPd",
+        "text_xaahGX"
       ],
       "settings": {
         "block_title_0": "Embrace Renewal with Every Sip",
