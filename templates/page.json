@@ -21,8 +21,8 @@
         "faq_block_MdAHiD": {
           "type": "faq_block",
           "settings": {
-            "question": "Tayya",
-            "answer": "<p>Aba<\/p>"
+            "question": "How can I track my order?",
+            "answer": "<p>Once your order has been shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status and location of your package. Alternatively, you can log in to your account on our website to track your order in real-time.<\/p>"
           }
         }
       },
