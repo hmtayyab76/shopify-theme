@@ -351,12 +351,14 @@
       {% for block in section.blocks %}
         <div class="dev-11-block">
           <div class="dev-11-img-box">
-            <img
-              src="{{ block.settings.image | image_url }}"
-              alt="{{ block.settings.block_title_1 }}"
-              width="82px"
-              height="70px"
-            >
+            {% if block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url }}"
+                alt="{{ block.settings.block_title_1 }}"
+                width="82px"
+                height="70px"
+              >
+            {% endif %}
           </div>
           <div class="dev-11-content">
             {% if block.settings.block_title_1 %}
