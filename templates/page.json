@@ -30,12 +30,20 @@
             "quest-text": "Can I sell products internationally with Shopify?",
             "ans-text": "Absolutely! Shopify offers built-in support for selling products internationally. You can set up multiple currencies, configure shipping rates for different regions, and even translate your store into multiple languages to cater to a global audience."
           }
+        },
+        "faq_wmdCaN": {
+          "type": "FAQ",
+          "settings": {
+            "quest-text": "How do I get started with setting up a Shopify store?",
+            "ans-text": "Getting started with Shopify is easy! Simply sign up for an account on the Shopify website, choose a plan that fits your needs, and follow the step-by-step setup process. You'll be guided through adding products, customizing your store's design, and configuring payment and shipping options."
+          }
         }
       },
       "block_order": [
         "faq_QHbcky",
         "faq_zaY9hn",
-        "faq_AxXaWL"
+        "faq_AxXaWL",
+        "faq_wmdCaN"
       ],
       "settings": {
       }
