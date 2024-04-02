@@ -106,16 +106,18 @@
                 <h2>{{ selectedArticle.title }}</h2>
                 <p class="blog-content">{{ selectedArticle.content }}</p>
               </div>
-              <div class="image-p">
-                <div class="blog-image">
-                  <img
-                    src="{{ selectedArticle.image | image_url }}"
-                    alt="{{ selectedArticle.title }}"
-                    width="100%"
-                    height="100%"
-                  >
-                </div>
-              </div>
+              {% if selectedArticle.image%}
+                <div class="image-p">
+                  <div class="blog-image">
+                    <img
+                      src="{{ selectedArticle.image | image_url }}"
+                      alt="{{ selectedArticle.title }}"
+                      width="100%"
+                      height="100%"
+                    >
+                    </div>
+                  </div>
+                {% endif %}
             </div>
             {% if block.settings['published-date'] %}
               <p class="post-date">{{ selectedArticle.published_at }}</p>
