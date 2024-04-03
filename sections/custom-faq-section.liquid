@@ -36,16 +36,20 @@
 {% endschema %}
 
 <style>
-    .faq-section {
+    .faq-section-p{
         padding: 40px 20px;
         max-width: 1100px;
         margin: 0 auto;
+    }
+    .faq-section {
+       
+        max-width: 700px;
+       
       }
       
       .faq-section h2 {
         color: #333;
         font-size: 24px;
-        text-align:center;
         margin-top: 10px;
         font-weight: 700;
       }
@@ -57,7 +61,7 @@
       
       .faq-item {
         border-bottom: 1px solid #eee;
-        padding: 20px 0;
+        padding: 10px 0;
       }
       
       .faq-item:last-child {
@@ -69,6 +73,7 @@
         align-items: center;
         justify-content: space-between;
         font-weight: bold;
+        margin:0px;
         margin-bottom: 10px;
         cursor: pointer; /* Add cursor pointer to indicate clickable */
         position: relative; /* Position relative for icon positioning */
@@ -80,10 +85,15 @@
       }
       
       .answer {
-        margin-left: 20px;
+        margin-left: 10px;
         max-height: 0;
         overflow: hidden;
+        margin:0;
         transition: max-height 0.5s ease;
+      }
+      .answer p{
+        margin:0;
+
       }
       
       .answer.show {
@@ -94,25 +104,27 @@
         transform: rotate(180deg); /* Rotate the icon when active */
       }
 </style>
-
-<div class="faq-section">
-    <h2>{{ section.settings.section_title }}</h2>
-    <div class="faq-list">
-      {% for block in section.blocks %}
-        <div class="faq-item">
-          <div class="question">
-            {{ block.settings.question }}
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-              <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-              <path fill="none" d="M0 0h24v24H0z"/>
-            </svg>
-          </div>
-          <div class="answer">{{ block.settings.answer }}</div>
+<div class="faq-section-p">
+    <div class="faq-section">
+        <h2>{{ section.settings.section_title }}</h2>
+        <div class="faq-list">
+            {% for block in section.blocks %}
+                <div class="faq-item">
+                    <div class="question">
+                        
+                        {{ block.settings.question }}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                <path fill="none" d="M0 0h24v24H0z"/>
+                                </svg>
+                            </div>
+                            <div class="answer">{{ block.settings.answer }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            
         </div>
-      {% endfor %}
-    </div>
-</div>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const faqItems = document.querySelectorAll(".faq-item");
