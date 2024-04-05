@@ -151,7 +151,7 @@
       <div class="product-div">
         <div class="view-div trans-pro-btn-block hov-img">
           <img
-            src="{{ product.featured_image | img_url: 'medium' }}"
+              src="{{ product.featured_image | image_url }}"
             alt="{{ product.title }}"
             width="100%"
             height="400px"
@@ -167,12 +167,12 @@
                   {{ product.price | money }}
                 </div>
               </div>
-              <div class="">
+              {% comment %} <div class="">
                 <div class="icon-img-block">
                   <img src="{{ 'img_red.ico'  | asset_url }}" alt="" class="heart-icon-1" width="20px" height="20px">
                   <img src="{{ 'heart.png' | asset_url }}" class="overlay" alt="" width="20px" height="20px">
                 </div>
-              </div>
+              </div> {% endcomment %}
             </div>
     </div>
   {% endfor %}

@@ -1,155 +1,240 @@
-<footer class="footer-main">
-    <div class="footer-sec-1">
-      {%- if section.blocks.size == 0 -%}
-        <div>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
+<style>
+    /* Styles for the first section */
+.bg-dark-primary {
+    background-color: #343a40; /* Adjust color as needed */
+    transition: background-color 0.3s ease; /* Transition for theme change */
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    display: flex;
+    width:100%;
+    padding:50px 20px;
+    justify-content:space-between;
+}
+.footer-right-side{
+    width:50%;
+    display: flex;
+    
+}
+.footer-left-side{
+    width:50%;
+    padding:50px;
+}
+
+@media (max-width: 706px) {
+    .row {
+        display: block;
+        width:100%;
+        padding:15px;
+      
+    }
+    .footer-left-side {
+        width: 100%;
+        margin:0;
+        padding: 15px;
+    }
+    .footer-left-side p {
+        margin:0;
+    }
+    .footer-right-side {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+.col-12, .col-6, .col-sm-12, .col-sm-4, .col-lg-6, .col-lg-2 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.my-4 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.mb-md-4 {
+    margin-bottom: 2rem !important;
+}
+
+.mb-lg-0 {
+    margin-bottom: 0 !important;
+}
+
+.text-light {
+    color: #f8f9fa !important; /* Adjust color as needed */
+}
+
+.text-decoration-none {
+    text-decoration: none !important;
+}
+
+.w-50 {
+    width: 50% !important;
+}
+
+
+
+.d-sm-block {
+    display: block !important;
+}
+
+/* Styles for the second section */
+.py-0 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.bg-dark-1 {
+    background-color: #495057; /* Adjust color as needed */
+}
+
+.m-0 {
+    margin: 0 !important;
+}
+
+.justify-content-between {
+    justify-content: space-between !important;
+}
+
+.px-3 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+.py-2 {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+}
+.rights{
+    text-align:center;
+}
+
+.text-white {
+    color: #fff !important; /* Adjust color as needed */
+}
+
+/* Additional styles for the footer */
+.footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.text-primary  {
+    color: #17a2b8  ;
+    text-decoration: none;
+}
+
+.text-primary:hover {
+    color: #f8f9fa;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+.link-heading{
+    color:#efefef;
+    font-weight:700;
+}
+
+</style>
+
+<section class="bg-dark-primary transition-theme">
+    <div class="container-fluid">
+        <div class="row mx-5">
+            <div class="footer-left-side">
+                <p class="text-light">We're a worldwide community for online learning and teaching where anybody can acquire new skills and accomplish their objectives by connecting with others. We are dedicated to making a positive difference in the future of education.</p>
+            </div>
+            <div class="footer-right-side">
+                <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                    <h3 class="lh-lg font-weight-bold mb-4  link-heading">Eduprix</h3>
+                    <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <li class="lh-lg"><a class="text-primary" href="#">About</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Affiliate</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Open Eduprix</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Career</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">News</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                    <h3 class="lh-lg font-weight-bold mb-4 link-heading">Connect</h3>
+                    <ul class="list-unstyled mb-md-4 mb-lg-0">
+                        <li class="lh-lg"><a class="text-primary" href="#">Blog</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Contact Us</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Help Centre</a></li>
+                        <li class="lh-lg"><a class="text-primary" href="#">Media Kit</a></li>
+                    <li class="lh-lg"><a class="text-primary" href="#">Donation</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                <h3 class="lh-lg font-weight-bold  mb-4 link-heading "> Legal</h3>
+                <ul class="list-unstyled  mb-lg-0">
+                    <li class="lh-lg"><a class="text-primary" href="#">Terms of Services</a></li>
+                    <li class="lh-lg"><a class="text-primary" href="#">Privacy Policy</a></li>
+                    <li class="lh-lg"><a class="text-primary" href="#">Accessibility</a></li>
+                    <li class="lh-lg"><a class="text-primary" href="#">Trademark</a></li>
+                    <li class="lh-lg"><a class="text-primary" href="#">Sitemap</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
         </div>
-        <div>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-        </div>
-  
-        <div>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-          <p>Terms of Use</p>
-          <p>Privacy Policy</p>
-          <p>Guides</p>
-          <p>Terms of Sale</p>
-        </div>
-  
-      {% else %}
-        {% comment %}
-          <div>
-            {% for block in section.blocks %}
-              <li>
-                <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-              </li>
-            {% endfor %}
-          </div>
-        {% endcomment %}
-        {% for block in section.blocks %}
-          <div>
-            <li>
-              <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-            </li>
-            <li>
-              <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-            </li>
-            <li>
-              <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-            </li>
-            <li>
-              <a href="{{ block.settings.link }}">{{ block.settings.text | escape }}</a>
-            </li>
-          </div>
-        {% endfor %}
-      {% endif %}
     </div>
-    <div class="footer-sec-2">
-      <p>Guides</p>
-      <p>Terms of Sale</p>
-      <p>Terms of Use</p>
-      <p>Privacy Policy</p>
+</section>
+<!-- All Rights Reserved -->
+<section class="py-0 bg-dark-1 transition-theme m-0">
+    <div class="container-fluid">
+        <footer>
+            <div class="px-3 py-2 mx-5 rights">
+                <p class="text-light  mb-0">All rights Reserved © Tayyab Products, 2022</p>
+            </div>
+        </footer>
     </div>
-  </footer>
-  
-  <style>
-    .footer-main {
-      background: {{ section.settings.background }}
-      ;
-      color: {{ section.settings.text_color }}
-      ;
-      padding: 10px;
+</section>
+
+
+{% schema %}
+{
+  "name": "Custom Footer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "block_title_0",
+      "label": "Title 1",
+      "default": "Embrace Renewal with Every Sip"
+    },
+    {
+      "type": "text",
+      "id": "block_title_main_0",
+      "label": "Title 2",
+      "default": "What Makes Daily Daisy™ Unique?"
     }
-    .footer-sec-1 {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-around;
+  ],
+  
+  "presets": [
+    {
+      "name": "Custom Footer"
     }
-  
-    .footer-sec-2 {
-      display: flex;
-    }
-    .footer-sec-2 p {
-      padding: 10px
-    }
-  </style>
-  
-  {% schema %}
-  {
-    "name": "Footer",
-    "settings": [
-      {
-        "type": "color",
-        "id": "background",
-        "label": "Background",
-        "default": "#000000"
-      },
-      {
-        "type": "color",
-        "id": "text_color",
-        "label": "Text",
-        "default": "#F4F4F4"
-      }
-    ],
-    "blocks": [
-      {
-        "name": "Links",
-        "type": "links",
-        "settings": [
-          {
-            "type": "text",
-            "id": "text",
-            "label": "Text",
-            "default": "link"
-          },
-          {
-            "type": "url",
-            "id": "link",
-            "label": "Link"
-          }
-        ]
-      }
-    ],
-    "presets": [
-      {
-        "name": "footer"
-      }
-    ]
-  }
-  {% endschema %}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  ]
+}
+{% endschema %}
+
