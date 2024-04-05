@@ -2,8 +2,16 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom_footer_i7XTVn": {
+      "type": "custom-footer",
+      "settings": {
+        "background": "#000000",
+        "text_color": "#F4F4F4"
+      }
+    },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
@@ -21,6 +29,7 @@
     }
   },
   "order": [
+    "custom_footer_i7XTVn",
     "footer"
   ]
 }
