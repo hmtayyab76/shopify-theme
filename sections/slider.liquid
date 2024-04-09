@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Slider Example</title>
+      <style>
+        .slider {
+          width: 300px;
+          margin: 20px auto;
+        }
+        .slider input[type="range"] {
+          width: 100%;
+        }
+        .slider .slider-value {
+          text-align: center;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="slider">
+        <input type="range" min="0" max="100" value="{{ sliderValue }}" id="slider">
+        <div class="slider-value">{{ sliderValue }}</div>
+      </div>
+    
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var slider = document.getElementById('slider');
+          var output = document.querySelector('.slider-value');
+    
+          output.innerHTML = slider.value;
+    
+          slider.oninput = function() {
+            output.innerHTML = this.value;
+          };
+        });
+      </script>
+    </body>
+    </html>
+    
