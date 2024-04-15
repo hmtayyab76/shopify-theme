@@ -1,430 +1,198 @@
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM fully loaded and parsed');
-    
-    // Auto-scrolling function
-    function autoScroll() {
-        console.log('autoScroll function called');
-        
-        const section = document.getElementById('section-id-{{ section.id }}');
-        const logos = section.querySelectorAll('.d-11-text.logo');
-        
-        let scrollAmount = 1; // Adjust this value for scroll speed
-        let currentScroll = 0;
-        
-        // Clone logos for seamless looping
-        section.innerHTML += section.innerHTML;
-        
-        function scroll() {
-            currentScroll += scrollAmount;
-            
-            // Reset to start if reached the original end
-            if (currentScroll >= section.scrollWidth / 2) {
-                currentScroll = 0;
-            }
-            
-            section.scrollLeft = currentScroll;
-        }
-        
-        let scrollInterval = setInterval(scroll, 20); // Adjust interval for smoother/faster scrolling
-        
-        // Pause scrolling on hover
-        section.addEventListener('mouseenter', function() {
-            clearInterval(scrollInterval);
-            console.log('Scroll paused');
-        });
-        
-        // Resume scrolling on mouse leave
-        section.addEventListener('mouseleave', function() {
-            scrollInterval = setInterval(scroll, 20);
-            console.log('Scroll resumed');
-        });
-    }
-    
-    // Initialize auto-scrolling
-    autoScroll();
-});
+{% comment %}
+    @rotcl
+{% endcomment %}
 
 
+{% assign default = '1400x' %}
+{% assign size1 = '480x' %}
+{% assign size2 = '765x' %}
+{% assign size3 = '900x' %}
+{% assign size4 = '1000x' %}
+{% assign size5 = '1100x' %}
+{% assign size6 = '1300x' %}
+{% assign size7 = '1500x' %}
+{% assign size8 = '1700x' %}
+{% assign size9 = '1900x' %}
+{% assign size10 = '2000x' %}
 
+<div class="logo-bar-section container">
+  <div class="sixteen columns">
+    <div class="section clearfixr">
+    {% if section.settings.title != blank %}
+        <h2 class="title center">{{ section.settings.title | escape }}</h2>
+        <div class="feature_divider no-margin"></div>
+    {% endif %}
 
-</script>
-{%- assign col_head_links_alt = settings.col_head_links_alt -%}
-<style>
-  /* Logo container styling */
-#section-id-{{ section.id }} .d-11 {
-    overflow: hidden;
-    white-space: nowrap;
-}
+    {% if section.blocks.size > 0 %}
+      <div class="container">
+  <div class="brands">
+    <div class="brands__preWrapper">
+      <div class="logo-bar brands__wrapper">
+        {% for block in section.blocks %}
+          <div class="logo-bar__item" {{ block.shopify_attributes }}>
+            {% if block.settings.link != blank %}
+              <a href="{{ block.settings.link }}" class="logo-bar__link">
+            {% endif %}
+            {% if block.settings.image != blank %}
+              <img  src="{{ block.settings.image | img_url: '100x' }}"
+                alt="{{ block.settings.image.alt | escape }}"
+                class="lazyload {{ settings.image_loading_style }}"
+                style="max-width: {{- block.settings.image.width -}}px;"
+                data-sizes="auto"
+                data-src="{{ block.settings.image | img_url: default }}"
+                data-srcset="
+                {{ block.settings.image | img_url: default }} {{default | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size1 }} {{size1 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size2 }} {{size2 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size3 }} {{size3 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size4 }} {{size4 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size5 }} {{size5 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size6 }} {{size6 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size7 }} {{size7 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size8 }} {{size8 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size9 }} {{size9 | replace: 'x', 'w'}},
+                {{ block.settings.image | img_url: size10 }} {{size10 | replace: 'x', 'w'}}"
+                 />
+            {% else %}
+              {{ 'logo' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+            {% if block.settings.link != blank %}
+              </a>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
 
-/* Logo item styling */
-#section-id-{{ section.id }} .d-11-text.logo {
-    display: inline-block;
-    margin: 0 10px; /* Adjust spacing between logos */
-}
-
-  .logo {
-  position: relative;
- 
-  font-size: 25px;
-  line-height: 1.4em;
-  word-break: break-word;
-  max-width: calc(100% - 120px);
-  transition: opacity 0.4s, visibility 0.4s;
-}
-@media (min-width: 768px) {
-  .logo {
-    font-size: 30px;
-  }
-}
-@media (min-width: 1100px) {
-  .nav-inline-desktop .logo {
-    width: 190px;
-    text-align: left;
-  }
-  .nav-inline-desktop .logo img {
-    max-width: 190px;
-  }
-}
-@media (min-width: 1400px) {
-  .nav-inline-desktop .logo {
-    width: 250px;
-  }
-  .nav-inline-desktop .logo img {
-    max-width: none;
-  }
-}
-.logo img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  -webkit-transition: opacity 400ms;
-  -ms-transition: opacity 400ms;
-  -moz-transition: opacity 400ms;
-  -o-transition: opacity 400ms;
-  transition: opacity 400ms;
-}
-@media (min-width: 1100px) {
-  .nav-inline-desktop .logo img {
-    margin-left: 0;
-  }
-}
-  /* Logo container styling */
-#section-id-{{ section.id }} .d-11 {
-    overflow: hidden;
-    white-space: nowrap;
-    display: flex;
-    align-items: center; /* Align logos vertically center */
-}
-
-/* Logo item styling */
-#section-id-{{ section.id }} .d-11-text.logo {
-    display: inline-block;
-    margin: 0 10px; /* Adjust spacing between logos */
-}
-
-.logo .alt-logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 400ms;
-  -ms-transition: opacity 400ms;
-  -moz-transition: opacity 400ms;
-  -o-transition: opacity 400ms;
-  transition: opacity 400ms;
-}
-
-.use-alt-logo .site-control:not(.nav-opaque) .logo {
-  color: {{ col_head_links_alt }};
-}
-.use-alt-logo .site-control:not(.nav-opaque) .logo.logo--has-alt-logo > img, .use-alt-logo .site-control:not(.nav-opaque) .logo.logo--has-alt-logo > h1 > img {
-  opacity: 0;
-}
-.use-alt-logo .site-control:not(.nav-opaque) .logo .alt-logo {
-  opacity: 1;
-}
-.use-alt-logo .site-control:not(.nav-opaque) .site-control__inner a, .use-alt-logo .site-control:not(.nav-opaque) .site-control__inner .disclosure__toggle {
-  color: {{ col_head_links_alt }};
-}
-.use-alt-logo .site-control:not(.nav-opaque) .site-control__inner svg, .use-alt-logo .site-control:not(.nav-opaque) .site-control__inner .cart {
-  fill: {{ col_head_links_alt }};
-  color: {{ col_head_links_alt }};
-}
-.use-alt-logo .site-control:not(.nav-opaque) .site-control__inner .menu .icon-menu .icon-menu__bar {
-  background: {{ col_head_links_alt }};
-}
-
-.modal-active[data-modal-id=page-menu] .alt-logo-when-active.site-control .logo, .modal-active[data-modal-id=added-to-cart] .alt-logo-when-active.site-control .logo, .nav-mega-open .alt-logo-when-active.site-control .logo {
- 
-}
-.modal-active[data-modal-id=page-menu] .alt-logo-when-active.site-control .logo.logo--has-alt-logo > img, .modal-active[data-modal-id=added-to-cart] .alt-logo-when-active.site-control .logo.logo--has-alt-logo > img, .nav-mega-open .alt-logo-when-active.site-control .logo.logo--has-alt-logo > img, .modal-active[data-modal-id=page-menu] .alt-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img, .modal-active[data-modal-id=added-to-cart] .alt-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img, .nav-mega-open .alt-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img {
-  opacity: 0;
-}
-.modal-active[data-modal-id=page-menu] .alt-logo-when-active.site-control .logo .alt-logo, .modal-active[data-modal-id=added-to-cart] .alt-logo-when-active.site-control .logo .alt-logo, .nav-mega-open .alt-logo-when-active.site-control .logo .alt-logo {
-  opacity: 1;
-}
-.modal-active[data-modal-id=page-menu] .main-logo-when-active.site-control .logo.logo--has-alt-logo > img, .modal-active[data-modal-id=added-to-cart] .main-logo-when-active.site-control .logo.logo--has-alt-logo > img, .nav-mega-open .main-logo-when-active.site-control .logo.logo--has-alt-logo > img, .modal-active[data-modal-id=page-menu] .main-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img, .modal-active[data-modal-id=added-to-cart] .main-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img, .nav-mega-open .main-logo-when-active.site-control .logo.logo--has-alt-logo > h1 > img {
-  opacity: 1;
-}
-.modal-active[data-modal-id=page-menu] .main-logo-when-active.site-control .logo .alt-logo, .modal-active[data-modal-id=added-to-cart] .main-logo-when-active.site-control .logo .alt-logo, .nav-mega-open .main-logo-when-active.site-control .logo .alt-logo {
-  opacity: 0;
-}
-</style>
-<div id="section-id-{{ section.id }}" class="section-id-{{ section.id }} section-spacing-small use-{{ section.settings.color_scheme }}-bg" data-section-type="scrolling-banner" data-cc-animate>
-    {% style %}
-      {% if section.settings.color_scheme == "custom" %}
-        .section-id-{{ section.id }} {
-          background: {{ section.settings.color_bg }};
-          color: {{ section.settings.color_text }};
-        }
-      {% endif %}
-  
-      .section-id-{{ section.id }} .d-11-text {
-        line-height: {{ section.settings.line_height }};
-        {%- assign title_size_small = section.settings.text_size | times: 0.5 | at_least: settings.font_size_base_int -%}
-        font-size: {{ title_size_small }}px;
-      }
-  
-      @media (min-width: 768px) {
-        .section-id-{{ section.id }} .d-11-text {
-          {%- assign title_size_medium = section.settings.text_size | times: 0.7 | at_least: settings.font_size_base_int -%}
-          font-size: {{ title_size_medium }}px;
-        }
-      }
-  
-      @media (min-width: 992px) {
-        .section-id-{{ section.id }} .d-11-text {
-          font-size: {{ section.settings.text_size }}px;
-        }
-      }
-    {% endstyle %}
-  
-    {%- if section.settings.link -%}
-      <a href="{{ section.settings.link.url }}">
-    {%- endif -%}
-  
-    <div class="d-11 d-11--{{ section.settings.direction }}
-        {% if section.settings.space_x %} d-11--spaced{% endif %}
-        {% if section.settings.stencil_all_text %} d-11--stencil{% endif %}
-        {% if section.settings.font == "heading" %} d-11--heading-font{% endif %}
-        {% if section.settings.image and section.settings.overlay_style_tint and section.settings.color_scheme == "standard" %} d-11--overlay-color{% endif %}"
-         style="--duration: {{ 21 | minus: section.settings.speed }}s;" role="d-11">
-  
-      
-        <div class="d-11-text logo">
-          {%- for block in section.blocks -%}
-          {{block.settings.logo | img_url: 'x34' | img_tag }}
-          {%- endfor -%}
-        </div>
-        <div class="d-11-text logo">
-          {%- for block in section.blocks -%}
-          {{block.settings.logo | img_url: 'x34' | img_tag }}
-          {%- endfor -%}
-        </div>
-        <div class="d-11-text logo">
-          {%- for block in section.blocks -%}
-          {{block.settings.logo | img_url: 'x34' | img_tag }}
-          {%- endfor -%}
-        </div>
-  
-        <div class="d-11-text logo">
-          {%- for block in section.blocks -%}
-          {{block.settings.logo | img_url: 'x34' | img_tag }}
-          {%- endfor -%}
-        </div>
-  
-        <div class="d-11-text logo">
-          {%- for block in section.blocks -%}
-          {{block.settings.logo | img_url: 'x34' | img_tag }}
-          {%- endfor -%}
-        </div>
-      
     </div>
-  
-    {%- if section.settings.link -%}
-      </a>
-    {%- endif -%}
   </div>
-  
-  {% schema %}
-    {
-      "name": "Scrolling logos",
-      "class": "section-scrolling-banner",
-      "settings": [
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text",
-          "default": "Your scrolling text here"
-        },
-        {
-          "type": "url",
-          "id": "link",
-          "label": "Link"
-        },
-        {
-          "type": "range",
-          "id": "text_size",
-          "min": 16,
-          "max": 200,
-          "step": 2,
-          "unit": "px",
-          "label": "Text size",
-          "default": 80
-        },
-        {
-          "type": "range",
-          "id": "line_height",
-          "min": 1,
-          "max": 4,
-          "step": 0.1,
-          "unit": "x",
-          "label": "Height",
-          "default": 1.5
-        },
-        {
-          "type": "range",
-          "id": "speed",
-          "min": 0.5,
-          "max": 20,
-          "step": 0.5,
-          "unit": "x",
-          "label": "Speed",
-          "default": 14
-        },
-        {
-          "type": "select",
-          "id": "direction",
-          "label": "Direction",
-          "options": [
-            {
-              "label": "Left to right",
-              "value": "right"
-            },
-            {
-              "label": "Right to left",
-              "value": "left"
-            }
-          ],
-          "default": "left"
-        },
-        {
-          "type": "select",
-          "id": "font",
-          "label": "Font",
-          "options": [
-            {
-              "label": "Base font",
-              "value": "base"
-            },
-            {
-              "label": "Heading font",
-              "value": "heading"
-            }
-          ],
-          "default": "heading"
-        },
-        {
-          "type": "checkbox",
-          "id": "space_x",
-          "label": "Add gap between text",
-          "default": true
-        },
-        {
-          "type": "header",
-          "content": "Stencil text"
-        },
-        {
-          "type": "paragraph",
-          "content": "Some or all of your text can appear as a stencil outline. May not work in all browsers."
-        },
-        {
-          "type": "checkbox",
-          "id": "stencil_all_text",
-          "label": "Stencil all text",
-          "default": false
-        },
-        {
-          "type": "text",
-          "id": "stencil_text",
-          "label": "Text to stencil",
-          "info": "Case-sensitive. To stencil words that are not next to each other, use a comma. For example 'shipping, returns'."
-        },
-        {
-          "type": "header",
-          "content": "Image"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Custom background image"
-        },
-        {
-          "id": "overlay_style_tint",
-          "type": "checkbox",
-          "label": "Show overlay tint",
-          "default": false
-        },
-        {
-          "type": "header",
-          "content": "Style"
-        },
-        {
-          "type": "radio",
-          "id": "color_scheme",
-          "label": "Color scheme",
-          "default": "custom",
-          "options": [
-            {
-              "value": "standard",
-              "label": "Standard"
-            },
-            {
-              "value": "alt",
-              "label": "Alternate colors"
-            },
-            {
-              "value": "custom",
-              "label": "Custom colors"
-            }
-          ]
-        },
-        {
-          "type": "color",
-          "id": "color_bg",
-          "label": "Custom background color",
-          "default": "#000000"
-        },
-        {
-          "type": "color",
-          "id": "color_text",
-          "label": "Custom text color",
-          "default": "#ffffff"
-        }
-      ],
-      "blocks": [
-        {
-          "type": "logo",
-          "name": "logo",
-          "settings": [
-            {
-              "type": "image_picker",
-              "id": "logo",
-              "label": "Logo"
-            }
-          ]
-        }
-      ],
-      "presets": [
-        {
-          "name": "Scrolling logos",
-          "settings": {
-          }
-        }
-      ]
+</div>
+      </div>
+    </div>
+  </div>
+
+
+<style>
+    .brands {
+      position: relative;
+      overflow: hidden;
+      height: 8.5rem;
     }
-  {% endschema %}
-  
+    
+    .brands:hover .brands__wrapper,
+    .brands:hover .brands__preWrapper {
+      animation-play-state: paused;
+    }
+    
+    .brands__preWrapper {
+      position: relative;
+      width: 100%;
+      height: 8.5rem;
+      transform: translateX(0%);
+      animation: scroll1 10s linear infinite;
+      animation-delay: 4s;
+      animation-direction: alternate;
+    
+      will-change: transform;
+    }
+    
+    .brands__wrapper {
+      position: absolute;
+      white-space: nowrap;
+      transform: translateX(0%) translateZ(0);
+      animation: scroll2 10s linear infinite;
+      animation-delay: 4s;
+      animation-direction: alternate;
+    
+      will-change: transform;
+    }
+    
+    .brands__wrapper > a,
+    .brands__wrapper > img {
+      position: relative;
+      display: inline-block;
+      margin: 0 1rem;
+      vertical-align: middle;
+    }
+    
+    .brands__wrapper > a img {
+      max-width: 15rem;
+      max-height: 8.5rem;
+    }
+    
+    @keyframes scroll1 {
+      0% {
+        transform: translateX(-0%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    
+    @keyframes scroll2 {
+      0% {
+        transform: translateX(0%) translateZ(0);
+      }
+      100% {
+        transform: translateX(-100%) translateZ(0);
+      }
+    }
+</style>
+
+{% schema %}
+  {
+    "name": "Logo Slider",
+    "class": "logo-list-section",
+    "max_blocks": 30,
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Logo list"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "logo_image",
+        "name": "Logo",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "info": "400 x 300px recommended"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Link"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Logo Slider",
+        "category": "Custom",
+        "blocks": [
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          },
+          {
+            "type": "logo_image"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
