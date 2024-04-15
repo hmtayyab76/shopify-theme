@@ -125,27 +125,24 @@ width: 100%;
 }
 </style>
 <div class="brands-slider-col">
-    <div id="brand-discount-slider">
-        {% if section.settings.show_arrows %}
-        <div class="brand-arrow-next">
-            &#10095;
-        </div>
-        <div class="brand-arrow-prev">
-            &#10094;
-        </div>
-        {% endif %}
-        <ul>
-            {% for block in section.blocks %}
-            <li>
-                <div class="brand-logo-container">
-                    <img src="{{ block.settings.image | image_url: '100x100' }}" alt="Brand Logo">
-                </div>
-            </li>
-            {% endfor %}
-        </ul>
+  <div id="brand-discount-slider">
+    <div class="brand-arrow-next">
+      &​#10095;
     </div>
+    <div class="brand-arrow-prev">
+      &​#10094;
+    </div>
+    <ul>
+      {% for block in section.blocks %}
+        <li>
+          <div class="brand-logo-container">
+            <img src="{{ block.settings.image | image_url: '100x100' }}" width="" height='' alt="Brand Logo">
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
-
 
 {% schema %}
 {
