@@ -100,19 +100,18 @@
     "scrolling_logos_MdqMeW": {
       "type": "scrolling-logos",
       "blocks": {
-        "logo_image_K9YCzc": {
-          "type": "logo_image",
+        "brand_image_JAPida": {
+          "type": "brand_image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-math-90946.jpg",
-            "link": ""
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
           }
         }
       },
       "block_order": [
-        "logo_image_K9YCzc"
+        "brand_image_JAPida"
       ],
       "settings": {
-        "title": ""
+        "show_arrows": true
       }
     }
   },
