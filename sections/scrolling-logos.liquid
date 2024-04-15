@@ -126,20 +126,71 @@ width: 100%;
 </style>
 <div class="brands-slider-col">
     <div id="brand-discount-slider">
+        {% if section.settings.show_arrows %}
         <div class="brand-arrow-next">
             &#10095;
         </div>
         <div class="brand-arrow-prev">
             &#10094;
         </div>
+        {% endif %}
         <ul>
-            {% for image in section.settings.brand_images %}
+            {% for block in section.blocks %}
             <li>
                 <div class="brand-logo-container">
-                    <img src="{{ image | img_url: '100x100' }}" alt="Brand Logo">
+                    <img src="{{ block.settings.image | image_url: '100x100' }}" alt="Brand Logo">
                 </div>
             </li>
             {% endfor %}
         </ul>
     </div>
 </div>
+
+
+{% schema %}
+{
+  "name": "Brand Slider",
+  "class": "brand-slider-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_arrows",
+      "label": "Show Arrows",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "brand_image",
+      "name": "Brand Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "400 x 300px recommended"
+        }
+      ]
+    }
+   
+  ],
+  "presets": [
+    {
+      "name": "Brand Slider",
+      "category": "Custom",
+      "blocks": [
+        {
+          "type": "brand_image"
+        },
+        {
+          "type": "brand_image"
+        }
+      ],
+      "settings": {
+        "show_arrows": true
+      }
+    }
+  ]
+}
+{% endschema %}
+
