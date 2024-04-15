@@ -1,0 +1,255 @@
+<div id="section-id-{{ section.id }}" class="section-id-{{ section.id }} section-spacing-small use-{{ section.settings.color_scheme }}-bg" data-section-type="scrolling-banner" data-cc-animate>
+    {% style %}
+      {% if section.settings.color_scheme == "custom" %}
+        .section-id-{{ section.id }} {
+          background: {{ section.settings.color_bg }};
+          color: {{ section.settings.color_text }};
+        }
+      {% endif %}
+  
+      .section-id-{{ section.id }} .d-11-text {
+        line-height: {{ section.settings.line_height }};
+        {%- assign title_size_small = section.settings.text_size | times: 0.5 | at_least: settings.font_size_base_int -%}
+        font-size: {{ title_size_small }}px;
+      }
+  
+      @media (min-width: 768px) {
+        .section-id-{{ section.id }} .d-11-text {
+          {%- assign title_size_medium = section.settings.text_size | times: 0.7 | at_least: settings.font_size_base_int -%}
+          font-size: {{ title_size_medium }}px;
+        }
+      }
+  
+      @media (min-width: 992px) {
+        .section-id-{{ section.id }} .d-11-text {
+          font-size: {{ section.settings.text_size }}px;
+        }
+      }
+    {% endstyle %}
+  
+    {%- if section.settings.link -%}
+      <a href="{{ section.settings.link.url }}">
+    {%- endif -%}
+  
+    <div class="d-11 d-11--{{ section.settings.direction }}
+        {% if section.settings.space_x %} d-11--spaced{% endif %}
+        {% if section.settings.stencil_all_text %} d-11--stencil{% endif %}
+        {% if section.settings.font == "heading" %} d-11--heading-font{% endif %}
+        {% if section.settings.image and section.settings.overlay_style_tint and section.settings.color_scheme == "standard" %} d-11--overlay-color{% endif %}"
+         style="--duration: {{ 21 | minus: section.settings.speed }}s;" role="d-11">
+  
+      
+        <div class="d-11-text logo">
+          {%- for block in section.blocks -%}
+          {{block.settings.logo | img_url: 'x34' | img_tag }}
+          {%- endfor -%}
+        </div>
+        <div class="d-11-text logo">
+          {%- for block in section.blocks -%}
+          {{block.settings.logo | img_url: 'x34' | img_tag }}
+          {%- endfor -%}
+        </div>
+        <div class="d-11-text logo">
+          {%- for block in section.blocks -%}
+          {{block.settings.logo | img_url: 'x34' | img_tag }}
+          {%- endfor -%}
+        </div>
+  
+        <div class="d-11-text logo">
+          {%- for block in section.blocks -%}
+          {{block.settings.logo | img_url: 'x34' | img_tag }}
+          {%- endfor -%}
+        </div>
+  
+        <div class="d-11-text logo">
+          {%- for block in section.blocks -%}
+          {{block.settings.logo | img_url: 'x34' | img_tag }}
+          {%- endfor -%}
+        </div>
+      
+    </div>
+  
+    {%- if section.settings.link -%}
+      </a>
+    {%- endif -%}
+  </div>
+  
+  {% schema %}
+    {
+      "name": "Scrolling logos",
+      "class": "section-scrolling-banner",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Your scrolling text here"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "range",
+          "id": "text_size",
+          "min": 16,
+          "max": 200,
+          "step": 2,
+          "unit": "px",
+          "label": "Text size",
+          "default": 80
+        },
+        {
+          "type": "range",
+          "id": "line_height",
+          "min": 1,
+          "max": 4,
+          "step": 0.1,
+          "unit": "x",
+          "label": "Height",
+          "default": 1.5
+        },
+        {
+          "type": "range",
+          "id": "speed",
+          "min": 0.5,
+          "max": 20,
+          "step": 0.5,
+          "unit": "x",
+          "label": "Speed",
+          "default": 14
+        },
+        {
+          "type": "select",
+          "id": "direction",
+          "label": "Direction",
+          "options": [
+            {
+              "label": "Left to right",
+              "value": "right"
+            },
+            {
+              "label": "Right to left",
+              "value": "left"
+            }
+          ],
+          "default": "left"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "Font",
+          "options": [
+            {
+              "label": "Base font",
+              "value": "base"
+            },
+            {
+              "label": "Heading font",
+              "value": "heading"
+            }
+          ],
+          "default": "heading"
+        },
+        {
+          "type": "checkbox",
+          "id": "space_x",
+          "label": "Add gap between text",
+          "default": true
+        },
+        {
+          "type": "header",
+          "content": "Stencil text"
+        },
+        {
+          "type": "paragraph",
+          "content": "Some or all of your text can appear as a stencil outline. May not work in all browsers."
+        },
+        {
+          "type": "checkbox",
+          "id": "stencil_all_text",
+          "label": "Stencil all text",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "stencil_text",
+          "label": "Text to stencil",
+          "info": "Case-sensitive. To stencil words that are not next to each other, use a comma. For example 'shipping, returns'."
+        },
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom background image"
+        },
+        {
+          "id": "overlay_style_tint",
+          "type": "checkbox",
+          "label": "Show overlay tint",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Style"
+        },
+        {
+          "type": "radio",
+          "id": "color_scheme",
+          "label": "Color scheme",
+          "default": "custom",
+          "options": [
+            {
+              "value": "standard",
+              "label": "Standard"
+            },
+            {
+              "value": "alt",
+              "label": "Alternate colors"
+            },
+            {
+              "value": "custom",
+              "label": "Custom colors"
+            }
+          ]
+        },
+        {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Custom background color",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "color_text",
+          "label": "Custom text color",
+          "default": "#ffffff"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "logo",
+          "name": "logo",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "logo",
+              "label": "Logo"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Scrolling logos",
+          "settings": {
+          }
+        }
+      ]
+    }
+  {% endschema %}
+  
