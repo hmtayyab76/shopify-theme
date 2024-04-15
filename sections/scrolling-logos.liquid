@@ -1,6 +1,14 @@
-{% comment %}
-    @rotcl
-{% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const brandsWrapper = document.querySelector('.brands__wrapper');
+    const brandsPreWrapper = document.querySelector('.brands__preWrapper');
+    
+    // Clone the contents to ensure seamless looping
+    brandsWrapper.innerHTML += brandsWrapper.innerHTML;
+    brandsPreWrapper.innerHTML += brandsPreWrapper.innerHTML;
+});
+
+</script>
 
 
 {% assign default = '1400x' %}
