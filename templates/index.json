@@ -100,37 +100,19 @@
     "scrolling_logos_MdqMeW": {
       "type": "scrolling-logos",
       "blocks": {
-        "logo_76YwzY": {
-          "type": "logo",
+        "logo_image_K9YCzc": {
+          "type": "logo_image",
           "settings": {
-            "logo": "shopify:\/\/shop_images\/pexels-math-90946.jpg"
-          }
-        },
-        "logo_Emj8Vy": {
-          "type": "logo",
-          "settings": {
+            "image": "shopify:\/\/shop_images\/pexels-math-90946.jpg",
+            "link": ""
           }
         }
       },
       "block_order": [
-        "logo_76YwzY",
-        "logo_Emj8Vy"
+        "logo_image_K9YCzc"
       ],
       "settings": {
-        "text": "Your scrolling text here",
-        "link": "",
-        "text_size": 80,
-        "line_height": 1.5,
-        "speed": 14,
-        "direction": "left",
-        "font": "heading",
-        "space_x": true,
-        "stencil_all_text": false,
-        "stencil_text": "",
-        "overlay_style_tint": false,
-        "color_scheme": "custom",
-        "color_bg": "#000000",
-        "color_text": "#ffffff"
+        "title": ""
       }
     }
   },
