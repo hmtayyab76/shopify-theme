@@ -1,145 +1,90 @@
-<script> $(document).ready(function () { var slideCount = $('#brand-discount-slider ul li').length; var slideWidth = $('#brand-discount-slider ul li').width(); var slideHeight = $('#brand-discount-slider ul li').height(); var sliderUlWidth = slideCount \* slideWidth; ```javascript $('#brand-discount-slider').css({ width: slideWidth, height: slideHeight }); $('#brand-discount-slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth }); $('#brand-discount-slider ul li:last-child').prependTo('#brand-discount-slider ul'); function moveLeft() { $('#brand-discount-slider ul').animate({ left: + slideWidth }, 200, function () { $('#brand-discount-slider ul li:last-child').prependTo('#brand-discount-slider ul'); $('#brand-discount-slider ul').css('left', ''); }); }; function moveRight() { $('#brand-discount-slider ul').animate({ left: - slideWidth }, 200, function () { $('#brand-discount-slider ul li:first-child').appendTo('#brand-discount-slider ul'); $('#brand-discount-slider ul').css('left', ''); }); }; $('.brand-arrow-prev').click(function () { moveLeft(); }); $('.brand-arrow-next').click(function () { moveRight(); }); setTimeout(function () { moveLeft(); }, 1000); ``` }); </script>
+{% assign slides = section.blocks %}
 <style>
-  
-.brand-logo-container {
-   width: 143px;
-    height: 92px;
-    background: #fff;
-    margin: 0 auto;
-  padding-top:35%;
+  .slider {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
 }
 
-
-.brands-slider-col{
-	height: 200px;
-    width: 100%;
-    float: none
-}
-#brand-discount-slider {
-position: relative;
-    overflow: hidden;
-    width: 100% !important;
-    height: 200px !important;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    padding: 0px 0px;
-}
-#brand-discount-slider ul {
-	position: relative;
-	margin: 0 !important;
-padding: 0 60px !important;
-    height: 100% !important;
-	list-style: none;
-  display: flex;
-  width:100% !important;
-}
-#brand-discount-slider ul li {
-position: relative;
-    display: block;
-    float: left;
-    margin: 20px;
-    padding: 0;
-    width: 100%;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-#brand-discount-slider ul li img {
-width: 100%;
-}
-.brand-arrow-prev {
-	width: 50px;
-    height: 81%;
-    background: #000;
-    text-align: center;
-    line-height: 177px;
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    left: 0;
-    z-index: 25;
-    cursor: pointer;
-    margin: 20px 0px;
-}
-.brand-arrow-next {
-	  width: 50px;
-   height: 81%;
-    background: #000;
-    text-align: center;
-    line-height: 177px;
-    color: #fff;
-    position: absolute;
-    top: 0px;
-    right: 0;
-    z-index: 25;
-    cursor: pointer;
-   margin: 20px 0px;
+.slider .slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
 }
 
-.brand-arrow-next:hover, .brand-arrow-prev:hover {
-  color:#d58e35;
+.slider .slide:first-child {
+  opacity: 1;
 }
 </style>
-<div class="brands-slider-col">
-  <div id="brand-discount-slider">
-    <div class="brand-arrow-next">
-      &​#10095;
-    </div>
-    <div class="brand-arrow-prev">
-      &​#10094;
-    </div>
-    <ul>
-      {% for block in section.blocks %}
-        <li>
-          <div class="brand-logo-container">
-            <img src="{{ block.settings.image | image_url: '300x300' }}" width="" height='' alt="Brand Logo">
-          </div>
-        </li>
-      {% endfor %}
-    </ul>
+<div class="slider">
+  <div class="slide" data-slide-index="{{ forloop.index0 }}">
+    {% for slide in slides %}
+      {% if forloop.index == forloop.index0 %}
+        {% assign slide_image = slide.settings.image %}
+        {% assign slide_title = slide.settings.title %}
+        {% assign slide_text = slide.settings.text %}
+      {% endif %}
+    {% endfor %}
+    {% if slide_image %}
+      <img src="{{ slide_image | image_url: '1200x600' }}" width="" height="s" alt="Slide">
+    {% endif %}
+    {% if slide_title or slide_text %}
+      <div class="slide-content">
+        {% if slide_title %}
+          <h2>{{ slide_title }}</h2>
+        {% endif %}
+        {% if slide_text %}
+          {{ slide_text | markdownify }}
+        {% endif %}
+      </div>
+    {% endif %}
   </div>
 </div>
 
+<script>
+  $(document).ready(function () {
+  setInterval(function () {
+    $('.slider .slide:first-child').fadeOut(500).next().fadeIn(500).end().appendTo('.slider');
+  }, 5000);
+});
+</script>
+
 {% schema %}
+
 {
-  "name": "Brand Slider",
-  "class": "brand-slider-section",
-  "settings": [
-    {
-      "type": "checkbox",
-      "id": "show_arrows",
-      "label": "Show Arrows",
-      "default": true
-    }
-  ],
+  "name": "Slider",
+  "settings": [],
   "blocks": [
     {
-      "type": "brand_image",
-      "name": "Brand Image",
+      "type": "image",
+      "name": "Slide",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image",
-          "info": "400 x 300px recommended"
+          "label": "Image"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Brand Slider",
+      "name": "Slider",
       "category": "Custom",
       "blocks": [
         {
-          "type": "brand_image"
+          "type": "image"
         },
         {
-          "type": "brand_image"
+          "type": "image"
         }
       ]
     }
   ]
 }
 {% endschema %}
-
-
