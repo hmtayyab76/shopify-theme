@@ -1,7 +1,11 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded and parsed');
+    
     // Auto-scrolling function
     function autoScroll() {
+        console.log('autoScroll function called');
+        
         const section = document.getElementById('section-id-{{ section.id }}');
         const logos = section.querySelectorAll('.d-11-text.logo');
         
@@ -27,17 +31,20 @@
         // Pause scrolling on hover
         section.addEventListener('mouseenter', function() {
             clearInterval(scrollInterval);
+            console.log('Scroll paused');
         });
         
         // Resume scrolling on mouse leave
         section.addEventListener('mouseleave', function() {
             scrollInterval = setInterval(scroll, 20);
+            console.log('Scroll resumed');
         });
     }
     
     // Initialize auto-scrolling
     autoScroll();
 });
+
 
 
 
@@ -102,6 +109,20 @@
     margin-left: 0;
   }
 }
+  /* Logo container styling */
+#section-id-{{ section.id }} .d-11 {
+    overflow: hidden;
+    white-space: nowrap;
+    display: flex;
+    align-items: center; /* Align logos vertically center */
+}
+
+/* Logo item styling */
+#section-id-{{ section.id }} .d-11-text.logo {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between logos */
+}
+
 .logo .alt-logo {
   position: absolute;
   top: 0;
