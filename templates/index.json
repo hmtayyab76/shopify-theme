@@ -96,11 +96,48 @@
         "side_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
         "side_image_mobile": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
       }
+    },
+    "scrolling_logos_MdqMeW": {
+      "type": "scrolling-logos",
+      "blocks": {
+        "logo_76YwzY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/pexels-math-90946.jpg"
+          }
+        },
+        "logo_Emj8Vy": {
+          "type": "logo",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "logo_76YwzY",
+        "logo_Emj8Vy"
+      ],
+      "settings": {
+        "text": "Your scrolling text here",
+        "link": "",
+        "text_size": 80,
+        "line_height": 1.5,
+        "speed": 14,
+        "direction": "left",
+        "font": "heading",
+        "space_x": true,
+        "stencil_all_text": false,
+        "stencil_text": "",
+        "overlay_style_tint": false,
+        "color_scheme": "custom",
+        "color_bg": "#000000",
+        "color_text": "#ffffff"
+      }
     }
   },
   "order": [
     "image_banner",
     "custom_featured_product_FDKEYP",
-    "custom_renewal_UHnRLh"
+    "custom_renewal_UHnRLh",
+    "scrolling_logos_MdqMeW"
   ]
 }
