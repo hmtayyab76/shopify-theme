@@ -1,5 +1,59 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Auto-scrolling function
+    function autoScroll() {
+        const section = document.getElementById('section-id-{{ section.id }}');
+        const logos = section.querySelectorAll('.d-11-text.logo');
+        
+        let scrollAmount = 1; // Adjust this value for scroll speed
+        let currentScroll = 0;
+        
+        // Clone logos for seamless looping
+        section.innerHTML += section.innerHTML;
+        
+        function scroll() {
+            currentScroll += scrollAmount;
+            
+            // Reset to start if reached the end
+            if (currentScroll >= section.scrollWidth / 2) {
+                currentScroll = 0;
+            }
+            
+            section.scrollLeft = currentScroll;
+        }
+        
+        let scrollInterval = setInterval(scroll, 50); // Adjust interval for smoother/faster scrolling
+        
+        // Pause scrolling on hover
+        section.addEventListener('mouseenter', function() {
+            clearInterval(scrollInterval);
+        });
+        
+        // Resume scrolling on mouse leave
+        section.addEventListener('mouseleave', function() {
+            scrollInterval = setInterval(scroll, 50);
+        });
+    }
+    
+    // Initialize auto-scrolling
+    autoScroll();
+});
+
+</script>
 {%- assign col_head_links_alt = settings.col_head_links_alt -%}
 <style>
+  /* Logo container styling */
+#section-id-{{ section.id }} .d-11 {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* Logo item styling */
+#section-id-{{ section.id }} .d-11-text.logo {
+    display: inline-block;
+    margin: 0 10px; /* Adjust spacing between logos */
+}
+
   .logo {
   position: relative;
  
