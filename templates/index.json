@@ -96,11 +96,29 @@
         "side_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
         "side_image_mobile": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
       }
+    },
+    "scrolling_logos_MdqMeW": {
+      "type": "scrolling-logos",
+      "blocks": {
+        "brand_image_JAPida": {
+          "type": "brand_image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "brand_image_JAPida"
+      ],
+      "settings": {
+        "show_arrows": true
+      }
     }
   },
   "order": [
     "image_banner",
     "custom_featured_product_FDKEYP",
-    "custom_renewal_UHnRLh"
+    "custom_renewal_UHnRLh",
+    "scrolling_logos_MdqMeW"
   ]
 }
