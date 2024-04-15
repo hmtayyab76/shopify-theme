@@ -14,7 +14,7 @@
         function scroll() {
             currentScroll += scrollAmount;
             
-            // Reset to start if reached the end
+            // Reset to start if reached the original end
             if (currentScroll >= section.scrollWidth / 2) {
                 currentScroll = 0;
             }
@@ -22,7 +22,7 @@
             section.scrollLeft = currentScroll;
         }
         
-        let scrollInterval = setInterval(scroll, 50); // Adjust interval for smoother/faster scrolling
+        let scrollInterval = setInterval(scroll, 20); // Adjust interval for smoother/faster scrolling
         
         // Pause scrolling on hover
         section.addEventListener('mouseenter', function() {
@@ -31,13 +31,15 @@
         
         // Resume scrolling on mouse leave
         section.addEventListener('mouseleave', function() {
-            scrollInterval = setInterval(scroll, 50);
+            scrollInterval = setInterval(scroll, 20);
         });
     }
     
     // Initialize auto-scrolling
     autoScroll();
 });
+
+
 
 </script>
 {%- assign col_head_links_alt = settings.col_head_links_alt -%}
