@@ -69,9 +69,10 @@
             assign cover_image = section.settings.video_shopify.preview_image
           endif
         -%}
+        
         {% if cover_image %}
           <div class="video-container__fallback rimage-outer-wrapper lazyload fade-in"
-              data-bgset="{% render 'bgset', image: cover_image %}"
+              {% comment %} data-bgset="{% render 'bgset', image: cover_image %}" {% endcomment %}
               data-sizes="auto"
               data-parent-fit="cover"
               {% if section.settings.image %} style="background-position: {{ section.settings.image.presentation.focal_point }}"{% endif %}>
