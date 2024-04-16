@@ -99,19 +99,14 @@
     },
     "scrolling_logos_MdqMeW": {
       "type": "scrolling-logos",
-      "blocks": {
-        "logo_slider_kgh9kH": {
-          "type": "logo_slider",
-          "settings": {
-            "logo_image": "shopify:\/\/shop_images\/TayyabPicture.png"
-          }
-        }
-      },
-      "block_order": [
-        "logo_slider_kgh9kH"
-      ],
       "settings": {
         "logo_text": "Text"
+      }
+    },
+    "text_image_slider_QRmtig": {
+      "type": "text-image-slider",
+      "settings": {
+        "text_image_text": "Text"
       }
     }
   },
@@ -119,6 +114,7 @@
     "image_banner",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
-    "scrolling_logos_MdqMeW"
+    "scrolling_logos_MdqMeW",
+    "text_image_slider_QRmtig"
   ]
 }
