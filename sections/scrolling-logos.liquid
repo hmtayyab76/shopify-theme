@@ -2,8 +2,7 @@
     <div>
         <div>
             <ul>
-                {% assign logos = section.settings.logo_image %}
-                {% for block in section.settings.logo_image %}
+                {% for block in section.blocks %}
                        <img 
                         src="{{ block.logo_image | image_url }}"
                         alt="{{ block.logo_text }}"
