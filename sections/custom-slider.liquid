@@ -1,0 +1,191 @@
+<style>
+    /* slider */
+.slider {
+    height: 400px;
+}
+
+/* slider-cards */
+.slide-card {
+    width: 300px;
+}
+
+/* slider-arrows */
+.arrow {
+    width: 40px;
+    height: 40px;
+}
+
+/* disabled button */
+.bg-disabled {
+    background-color: #e5e3e7;
+}
+
+/* slider and slide transitions */
+.slider-move-left {
+    transform: translate(-320px, 0px);
+    transition: all 0.5s ease;
+}
+
+.move-left {
+    transform: translate(-320px, 0px);
+    transition: all 0.5s ease;
+}
+
+.move-right {
+    transform: translate(320px, 0px);
+    transition: all 0.5s ease;
+}
+</style>
+<script>
+    // add active class by default
+document.querySelectorAll(".slide-card")[0].classList.add("active");
+// disable and style disabled back button
+document.querySelector("#previous-arrow").setAttribute("disabled", " ");
+document.querySelector("#previous-arrow i").style.color = "#c5c5c5";
+document.querySelector("#previous-arrow").classList.replace("bg-white", "bg-disabled");
+// calculate number of slides
+let count = document.querySelectorAll(".slide-card").length;
+
+
+// move to next slide
+function nextSlide() {
+    // enable and style the back button
+    document.querySelector("#previous-arrow").removeAttribute("disabled");
+    document.querySelector("#previous-arrow i").style.color = "#212529";
+    document.querySelector("#previous-arrow").classList.replace("bg-disabled", "bg-white");
+    const elements = document.querySelectorAll('.slide-card');
+    console.log(document.querySelector('.slider-wrap').children);
+    for (let index = 0; index <= count; index++) {
+        let valueIndex = null;
+        if (elements[index].classList.contains('active')) {
+            valueIndex = index;
+        }
+        if (valueIndex == 0) {
+            setTimeout(() => {
+                previousSlide();
+            }, 560);
+        }
+        // set animations
+        elements[index].classList.remove('move-left');
+        elements[elements.length - 1].classList.remove('move-left');
+        setTimeout(() => {
+            elements[index].classList.add('move-left');
+        }, 0);
+        setTimeout(() => {
+            elements[index].classList.remove('active');
+            elements[2].classList.add('active');
+            elements[index].classList.remove('move-left');
+            elements[elements.length - 1].classList.remove('move-left');
+            document.querySelector('.slider-wrap').append(elements[0]);
+        }, 500);
+    }
+};
+
+
+// previous slide
+function previousSlide() {
+    const elements = document.querySelectorAll('.slide-card');
+    // animate the slider wrapper
+    document.querySelector('.slider-wrap').classList.add('slider-move-left');
+    for (let index = 0; index <= count; index++) {
+        // set animations
+        setTimeout(() => {
+            elements[index].classList.add('move-right');
+        }, 0);
+        setTimeout(() => {
+            elements[index].classList.remove('active');
+            elements[0].classList.add('active');
+            elements[index].classList.remove('move-right');
+            document.querySelector('.slider-wrap').prepend(elements[elements.length - 1]);
+        }, 500);
+    }
+}
+</script>
+<main>
+    <!-- Slider -->
+    <section class="bg-light p-md-2 p-0 vh-100">
+        <h3 class="text-center">
+            Javascript Custom Slider
+        </h3>
+        <div class="text-muted text-center">Slide items one by one with an infinite loop. Responsive for all
+            screens.</div>
+      <div class="container position-relative">
+        <!-- Cards Wrap -->
+        <div class="slider d-flex align-items-center justify-content-start overflow-hidden position-relative">
+            <div class="slider-wrap d-flex align-items-center position-absolute">
+                {% for block in (1..8) %}
+
+                    <div class="slide-card 1 position-relative bg-white overflow-hidden shadow-sm mx-2">
+                        <a href="#" class="text-decoration-none">
+                            <img src="https://i.postimg.cc/wv0j2bCB/slide-1.jpg" alt="slide" width="100%" height="">
+                            <div class="p-3">
+                                <p class="text-dark my-2 fs-5 fw-semibold">JavaScript - 1</p>
+                                <p class="text-dark">Lorem ipsum dolor sit amet consec isicing elit. Praesentium
+                                aperiam
+                                ullam natus. Repudiandae.</p>
+                                <p class="text-muted mb-0 mt-3">18 Nov, 2022</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Slider Arrows -->
+        <!-- Previous Arrow -->
+        <button
+            class="text-dark arrow bg-white d-flex align-items-center justify-content-center shadow-lg border rounded-circle position-absolute bottom-50 start-0"
+            id="previous-arrow" onclick="previousSlide()">
+            <div>
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </div>
+        </button>
+        <!-- Next Arrow -->
+        <button
+            class="text-dark arrow bg-white d-flex align-items-center justify-content-center shadow-lg border rounded-circle position-absolute bottom-50 end-0"
+            id="next-arrow" onclick="nextSlide()">
+            <div>
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </div>
+        </button>
+    </div>
+    </section>
+</main>
+
+{% schema %}
+{
+  "name": "Custom Slider",
+  "class": "text_image_class",
+  "settings": [
+    {
+      "type": "text",
+      "id": "text_image_text",
+      "label": "Text Label",
+      "default": "Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "text_image_image",
+      "label": "text_image Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_picker",
+      "name": "text_image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "text_image_image",
+          "label": "text_image Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Slider",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
