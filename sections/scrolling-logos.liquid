@@ -1,20 +1,57 @@
-<div>
-    <div>
-        <div>
-            <ul>
-                {% for block in section.blocks %}
-                       <img 
-                        src="{{ block.logo_image | image_url }}"
-                        alt="{{ block.logo_text }}"
-                        width="100%"
-                        height="400px"
-                        >
-                            Hello           
-                {% endfor %}
-            </ul>
-        </div>
+
+<style>
+    .slider-container {
+        overflow: hidden;
+
+    }
+    
+    .slider-wrapper {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
+    }
+    
+    .logo-list {
+        display: flex;
+
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
+    .logo-item {
+        flex-shrink: 0;
+        margin-right: 20px; /* Space between logos */
+        scroll-snap-align: start;
+    }
+    
+    /* Optional: Hide scrollbar */
+    .slider-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+ 
+        
+</style>
+<div class="slider-container">
+    <div class="slider-wrapper">
+        <ul class="logo-list">
+            {% for block in section.blocks %}
+                <li class="logo-item">
+                    <img 
+                        src="{{ block.settings.logo_image | image_url }}"
+                        alt="Hello"
+                        width=""
+                        height=""
+                    >
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
+
+
+
 
 {% schema %}
     {
