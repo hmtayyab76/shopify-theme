@@ -2,8 +2,15 @@
     <div>
         <div>
             <ul>
-                {% for i in (1..5) %}
-                    hello        
+                {% assign logos = section.settings.logo_image %}
+                {% for block in logos %}
+                       <img 
+                        src="{{ block.logo_image | image_url }}"
+                        alt="{{ block.logo_text }}"
+                        width="100%"
+                        height="400px"
+                        >
+                            Hello           
                 {% endfor %}
             </ul>
         </div>
@@ -20,6 +27,24 @@
                 "id":"logo_text",
                 "label": "Text Label",
                 "default":"Text"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo_image",
+                "label": "Logo Image"
+            }
+        ],
+        "blocks": [
+            {
+                "type": "logo_slider",
+                "name":"Logo",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "logo_image",
+                        "label": "Logo Image"
+                    }
+                ]
             }
         ],
         "presets": [
