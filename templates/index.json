@@ -108,6 +108,12 @@
       "settings": {
         "text_image_text": "Text"
       }
+    },
+    "custom_slider_G4gCPG": {
+      "type": "custom-slider",
+      "settings": {
+        "text_image_text": "Text"
+      }
     }
   },
   "order": [
@@ -115,6 +121,7 @@
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
     "scrolling_logos_MdqMeW",
-    "text_image_slider_QRmtig"
+    "text_image_slider_QRmtig",
+    "custom_slider_G4gCPG"
   ]
 }
