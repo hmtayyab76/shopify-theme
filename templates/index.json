@@ -115,6 +115,23 @@
       "settings": {
         "text_image_text": "Text"
       }
+    },
+    "171363943290d25185": {
+      "type": "apps",
+      "blocks": {
+        "klaviyo_email_marketing_sms_form_embed_block_ADxKRR": {
+          "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/form-embed-block\/2632fe16-c075-4321-a88b-50b567f42507",
+          "settings": {
+            "formId": "WDNA2a"
+          }
+        }
+      },
+      "block_order": [
+        "klaviyo_email_marketing_sms_form_embed_block_ADxKRR"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -123,6 +140,7 @@
     "custom_renewal_UHnRLh",
     "scrolling_logos_MdqMeW",
     "text_image_slider_QRmtig",
-    "custom_slider_G4gCPG"
+    "custom_slider_G4gCPG",
+    "171363943290d25185"
   ]
 }
