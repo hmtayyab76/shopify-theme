@@ -111,6 +111,7 @@
     },
     "custom_slider_G4gCPG": {
       "type": "custom-slider",
+      "disabled": true,
       "settings": {
         "text_image_text": "Text"
       }
