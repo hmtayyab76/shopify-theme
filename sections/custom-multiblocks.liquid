@@ -1,6 +1,139 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Multi-Blocks",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Featured Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "multi_block",
+      "name": "Multi-block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "text_content",
+          "label": "Text Content",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+          "type": "radio",
+          "id": "content_position",
+          "label": "Content Position",
+          "options": [
+            {
+              "value": "image_left",
+              "label": "Image on Left, Text on Right"
+            },
+            {
+              "value": "image_right",
+              "label": "Image on Right, Text on Left"
+            }
+          ],
+          "default": "image_left"
+        }
+      ]
+    }
+  ], 
+  "presets": [
+    {
+      "name": "Multi Block Section"
+    }
+  ]
+}
 {% endschema %}
+
+
+
+<style>
+.multi-block-section {
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .multi-block {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .multi-block .content {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .multi-block.image-left .content {
+    order: 2;
+  }
+  
+  .multi-block.image-right .content {
+    order: 1;
+  }
+  
+  .multi-block img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .multi-block p {
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .multi-block {
+      flex: 0 0 100%;
+      flex-direction: column;
+    }
+  
+    .multi-block .content {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Variant Styles */
+  .multi-block.image-left {
+    order: {% if section.settings.content_position_variant == 'image_right' %}2{% else %}1{% endif %};
+  }
+  
+  .multi-block.image-right {
+    order: {% if section.settings.content_position_variant == 'image_left' %}2{% else %}1{% endif %};
+  }
+  </style>
+
+
+  {% assign section_settings = section.settings %}
+
+  <section class="multi-block-section">
+    <div class="container">
+      <h2>{{ section_settings.section_title }}</h2>
+      
+      {% for block in section.blocks %}
+        <div class="multi-block {% if block.settings.content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
+          <img src="{{ block.settings.image.url | image_url }}" alt="{{ block.settings.image.alt }}" width="" height="">
+          <div class="content">
+            <p>{{ block.settings.text_content }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+
+  
