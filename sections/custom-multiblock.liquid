@@ -120,20 +120,22 @@
 
   {% assign section_settings = section.settings %}
 
-  <section class="multi-block-section">
-    <div class="container">
-      <h2>{{ section_settings.section_title }}</h2>
-      
-      {% for block in section.blocks %}
-        <div class="multi-block {% if block.settings.content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
-          <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image.alt }}" width="200px" height="200px">
-          <div class="content">
-            <p>{{ block.settings.text_content }}</p>
-          </div>
+<section class="multi-block-section">
+  <div class="container">
+    <h2>{{ section_settings.section_title }}</h2>
+    
+    {% for block in section.blocks %}
+      <!-- Check content_position setting to determine the content position -->
+      <div class="multi-block {% if block.settings.content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
+        <img src="{{ block.settings.image | image_url: '200x200' }}" alt="{{ block.settings.image.alt }}" width="200px" height="200px">
+        <div class="content">
+          <p>{{ block.settings.text_content }}</p>
         </div>
-      {% endfor %}
-    </div>
-  </section>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
 
 
   
