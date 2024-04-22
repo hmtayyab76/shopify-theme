@@ -44,95 +44,22 @@
           "id": "text_content",
           "label": "Text Content",
           "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        }
-      ],
-      "settings\_map": {
-        "image": "image",
-        "text_content": "text_content",
-        "content_position_variant": "content_position"
-      },
-      "blocks": [
+        },
         {
-          "type": "container",
-          "blocks": [
+          "type": "select",
+          "id": "content_position",
+          "label": "Content Position",
+          "options": [
             {
-              "type": "image",
-              "settings": [
-                {
-                  "type": "image_picker",
-                  "id": "image",
-                  "label": "Image"
-                }
-              ]
+              "value": "image_left",
+              "label": "Image on Left, Text on Right"
             },
             {
-              "type": "container",
-              "settings": [
-                {
-                  "type": "textarea",
-                  "id": "text_content",
-                  "label": "Text Content"
-                }
-              ],
-              "blocks": [
-                {
-                  "type": "container",
-                  "settings": [
-                    {
-                      "type": "select",
-                      "id": "content_position",
-                      "label": "Content Position",
-                      "options": [
-                        {
-                          "value": "image_left",
-                          "label": "Image on Left, Text on Right"
-                        },
-                        {
-                          "value": "image_right",
-                          "label": "Image on Right, Text on Left"
-                        }
-                      ],
-                      "default": "image_left"
-                    }
-                  ],
-                  "blocks": [
-                    {
-                      "type": "container",
-                      "settings": [
-                        {
-                          "type": "image",
-                          "id": "image",
-                          "label": "Image",
-                          "computed_properties": [
-                            {
-                              "name": "custom_class",
-                              "value": "{% if settings.content_position == 'image_left' %}order-2{% else %}order-1{% endif %}"
-                            }
-                          ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "container",
-                      "settings": [
-                        {
-                          "type": "richtext",
-                          "id": "text_content",
-                          "label": "Text Content",
-                          "computed_properties": [
-                            {
-                              "name": "custom_class",
-                              "value": "{% if settings.content_position == 'image_left' %}order-1{% else %}order-2{% endif %}"
-                            }
-                         ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
+              "value": "image_right",
+              "label": "Image on Right, Text on Left"
             }
-          ]
+          ],
+          "default": "image_left"
         }
       ]
     }
@@ -141,125 +68,85 @@
 {% endschema %}
 
 <style>
-    .multi-block-section {
-        padding: 20px;
-      }
-      
-      .container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-      
-      .multi-block {
-        flex: 0 0 calc(50% - 10px);
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-      }
-      
-      .multi-block .content {
-        flex: 1;
-        margin-left: 20px;
-      }
-      
-      .multi-block.image-left .content {
-        order: 2;
-      }
-      
-      .multi-block.image-right .content {
-        order: 1;
-      }
-      
-      .multi-block img {
-        max-width: 100%;
-        height: auto;
-      }
-      
-      .multi-block p {
-        margin-top: 10px;
-      }
-      
-      /* Responsive Styles */
-      @media screen and (max-width: 768px) {
-        .multi-block {
-          flex: 0 0 100%;
-          flex-direction: column;
-        }
-      
-        .multi-block .content {
-          margin-left: 0;
-          margin-top: 10px;
-        }
-      }
-      
-      /* Variant Styles */
-      .multi-block.image-left {
-        {% if section.settings.content_position_variant == 'image_right' %}
-          order: 2;
-        {% endif %}
-      }
-      
-      .multi-block.image-left .content {
-        {% if section.settings.content_position_variant == 'image_right' %}
-          order: 1;
-        {% endif %}
-      }
-      
-      .multi-block.image-left .content .rte {
-        {% if section.settings.content_position_variant == 'image_right' %}
-          order: 2;
-        {% endif %}
-      }
-      
-      .multi-block.image-left img {
-        {% if section.settings.content_position_variant == 'image_right' %}
-          order: 1;
-        {% endif %}
-      }
-      
-      .multi-block.image-right {
-        {% if section.settings.content_position_variant == 'image_left' %}
-          order: 2;
-        {% endif %}
-      }
-      
-      .multi-block.image-right .content {
-        {% if section.settings.content_position_variant == 'image_left' %}
-          order: 1;
-        {% endif %}
-      }
-      
-      .multi-block.image-right .content .rte {
-        {% if section.settings.content_position_variant == 'image_left' %}
-          order: 2;
-        {% endif %}
-      }
-      
-      .multi-block.image-right img {
-        {% if section.settings.content_position_variant == 'image_left' %}
-          order: 1;
-        {% endif %}
-      }
-</style>
+.multi-block-section {
+    padding: 20px;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .multi-block {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .multi-block .content {
+    flex: 1;
+    margin-left: 20px;
+  }
+  
+  .multi-block.image-left .content {
+    order: 2;
+  }
+  
+  .multi-block.image-right .content {
+    order: 1;
+  }
+  
+  .multi-block img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .multi-block p {
+    margin-top: 10px;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .multi-block {
+      flex: 0 0 100%;
+      flex-direction: column;
+    }
+  
+    .multi-block .content {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+  
+  /* Variant Styles */
+  .multi-block.image-left {
+    order: {% if section.settings.content_position_variant == 'image_right' %}2{% else %}1{% endif %};
+  }
+  
+  .multi-block.image-right {
+    order: {% if section.settings.content_position_variant == 'image_left' %}2{% else %}1{% endif %};
+  }
+  </style>
 
 
-{% assign section_settings = section.settings %}
-{% assign content_position = section_settings.content_position %}
+  {% assign section_settings = section.settings %}
 
-<section class="multi-block-section">
-  <div class="container">
-    <h2>{{ section_settings.section_title }}</h2>
-    
-    {% for block in section.blocks %}
-      <div class="multi-block {% if content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
-        <img src="{{ block.settings.image.url }}" alt="{{ block.settings.image.alt }}" width="" height="">
-        <div class="content">
-          <p>{{ block.settings.text_content }}</p>
+  <section class="multi-block-section">
+    <div class="container">
+      <h2>{{ section_settings.section_title }}</h2>
+      
+      {% for block in section.blocks %}
+        <div class="multi-block {% if block.settings.content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
+          <img src="{{ block.settings.image.url }}" alt="{{ block.settings.image.alt }}" width="" height="">
+          <div class="content">
+            <p>{{ block.settings.text_content }}</p>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
+      {% endfor %}
+    </div>
+  </section>
+  
 
   
