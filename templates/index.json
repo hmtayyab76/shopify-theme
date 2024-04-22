@@ -182,7 +182,7 @@
       ],
       "settings": {
         "title": "Multicolumn Section",
-        "font_size": 16,
+        "font_size": 19,
         "background": "#eeeeee",
         "button_label": "Learn More",
         "button_link": ""
