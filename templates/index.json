@@ -139,7 +139,7 @@
             "title": "Daily dose of natural energy for your family’s immunity & vitality.",
             "content": "<p>“Excellent choice to stay healthy. We as a family noticed a huge difference, as the immunity has increased and the number of colds and other diseases that usually occur in the winter have been reduced. I recommend everyone use it”. <\/p>",
             "footer": "VERIFIED BUYER, UMF™ 10+",
-            "color": "#E87722"
+            "color": "#e87722"
           }
         },
         "testimonial_4z8YCP": {
@@ -151,7 +151,7 @@
             "title": "Daily dose of natural energy for your family’s immunity & vitality.",
             "content": "<p>“Excellent choice to stay healthy. We as a family noticed a huge difference, as the immunity has increased and the number of colds and other diseases that usually occur in the winter have been reduced. I recommend everyone use it”. <\/p>",
             "footer": "VERIFIED BUYER, UMF™ 10+",
-            "color": "#E87722"
+            "color": "#e87722"
           }
         }
       },
@@ -162,6 +162,31 @@
       "settings": {
         "title_text": "Live life in full colors"
       }
+    },
+    "multi_section_f6qQnF": {
+      "type": "multi-section",
+      "blocks": {
+        "column_rbQegV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
+            "title": "Block-1",
+            "text": "<p>We're a worldwide community for online learning and teaching where anybody can acquire new skills and accomplish their objectives by connecting with others. We are dedicated to making a positive difference in the future of education.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_rbQegV"
+      ],
+      "settings": {
+        "title": "Multicolumn Section",
+        "font_size": 16,
+        "background": "#eeeeee",
+        "button_label": "Learn More",
+        "button_link": ""
+      }
     }
   },
   "order": [
@@ -171,6 +196,7 @@
     "scrolling_logos_MdqMeW",
     "custom_slider_G4gCPG",
     "171363943290d25185",
-    "text_image_slider_fk8AEX"
+    "text_image_slider_fk8AEX",
+    "multi_section_f6qQnF"
   ]
 }
