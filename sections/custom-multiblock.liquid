@@ -55,7 +55,7 @@
 
 
 <style>
-
+    
         .multi-block-section {
             padding: 20px;
           }
@@ -108,26 +108,13 @@
             }
           }
           
-          /* Variant Styles */
-          {% for block in section.blocks %}
-          {% if block.settings.content_position == 'image_left' %}
-          .multi-block.image-left {
-            order: 2;
-          }
+      
+          .image_left{
+            flex-direction: row-reverse;
+        }
+         
           
-          .multi-block.image-right {
-            order: 1;
-          }
-          {% elsif block.settings.content_position == 'image_right' %}
-          .multi-block.image-left {
-            order: 1;
-          }
-          
-          .multi-block.image-right {
-            order: 2;
-          }
-          {% endif %}
-          {% endfor %}
+      
           
   </style>
 
@@ -140,7 +127,7 @@
     
     {% for block in section.blocks %}
       <!-- Check content_position setting to determine the content position -->
-      <div class="multi-block {% if block.settings.content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
+      <div class="multi-block {% if block.settings.content_position == 'image_left' %} image-left {% else %} image-right {% endif %}">
         <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
         <div class="content">
           <p>{{ block.settings.text_content }}</p>
