@@ -103,12 +103,6 @@
         "logo_text": "Text"
       }
     },
-    "text_image_slider_QRmtig": {
-      "type": "text-image-slider",
-      "settings": {
-        "title_text": "Live life in full colors"
-      }
-    },
     "custom_slider_G4gCPG": {
       "type": "custom-slider",
       "disabled": true,
@@ -162,7 +156,6 @@
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
     "scrolling_logos_MdqMeW",
-    "text_image_slider_QRmtig",
     "custom_slider_G4gCPG",
     "171363943290d25185",
     "text_image_slider_fk8AEX"
