@@ -159,33 +159,36 @@
         "testimonial_iA8bUj",
         "testimonial_4z8YCP"
       ],
+      "disabled": true,
       "settings": {
         "title_text": "Live life in full colors"
       }
     },
-    "multi_section_f6qQnF": {
-      "type": "multi-section",
+    "custom_multiblock_3VtcxH": {
+      "type": "custom-multiblock",
       "blocks": {
-        "column_rbQegV": {
-          "type": "column",
+        "multi_block_FkBbjt": {
+          "type": "multi_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
-            "title": "Block-1",
-            "text": "<p>We're a worldwide community for online learning and teaching where anybody can acquire new skills and accomplish their objectives by connecting with others. We are dedicated to making a positive difference in the future of education.<\/p>",
-            "link_label": "",
-            "link": ""
+            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "content_position": "image_left"
+          }
+        },
+        "multi_block_G8jNU8": {
+          "type": "multi_block",
+          "settings": {
+            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "content_position": "image_left"
           }
         }
       },
       "block_order": [
-        "column_rbQegV"
+        "multi_block_FkBbjt",
+        "multi_block_G8jNU8"
       ],
       "settings": {
-        "title": "Multicolumn Section",
-        "font_size": 19,
-        "background": "#eeeeee",
-        "button_label": "Learn More",
-        "button_link": ""
+        "section_title": "Featured Products"
       }
     }
   },
@@ -197,6 +200,6 @@
     "custom_slider_G4gCPG",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
-    "multi_section_f6qQnF"
+    "custom_multiblock_3VtcxH"
   ]
 }
