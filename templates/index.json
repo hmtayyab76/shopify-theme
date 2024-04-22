@@ -132,6 +132,15 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "slider_bqHzhX": {
+      "type": "slider",
+      "settings": {
+        "products": [
+          "age-defying-face-cream"
+        ],
+        "title": "SHOW ME THE HONEY"
+      }
     }
   },
   "order": [
@@ -141,6 +150,7 @@
     "scrolling_logos_MdqMeW",
     "text_image_slider_QRmtig",
     "custom_slider_G4gCPG",
-    "171363943290d25185"
+    "171363943290d25185",
+    "slider_bqHzhX"
   ]
 }
