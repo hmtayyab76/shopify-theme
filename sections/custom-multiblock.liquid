@@ -1,0 +1,120 @@
+{% schema %}
+{
+    "name": "Multi-block Section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "section_title",
+        "label": "Section Title",
+        "default": "Featured Products"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image",
+        "default": {
+          "url": "placeholder-image.jpg",
+          "alt": "Placeholder Image"
+        }
+      },
+      {
+        "type": "textarea",
+        "id": "text_content",
+        "label": "Text Content",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      },
+      {
+        "type": "select",
+        "id": "content_position",
+        "label": "Content Position",
+        "options": [
+          {
+            "value": "image_left",
+            "label": "Image on Left, Text on Right"
+          },
+          {
+            "value": "image_right",
+            "label": "Image on Right, Text on Left"
+          }
+        ],
+        "default": "image_left"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "multi_block",
+        "name": "Multi-block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image",
+            "default": {
+              "url": "placeholder-image.jpg",
+              "alt": "Placeholder Image"
+            }
+          },
+          {
+            "type": "textarea",
+            "id": "text_content",
+            "label": "Text Content",
+            "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+<style>
+    .multi-block-section {
+        padding: 20px;
+      }
+      
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      
+      .multi-block {
+        flex: 0 0 calc(50% - 10px);
+        margin-bottom: 20px;
+      }
+      
+      .multi-block.image-left img {
+        order: 1;
+      }
+      
+      .multi-block.image-right img {
+        order: 2;
+      }
+      
+      .multi-block p {
+        margin-top: 10px;
+      }
+      
+      /* Responsive Styles */
+      @media screen and (max-width: 768px) {
+        .multi-block {
+          flex: 0 0 100%;
+        }
+      }
+      
+</style>
+
+{% assign section_settings = section.settings %}
+{% assign content_position = section_settings.content_position %}
+
+<section class="multi-block-section">
+  <div class="container">
+    <h2>{{ section_settings.section_title }}</h2>
+    
+    {% for block in section.blocks %}
+      <div class="multi-block {% if content_position == 'image_left' %}image-left{% else %}image-right{% endif %}">
+        <img src="{{ block.settings.image.url }}" alt="{{ block.settings.image.alt }}" width="" height="">
+        <p>{{ block.settings.text_content }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+  
