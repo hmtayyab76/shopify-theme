@@ -43,90 +43,145 @@
 {% endschema %}
 
 
-
 <style>
+    .multi-block-section {
+      padding: 40px 0;
+      background-color: #f9f9f9;
+    }
     
-        .multi-block-section {
-            padding: 20px;
-          }
-          
-          .container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-          }
-          
-          .multi-block {
-            flex: 0 0 calc(50% - 10px);
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-          }
-          
-          .multi-block .content {
-            flex: 1;
-            margin-left: 20px;
-          }
-          
-          .multi-block.image-left .content {
-            order: 2;
-          }
-          
-          .multi-block.image-right .content {
-            order: 1;
-          }
-          
-          .multi-block img {
-            max-width: 100%;
-            height: auto;
-          }
-          
-          .multi-block p {
-            margin-top: 10px;
-          }
-          
-          /* Responsive Styles */
-          @media screen and (max-width: 768px) {
-            .multi-block {
-              flex: 0 0 100%;
-              flex-direction: column;
-            }
-          
-            .multi-block .content {
-              margin-left: 0;
-              margin-top: 10px;
-            }
-          }
-          
-      
-          .image-left{
-            flex-direction: row-reverse !important;
-        }
-         
-          
-      
-          
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .multi-block {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .multi-block img {
+      max-width: 50%;
+      object-fit: cover;
+      height: auto;
+      border-radius: 8px 0 0 8px;
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+    
+    .multi-block .content {
+      flex: 1;
+      padding: 20px;
+    }
+    
+    .multi-block.image-left .content {
+      order: 2;
+    }
+    
+    .multi-block.image-right .content {
+      order: 1;
+    }
+    
+    .multi-block p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333333;
+    }
+    
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      text-align: center;
+      color: #333333;
+    }
+    
+   /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .multi-block img {
+      max-width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+  
+    .multi-block .content {
+      padding: 15px;
+    }
+    
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .multi-block img {
+      max-width: 100%;
+      border-radius: 8px 8px 0 0;
+    }
+
+    .multi-block:hover img {
+      transform: translateY(-10px);
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+  
+    
+    .image-left {
+      flex-direction: row-reverse;
+    }
+    
   </style>
-
-
-  {% assign section_settings = section.settings %}
-
-<section class="multi-block-section">
-  <div class="container">
-    <h2>{{ section_settings.section_title }}</h2>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll(".multi-block img");
     
-    {% for block in section.blocks %}
-      <!-- Check content_position setting to determine the content position -->
-      <div class="multi-block {% if block.settings.checked  %} image-left {% endif %}">
-        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
-        <div class="content">
-          <p>{{ block.settings.text_content }}</p>
+      const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.3
+      };
+    
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+    
+      images.forEach((image) => {
+        observer.observe(image);
+      });
+    });
+  </script>
+  
+  {% assign section_settings = section.settings %}
+  
+  <section class="multi-block-section">
+    <div class="container">
+      <h2>{{ section_settings.section_title }}</h2>
+      
+      {% for block in section.blocks %}
+        <!-- Check content_position setting to determine the content position -->
+        <div class="multi-block {% if block.settings.checked %}image-left{% endif %}">
+          <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
+          <div class="content">
+            <p>{{ block.settings.text_content }}</p>
+          </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-</section>
-
-
-
+      {% endfor %}
+    </div>
+  </section>
   
