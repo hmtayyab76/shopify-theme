@@ -26,20 +26,10 @@
           "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-          "type": "radio",
-          "id": "content_position",
-          "label": "Content Position",
-          "options": [
-            {
-              "value": "image_left",
-              "label": "Image on Left, Text on Right"
-            },
-            {
-              "value": "image_right",
-              "label": "Image on Right, Text on Left"
-            }
-          ],
-          "default": "image_left"
+            "type": "checkbox",
+            "id": "checked",
+            "label": "Check Box",
+            "default": true
         }
       ]
     }
@@ -127,7 +117,7 @@
     
     {% for block in section.blocks %}
       <!-- Check content_position setting to determine the content position -->
-      <div class="multi-block {% if block.settings.content_position == 'image_left' %} image-left {% else %} image-right {% endif %}">
+      <div class="multi-block {% if block.settings.checked  %} image-left {% endif %}">
         <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
         <div class="content">
           <p>{{ block.settings.text_content }}</p>
