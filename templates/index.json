@@ -141,10 +141,23 @@
             "footer": "VERIFIED BUYER, UMF™ 10+",
             "color": "#E87722"
           }
+        },
+        "testimonial_4z8YCP": {
+          "type": "testimonial",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/testimonials-1-1.webp",
+            "image_2": "shopify:\/\/shop_images\/DSC_1334_10_UMF.webp",
+            "image_3": "shopify:\/\/shop_images\/testimonials-1-bg.webp",
+            "title": "Daily dose of natural energy for your family’s immunity & vitality.",
+            "content": "<p>“Excellent choice to stay healthy. We as a family noticed a huge difference, as the immunity has increased and the number of colds and other diseases that usually occur in the winter have been reduced. I recommend everyone use it”. <\/p>",
+            "footer": "VERIFIED BUYER, UMF™ 10+",
+            "color": "#E87722"
+          }
         }
       },
       "block_order": [
-        "testimonial_iA8bUj"
+        "testimonial_iA8bUj",
+        "testimonial_4z8YCP"
       ],
       "settings": {
         "title_text": "Live life in full colors"
