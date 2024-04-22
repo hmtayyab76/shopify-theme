@@ -1,40 +1,167 @@
-<!DOCTYPE html>
-    <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Slider Example</title>
-      <style>
-        .slider {
-          width: 300px;
-          margin: 20px auto;
-        }
-        .slider input[type="range"] {
-          width: 100%;
-        }
-        .slider .slider-value {
-          text-align: center;
-        }
-      </style>
-    </head>
-    <body>
-      <div class="slider">
-        <input type="range" min="0" max="100" value="{{ sliderValue }}" id="slider">
-        <div class="slider-value">{{ sliderValue }}</div>
+{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}
+{{ 'slider.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper-bundle.min.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
+<div class="c-container">
+  <div class="c-slider__content">
+    {%- if section.settings.title != blank -%}
+      <h2>{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+    {%- if section.settings.products != blank -%}
+      <div class="c-slider__products swiper">
+        <div class="c-slider__products__wrapper swiper-wrapper">
+          {%- for product in section.settings.products -%}
+            {% liquid
+              assign default_variant_id = null
+              if product.variants != blank
+                for variant in product.variants
+                  if settings.default_variants contains variant.title
+                    assign default_variant_id = variant.id
+                  endif
+                endfor
+              endif
+            %}
+            <div
+              class="c-slider__product swiper-slide"
+              {% if product.metafields.custom.color != blank %}
+                data-color="{{ product.metafields.custom.color | escape }};"
+              {% endif %}
+              {% if product.metafields.custom.umf_score != blank %}
+                data-pagination-text="{{ product.metafields.custom.umf_score | escape }}"
+              {% endif %}
+              data-name="{% if product.metafields.custom.product_name != blank %}{{ product.metafields.custom.product_name | escape }}{% elsif product.title != blank %}{{ product.title | escape }}{% else %}Manuka Honey{% endif %}"
+              {% if product.metafields.custom.color != blank %}
+                style="--product-color: {{ product.metafields.custom.color | escape }};"
+              {% endif %}
+            >
+              <div class="c-slider__product__content">
+                <div class="c-slider__product__top">
+                  <div class="c-slider__product__title">
+                    {%- if product.metafields.custom.product_name != blank -%}
+                      <h3>{{ product.metafields.custom.product_name | escape }}</h3>
+                    {%- elsif product.title != blank -%}
+                      <h3>{{ product.title | escape }}</h3>
+                    {%- else -%}
+                      <h3>{{ 'sections.slider.manuka_honey' | t }}</h3>
+                    {%- endif -%}
+                  </div>
+                  <a
+                    class="c-slider__product__image"
+                    href="{{ product.url }}{% if default_variant_id != null %}?variant={{ default_variant_id }}{% endif %}"
+                    rel="bookmark"
+                  >
+                    {%- if product.featured_media -%}
+                      <img
+                        srcset="
+                          {%- if product.featured_media.width >= 165 -%}{{ product.featured_media | image_url: width: 330 }} 165w,{%- endif -%}
+                          {%- if product.featured_media.width >= 360 -%}{{ product.featured_media | image_url: width: 720 }} 360w,{%- endif -%}
+                          {%- if product.featured_media.width >= 533 -%}{{ product.featured_media | image_url: width: 1128 }} 533w,{%- endif -%}
+                          {%- if product.featured_media.width >= 720 -%}{{ product.featured_media | image_url: width: 1128 }} 720w,{%- endif -%}
+                          {%- if product.featured_media.width >= 940 -%}{{ product.featured_media | image_url: width: 1128 }} 940w,{%- endif -%}
+                          {%- if product.featured_media.width >= 1066 -%}{{ product.featured_media | image_url: width: 1128 }} 1066w,{%- endif -%}
+                          {{ product.featured_media | image_url }} {{ product.featured_media.width }}w
+                        "
+                        src="{{ product.featured_media | image_url: width: 800 }}"
+                        sizes="(min-width: 500px) {{ 1600 | minus: 500 | divided_by: 3 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                        alt="{{ product.featured_media.alt | escape }}"
+                        class="c-slider__product__image__primary u-absolute-fill"
+                        loading="lazy"
+                        width="{{ product.featured_media.width }}"
+                        height="{{ product.featured_media.height }}"
+                      >
+                    {%- endif -%}
+                  </a>
+                  <div class="c-slider__product__info">
+                    {%- if product.metafields.custom.umf_score != blank -%}
+                      <div class="c-slider__product__score c-slider__product__score--umf">
+                        <span class="c-slider__product__score__name">{{ 'sections.slider.umf_html' | t }}</span>
+                        <span class="c-slider__product__score__value"
+                          ><strong>{{ product.metafields.custom.umf_score | escape }}</strong></span
+                        >
+                      </div>
+                    {%- endif -%}
+                    {%- if product.metafields.custom.mgo_score != blank -%}
+                      <div class="c-slider__product__score c-slider__product__score--mgo">
+                        <span class="c-slider__product__score__name">{{ 'sections.slider.mgo' | t }}</span>
+                        <span class="c-slider__product__score__value"
+                          ><strong>{{ product.metafields.custom.mgo_score | escape }}</strong></span
+                        >
+                      </div>
+                    {%- endif -%}
+                  </div>
+                  {%- if product.metafields.custom.background_image != blank -%}
+                    <img
+                      srcset="
+                        {%- if product.metafields.custom.background_image.width >= 165 -%}{{ product.metafields.custom.background_image | image_url: width: 330 }} 165w,{%- endif -%}
+                        {%- if product.metafields.custom.background_image.width >= 360 -%}{{ product.metafields.custom.background_image | image_url: width: 720 }} 360w,{%- endif -%}
+                        {%- if product.metafields.custom.background_image.width >= 533 -%}{{ product.metafields.custom.background_image | image_url: width: 1128 }} 533w,{%- endif -%}
+                        {%- if product.metafields.custom.background_image.width >= 720 -%}{{ product.metafields.custom.background_image | image_url: width: 1128 }} 720w,{%- endif -%}
+                        {%- if product.metafields.custom.background_image.width >= 940 -%}{{ product.metafields.custom.background_image | image_url: width: 1128 }} 940w,{%- endif -%}
+                        {%- if product.metafields.custom.background_image.width >= 1066 -%}{{ product.metafields.custom.background_image | image_url: width: 1128 }} 1066w,{%- endif -%}
+                        {{ product.metafields.custom.background_image | image_url }} {{ product.metafields.custom.background_image.width }}w
+                      "
+                      src="{{ product.metafields.custom.background_image | image_url: width: 800 }}"
+                      sizes="(min-width: 500px) {{ 1600 | minus: 500 | divided_by: 3 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
+                      alt="{{ product.metafields.custom.background_image.alt | escape }}"
+                      class="u-absolute-fill c-slider__product__background"
+                      loading="lazy"
+                      width="{{ product.metafields.custom.background_image.width }}"
+                      height="{{ product.metafields.custom.background_image.height }}"
+                    >
+                  {%- endif -%}
+                </div>
+                <div class="c-slider__product__bottom">
+                  <a
+                    class="c-button"
+                    href="{{ product.url }}{% if default_variant_id != null %}?variant={{ default_variant_id }}{% endif %}"
+                    rel="bookmark"
+                  >
+                    {%- if product.metafields.custom.shop_button_text != blank -%}
+                      {{- product.metafields.custom.shop_button_text | escape -}}
+                    {%- else -%}
+                      {{ 'sections.slider.learn_more' | t }}
+                    {%- endif -%}
+                  </a>
+                </div>
+              </div>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class="c-slider__pagination"></div>
+        <div class="c-slider__nav swiper-button-prev">
+          {%- render 'icon-arrow', type: 'left' -%}
+        </div>
+        <div class="c-slider__nav swiper-button-next">
+          {%- render 'icon-arrow', type: 'right' -%}
+        </div>
       </div>
-    
-      <script>
-        document.addEventListener('DOMContentLoaded', function() {
-          var slider = document.getElementById('slider');
-          var output = document.querySelector('.slider-value');
-    
-          output.innerHTML = slider.value;
-    
-          slider.oninput = function() {
-            output.innerHTML = this.value;
-          };
-        }); 
-      </script>
-    </body>
-    </html>
-    
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Slider",
+  "tag": "section",
+  "class": "c-slider",
+  "settings": [
+    {
+      "type": "product_list",
+      "id": "products",
+      "label": "Products",
+      "limit": 12
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "SHOW ME THE HONEY"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Slider"
+    }
+  ]
+}
+{% endschema %}
