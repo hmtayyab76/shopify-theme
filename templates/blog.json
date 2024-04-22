@@ -43,13 +43,21 @@
             "selected_blog_post": "news\/rehana-dev",
             "published-date": true
           }
+        },
+        "text_HjxPV6": {
+          "type": "text",
+          "settings": {
+            "selected_blog_post": "news\/allie-grack",
+            "published-date": true
+          }
         }
       },
       "block_order": [
         "text_48G3T9",
         "text_awHA6z",
         "text_eTdjhc",
-        "text_YfWWkc"
+        "text_YfWWkc",
+        "text_HjxPV6"
       ],
       "settings": {
         "main-blog-title": "From the blog",
