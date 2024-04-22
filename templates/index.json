@@ -178,6 +178,7 @@
         "multi_block_G8jNU8": {
           "type": "multi_block",
           "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
             "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "content_position": "image_left"
           }
