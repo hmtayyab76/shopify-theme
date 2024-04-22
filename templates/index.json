@@ -106,7 +106,7 @@
     "text_image_slider_QRmtig": {
       "type": "text-image-slider",
       "settings": {
-        "text_image_text": "Text"
+        "title_text": "Live life in full colors"
       }
     },
     "custom_slider_G4gCPG": {
@@ -133,13 +133,27 @@
         "include_margins": true
       }
     },
-    "slider_bqHzhX": {
-      "type": "slider",
+    "text_image_slider_fk8AEX": {
+      "type": "text-image-slider",
+      "blocks": {
+        "testimonial_iA8bUj": {
+          "type": "testimonial",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/DSC_1334_10_UMF.webp",
+            "image_2": "shopify:\/\/shop_images\/testimonials-1-1.webp",
+            "image_3": "shopify:\/\/shop_images\/testimonials-1-bg.webp",
+            "title": "Daily dose of natural energy for your family’s immunity & vitality.",
+            "content": "<p>“Excellent choice to stay healthy. We as a family noticed a huge difference, as the immunity has increased and the number of colds and other diseases that usually occur in the winter have been reduced. I recommend everyone use it”. <\/p>",
+            "footer": "VERIFIED BUYER, UMF™ 10+",
+            "color": "#E87722"
+          }
+        }
+      },
+      "block_order": [
+        "testimonial_iA8bUj"
+      ],
       "settings": {
-        "products": [
-          "age-defying-face-cream"
-        ],
-        "title": "SHOW ME THE HONEY"
+        "title_text": "Live life in full colors"
       }
     }
   },
@@ -151,6 +165,6 @@
     "text_image_slider_QRmtig",
     "custom_slider_G4gCPG",
     "171363943290d25185",
-    "slider_bqHzhX"
+    "text_image_slider_fk8AEX"
   ]
 }
