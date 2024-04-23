@@ -111,8 +111,8 @@
         "multi_block_hemnqM": {
           "type": "multi_block",
           "settings": {
-            "text_title": "Text Title",
-            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "text_title": "Accessory",
+            "text_content": "This is the content for the accessory. It describes the features and benefits of the accessory.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nThis is the content for the accessory. It describes the features and benefits of the accessory.",
             "checked": false
           }
         }
