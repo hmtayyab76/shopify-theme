@@ -203,13 +203,14 @@
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
                 {% when 'block' %}
+                  
                   <div class="container">    
-                    {% for block in section.blocks %}
+                    {% for inner_block in section.blocks %}
                       <!-- Check content_position setting to determine the content position -->
                       <div class="multi-block">
-                        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
+                        <img src="{{ inner_block.settings.image | image_url }}" alt="{{ inner_block.settings.image }}" width="200px" height="200px">
                         <div class="content">
-                          <p>{{ block.settings.text_content }}</p>
+                          <p>{{ inner_block.settings.text_content }}</p>
                         </div>
                       </div>
                     {% endfor %}
