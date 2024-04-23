@@ -7,7 +7,8 @@
 .ss-trust-badge-container {
   display: flex;           /* Flexbox */
   justify-content: center; /* Center items horizontally */
-  align-items: center;     /* Center items vertically */
+  align-items: center;  
+  flex-wrap: wrap;   /* Center items vertically */
 }
 
 /* Trust Badge Item */
@@ -16,6 +17,7 @@
     padding: .75rem;
     flex: 1;
     display: flex;
+    min-width: 50%;
     border-color: #dedede;
     align-items: center;
     gap: 10px;
