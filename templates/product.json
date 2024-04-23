@@ -74,27 +74,6 @@
             "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "checked": true
           }
-        },
-        "block_DMF7nD": {
-          "type": "block",
-          "settings": {
-            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": true
-          }
-        },
-        "block_UYb4dy": {
-          "type": "block",
-          "settings": {
-            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": true
-          }
-        },
-        "block_yh4Lqc": {
-          "type": "block",
-          "settings": {
-            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": true
-          }
         }
       },
       "block_order": [
@@ -108,10 +87,7 @@
         "share",
         "collapsible_tab_zxHbzp",
         "collapsible_tab_hyyCU4",
-        "block_V9KWwb",
-        "block_DMF7nD",
-        "block_UYb4dy",
-        "block_yh4Lqc"
+        "block_V9KWwb"
       ],
       "settings": {
         "enable_sticky_info": true,
