@@ -164,12 +164,33 @@
         "block_bUxP9b": {
           "type": "block",
           "settings": {
-            "logo_image": "shopify:\/\/shop_images\/pexels-karolina-grabowska-4226911.jpg"
+            "logo_image": "shopify:\/\/shop_images\/Screenshot_2023-04-07_at_21.22.45_300x300_f94c9ffc-faea-4e60-8e87-9b90b1de8456.png"
+          }
+        },
+        "block_TektNe": {
+          "type": "block",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Screenshot_2023-04-05_at_10.29.21_300x300_11106cf2-686d-4019-a4c8-e638a64f0d39.png"
+          }
+        },
+        "block_DGrHxT": {
+          "type": "block",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Screenshot_2023-04-07_at_21.22.15_300x300_9ccd1a2b-801b-4d7e-9ba7-a164ae0d50a3.png"
+          }
+        },
+        "block_Gb96AX": {
+          "type": "block",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Screenshot_2023-04-07_at_21.22.05_300x300_d311d206-24f9-4fa0-9e31-095278bfb36e.png"
           }
         }
       },
       "block_order": [
-        "block_bUxP9b"
+        "block_bUxP9b",
+        "block_TektNe",
+        "block_DGrHxT",
+        "block_Gb96AX"
       ],
       "settings": {
       }
