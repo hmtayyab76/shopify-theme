@@ -1,93 +1,76 @@
-
 <style>
-    .slider-container {
+    .scrolling-logo {
         overflow: hidden;
-
-    }
-    
-    .slider-wrapper {
-        display: flex;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-        -webkit-overflow-scrolling: touch; /* For smooth scrolling on iOS */
-    }
-    
-    .logo-list {
-        display: flex;
-
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
+        white-space: nowrap;
     }
     
     .logo-item {
-        flex-shrink: 0;
-        margin-right: 20px; /* Space between logos */
-        scroll-snap-align: start;
+        display: inline-block;
+        margin-right: 20px; /* Adjust spacing between logos */
+        animation: scrollLeft 15s linear infinite; /* Adjust animation speed as needed */
     }
     
-    /* Optional: Hide scrollbar */
-    .slider-wrapper::-webkit-scrollbar {
-        display: none;
+    .logo-item:hover {
+        animation-play-state: paused; /* Pause animation on hover */
     }
- 
-        
+    
+    /* Resume animation on mouse out */
+    .logo-item:hover + .logo-item,
+    .scrolling-logo:hover .logo-item {
+        animation-play-state: running;
+    }
+    
+    @keyframes scrollLeft {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    
 </style>
-<div class="slider-container">
-    <div class="slider-wrapper">
-        <ul class="logo-list">
-            {% for block in section.blocks %}
-                <li class="logo-item">
-                    <img 
-                        src="{{ block.settings.logo_image | image_url }}"
-                        alt="Hello"
-                        width=""
-                        height=""
-                    >
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
+<div class="scrolling-logo">
+    {% for logo in section.blocks %}
+        {% if settings.logo_image != blank %}
+            <img src="{{ logo | image_url: 'medium' }}" alt="Logo" class="logo-item" width="" height="">
+          {% endif %}
+          
+    {% endfor %}
 </div>
-
-
-
-
 {% schema %}
-    {
-        "name": "Logo Slider",
-        "class": "logo_class",
-        "settings": [
+{
+    "name": "Scrolling Logo",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo Settings"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo_image",
+        "label": "Upload Logo",
+        "info": "Recommended size: 300x100 pixels"
+      }
+    ],
+    "blocks": [
+        {
+          "type": "block",
+          "name": "Logo",
+          "settings": [
             {
-                "type": "text",
-                "id":"logo_text",
-                "label": "Text Label",
-                "default":"Text"
-            },
-            {
-                "type": "image_picker",
-                "id": "logo_image",
-                "label": "Logo Image"
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
             }
-        ],
-        "blocks": [
-            {
-                "type": "logo_slider",
-                "name":"Logo",
-                "settings": [
-                    {
-                        "type": "image_picker",
-                        "id": "logo_image",
-                        "label": "Logo Image"
-                    }
-                ]
-            }
-        ],
-        "presets": [
-            {
-                "name": "Logo Slider",
-                "settings": {}
-            }
-        ]   
-    }
+          ]
+        }
+      ], 
+      "presets": [
+        {
+          "name": "Scrolling Logo"
+        }
+      ]  
+  }
+  
 {% endschema %}
