@@ -2,12 +2,16 @@
     .scrolling-logo {
         overflow: hidden;
         white-space: nowrap;
+        width: 100vw;
+    }
+    .scrolling-logo-container{
+        width:1000px;
     }
     
     .logo-item {
         display: inline-block;
         margin-right: 20px; /* Adjust spacing between logos */
-        animation: scrollLeft 15s linear infinite; /* Adjust animation speed as needed */
+        animation: scrollLeft 1s linear infinite; /* Adjust animation speed as needed */
     }
     
     .logo-item:hover {
@@ -30,23 +34,20 @@
     }
     
 </style>
-<div class="scrolling-logo">
-    Trusted By
-    {% for logo in section.blocks %}
-        {% if settings.logo_image != blank %}
-            <img src="{{ logo.logo_image | image_url: 'medium' }}" alt="Logo" class="logo-item" width="" height="">
-          {% endif %}
-          
-    {% endfor %}
+Trusted By
+<div class="scrolling-logo-container">
+    <div class="scrolling-logo">
+        {% for block in section.blocks %}
+            {{"Tayyan"}}
+            <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="50px" height="50px">
+            
+        {% endfor %}
+    </div>
 </div>
 {% schema %}
 {
     "name": "Scrolling Logo",
     "settings": [
-      {
-        "type": "header",
-        "content": "Logo Settings"
-      },
       {
         "type": "image_picker",
         "id": "logo_image",
