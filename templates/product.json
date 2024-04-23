@@ -67,6 +67,13 @@
             "content": "<ul><li>Laver à l'eau froide<\/li><li>Ne pas utiliser de javel<\/li><li>Sèche-linge à basse température<\/li><li>Nettoyage à sec interdit<\/li><li>Ne pas repasser<\/li><\/ul>",
             "page": ""
           }
+        },
+        "block_V9KWwb": {
+          "type": "block",
+          "settings": {
+            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "checked": true
+          }
         }
       },
       "block_order": [
@@ -79,7 +86,8 @@
         "description",
         "share",
         "collapsible_tab_zxHbzp",
-        "collapsible_tab_hyyCU4"
+        "collapsible_tab_hyyCU4",
+        "block_V9KWwb"
       ],
       "settings": {
         "enable_sticky_info": true,
