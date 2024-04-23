@@ -169,7 +169,6 @@
         "block_bUxP9b": {
           "type": "block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/pexels-karolina-grabowska-4226911.jpg"
           }
         }
       },
@@ -177,7 +176,6 @@
         "block_bUxP9b"
       ],
       "settings": {
-        "logo_image": "shopify:\/\/shop_images\/pexels-karolina-grabowska-4226911.jpg"
       }
     }
   },
