@@ -2,6 +2,12 @@
     body {
         min-height: 100vh;
       }
+      .logo-item{
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: contain;
+    }
       .slider {
         height: 60px;
         position: relative;
@@ -34,7 +40,7 @@
       /*  IMPORTANT CODE BELOW */
       
       .slide-track {
-        width: calc(150px* 20);
+        width: calc(170px* 20);
         display: flex;
         animation: scroll 15s linear infinite;
         justify-content: space-between;
@@ -43,9 +49,8 @@
       
       
       .slide {
-        width: 150px;
+        width: 110px;
         height: 60px;
-      
         display: grid;
         place-items: center;
         transition:0.5s;
@@ -94,17 +99,22 @@ Trusted By
     <div class="slide-track">
         {% for block in section.blocks %}
             <div class="slide bg-red-500">
-                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="" height="">
             </div>
         {% endfor %}
         {% for block in section.blocks %}
             <div class="slide bg-red-500">
-                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="" height="">
             </div>
         {% endfor %}
         {% for block in section.blocks %}
             <div class="slide bg-red-500">
-                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="" height="">
+            </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+            <div class="slide bg-red-500">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="" height="">
             </div>
         {% endfor %}
         
