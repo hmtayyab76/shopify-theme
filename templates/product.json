@@ -63,7 +63,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Instructions",
-            "icon": "none",
+            "icon": "dairy",
             "content": "<ul><li>Laver à l'eau froide<\/li><li>Ne pas utiliser de javel<\/li><li>Sèche-linge à basse température<\/li><li>Nettoyage à sec interdit<\/li><li>Ne pas repasser<\/li><\/ul>",
             "page": ""
           }
