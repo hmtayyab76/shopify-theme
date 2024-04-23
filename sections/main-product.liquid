@@ -202,24 +202,22 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
-                {% when 'block' %}
-                  
-                  <div class="container">    
-                  <!-- Check content_position setting to determine the content position -->
-                  <div class="multi-block">
-                    <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
-                    <div class="content">
-                      <p>{{ block.settings.text_content }}</p>
+              {% when 'block' %}
+                <div class="ss-trust-badge-item-{{section.id }}">
+                  <div class="ss-trust-badge-icon-{{section.id }}">
+                    🏆
+                  </div>
+                  <div class="ss-trust-badge-text-{{section.id }}">
+                    <div class="ss-trust-badge-title-{{section.id }}">
+                      <p>Ships Free + Saves</p>
                     </div>
-                    {% if block.settings.checked %}
-                      <div class="checkbox-content">
-                        <p>Checkbox is checked</p>
-                      </div>
-                    {% endif %}
+                    <div class="ss-trust-badge-subtitle-{{section.id }}">
+                      <p>Subscribe and save</p>
+                    </div>
                   </div>
                 </div>
-          
-              {%- when 'collapsible_tab' -%} 
+
+              {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
                     <summary>
@@ -231,7 +229,10 @@
                       </div>
                       {% render 'icon-caret' %}
                     </summary>
-                    <div class="accordion__content rte custon-style-accordion__content" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
+                    <div
+                      class="accordion__content rte custon-style-accordion__content"
+                      id="ProductAccordion-{{ block.id }}-{{ section.id }}"
+                    >
                       {{ block.settings.content }}
                       {{ block.settings.page.content }}
                     </div>
@@ -1035,10 +1036,10 @@
           "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         },
         {
-            "type": "checkbox",
-            "id": "checked",
-            "label": "Check Box",
-            "default": true
+          "type": "checkbox",
+          "id": "checked",
+          "label": "Check Box",
+          "default": true
         }
       ]
     },
