@@ -49,6 +49,15 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "collapsible_tab_zxHbzp": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material",
+            "icon": "none",
+            "content": "",
+            "page": ""
+          }
         }
       },
       "block_order": [
@@ -59,7 +68,8 @@
         "quantity_selector",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "collapsible_tab_zxHbzp"
       ],
       "settings": {
         "enable_sticky_info": true,
