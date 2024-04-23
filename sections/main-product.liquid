@@ -202,6 +202,18 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+                {% when 'block' %}
+                  <div class="container">    
+                    {% for block in section.blocks %}
+                      <!-- Check content_position setting to determine the content position -->
+                      <div class="multi-block">
+                        <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
+                        <div class="content">
+                          <p>{{ block.settings.text_content }}</p>
+                        </div>
+                      </div>
+                    {% endfor %}
+                  </div>
               {%- when 'collapsible_tab' -%} 
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
@@ -999,6 +1011,29 @@
           "id": "custom_liquid",
           "label": "t:sections.custom-liquid.settings.custom_liquid.label",
           "info": "t:sections.custom-liquid.settings.custom_liquid.info"
+        }
+      ]
+    },
+    {
+      "type": "block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "text_content",
+          "label": "Text Content",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        },
+        {
+            "type": "checkbox",
+            "id": "checked",
+            "label": "Check Box",
+            "default": true
         }
       ]
     },
