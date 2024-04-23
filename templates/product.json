@@ -111,10 +111,9 @@
         "multi_block_hemnqM": {
           "type": "multi_block",
           "settings": {
-            "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
             "text_title": "Text Title",
             "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": true
+            "checked": false
           }
         }
       },
