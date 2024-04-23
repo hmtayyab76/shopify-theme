@@ -12,13 +12,19 @@
 
 /* Trust Badge Item */
 .ss-trust-badge-item {
-  flex: 1;                 /* Each item takes equal width */
-  padding: 15px;           /* Add padding around each item */
-  box-sizing: border-box;  /* Include padding in item's total width */
-  display: flex;           /* Flexbox */
-  flex-direction: column;  /* Stack content vertically */
-  align-items: center;     /* Center content horizontally */
-  text-align: center;      /* Center text */
+  text-align: center;
+    padding: .75rem;
+    flex: 1;
+    display: flex;
+    border-color: #dedede;
+    align-items: center;
+    gap: 10px;
+    border-bottom:1px solid #dedede;
+  
+    font-size: 12px;   
+}
+.ss-trust-badge-item:nth-child(even) {
+  border-left: 1px solid #dedede;
 }
 
 /* Trust Badge Icon */
@@ -28,17 +34,21 @@
 
 /* Trust Badge Text */
 .ss-trust-badge-text {
-  margin-top: 10px;        /* Add margin to the top */
+  line-height: 1.2;
+  margin: 0;
+  text-align: left;      /* Add margin to the top */
 }
 
 /* Trust Badge Title */
 .ss-trust-badge-title {
-  font-weight: bold;       /* Make title bold */
+  font-weight: bold;
+  margin: 0;       /* Make title bold */
 }
 
 /* Trust Badge Subtitle */
 .ss-trust-badge-subtitle {
-  color: #777;             /* Lighter text color */
+  color: #777;   
+  margin: 0;          /* Lighter text color */
 }
 
 
