@@ -39,6 +39,13 @@
             "show_gift_card_recipient": true
           }
         },
+        "block_V9KWwb": {
+          "type": "block",
+          "settings": {
+            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "checked": true
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -67,13 +74,6 @@
             "content": "<ul><li>Laver à l'eau froide<\/li><li>Ne pas utiliser de javel<\/li><li>Sèche-linge à basse température<\/li><li>Nettoyage à sec interdit<\/li><li>Ne pas repasser<\/li><\/ul>",
             "page": ""
           }
-        },
-        "block_V9KWwb": {
-          "type": "block",
-          "settings": {
-            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": true
-          }
         }
       },
       "block_order": [
@@ -83,11 +83,11 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "block_V9KWwb",
         "description",
         "share",
         "collapsible_tab_zxHbzp",
-        "collapsible_tab_hyyCU4",
-        "block_V9KWwb"
+        "collapsible_tab_hyyCU4"
       ],
       "settings": {
         "enable_sticky_info": true,
