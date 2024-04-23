@@ -202,20 +202,45 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+                
               {% when 'block' %}
-                <div class="ss-trust-badge-item-{{section.id }}">
-                  <div class="ss-trust-badge-icon-{{section.id }}">
-                    🏆
-                  </div>
-                  <div class="ss-trust-badge-text-{{section.id }}">
-                    <div class="ss-trust-badge-title-{{section.id }}">
-                      <p>Ships Free + Saves</p>
+                  <div class="ss-trust-badge-main">
+                    <div class="ss-trust-badge-container">
+                      
+                      <!-- First Trust Badge Block -->
+                      <div class="ss-trust-badge-item">
+                        <div class="ss-trust-badge-icon">
+                          🏆
+                        </div>
+                        <div class="ss-trust-badge-text">
+                          <div class="ss-trust-badge-title">
+                            <p>Ships Free + Saves</p>
+                          </div>
+                          <div class="ss-trust-badge-subtitle">
+                            <p>Subscribe and save</p>
+                          </div>
+                        </div>
+                      </div>
+                
+                      <!-- Second Trust Badge Block -->
+                      <div class="ss-trust-badge-item">
+                        <!-- Add your content for the second block here -->
+                        <div class="ss-trust-badge-icon">
+                          🛒
+                        </div>
+                        <div class="ss-trust-badge-text">
+                          <div class="ss-trust-badge-title">
+                            <p>Another Title</p>
+                          </div>
+                          <div class="ss-trust-badge-subtitle">
+                            <p>Another subtitle</p>
+                          </div>
+                        </div>
+                      </div>
+                
                     </div>
-                    <div class="ss-trust-badge-subtitle-{{section.id }}">
-                      <p>Subscribe and save</p>
-                    </div>
                   </div>
-                </div>
+                
 
               {%- when 'collapsible_tab' -%}
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>

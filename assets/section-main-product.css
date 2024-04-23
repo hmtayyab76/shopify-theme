@@ -1,3 +1,47 @@
+/* Main Trust Badge Container */
+.ss-trust-badge-main {
+  width: 100%;
+}
+
+/* Trust Badge Container */
+.ss-trust-badge-container {
+  display: flex;           /* Flexbox */
+  justify-content: center; /* Center items horizontally */
+  align-items: center;     /* Center items vertically */
+}
+
+/* Trust Badge Item */
+.ss-trust-badge-item {
+  flex: 1;                 /* Each item takes equal width */
+  padding: 15px;           /* Add padding around each item */
+  box-sizing: border-box;  /* Include padding in item's total width */
+  display: flex;           /* Flexbox */
+  flex-direction: column;  /* Stack content vertically */
+  align-items: center;     /* Center content horizontally */
+  text-align: center;      /* Center text */
+}
+
+/* Trust Badge Icon */
+.ss-trust-badge-icon {
+  font-size: 24px;         /* Set font size */
+}
+
+/* Trust Badge Text */
+.ss-trust-badge-text {
+  margin-top: 10px;        /* Add margin to the top */
+}
+
+/* Trust Badge Title */
+.ss-trust-badge-title {
+  font-weight: bold;       /* Make title bold */
+}
+
+/* Trust Badge Subtitle */
+.ss-trust-badge-subtitle {
+  color: #777;             /* Lighter text color */
+}
+
+
 .product {
   margin: 0;
 }
