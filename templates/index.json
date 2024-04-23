@@ -171,14 +171,16 @@
           "type": "multi_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
+            "text_title": "Tayyab",
             "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            "checked": false
+            "checked": true
           }
         },
         "multi_block_G8jNU8": {
           "type": "multi_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
+            "text_title": "Text Title",
             "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
             "checked": true
           }

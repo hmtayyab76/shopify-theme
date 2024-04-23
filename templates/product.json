@@ -61,7 +61,7 @@
           "type": "collapsible_tab",
           "settings": {
             "heading": "Material",
-            "icon": "none",
+            "icon": "pepper",
             "content": "<p>Composition : 50% Cotton \/ 50% Polyester<\/p><p>- Le tissu évacue l'humidité du corps<br\/>- Coutures doubles partout<br\/>- Col sans couture<br\/>- Étiquette de transfert thermique<br\/>- Épaule à épaule collée<\/p>",
             "page": ""
           }
@@ -123,29 +123,41 @@
         "padding_bottom": 28
       }
     },
-    "custom_speces_My8THP": {
-      "type": "custom-speces",
+    "multi_section_m8cCjQ": {
+      "type": "multi-section",
+      "settings": {
+        "title": "Multicolumn Section",
+        "font_size": 16,
+        "background": "#eeeeee",
+        "button_label": "Learn More",
+        "button_link": ""
+      }
+    },
+    "custom_multiblock_zhrcPz": {
+      "type": "custom-multiblock",
       "blocks": {
-        "column_XLTAwh": {
-          "type": "column",
+        "multi_block_hemnqM": {
+          "type": "multi_block",
           "settings": {
-            "speces_label": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'label' }}",
-            "speces_value": "{{ product.metafields.custom.speces_rows | metafield_text: field: 'value' }}"
+            "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
+            "text_title": "Text Title",
+            "text_content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "checked": true
           }
         }
       },
       "block_order": [
-        "column_XLTAwh"
+        "multi_block_hemnqM"
       ],
       "settings": {
-        "speces_label": "",
-        "speces_value": ""
+        "section_title": "Featured Products"
       }
     }
   },
   "order": [
     "main",
     "related-products",
-    "custom_speces_My8THP"
+    "multi_section_m8cCjQ",
+    "custom_multiblock_zhrcPz"
   ]
 }
