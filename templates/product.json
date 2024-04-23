@@ -116,10 +116,20 @@
             "text_content": "This is the content for the accessory. It describes the features and benefits of the accessory.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nThis is the content for the accessory. It describes the features and benefits of the accessory.",
             "checked": false
           }
+        },
+        "multi_block_aidHrb": {
+          "type": "multi_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
+            "text_title": "Accessory 2",
+            "text_content": "This is the content for the accessory. It describes the features and benefits of the accessory. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nThis is the content for the accessory. It describes the features and benefits of the accessory.",
+            "checked": true
+          }
         }
       },
       "block_order": [
-        "multi_block_hemnqM"
+        "multi_block_hemnqM",
+        "multi_block_aidHrb"
       ],
       "settings": {
         "section_title": "Featured Products"
