@@ -202,24 +202,28 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
-              {%- when 'collapsible_tab' -%} 
-                <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
-                  <details id="Details-{{ block.id }}-{{ section.id }}">
-                    <summary>
-                      <div class="summary__title">
-                        {% render 'icon-accordion', icon: block.settings.icon %}
-                        <h2 class="h4 accordion__title inline-richtext">
-                          {{ block.settings.heading | default: block.settings.page.title | escape }}
-                        </h2>
-                      </div>
-                      {% render 'icon-caret' %}
-                    </summary>
-                    <div class="accordion__content rte" id="ProductAccordion-{{ block.id }}-{{ section.id }}">
-                      {{ block.settings.content }}
-                      {{ block.settings.page.content }}
-                    </div>
-                  </details>
-                </div>
+             {%- when 'collapsible-tab' -%}
+				{{ section_id }} [data-{{ block.id }}] .accordion-title {
+					font-size: {{ block.settings.heading_font_size }}px;
+				}
+
+				{{ section_id }} [data-{{ block.id }}] .accordion-content {
+					font-size: {{ block.settings.content_font_size }}px;
+				}
+
+				@media (max-width: 991px) {
+					{%- if block.settings.font_size > 20 -%}
+						{{ section_id }} [data-{{ block.id }}] .accordion-title {
+							font-size: {{ block.settings.heading_font_size | times: 0.7 }}px;
+						}
+					{%- endif -%}
+
+					{%- if block.settings.content_font_size > 20 -%}
+						{{ section_id }} [data-{{ block.id }}] .accordion-content {
+							font-size: {{ block.settings.content_font_size | times: 0.7 }}px;
+						}
+					{%- endif -%}
+				}
               {%- when 'quantity_selector' -%}
                 <div
                   id="Quantity-Form-{{ section.id }}"
