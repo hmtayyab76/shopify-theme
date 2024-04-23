@@ -202,7 +202,9 @@
                 </p>
               {%- when 'custom_liquid' -%}
                 {{ block.settings.custom_liquid }}
+                            
              {%- when 'collapsible-tab' -%}
+                            {% assign section_id       = '#shopify-section-' | append: section.id %}
 				{{ section_id }} [data-{{ block.id }}] .accordion-title {
 					font-size: {{ block.settings.heading_font_size }}px;
 				}
