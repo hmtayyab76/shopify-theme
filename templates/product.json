@@ -152,22 +152,11 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "multi_section_m8cCjQ": {
-      "type": "multi-section",
-      "settings": {
-        "title": "Multicolumn Section",
-        "font_size": 16,
-        "background": "#eeeeee",
-        "button_label": "Learn More",
-        "button_link": ""
-      }
     }
   },
   "order": [
     "main",
     "custom_multiblock_zhrcPz",
-    "related-products",
-    "multi_section_m8cCjQ"
+    "related-products"
   ]
 }
