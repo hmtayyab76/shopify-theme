@@ -99,6 +99,17 @@
     },
     "scrolling_logos_MdqMeW": {
       "type": "scrolling-logos",
+      "blocks": {
+        "block_rmPziK": {
+          "type": "block",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/pexels-karolina-grabowska-4226911.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "block_rmPziK"
+      ],
       "settings": {
       }
     },
