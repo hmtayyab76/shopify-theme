@@ -1,49 +1,119 @@
 <style>
-    .scrolling-logo {
+    body {
+        min-height: 100vh;
+      }
+      .slider {
+        height: 60px;
+        position: relative;
+        width: 100%;
+      
+        display: grid;
+        place-items: center;
         overflow: hidden;
-        white-space: nowrap;
-        width: 100vw;
-    }
-    .scrolling-logo-container{
-        width:1000px;
-    }
-    
-    .logo-item {
-        display: inline-block;
-        margin-right: 20px; /* Adjust spacing between logos */
-        animation: scrollLeft 1s linear infinite; /* Adjust animation speed as needed */
-    }
-    
-    .logo-item:hover {
-        animation-play-state: paused; /* Pause animation on hover */
-    }
-    
-    /* Resume animation on mouse out */
-    .logo-item:hover + .logo-item,
-    .scrolling-logo:hover .logo-item {
-        animation-play-state: running;
-    }
-    
-    @keyframes scrollLeft {
+      }
+      .slider::before,
+      .slider::after{
+        position:absolute;
+        background-image:linear-gradient(to right,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+        content:'';
+        height:100%;
+        width:25%;
+        z-index:2;
+        pointer-events:none;
+      }
+      .slider::before{
+        left:0;
+        top:0;
+      }
+      .slider::after{
+        right:0;
+        top:0;
+        transform:rotateZ(180deg);
+      }
+      
+      /*  IMPORTANT CODE BELOW */
+      
+      .slide-track {
+        width: calc(150px* 20);
+        display: flex;
+        animation: scroll 15s linear infinite;
+        justify-content: space-between;
+      }
+      
+      
+      
+      .slide {
+        width: 150px;
+        height: 60px;
+      
+        display: grid;
+        place-items: center;
+        transition:0.5s;
+        cursor:pointer;
+      }
+      .slide:hover{
+        transform:scale(0.8)
+      }
+      
+      @keyframes scroll {
         0% {
-            transform: translateX(0%);
+          transform: translateX(0px);
         }
         100% {
-            transform: translateX(-100%);
+          transform: translateX(calc(-130px * 10));
         }
-    }
+      }
+      
+      
+      @media screen and (max-width: 768px) {
+        .slide-track {
+          width: calc(100px * 20);
+        }
+      
+        .slide {
+          width: 100px;
+        }
+      
+        @keyframes scroll {
+          0% {
+            transform: translateX(0px);
+          }
+          100% {
+            transform: translateX(calc(-80px * 10));
+          }
+        }
+      }
+      
     
 </style>
 Trusted By
-<div class="scrolling-logo-container">
-    <div class="scrolling-logo">
+
+<body class="container mx-auto px-4 sm:px-12 py-8">
+ 
+  <div class="slider">
+    <div class="slide-track">
         {% for block in section.blocks %}
-            {{"Tayyan"}}
-            <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="50px" height="50px">
-            
+            <div class="slide bg-red-500">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+            </div>
         {% endfor %}
+        {% for block in section.blocks %}
+            <div class="slide bg-red-500">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+            </div>
+        {% endfor %}
+        {% for block in section.blocks %}
+            <div class="slide bg-red-500">
+                <img src="{{ block.settings.logo_image | image_url }}" alt="Logo" class="logo-item" width="140px" height="40px">
+            </div>
+        {% endfor %}
+        
+    
     </div>
-</div>
+  </div>
+
+ 
+</body>
 {% schema %}
 {
     "name": "Scrolling Logo",
