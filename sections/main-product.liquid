@@ -205,16 +205,20 @@
                 {% when 'block' %}
                   
                   <div class="container">    
-                    {% for inner_block in section.blocks %}
-                      <!-- Check content_position setting to determine the content position -->
-                      <div class="multi-block">
-                        <img src="{{ inner_block.settings.image | image_url }}" alt="{{ inner_block.settings.image }}" width="200px" height="200px">
-                        <div class="content">
-                          <p>{{ inner_block.settings.text_content }}</p>
-                        </div>
+                  <!-- Check content_position setting to determine the content position -->
+                  <div class="multi-block">
+                    <img src="{{ block.settings.image | image_url }}" alt="{{ block.settings.image }}" width="200px" height="200px">
+                    <div class="content">
+                      <p>{{ block.settings.text_content }}</p>
+                    </div>
+                    {% if block.settings.checked %}
+                      <div class="checkbox-content">
+                        <p>Checkbox is checked</p>
                       </div>
-                    {% endfor %}
+                    {% endif %}
                   </div>
+                </div>
+          
               {%- when 'collapsible_tab' -%} 
                 <div class="product__accordion accordion quick-add-hidden" {{ block.shopify_attributes }}>
                   <details id="Details-{{ block.id }}-{{ section.id }}">
