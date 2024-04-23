@@ -24,6 +24,7 @@
   margin-bottom: 0;
   border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
   border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  font-weight: 600;
 }
 
 .accordion__title {
@@ -32,6 +33,7 @@
   min-height: 1.6rem;
   margin: 0;
   word-break: break-word;
+  font-size: 18px;
 }
 
 .accordion .icon-accordion {
