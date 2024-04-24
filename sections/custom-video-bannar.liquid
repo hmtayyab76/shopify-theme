@@ -13,6 +13,23 @@
         "id": "bg_image",
         "label": "Banner Image",
         "info": "Upload or select a Image for the banner"
+      },
+      {
+        "type": "radio",
+        "id": "design_type",
+        "label": "Select Design",
+        "options": [
+          {
+            "value": "design_one",
+            "label": "Design One"
+          },
+          {
+            "value": "design_two",
+            "label": "Design Two"
+          }
+        ],
+        "default": "design_one",
+        "info": "Choose the design for the banner"
       }
   ],
   "presets": [
@@ -108,9 +125,7 @@
   .banner-play-template--{{ section.id }}:hover {
     transform: scale(0.9); /* Reduces the width by scaling down to 90% */
 }
-  .banner-play-template--{{ section.id }}:hover{
-    
-}
+ 
   .banner-play-template--{{ section.id }} svg{
       display: block;
       width: 100%;
@@ -233,9 +248,9 @@
 </style>
 
 <div
-  class="banner-template--{{ section.id }}"
-  style="background-color:#ffffff;background-image: ;"
->
+    class="banner-template--{{ section.id }} {% if section.settings.design_type == 'design_one' %}design-one{% else %}design-two{% endif %}"
+    style="background-color:#ffffff;background-image: ;"
+  >
   <div class="banner-bg-template--{{ section.id }}">
     <img
       src="{{ section.settings.bg_image | image_url }}"
