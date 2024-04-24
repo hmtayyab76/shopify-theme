@@ -194,6 +194,11 @@
       "settings": {
         "title_text": "Live life in full colors"
       }
+    },
+    "custom_video_bannar_aAVnzx": {
+      "type": "custom-video-bannar",
+      "settings": {
+      }
     }
   },
   "order": [
@@ -203,6 +208,7 @@
     "custom_renewal_UHnRLh",
     "custom_slider_G4gCPG",
     "171363943290d25185",
-    "text_image_slider_fk8AEX"
+    "text_image_slider_fk8AEX",
+    "custom_video_bannar_aAVnzx"
   ]
 }
