@@ -30,6 +30,12 @@
         ],
         "default": "design_one",
         "info": "Choose the design for the banner"
+      },
+      {
+        "type": "color",
+        "id": "design_color",
+        "label": "Color",
+        "info": "Choose a background color for the banner"
       }
   ],
   "presets": [
@@ -43,8 +49,8 @@
 <style>
     .design-two--{{ section.id }}{
         width:1200px;
-        border-radius:20px;
-        margin:auto;
+        border-radius:20px !important;
+        margin: 40px auto !important;
     }
     .design-one--{{ section.id }}{
   
@@ -92,6 +98,15 @@
       align-items: center;
       max-width: 140rem;
   }
+  .section-template-settings-2--{{ section.id }}{
+    padding: 0 5rem;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    align-items: center;
+    justify-content: start;
+}
   .banner-content-template--{{ section.id }}{
       width: 100%;
   }
@@ -268,7 +283,7 @@
       height=""
     >
   </div>
-  <div class="section-template-settings--{{ section.id }}">
+  <div class="section-template-settings--{{ section.id }} {% if section.settings.design_type == 'design_one' %}{% else %}section-template-settings-2--{{ section.id }}{% endif %}">
     <div class="banner-content-template--{{ section.id }}">
       <div class="banner-heading-heading--{{ section.id }}">
         <h2>Tayyab's journey to bringing</h2>
