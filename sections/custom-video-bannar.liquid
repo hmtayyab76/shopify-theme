@@ -126,7 +126,7 @@
       margin-top: 16px;
       margin: 0;
       font-size: 18px;
-      color: #ffffff;
+      color: {{ section.settings.design_color }};
       line-height: 150%;
       text-transform: unset;
   }
@@ -159,7 +159,7 @@
   .banner-toggle-text-video--{{ section.id }}{
       margin: 0px;
       font-size: 12px;
-      color: #ffffff;
+      color: {{ section.settings.design_color }};
       line-height: 130%;
       text-transform: unset;
   }
@@ -306,7 +306,7 @@
             fill="none"
             viewBox="0 0 44 44"
           >
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44ZM29.9286 22.8659C30.5953 22.481 30.5953 21.5187 29.9286 21.1338L18.7857 14.7005C18.1191 14.3156 17.2857 14.7967 17.2857 15.5665V28.4332C17.2857 29.203 18.1191 29.6841 18.7857 29.2992L29.9286 22.8659Z" fill="#ffffff"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44ZM29.9286 22.8659C30.5953 22.481 30.5953 21.5187 29.9286 21.1338L18.7857 14.7005C18.1191 14.3156 17.2857 14.7967 17.2857 15.5665V28.4332C17.2857 29.203 18.1191 29.6841 18.7857 29.2992L29.9286 22.8659Z" fill="{{ section.settings.design_color }}"></path>
           </svg>
         </div>
         <p class="banner-toggle-text-video--{{ section.id }}">WATCH FILM</p>
