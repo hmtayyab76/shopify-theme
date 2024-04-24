@@ -112,6 +112,8 @@
         top: 0;
         left: 0;
         position: fixed;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -132,12 +134,40 @@
         background-color: black;
         border-radius:50px;
         border: 0px;
+        
         cursor: pointer;
         z-index: 2;
     }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    
+    
+    
+    .fadeIn {
+        animation-name: fadeIn;
+    }
+    
+    .fadeOut {
+        animation-name: fadeOut;
+    }
     .banner-close-template--{{ section.id }} svg{
         display: block;
-        width: 30px;
+        width: 20px;
         height: 30px;
     }
     .banner-modal-inner-template--{{ section.id }}{
@@ -273,6 +303,8 @@
             modal.style.zIndex = '100';
             modal.style.transition = 'opacity 250ms ease-in';
             document.body.classList.add('modal-open');
+            modal.classList.add('fadeIn');
+    modal.classList.remove('fadeOut');
         });
     
         // Add click event listener to the close button
@@ -281,6 +313,8 @@
             modal.style.opacity = '0';
             modal.style.pointerEvents = 'none';
             document.body.classList.remove('modal-open');
+            modal.classList.add('fadeOut');
+    modal.classList.remove('fadeIn');
         });
     });
 </script>
