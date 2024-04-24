@@ -1,7 +1,19 @@
 {% schema %}
 {
   "name": "Custom Video Banner",
-  "settings": [],
+  "settings": [
+    {
+        "type": "video",
+        "id": "video_url",
+        "label": "Video URL",
+        "info": "Upload or select a video for the banner"
+      },
+      {
+        "type": "image_picker",
+        "id": "bg_image",
+        "label": "Image"
+      }
+  ],
   "presets": [
     {
       "name": "Custom Video Banner"
@@ -218,7 +230,7 @@
 >
   <div class="banner-bg-template--{{ section.id }}">
     <img
-      src="//section.store/cdn/shop/files/johny-goerend-pnigODapPek-unsplash.jpg?v=1713854715"
+      src="{{ settings.bg_image | image_url }}"
       alt=""
       loading="lazy"
       width=""
@@ -272,17 +284,8 @@
         mute="false"
         id="vid"
         preload="metadata"
-        poster="//section.store/cdn/shop/files/preview_images/9218c4836a5c40429127819258a50242.thumbnail.0000000000_small.jpg?v=1710482102"
+        src="{{ settings.video_url }}"
       >
-        <source
-          src="https://cdn.shopify.com/videos/c/vp/9218c4836a5c40429127819258a50242/9218c4836a5c40429127819258a50242.HD-1080p-4.8Mbps-25897980.mp4"
-          type="video/mp4"
-        >
-        <img
-          src="//section.store/cdn/shop/files/preview_images/9218c4836a5c40429127819258a50242.thumbnail.0000000000_small.jpg?v=1710482102"
-          width=""
-          height=""
-        >
       </video>
     </div>
   </div>
