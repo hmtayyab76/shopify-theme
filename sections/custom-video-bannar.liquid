@@ -41,6 +41,14 @@
 {% endschema %}
 
 <style>
+    .design-two--{{ section.id }}{
+        width:1200px;
+        border-radius:20px;
+        margin:auto;
+    }
+    .design-one--{{ section.id }}{
+  
+    }
   .banner-template--{{ section.id }}{
       border-top: solid #000000 0px;
       border-bottom: solid #000000 0px;
@@ -248,7 +256,7 @@
 </style>
 
 <div
-    class="banner-template--{{ section.id }} {% if section.settings.design_type == 'design_one' %}design-one{% else %}design-two{% endif %}"
+    class="banner-template--{{ section.id }} {% if section.settings.design_type == 'design_one' %}design-one--{{ section.id }}{% else %}design-two--{{ section.id }}{% endif %}"
     style="background-color:#ffffff;background-image: ;"
   >
   <div class="banner-bg-template--{{ section.id }}">
