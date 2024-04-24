@@ -1,0 +1,240 @@
+{% schema %}
+{
+    "name": "Custom Video Banner",
+    "settings": [],
+    "presets": [
+        {
+            "name": "Custom Video Banner"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+    .banner-template--{{ section.id }}{
+        border-top: solid #000000 0px;
+        border-bottom: solid #000000 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0px;
+        overflow: hidden;
+        height: 500px;
+    }
+
+    .banner-bg-template--{{ section.id }}{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+
+    .banner-bg-template--{{ section.id }} img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .section-template-settings--{{ section.id }}{
+        margin: 0 auto;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        max-width: 140rem;
+    }
+    .banner-content-template--{{ section.id }}{
+        width: 100%;
+    }
+
+    .banner-heading-heading--{{ section.id }}{
+        text-align: left;
+        margin-top: 0px;
+        margin: 0;
+        font-size: 28px;
+        color: #ffffff;
+        line-height: 130%;
+        text-transform: unset;
+    }
+
+    .banner-text-{{ section.id }}{
+        text-align: left;
+        margin-top: 16px;
+        margin: 0;
+        font-size: 18px;
+        color: #ffffff;
+        line-height: 150%;
+        text-transform: unset;
+    }
+
+    .banner-toggle-template{{ section.id }}{
+        display: flex;
+        margin-top: 32px;
+        max-width: fit-content;
+        align-items: center;
+        gap: 28px;
+        cursor: pointer;
+    }
+
+    .banner-play-template--{{ section.id }}{
+        flex: 0 0 44px;
+        height: 44px;
+    }
+    .banner-play-template--{{ section.id }} svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .banner-toggle-text-video--{{ section.id }}{
+        margin: 0px;
+        font-size: 12px;
+        color: #ffffff;
+        line-height: 130%;
+        text-transform: unset;
+    }
+
+    .banner-modal-template{{ section.id }}{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        overflow-y: scroll;
+        pointer-events: none;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
+    }
+    .banner-close-template--{{ section.id }}{
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        box-shadow: none;
+        background-color: transparent;
+        border: 0px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .banner-close-template--{{ section.id }} svg{
+        display: block;
+        width: 30px;
+        height: 30px;
+    }
+    .banner-modal-inner-template--{{ section.id }}{
+        position: relative;
+        width: 100%;
+        max-height: 96vh;
+        border: 0px solid #000000;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    .banner-modal-inner-video-template--{{ section.id }}{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: none;
+        border: 0px;
+    }
+    video {
+        object-fit: contain;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
+    @media (min-width: 768px) {
+        .banner-template--{{ section.id }} {
+            height: 650px;
+        }
+    }
+</style>
+
+<div
+  class="banner-template--{{ section.id }}"
+  style="background-color:#ffffff;background-image: ;"
+>
+  <div class="banner-bg-template--{{ section.id }}">
+    <img
+      src="//section.store/cdn/shop/files/johny-goerend-pnigODapPek-unsplash.jpg?v=1713854715"
+      alt=""
+      loading="lazy"
+      width=""
+      height=""
+    >
+  </div>
+  <div class="section-template-settings--{{ section.id }}">
+    <div class="banner-content-template--{{ section.id }}">
+      <div class="banner-heading-heading--{{ section.id }}">
+        <h2>Olivia's journey to bringing</h2>
+        <h2>you joy &amp; longevity.</h2>
+      </div>
+      <div class="banner-text-{{ section.id }}">
+        <p>A small film on how the heart of the olive oil reaches</p>
+        <p>your plate fresh, its generosity intact.</p>
+      </div>
+      <div
+        class="banner-toggle-template{{ section.id }}"
+        id="video_XWzCqD"
+      >
+        <div class="banner-play-template--{{ section.id }}">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+            class="icon icon-play-circle"
+            fill="none"
+            viewBox="0 0 44 44"
+          >
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84974 0 0 9.84974 0 22C0 34.1503 9.84974 44 22 44ZM29.9286 22.8659C30.5953 22.481 30.5953 21.5187 29.9286 21.1338L18.7857 14.7005C18.1191 14.3156 17.2857 14.7967 17.2857 15.5665V28.4332C17.2857 29.203 18.1191 29.6841 18.7857 29.2992L29.9286 22.8659Z" fill="#ffffff"></path>
+          </svg>
+        </div>
+        <p class="banner-toggle-text-video--{{ section.id }}">WATCH FILM</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="banner-modal-template{{ section.id }}" data-id="video_XWzCqD">
+  <button class="banner-close-template--{{ section.id }}">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0002 10.586L4.70718 3.29297L3.29297 4.70718L10.586 12.0002L3.29297 19.2933L4.70718 20.7075L12.0002 13.4145L19.2933 20.7075L20.7075 19.2933L13.4145 12.0002L20.7075 4.70723L19.2933 3.29302L12.0002 10.586Z" fill="white"></path>
+    </svg>
+  </button>
+  <div class="banner-modal-inner-template--{{ section.id }}">
+    <div class="banner-modal-inner-video-template--{{ section.id }}">
+      <video
+        playsinline="playsinline"
+        loop="loop"
+        controls="controls"
+        mute="false"
+        id="vid"
+        preload="metadata"
+        poster="//section.store/cdn/shop/files/preview_images/9218c4836a5c40429127819258a50242.thumbnail.0000000000_small.jpg?v=1710482102"
+      >
+        <source
+          src="https://cdn.shopify.com/videos/c/vp/9218c4836a5c40429127819258a50242/9218c4836a5c40429127819258a50242.HD-1080p-4.8Mbps-25897980.mp4"
+          type="video/mp4"
+        >
+        <img
+          src="//section.store/cdn/shop/files/preview_images/9218c4836a5c40429127819258a50242.thumbnail.0000000000_small.jpg?v=1710482102"
+          width=""
+          height=""
+        >
+      </video>
+    </div>
+  </div>
+</div>
