@@ -58,11 +58,11 @@
         width: 100%;
     }
 
-    .banner-heading-heading--{{ section.id }}{
+    .banner-heading-heading--{{ section.id }} h2{
         text-align: left;
         margin-top: 0px;
         margin: 0;
-        font-size: 28px;
+        font-size: 40px;
         color: #ffffff;
         line-height: 130%;
         text-transform: unset;
@@ -117,9 +117,12 @@
         justify-content: center;
         opacity: 0;
         overflow-y: scroll;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px); 
         pointer-events: none;
         background: rgba(255, 255, 255, 0.8);
         padding: 10px;
+        
     }
     .banner-close-template--{{ section.id }}{
         position: absolute;
@@ -152,10 +155,24 @@
         box-shadow: none;
         border: 0px;
     }
+    body.modal-open {
+        overflow: hidden;
+    }
+    body.modal-open .banner-close-template--{{ section.id }} svg {
+        fill: #000; 
+    }
     video {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         overflow-clip-margin: content-box;
         overflow: clip;
+    }
+
+    @media (min-width: 1024px) {
+        .banner-modal-inner-template--{{ section.id }}{
+            max-width: 70%;
+        }
     }
     @media (min-width: 768px) {
         .banner-template--{{ section.id }} {
@@ -210,7 +227,7 @@
 </div>
 <div class="banner-modal-template{{ section.id }}" data-id="video_XWzCqD">
   <button class="banner-close-template--{{ section.id }}">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="#000">
       <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0002 10.586L4.70718 3.29297L3.29297 4.70718L10.586 12.0002L3.29297 19.2933L4.70718 20.7075L12.0002 13.4145L19.2933 20.7075L20.7075 19.2933L13.4145 12.0002L20.7075 4.70723L19.2933 3.29302L12.0002 10.586Z" fill="white"></path>
     </svg>
   </button>
@@ -238,3 +255,31 @@
     </div>
   </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the button and modal elements
+        const toggleButton = document.querySelector('.banner-toggle-template{{ section.id }}');
+        const modal = document.querySelector('.banner-modal-template{{ section.id }}');
+        const closeButton = modal.querySelector('.banner-close-template--{{ section.id }}');
+    
+        // Add click event listener to the toggle button
+        toggleButton.addEventListener('click', function() {
+            // Show the modal
+            modal.style.opacity = '1';
+            modal.style.pointerEvents = 'auto';
+            modal.style.zIndex = '100';
+            modal.style.transition = 'opacity 250ms ease-in';
+            document.body.classList.add('modal-open');
+        });
+    
+        // Add click event listener to the close button
+        closeButton.addEventListener('click', function() {
+            // Hide the modal
+            modal.style.opacity = '0';
+            modal.style.pointerEvents = 'none';
+            document.body.classList.remove('modal-open');
+        });
+    });
+</script>
+    
