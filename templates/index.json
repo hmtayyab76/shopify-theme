@@ -3,6 +3,7 @@
     "custom_video_bannar_aAVnzx": {
       "type": "custom-video-bannar",
       "settings": {
+        "bg_image": "shopify:\/\/shop_images\/johny-goerend-pnigODapPek-unsplash.webp"
       }
     },
     "scrolling_logos_ijyUWK": {
