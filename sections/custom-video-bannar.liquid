@@ -35,6 +35,7 @@
         "type": "color",
         "id": "design_color",
         "label": "Color",
+        "default":"#fff",
         "info": "Choose a background color for the banner"
       }
   ],
@@ -48,7 +49,8 @@
 
 <style>
     .design-two--{{ section.id }}{
-        width:1200px;
+        width:90%;
+        max-width:1400px;
         border-radius:20px !important;
         margin: 40px auto !important;
     }
@@ -115,6 +117,9 @@
       text-align: left;
       margin-top: 0px;
       margin: 0;
+      font-family: "Josefin Sans", sans-serif;
+    font-weight: 600;
+    font-style: normal;
       font-size: 40px;
       color: {{ section.settings.design_color }};
       line-height: 130%;
