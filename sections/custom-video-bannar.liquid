@@ -3,41 +3,65 @@
   "name": "Custom Video Banner",
   "settings": [
     {
-        "type": "video",
-        "id": "video_url",
-        "label": "Video URL",
-        "info": "Upload or select a video for the banner"
+      "type": "text",
+      "id": "banner_text_title_1",
+      "label": "Banner Title",
+      "default": "Text Title"
+    },
+    {
+        "type": "text",
+        "id": "banner_text_title_2",
+        "label": "Banner Title",
+        "default": "Text Title"
       },
-      {
-        "type": "image_picker",
-        "id": "bg_image",
-        "label": "Banner Image",
-        "info": "Upload or select a Image for the banner"
+    {
+      "type": "text",
+      "id": "banner_text_discp_1",
+      "label": "Banner Discription",
+      "default": "Write Text"
+    },
+    {
+        "type": "text",
+        "id": "banner_text_discp_2",
+        "label": "Banner Discription",
+        "default": "Write Text"
       },
-      {
-        "type": "radio",
-        "id": "design_type",
-        "label": "Select Design",
-        "options": [
-          {
-            "value": "design_one",
-            "label": "Design One"
-          },
-          {
-            "value": "design_two",
-            "label": "Design Two"
-          }
-        ],
-        "default": "design_one",
-        "info": "Choose the design for the banner"
-      },
-      {
-        "type": "color",
-        "id": "design_color",
-        "label": "Color",
-        "default":"#fff",
-        "info": "Choose a background color for the banner"
-      }
+    {
+      "type": "video",
+      "id": "video_url",
+      "label": "Video URL",
+      "info": "Upload or select a video for the banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Banner Image",
+      "info": "Upload or select a Image for the banner"
+    },
+    {
+      "type": "radio",
+      "id": "design_type",
+      "label": "Select Design",
+      "options": [
+        {
+          "value": "design_one",
+          "label": "Design One"
+        },
+        {
+          "value": "design_two",
+          "label": "Design Two"
+        }
+      ],
+      "default": "design_one",
+      "info": "Choose the design for the banner"
+    },
+    {
+      "type": "color",
+      "id": "design_color",
+      "label": "Color",
+      "default": "#fff",
+      "info": "Choose a background color for the banner"
+    }
   ],
   "presets": [
     {
@@ -48,237 +72,237 @@
 {% endschema %}
 
 <style>
-    .design-two--{{ section.id }}{
-        width:90%;
-        max-width:1400px;
-        border-radius:20px !important;
-        margin: 40px auto !important;
+      .design-two--{{ section.id }}{
+          width:90%;
+          max-width:1400px;
+          border-radius:20px !important;
+          margin: 40px auto !important;
+      }
+      .design-one--{{ section.id }}{
+
+      }
+    .banner-template--{{ section.id }}{
+        border-top: solid #000000 0px;
+        border-bottom: solid #000000 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0rem;
+        margin-right: 0rem;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0px;
+        overflow: hidden;
+        height: 500px;
     }
-    .design-one--{{ section.id }}{
-  
+
+    .banner-bg-template--{{ section.id }}{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
     }
-  .banner-template--{{ section.id }}{
-      border-top: solid #000000 0px;
-      border-bottom: solid #000000 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-left: 0rem;
-      margin-right: 0rem;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0px;
-      overflow: hidden;
-      height: 500px;
-  }
 
-  .banner-bg-template--{{ section.id }}{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-  }
+    .banner-bg-template--{{ section.id }} img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-  .banner-bg-template--{{ section.id }} img{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .section-template-settings--{{ section.id }}{
-      margin: 0 auto;
-      padding-top: 27px;
-      padding-bottom: 27px;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      position: relative;
-      z-index: 2;
-      display: flex;
-      height: 100%;
+    .section-template-settings--{{ section.id }}{
+        margin: 0 auto;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        position: relative;
+        z-index: 2;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        max-width: 140rem;
+    }
+    .section-template-settings-2--{{ section.id }}{
+      padding: 0 5rem;
+      padding-top: 36px;
+      padding-bottom: 36px;
+      padding-left: 5rem;
+      padding-right: 5rem;
       align-items: center;
-      max-width: 140rem;
+      justify-content: start;
   }
-  .section-template-settings-2--{{ section.id }}{
-    padding: 0 5rem;
-    padding-top: 36px;
-    padding-bottom: 36px;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    align-items: center;
-    justify-content: start;
-}
-  .banner-content-template--{{ section.id }}{
-      width: 100%;
+    .banner-content-template--{{ section.id }}{
+        width: 100%;
+    }
+
+    .banner-heading-heading--{{ section.id }} h2{
+        text-align: left;
+        margin-top: 0px;
+        margin: 0;
+        font-family: "Josefin Sans", sans-serif;
+      font-weight: 600;
+      font-style: normal;
+        font-size: 40px;
+        color: {{ section.settings.design_color }};
+        line-height: 130%;
+        text-transform: unset;
+    }
+
+    .banner-text-{{ section.id }}{
+        text-align: left;
+        margin-top: 16px;
+        margin: 0;
+        font-size: 18px;
+        color: {{ section.settings.design_color }};
+        line-height: 150%;
+        text-transform: unset;
+    }
+
+    .banner-toggle-template{{ section.id }}{
+        display: flex;
+        margin-top: 32px;
+        max-width: fit-content;
+        align-items: center;
+        gap: 28px;
+        cursor: pointer;
+    }
+
+    .banner-play-template--{{ section.id }}{
+        flex: 0 0 44px;
+        height: 44px;
+        transition: transform 0.3s ease-in-out;
+    }
+    .banner-play-template--{{ section.id }}:hover {
+      transform: scale(0.9); /* Reduces the width by scaling down to 90% */
   }
 
-  .banner-heading-heading--{{ section.id }} h2{
-      text-align: left;
-      margin-top: 0px;
-      margin: 0;
-      font-family: "Josefin Sans", sans-serif;
-    font-weight: 600;
-    font-style: normal;
-      font-size: 40px;
-      color: {{ section.settings.design_color }};
-      line-height: 130%;
-      text-transform: unset;
-  }
+    .banner-play-template--{{ section.id }} svg{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 
-  .banner-text-{{ section.id }}{
-      text-align: left;
-      margin-top: 16px;
-      margin: 0;
-      font-size: 18px;
-      color: {{ section.settings.design_color }};
-      line-height: 150%;
-      text-transform: unset;
-  }
+    .banner-toggle-text-video--{{ section.id }}{
+        margin: 0px;
+        font-size: 12px;
+        color: {{ section.settings.design_color }};
+        line-height: 130%;
+        text-transform: unset;
+    }
 
-  .banner-toggle-template{{ section.id }}{
-      display: flex;
-      margin-top: 32px;
-      max-width: fit-content;
-      align-items: center;
-      gap: 28px;
-      cursor: pointer;
-  }
+    .banner-modal-template{{ section.id }}{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        position: fixed;
+        animation-duration: 0.3s;
+        animation-timing-function: ease-in-out;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        overflow-y: scroll;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        pointer-events: none;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 10px;
 
-  .banner-play-template--{{ section.id }}{
-      flex: 0 0 44px;
-      height: 44px;
-      transition: transform 0.3s ease-in-out;
-  }
-  .banner-play-template--{{ section.id }}:hover {
-    transform: scale(0.9); /* Reduces the width by scaling down to 90% */
-}
- 
-  .banner-play-template--{{ section.id }} svg{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
+    }
+    .banner-close-template--{{ section.id }}{
+        position: absolute;
+        top: 10px;
+        right: 8px;
+        box-shadow: none;
+        background-color: black;
+        border-radius:50px;
+        border: 0px;
 
-  .banner-toggle-text-video--{{ section.id }}{
-      margin: 0px;
-      font-size: 12px;
-      color: {{ section.settings.design_color }};
-      line-height: 130%;
-      text-transform: unset;
-  }
+        cursor: pointer;
+        z-index: 2;
+    }
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
 
-  .banner-modal-template{{ section.id }}{
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      position: fixed;
-      animation-duration: 0.3s;
-      animation-timing-function: ease-in-out;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      overflow-y: scroll;
-      backdrop-filter: blur(5px);
-      -webkit-backdrop-filter: blur(5px);
-      pointer-events: none;
-      background: rgba(255, 255, 255, 0.8);
-      padding: 10px;
-
-  }
-  .banner-close-template--{{ section.id }}{
-      position: absolute;
-      top: 10px;
-      right: 8px;
-      box-shadow: none;
-      background-color: black;
-      border-radius:50px;
-      border: 0px;
-
-      cursor: pointer;
-      z-index: 2;
-  }
-  @keyframes fadeIn {
-      from {
-          opacity: 0;
-      }
-      to {
-          opacity: 1;
-      }
-  }
-
-  @keyframes fadeOut {
-      from {
-          opacity: 1;
-      }
-      to {
-          opacity: 0;
-      }
-  }
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+        }
+    }
 
 
 
-  .fadeIn {
-      animation-name: fadeIn;
-  }
+    .fadeIn {
+        animation-name: fadeIn;
+    }
 
-  .fadeOut {
-      animation-name: fadeOut;
-  }
-  .banner-close-template--{{ section.id }} svg{
-      display: block;
-      width: 20px;
-      height: 30px;
-  }
-  .banner-modal-inner-template--{{ section.id }}{
-      position: relative;
-      width: 100%;
-      max-height: 96vh;
-      border: 0px solid #000000;
-      border-radius: 0px;
-      overflow: hidden;
-  }
-  .banner-modal-inner-video-template--{{ section.id }}{
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      box-shadow: none;
-      border: 0px;
-  }
-  body.modal-open {
-      overflow: hidden;
-  }
-  body.modal-open .banner-close-template--{{ section.id }} svg {
-      fill: #000;
-  }
-  video {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      overflow-clip-margin: content-box;
-      overflow: clip;
-  }
+    .fadeOut {
+        animation-name: fadeOut;
+    }
+    .banner-close-template--{{ section.id }} svg{
+        display: block;
+        width: 20px;
+        height: 30px;
+    }
+    .banner-modal-inner-template--{{ section.id }}{
+        position: relative;
+        width: 100%;
+        max-height: 96vh;
+        border: 0px solid #000000;
+        border-radius: 0px;
+        overflow: hidden;
+    }
+    .banner-modal-inner-video-template--{{ section.id }}{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        box-shadow: none;
+        border: 0px;
+    }
+    body.modal-open {
+        overflow: hidden;
+    }
+    body.modal-open .banner-close-template--{{ section.id }} svg {
+        fill: #000;
+    }
+    video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        overflow-clip-margin: content-box;
+        overflow: clip;
+    }
 
-  @media (min-width: 1024px) {
-      .banner-modal-inner-template--{{ section.id }}{
-          max-width: 70%;
-      }
-  }
-  @media (min-width: 768px) {
-      .banner-template--{{ section.id }} {
-          height: 650px;
-      }
-  }
+    @media (min-width: 1024px) {
+        .banner-modal-inner-template--{{ section.id }}{
+            max-width: 70%;
+        }
+    }
+    @media (min-width: 768px) {
+        .banner-template--{{ section.id }} {
+            height: 650px;
+        }
+    }
 </style>
 
 <div
-    class="banner-template--{{ section.id }} {% if section.settings.design_type == 'design_one' %}design-one--{{ section.id }}{% else %}design-two--{{ section.id }}{% endif %}"
-    style="background-color:#ffffff;background-image: ;"
-  >
+  class="banner-template--{{ section.id }} {% if section.settings.design_type == 'design_one' %}design-one--{{ section.id }}{% else %}design-two--{{ section.id }}{% endif %}"
+  style="background-color:#ffffff;background-image: ;"
+>
   <div class="banner-bg-template--{{ section.id }}">
     <img
       src="{{ section.settings.bg_image | image_url }}"
@@ -291,12 +315,12 @@
   <div class="section-template-settings--{{ section.id }} {% if section.settings.design_type == 'design_one' %}{% else %}section-template-settings-2--{{ section.id }}{% endif %}">
     <div class="banner-content-template--{{ section.id }}">
       <div class="banner-heading-heading--{{ section.id }}">
-        <h2>Tayyab's journey to bringing</h2>
-        <h2>you joy &amp; longevity.</h2>
+        <h2>{{ section.settings.banner_text_title_1 }}</h2>
+        <h2>{{ section.settings.banner_text_title_2 }}</h2>
       </div>
       <div class="banner-text-{{ section.id }}">
-        <p>A small film on how the heart of the olive oil reaches</p>
-        <p>your plate fresh, its generosity intact.</p>
+        <p>{{  section.settings.banner_text_discp_1 }}</p>
+        <p>{{  section.settings.banner_text_discp_2 }}</p>
       </div>
       <div
         class="banner-toggle-template{{ section.id }}"
@@ -337,7 +361,6 @@
         preload="metadata"
       >
         <source src="{{ section.settings.video_url | video_tag  }}">
-        
       </video>
     </div>
   </div>
