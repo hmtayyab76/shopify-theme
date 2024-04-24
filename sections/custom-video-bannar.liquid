@@ -284,9 +284,8 @@
         mute="false"
         id="vid"
         preload="metadata"
-        src="{{ section.settings.video_url }}"
       >
-        <source src="{{ section.settings.video_url }}">
+        <source src="{{ section.settings.video_url |asset_url }}" type="video/mp4">
         
       </video>
     </div>
