@@ -11,7 +11,8 @@
       {
         "type": "image_picker",
         "id": "bg_image",
-        "label": "Image"
+        "label": "Banner Image",
+        "info": "Upload or select a Image for the banner"
       }
   ],
   "presets": [
@@ -230,7 +231,7 @@
 >
   <div class="banner-bg-template--{{ section.id }}">
     <img
-      src="{{ settings.bg_image | image_url }}"
+      src="{{ section.settings.bg_image | image_url }}"
       alt=""
       loading="lazy"
       width=""
@@ -240,7 +241,7 @@
   <div class="section-template-settings--{{ section.id }}">
     <div class="banner-content-template--{{ section.id }}">
       <div class="banner-heading-heading--{{ section.id }}">
-        <h2>Olivia's journey to bringing</h2>
+        <h2>Tayyab's journey to bringing</h2>
         <h2>you joy &amp; longevity.</h2>
       </div>
       <div class="banner-text-{{ section.id }}">
@@ -284,7 +285,7 @@
         mute="false"
         id="vid"
         preload="metadata"
-        src="{{ settings.video_url }}"
+        src="{{ section.settings.video_url }}"
       >
       </video>
     </div>
