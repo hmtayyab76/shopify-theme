@@ -5,7 +5,8 @@
       "settings": {
         "video_url": "shopify:\/\/files\/videos\/9218c4836a5c40429127819258a50242.HD-1080p-4.8Mbps-25897980.mp4",
         "bg_image": "shopify:\/\/shop_images\/johny-goerend-pnigODapPek-unsplash.webp",
-        "design_type": "design_two"
+        "design_type": "design_one",
+        "design_color": "#fff"
       }
     },
     "scrolling_logos_ijyUWK": {
@@ -163,6 +164,15 @@
       "settings": {
         "title_text": "Live life in full colors"
       }
+    },
+    "custom_video_bannar_Rgr89x": {
+      "type": "custom-video-bannar",
+      "settings": {
+        "video_url": "shopify:\/\/files\/videos\/y2mate.com - beautiful girl running on sunlit wheat field slow motion 120 fps freedom concept happy woman having_1080p.mp4",
+        "bg_image": "shopify:\/\/shop_images\/Desktop_-_NTL_Hero_2_-_Compressed.jpg",
+        "design_type": "design_two",
+        "design_color": "#fff"
+      }
     }
   },
   "order": [
@@ -172,6 +182,7 @@
     "custom_renewal_UHnRLh",
     "custom_slider_G4gCPG",
     "171363943290d25185",
-    "text_image_slider_fk8AEX"
+    "text_image_slider_fk8AEX",
+    "custom_video_bannar_Rgr89x"
   ]
 }
