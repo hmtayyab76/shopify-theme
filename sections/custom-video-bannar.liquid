@@ -103,7 +103,14 @@
   .banner-play-template--{{ section.id }}{
       flex: 0 0 44px;
       height: 44px;
+      transition: transform 0.3s ease-in-out;
   }
+  .banner-play-template--{{ section.id }}:hover {
+    transform: scale(0.9); /* Reduces the width by scaling down to 90% */
+}
+  .banner-play-template--{{ section.id }}:hover{
+    
+}
   .banner-play-template--{{ section.id }} svg{
       display: block;
       width: 100%;
