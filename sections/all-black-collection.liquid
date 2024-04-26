@@ -1,0 +1,138 @@
+{% schema %}
+{
+  "name": "All Black",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection-section-d-11",
+      "label": "Select collection"
+    }
+  ],
+  "presets": [
+    {
+      "name": "All Blcak"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+    .all-black-heading-d-11{
+        color: #000;
+        font-family: "Futura LT Paneuropean";
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+       .custom-all-black-d-11{
+         display: flex;
+         max-width: 1440px;
+         overflow:hidden;
+         margin: 48px auto;
+         padding:0px 48px;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 25px;
+       }
+      .collection-container-d-11{
+        display: flex;
+        width: 100%;
+        gap: 20px;
+        justify-content: center;
+      }
+      .left-side-first-collection-d-11{
+        width: 435px;
+        height: 580px;
+      }
+    .left-side-first-collection-img-d-11{
+      width: 435px;
+      height: 580px;
+    }
+      .right-side-collection-d-11{
+        display: flex;
+
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+      .collection-item-d-11{
+        max-width: 207px;
+        max-height: 280px;
+        overflow:hidden;
+      }
+    @media (max-width: 768px) {
+      .all-black-heading-d-11{
+        margin:auto;
+        font-size: 18px;
+      }
+       .custom-all-black-d-11{
+         display: flex;
+         margin: 48px auto;
+         padding: 0px 20px;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 25px;
+       }
+
+      .left-side-first-collection-img-d-11{
+        width:100%;
+      }
+      .left-side-first-collection-d-11 {
+        width: 100%;
+        height: 530.338px;
+      }
+      .left-side-first-collection-d-11 img{
+        width: 100%;
+        height: 530.338px;
+
+  }
+      .right-side-collection-d-11{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0px;
+    }
+      .collection-container-d-11{
+        display: flex;
+        width: 100%;
+        flex-direction:column;
+        gap: 10px;
+        justify-content: center;
+      }
+      .collection-item-d-11{
+        width: 111.667px;
+        height: 160.84px;
+        overflow:hidden;
+      }
+    }
+</style>
+{% assign collection_all_black = section.settings['collection-section-d-11'] %}
+<div class="custom-all-black-d-11">
+  <h3 class="all-black-heading-d-11">All Black</h3>
+  <div class="collection-container-d-11">
+    <div class="left-side-first-collection-d-11">
+      <a href="{{ collection_all_black.products.first.url }}" style="text-decoration:none;">
+        <div class="left-side-first-collection-img-d-11">
+          <img
+            src="{{ collection_all_black.products.first.featured_image | image_url}}"
+            alt=""
+            width="100%"
+            height="100%"
+          >
+        </div>
+      </a>
+    </div>
+    <div class="right-side-collection-d-11">
+      {% for product in collection_all_black.products offset: 1 limit: 8 %}
+        <div class="collection-item-d-11">
+          <a href="{{ product.url }}" style="text-decoration:none;">
+            <div class="img-pt-14">
+              <img src="{{ product.featured_image | image_url}}" alt="" width="100%" height="100%">
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
