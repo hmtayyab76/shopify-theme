@@ -1,0 +1,244 @@
+{% schema %}
+{
+  "name": "Choose Us",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Image with text"
+        }
+  ],
+  "blocks": [
+      {
+        "type": "Block",
+        "name": "Block",
+        "settings": [
+           {
+        "type": "image_picker",
+        "id": "icon-img",
+        "label": "Icon Image"
+      },
+          {
+            "type": "text",
+            "id": "sub-head",
+            "label": "Sub Heading"
+          },
+           {
+            "type": "text",
+            "id": "sub-text",
+            "label": "Sub text"
+          }
+        ]
+      }
+    ],
+  "presets": [
+    {
+      "name": "Choose Us"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+      .why-choose-us-section-d-11{
+        border: 1px solid #E1E1E1;
+        margin: 0 auto;
+
+    background: #F3F3F3;
+      }
+          .why-choose-us-d-11 {
+            display: flex;
+            max-width: 1512px;
+            height: 453px;
+            padding: 13px 23px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 51px;
+            flex-shrink: 0;
+            margin: 0 auto;
+        }
+        .why-choose-us-main-heading-d-11{
+          color: #000;
+
+          /* H3 - Gilroy */
+          font-family: Gilroy;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 40px */
+      }
+        .why-choose-us-block-container-d-11 {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap: 105px;
+          }
+
+          .why-choose-us-block-d-11 {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 25px;
+              max-width:275px;
+              height: 100%;
+          }
+
+          .gurantee-box-d9 {
+              width: 100%;
+          }
+
+          .why-choose-us-heading-d-11 {
+              color: var(--Text-Color, #363636);
+              text-align: center;
+              font-family: Inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 150%;
+          }
+      .why-choose-us-block-d-11 img{
+              width:103px;
+              height:107px;
+      }
+          .why-choose-us-sub-heading-d-11 {
+              color: var(--Text-Color, #363636);
+              text-align: center;
+              font-family: Inter;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 150%;
+          }
+     @media screen and (max-width: 666px) {
+       .why-choose-us-main-heading-d-11{
+
+          font-size: 32px;
+
+      }
+       .why-choose-us-block-d-11{
+         display:none;
+         transition: opacity 1s ease;
+       }
+       .active-d-11{
+         display:flex;
+       }
+       .why-choose-us-d-11{
+            min-height: 375px;
+         height: 375px;
+      }
+       .why-choose-us-block-container-d-11{
+         gap:0px;
+       }
+         .why-choose-us-block-d-11.active-d-11 {
+      display: flex;
+      animation: fadeIn 0.5s ease forwards; /* Add animation for slide-in effect */
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateX(50px); /* Initial position of slide */
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0); /* Final position of slide */
+      }
+    }
+       .why-choose-us-block-d-11{
+         gap:10px;
+         min-width: 275px;
+       }
+       .why-choose-us-d-11{
+         gap:25px;
+         margin: 0px auto;
+       }
+       .why-choose-us-block-container-d-11 {
+              width: 275px;
+              overflow: hidden;
+               margin:0px auto;
+              gap: 20px;
+
+          }
+       .slider-dots {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slider-dot {
+      display: inline-block;
+      width: 12.571px;
+  height: 12.571px;
+      border-radius: 50%;
+      background-color: #E1E1E1; /* Default dot color */
+      margin: 0 5px;
+      cursor: pointer;
+    }
+
+    .slider-dot.active {
+      background-color: #007DC8; /* Active dot color */
+    }
+     }
+</style>
+
+<div class="why-choose-us-section-d-11">
+  <div class="why-choose-us-d-11">
+    <div class="why-choose-us-main-heading-d-11">
+      {{ section.settings.heading }}
+    </div>
+    <div class="why-choose-us-block-container-d-11" id="slider-container">
+      {% for block in section.blocks %}
+        <div class="why-choose-us-block-d-11">
+          <img src="{{ block.settings.icon-img | image_url }}" alt="" width="" height="">
+          <div>
+            <h4 class="why-choose-us-heading-d-11">{{ block.settings['sub-head'] }}</h4>
+            <p class="why-choose-us-sub-heading-d-11">{{ block.settings['sub-text'] }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="slider-dots"></div>
+  </div>
+</div>
+{% capture slide_count %}{{ section.blocks.size }}{% endcapture %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll('.why-choose-us-block-d-11');
+    const dotsContainer = document.querySelector('.slider-dots');
+    const slideCount = {{ slide_count | plus: 0 }}; // Incrementing slide count to match Liquid index
+
+    // Create navigation dots
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('span');
+      dot.classList.add('slider-dot');
+      dot.setAttribute('data-slide-index', i);
+      dot.addEventListener('click', function() {
+        const index = parseInt(this.getAttribute('data-slide-index'));
+        goToSlide(index);
+      });
+      dotsContainer.appendChild(dot);
+    }
+
+    let currentSlideIndex = 0;
+
+    function goToSlide(index) {
+      slides[currentSlideIndex].classList.remove('active-d-11');
+      slides[index].classList.add('active-d-11');
+      currentSlideIndex = index;
+       // Update dot styles
+      const dots = document.querySelectorAll('.slider-dot');
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    // Initially show the first slide
+    goToSlide(0);
+  });
+</script>
