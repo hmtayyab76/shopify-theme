@@ -7,31 +7,31 @@
       "id": "heading",
       "label": "Heading",
       "default": "Image with text"
-        }
+    }
   ],
   "blocks": [
-      {
-        "type": "Block",
-        "name": "Block",
-        "settings": [
-           {
-        "type": "image_picker",
-        "id": "icon-img",
-        "label": "Icon Image"
-      },
-          {
-            "type": "text",
-            "id": "sub-head",
-            "label": "Sub Heading"
-          },
-           {
-            "type": "text",
-            "id": "sub-text",
-            "label": "Sub text"
-          }
-        ]
-      }
-    ],
+    {
+      "type": "Block",
+      "name": "Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon-img",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "sub-head",
+          "label": "Sub Heading"
+        },
+        {
+          "type": "text",
+          "id": "sub-text",
+          "label": "Sub text"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "Choose Us"
@@ -41,127 +41,153 @@
 {% endschema %}
 
 <style>
-      .why-choose-us-section-d-11{
-        border: 1px solid #E1E1E1;
-        margin: 0 auto;
+  .why-choose-us-section-d-11 {
+    border: 1px solid #e1e1e1;
+    margin: 0 auto;
 
-    background: #F3F3F3;
-      }
-          .why-choose-us-d-11 {
-            display: flex;
-            max-width: 1512px;
-            height: 453px;
-            padding: 13px 23px;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: 51px;
-            flex-shrink: 0;
-            margin: 0 auto;
-        }
-        .why-choose-us-main-heading-d-11{
-          color: #000;
+    background: #f3f3f3;
+  }
+  .slides-container-rs-d-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+  }
+  .why-choose-us-d-11 {
+    display: flex;
+    max-width: 1512px;
+    height: 453px;
+    padding: 13px 23px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 51px;
+    flex-shrink: 0;
+    margin: 0 auto;
+  }
+  .why-choose-us-main-heading-d-11 {
+    color: #000;
 
-          /* H3 - Gilroy */
-          font-family: Gilroy;
-          font-size: 40px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 100%; /* 40px */
-      }
-        .why-choose-us-block-container-d-11 {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap: 105px;
-          }
+    /* H3 - Gilroy */
+    font-family: Gilroy;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 40px */
+  }
+  .why-choose-us-block-container-d-11 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 105px;
+  }
 
-          .why-choose-us-block-d-11 {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 25px;
-              max-width:275px;
-              height: 100%;
-          }
+  .why-choose-us-block-d-11 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 275px;
+    height: 100%;
+  }
 
-          .gurantee-box-d9 {
-              width: 100%;
-          }
+  .gurantee-box-d-11 {
+    width: 100%;
+  }
 
-          .why-choose-us-heading-d-11 {
-              color: var(--Text-Color, #363636);
-              text-align: center;
-              font-family: Inter;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 150%;
-          }
-      .why-choose-us-block-d-11 img{
-              width:103px;
-              height:107px;
-      }
-          .why-choose-us-sub-heading-d-11 {
-              color: var(--Text-Color, #363636);
-              text-align: center;
-              font-family: Inter;
-              font-size: 14px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 150%;
-          }
-     @media screen and (max-width: 666px) {
-       .why-choose-us-main-heading-d-11{
-
-          font-size: 32px;
-
-      }
-       .why-choose-us-block-d-11{
-         display:none;
-         transition: opacity 1s ease;
-       }
-       .active-d-11{
-         display:flex;
-       }
-       .why-choose-us-d-11{
-            min-height: 375px;
-         height: 375px;
-      }
-       .why-choose-us-block-container-d-11{
-         gap:0px;
-       }
-         .why-choose-us-block-d-11.active-d-11 {
+  .why-choose-us-heading-d-11 {
+    color: var(--Text-Color, #363636);
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%;
+  }
+  .why-choose-us-block-d-11 img {
+    width: 103px;
+    height: 107px;
+  }
+  .why-choose-us-sub-heading-d-11 {
+    color: var(--Text-Color, #363636);
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  @media screen and (max-width: 666px) {
+    .dot-rs-d-11 {
+      height: 14px;
+      width: 14px;
+      margin: 0 5px;
+      background: #d9d9d9;
+      display: inline-block;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .slides-container-rs-d-11 {
       display: flex;
-      animation: fadeIn 0.5s ease forwards; /* Add animation for slide-in effect */
+      justify-content: flex-start !important;
+      align-items: center;
+      gap: 0px;
+    }
+    * {
+      box-sizing: border-box;
     }
 
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateX(50px); /* Initial position of slide */
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0); /* Final position of slide */
-      }
+    .slider-rs-d-11 {
+      overflow: hidden;
+      width: 100%;
+      position: relative;
     }
-       .why-choose-us-block-d-11{
-         gap:10px;
-         min-width: 275px;
-       }
-       .why-choose-us-d-11{
-         gap:25px;
-         margin: 0px auto;
-       }
-       .why-choose-us-block-container-d-11 {
-              width: 275px;
-              overflow: hidden;
-               margin:0px auto;
-              gap: 20px;
 
-          }
-       .slider-dots {
+    .slides-container-rs-d-11 {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .slide-rs-d-11 {
+      min-width: 100%;
+      text-align: center;
+    }
+
+    .slider-dots-rs-d-11 {
+      text-align: center;
+    }
+
+    .active-rs-d-11 {
+      background: var(--Color, #007dc8);
+    }
+
+    .main-rs-slider {
+      width: 100%;
+    }
+
+    .inner-rs-slider {
+      max-width: 275px;
+      margin: 0 auto;
+    }
+    .why-choose-us-main-heading-d-11 {
+      font-size: 32px;
+    }
+
+    .why-choose-us-block-d-11 {
+      gap: 10px;
+      min-width: 275px;
+    }
+    .why-choose-us-d-11 {
+      gap: 25px;
+      margin: 0px auto;
+    }
+    .why-choose-us-block-container-d-11 {
+      width: 275px;
+      overflow: hidden;
+      margin: 0px auto;
+      gap: 20px;
+    }
+    .slider-dots {
       text-align: center;
       margin-top: 10px;
     }
@@ -169,76 +195,137 @@
     .slider-dot {
       display: inline-block;
       width: 12.571px;
-  height: 12.571px;
+      height: 12.571px;
       border-radius: 50%;
-      background-color: #E1E1E1; /* Default dot color */
+      background-color: #e1e1e1; /* Default dot color */
       margin: 0 5px;
       cursor: pointer;
     }
 
-    .slider-dot.active {
-      background-color: #007DC8; /* Active dot color */
+    .active-rs-d-11 {
+      background-color: #007dc8; /* Active dot color */
     }
-     }
+  }
 </style>
 
-<div class="why-choose-us-section-d-11">
+<!--
+  <div class="why-choose-us-section-d-11">
+    <div class="why-choose-us-d-11">
+      <div class="why-choose-us-main-heading-d-11">
+        {{ section.settings.heading }}
+      </div>
+      <div class="why-choose-us-block-container-d-11" id="slider-container">
+        {% for block in section.blocks %}
+          <div class="why-choose-us-block-d-11">
+            <img src="{{ block.settings.icon-img | image_url }}" alt="" width="" height="">
+            <div>
+              <h4 class="why-choose-us-heading-d-11">{{ block.settings['sub-head'] }}</h4>
+              <p class="why-choose-us-sub-heading-d-11">{{ block.settings['sub-text'] }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="slider-dots slide-rs-d-11"></div>
+    </div>
+  </div>
+-->
+
+<section class="why-choose-us-section-d-11">
   <div class="why-choose-us-d-11">
     <div class="why-choose-us-main-heading-d-11">
       {{ section.settings.heading }}
     </div>
-    <div class="why-choose-us-block-container-d-11" id="slider-container">
-      {% for block in section.blocks %}
-        <div class="why-choose-us-block-d-11">
-          <img src="{{ block.settings.icon-img | image_url }}" alt="" width="" height="">
-          <div>
-            <h4 class="why-choose-us-heading-d-11">{{ block.settings['sub-head'] }}</h4>
-            <p class="why-choose-us-sub-heading-d-11">{{ block.settings['sub-text'] }}</p>
-          </div>
+    <div class="inner-rs-slider">
+      <div id="slider-rs-d-11" class="slider-rs-d-11">
+        <div class="slides-container-rs-d-11 ">
+          {% for block in section.blocks %}
+            <div class="why-choose-us-block-d-11 slide-rs-d-11">
+              <img src="{{ block.settings.icon-img | image_url }}" alt="" width="" height="">
+              <div>
+                <h4 class="why-choose-us-heading-d-11">{{ block.settings['sub-head'] }}</h4>
+                <p class="why-choose-us-sub-heading-d-11">{{ block.settings['sub-text'] }}</p>
+              </div>
+            </div>
+          {% endfor %}
         </div>
-      {% endfor %}
+      </div>
+      <div class="slider-dots-rs-d-11 slider-dots"></div>
     </div>
-    <div class="slider-dots"></div>
   </div>
-</div>
-{% capture slide_count %}{{ section.blocks.size }}{% endcapture %}
+</section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll('.why-choose-us-block-d-11');
-    const dotsContainer = document.querySelector('.slider-dots');
-    const slideCount = {{ slide_count | plus: 0 }}; // Incrementing slide count to match Liquid index
+  (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+      const slider = document.querySelector('.slides-container-rs-d-11');
+      const slides = document.querySelectorAll('.slide-rs-d-11');
+      const dotsContainer = document.querySelector('.slider-dots-rs-d-11');
+      let currentSlide = 0;
 
-    // Create navigation dots
-    for (let i = 0; i < slideCount; i++) {
-      const dot = document.createElement('span');
-      dot.classList.add('slider-dot');
-      dot.setAttribute('data-slide-index', i);
-      dot.addEventListener('click', function() {
-        const index = parseInt(this.getAttribute('data-slide-index'));
-        goToSlide(index);
-      });
-      dotsContainer.appendChild(dot);
-    }
-
-    let currentSlideIndex = 0;
-
-    function goToSlide(index) {
-      slides[currentSlideIndex].classList.remove('active-d-11');
-      slides[index].classList.add('active-d-11');
-      currentSlideIndex = index;
-       // Update dot styles
-      const dots = document.querySelectorAll('.slider-dot');
-      dots.forEach((dot, i) => {
-        if (i === index) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
+      function createDots() {
+        for (let i = 0; i < slides.length; i++) {
+          const dot = document.createElement('span');
+          dot.classList.add('dot-rs-d-11');
+          dotsContainer.appendChild(dot);
+          dot.addEventListener('click', () => {
+            goToSlide(i);
+          });
         }
-      });
-    }
+        updateDots();
+      }
 
-    // Initially show the first slide
-    goToSlide(0);
-  });
+      function updateDots() {
+        const dots = document.querySelectorAll('.dot-rs-d-11');
+        dots.forEach((dot) => dot.classList.remove('active-rs-d-11'));
+        dots[currentSlide].classList.add('active-rs-d-11');
+      }
+
+      function goToSlide(n) {
+        slider.style.transform = `translateX(-${n * 100}%)`;
+        currentSlide = n;
+        updateDots();
+      }
+
+      let isDragging = false;
+      let startPos = 0;
+
+      function handleStart(evt) {
+        isDragging = true;
+        startPos = evt.type.includes('mouse') ? evt.clientX : evt.touches[0].clientX;
+        slider.classList.add('grabbing');
+      }
+
+      function handleMove(evt) {
+        if (!isDragging) return;
+        const currentPos = evt.type.includes('mouse') ? evt.clientX : evt.touches[0].clientX;
+        const moveX = currentPos - startPos;
+
+        if (Math.abs(moveX) > 100) {
+          // Minimum drag threshold in pixels
+          if (moveX > 0 && currentSlide > 0) {
+            goToSlide(currentSlide - 1);
+          } else if (moveX < 0 && currentSlide < slides.length - 1) {
+            goToSlide(currentSlide + 1);
+          }
+          isDragging = false;
+        }
+      }
+
+      function handleEnd() {
+        isDragging = false;
+        slider.classList.remove('grabbing');
+      }
+
+      slider.addEventListener('mousedown', handleStart);
+      slider.addEventListener('touchstart', handleStart);
+
+      window.addEventListener('mousemove', handleMove);
+      window.addEventListener('touchmove', handleMove);
+
+      window.addEventListener('mouseup', handleEnd);
+      window.addEventListener('touchend', handleEnd);
+
+      createDots();
+    });
+  })();
 </script>
