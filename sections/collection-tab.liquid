@@ -1,0 +1,243 @@
+<style>
+      #shopify-section-{{ section.id }}  *{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+       }
+     .img-pt-14-d10{
+       width: 249.906px;
+       height: 334.521px;
+     }
+      #shopify-section-{{ section.id }}  .main-pt-14-d10{
+           width: 100%;
+           background: rgba(230, 227, 226, 0.705);
+        margin-top:120px;
+       }
+  @media (max-width: 767px) {
+  #shopify-section-{{ section.id }} .main-pt-14-d10 {
+
+  margin-top: 50px;
+  padding: 0px 20px;
+  }
+  }
+       #shopify-section-{{ section.id }} .inner-pt-14-d10{
+           width: 100%;
+          margin: 30px auto;
+           padding: 30px 0;
+           max-width: 1440px;
+           padding: 32px 48px;
+           margin: 0 auto !important;
+           display: flex;
+           flex-direction: column;
+           gap: 36px;
+       }
+       #shopify-section-{{ section.id }} .inner-pt-14 h2-d10{
+           font-size: 22px;
+           color: black;
+           font-weight:600;
+       }
+      #shopify-section-{{ section.id }}  .tab-content-14-d10{
+           width: auto;
+       }
+       #shopify-section-{{ section.id }} .tab-content-14-d10{
+           width: 100%;
+           display: grid;
+           grid-template-columns: repeat(5, 1fr);
+           gap: 19px;
+       }
+       #shopify-section-{{ section.id }} .tabs-b-pt-14-d10{
+           display: flex;
+           width: 100%;
+           align-items: center;
+           justify-content: flex-star;
+           border-bottom: 1px solid lightgray;
+           flex-wrap: wrap;
+       }
+       #shopify-section-{{ section.id }} .tabs-b-pt-14-d10 button{
+           padding: 24px 10px;
+           width: 200px;
+           cursor:pointer;
+           font-family: 'Futura LT Paneuropean';
+           color: #000;
+           text-align: center;
+           font-family: "Futura LT Paneuropean";
+           font-size: 16px;
+           font-style: normal;
+           font-weight: 400;
+           line-height: normal;
+       }
+       #shopify-section-{{ section.id }} .tab-button-d10.active{
+           border-bottom: 1px solid black;
+       }
+   #shopify-section-{{ section.id }} .product-info-14-d10{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 10px;
+           width:100%;
+         height: 335px;
+       }
+  #shopify-section-{{ section.id }} .img-pt-14-d10{
+     width: 100%;
+     height: 100%;
+   }
+  #shopify-section-{{ section.id }} .img-pt-14-d10 img{
+     width: 100%;
+     object-fit: cover;
+     height: 100%;
+   }
+   #shopify-section-{{ section.id }} .product-pt-14-d10 h4 {
+   font-size: 18px;
+   font-family: 'Futura LT Paneuropean';
+   color: black;
+   font-weight: 400;
+   line-height: 24.08px;
+   padding: 6px 0 15px 0;
+  }
+      #shopify-section-{{ section.id }}  .product-pt-14-d10 p{
+           font-size: 12px;
+           color: #666;
+       }
+   @media (max-width:1299px){
+       #shopify-section-{{ section.id }} .tab-content-14-d10{
+           grid-template-columns: repeat(3, 1fr) ;
+       }
+      #shopify-section-{{ section.id }} .tabs-b-pt-14-d10 {
+      border: none;
+     }
+
+   }
+   @media (max-width: 767px){
+    #shopify-section-{{ section.id }} .main-pt-14-d10 {
+       background: white;
+     }
+     #shopify-section-{{ section.id }} .inner-pt-14-d10{
+       padding: 0 0;
+     }
+       #shopify-section-{{ section.id }} .tab-content-14-d10{
+           grid-template-columns: repeat(2, 1fr) ;
+         gap: 10px;
+       }
+    #shopify-section-{{ section.id }} .tabs-b-pt-14-d10 {
+       gap: 10px;
+      border: none;
+     }
+    #shopify-section-{{ section.id }} .tabs-b-pt-14-d10 button {
+   padding: 5px;
+      width:auto;
+   }
+    #shopify-section-{{ section.id }} .product-info-14-d10 {
+       height: 250px;
+     }
+     #shopify-section-{{ section.id }} .product-pt-14-d10 h4 {
+       padding: 6px 0 10px 0;
+     }
+   }
+  @media (min-width: 1900px) and (max-width: 1950px){
+  #shopify-section-{{ section.id }} .inner-pt-14-d10 {
+  width: 93.5%;
+  max-width: 100%;
+  padding: 0 0;
+  }
+  }
+</style>
+
+<div class="main-pt-14-d10">
+  <div class="inner-pt-14-d10">
+    <div class="tabs-b-pt-14-d10" id="tabButtons"></div>
+
+    {% for block in section.blocks %}
+      {% assign collectionmy = block.settings['collection-section-11'] %}
+
+      <div id="tabContent" class="tabs-c-pt-14-d10">
+        <p class="tab-button-d10" style="display: none;">{{ block.settings['tab-btn'] }}</p>
+        <div class="tab-content-14-d10">
+          {% for product in collectionmy.products limit: 10 %}
+            <a href="{{ product.url }}" style="text-decoration:none;">
+              <div class="product-pt-14-d10 custom-class-w-d-11-collection-tab">
+                <div class="product-info-14-d10">
+                  <div class="img-pt-14-d10">
+                    <img src="{{ product.featured_image | image_url}}" alt="" width="" height="">
+                  </div>
+                  <!--
+                    <div class="title-pt-14">
+                        <p style="text-align:left;">{{ block.settings.p-14-txt }}</p>
+                        <h4>{{ product.title | truncate:'20' }}</h4>
+                    </div>
+                  -->
+                </div>
+                <div class="price-pt-14-d10">
+                  <h4>{{ product.price | money }}</h4>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabContents = document.querySelectorAll('.tabs-c-pt-14-d10');
+
+    tabContents.forEach((tabContent, index) => {
+      const tabButton = document.createElement('button');
+      tabButton.textContent = tabContent.querySelector('p.tab-button-d10').textContent;
+      tabButton.classList.add('tab-button-d10');
+
+      tabButton.addEventListener('click', function () {
+        tabContents.forEach((tab) => {
+          tab.style.display = 'none';
+        });
+
+        tabContent.style.display = 'block';
+
+        document.querySelectorAll('.tab-button-d10').forEach((button) => {
+          button.classList.remove('active');
+        });
+
+        tabButton.classList.add('active');
+      });
+
+      document.getElementById('tabButtons').appendChild(tabButton);
+
+      if (index !== 0) {
+        tabContent.style.display = 'none';
+      } else {
+        tabButton.classList.add('active');
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Collection Tab",
+  "settings": [],
+  "blocks": [
+    {
+      "name": "Tab",
+      "type": "Tab",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection-section-11",
+          "label": "Select collection"
+        },
+        {
+          "type": "text",
+          "id": "tab-btn",
+          "label": "Tab Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Tab"
+    }
+  ]
+}
+{% endschema %}
