@@ -1,0 +1,153 @@
+<style>
+    #shopify-section-{{ section.id }} *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    #shopify-section-{{ section.id }} .collection-main-d10 {
+      position: relative;
+      width: 100%;
+      padding: 120px 0 0;
+      overflow: hidden;
+    }
+    #shopify-section-{{ section.id }} .main-collection-title-d10 {
+      font-size: 28px;
+      font-weight: 400;
+      font-family: "Futura LT Paneuropean";
+      text-align: left;
+      line-height: 37.46px;
+      width: 188px;
+      max-width: 230px;
+    }
+    #shopify-section-{{ section.id }} .collection-title-d10 {
+      padding: 10px 0 0 0;
+      font-family: "Futura LT Paneuropean";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18.73px;
+      text-align: center;
+    }
+    #shopify-section-{{ section.id }} .collection-flex-d10 {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0 0 0 48px;
+    }
+    #shopify-section-{{ section.id }} .product-flex-d10 {
+      display: flex;
+      justify-content: left;
+      align-items: baseline;
+      overflow: scroll;
+      padding: 0 0 0 30px !important;
+    }
+    #shopify-section-{{ section.id }} ::-webkit-scrollbar {
+      display: none;
+    }
+    #shopify-section-{{ section.id }} .collection-one-d10 {
+      text-align: center;
+      padding: 0 5px;
+    }
+    #shopify-section-{{ section.id }} .collection-image-d10 {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 2px solid #D7D4D4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+    }
+    #shopify-section-{{ section.id }} .collection-image-d10 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+    }
+    @media (max-width: 767px) {
+       #shopify-section-{{ section.id }} .collection-main-d10 {
+  
+      padding: 50px 0 10px 0;
+  
+    }
+      #shopify-section-{{ section.id }} .collection-flex-d10 {
+        justify-content: flex-start;
+        padding: 0 20px;
+      }
+      #shopify-section-{{ section.id }} .main-collection-title-d10 {
+        padding: 0 15px 0 0;
+        max-width: 150px;
+        font-size: 22px;
+        line-height: 25px;
+      }
+      #shopify-section-{{ section.id }} .collection-image-d10 {
+        width: 90px;
+        height: 90px;
+      }
+      #shopify-section-{{ section.id }} h3.collection-title-d10 {
+        font-size: 12px;
+        line-height: 16.8px;
+      }
+    }
+    @media (max-width: 450px){
+     #shopify-section-{{ section.id }} .product-flex-d10 {
+        padding-left: 25px !important;
+      }
+    }
+  </style>
+  
+  <section class="collection-main-d10">
+    <div class="collection-flex-d10" id="collection-slider">
+      <h2 class="main-collection-title-d10">{{ section.settings.title }}</h2>
+      {% for block in section.blocks %}
+        {% assign new_collection = block.settings.collection %}
+        <div class="product-flex-d10">
+          {% for product in new_collection.products %}
+            <a href="{{ product.url }}" class="collection-slide-d10">
+              <div class="collection-one-d10">
+                <div class="collection-image-d10">
+                  <img src="{{ product.featured_image | image_url: 'master' }}" alt="loading image" width="" height="">
+                </div>
+                <h3 class="collection-title-d10">{{ product.title }}</h3>
+              </div>
+            </a>
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+  
+  {% schema %}
+  {
+    "name": "Collection Slider",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Collection",
+        "limit": 1,
+        "settings": [
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+          }
+        ]
+      }
+    ],
+    "presets":[
+      {
+        "name": "Collection Slider"
+      }
+    ]
+  }
+  {% endschema %}
+  
