@@ -59,10 +59,18 @@
             "collection-section-11": "frontpage",
             "tab-btn": "Tayyab"
           }
+        },
+        "tab_NDyNNL": {
+          "type": "Tab",
+          "settings": {
+            "collection-section-11": "top-sale",
+            "tab-btn": "Top Sale"
+          }
         }
       },
       "block_order": [
-        "tab_KYhb3y"
+        "tab_KYhb3y",
+        "tab_NDyNNL"
       ],
       "settings": {
       }
