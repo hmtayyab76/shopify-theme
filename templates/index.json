@@ -52,6 +52,17 @@
     },
     "collection_slider_tk6xhA": {
       "type": "collection-slider",
+      "blocks": {
+        "text_bbb6tY": {
+          "type": "text",
+          "settings": {
+            "collection": "top-sale"
+          }
+        }
+      },
+      "block_order": [
+        "text_bbb6tY"
+      ],
       "settings": {
         "title": "New Wholesale Clothings"
       }
