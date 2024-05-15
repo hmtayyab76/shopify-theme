@@ -150,7 +150,7 @@
       {% assign collectionmy = block.settings['collection-section-11'] %}
 
       <div id="tabContent" class="tabs-c-pt-14-d10">
-        <p class="tab-button-d10" style="display: none;">{{ block.settings['tab-btn'] }}</p>
+        <p class="tab-button-d10" style="display: none;">{{ collectionmy.title }}</p>
         <div class="tab-content-14-d10">
           {% for product in collectionmy.products limit: 10 %}
             <a href="{{ product.url }}" style="text-decoration:none;">
