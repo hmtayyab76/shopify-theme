@@ -50,6 +50,12 @@
       "settings": {
       }
     },
+    "collection_slider_tk6xhA": {
+      "type": "collection-slider",
+      "settings": {
+        "title": "New Wholesale Clothings"
+      }
+    },
     "collection_tab_nTGYtz": {
       "type": "collection-tab",
       "blocks": {
@@ -211,6 +217,7 @@
   "order": [
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
+    "collection_slider_tk6xhA",
     "collection_tab_nTGYtz",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
