@@ -50,6 +50,23 @@
       "settings": {
       }
     },
+    "collection_tab_nTGYtz": {
+      "type": "collection-tab",
+      "blocks": {
+        "tab_KYhb3y": {
+          "type": "Tab",
+          "settings": {
+            "collection-section-11": "frontpage",
+            "tab-btn": "Tayyab"
+          }
+        }
+      },
+      "block_order": [
+        "tab_KYhb3y"
+      ],
+      "settings": {
+      }
+    },
     "custom_featured_product_FDKEYP": {
       "type": "custom-featured-product",
       "blocks": {
@@ -186,6 +203,7 @@
   "order": [
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
+    "collection_tab_nTGYtz",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
     "custom_slider_G4gCPG",
