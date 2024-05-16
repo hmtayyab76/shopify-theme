@@ -113,70 +113,6 @@
         "selected_main_featured_product": ""
       }
     },
-    "customer_reviews_yAtBzd": {
-      "type": "customer-reviews",
-      "blocks": {
-        "review_mcQGF9": {
-          "type": "review",
-          "settings": {
-            "subtext": "Hear From Our Customers",
-            "headtext": "Customer Reviews",
-            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
-            "nametext": "David W",
-            "star-icon": "star-5"
-          }
-        },
-        "review_NMLTYL": {
-          "type": "review",
-          "settings": {
-            "subtext": "Hear From Our Customers",
-            "headtext": "Customer Reviews",
-            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
-            "nametext": "David W",
-            "star-icon": "star-5"
-          }
-        },
-        "review_W4EQjL": {
-          "type": "review",
-          "settings": {
-            "subtext": "Hear From Our Customers",
-            "headtext": "Customer Reviews",
-            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
-            "nametext": "David W",
-            "star-icon": "star-5"
-          }
-        },
-        "review_hz39me": {
-          "type": "review",
-          "settings": {
-            "subtext": "Hear From Our Customers",
-            "headtext": "Customer Reviews",
-            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
-            "nametext": "David W",
-            "star-icon": "star-5"
-          }
-        },
-        "review_wN3icj": {
-          "type": "review",
-          "settings": {
-            "subtext": "Hear From Our Customers",
-            "headtext": "Customer Reviews",
-            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
-            "nametext": "David W",
-            "star-icon": "star-5"
-          }
-        }
-      },
-      "block_order": [
-        "review_mcQGF9",
-        "review_NMLTYL",
-        "review_W4EQjL",
-        "review_hz39me",
-        "review_wN3icj"
-      ],
-      "settings": {
-      }
-    },
     "custom_renewal_UHnRLh": {
       "type": "custom-renewal",
       "blocks": {
@@ -267,6 +203,70 @@
         "title_text": "Live life in full colors"
       }
     },
+    "customer_reviews_yAtBzd": {
+      "type": "customer-reviews",
+      "blocks": {
+        "review_mcQGF9": {
+          "type": "review",
+          "settings": {
+            "subtext": "Hear From Our Customers",
+            "headtext": "Customer Reviews",
+            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
+            "nametext": "David W",
+            "star-icon": "star-5"
+          }
+        },
+        "review_NMLTYL": {
+          "type": "review",
+          "settings": {
+            "subtext": "Hear From Our Customers",
+            "headtext": "Customer Reviews",
+            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
+            "nametext": "David W",
+            "star-icon": "star-5"
+          }
+        },
+        "review_W4EQjL": {
+          "type": "review",
+          "settings": {
+            "subtext": "Hear From Our Customers",
+            "headtext": "Customer Reviews",
+            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
+            "nametext": "David W",
+            "star-icon": "star-5"
+          }
+        },
+        "review_hz39me": {
+          "type": "review",
+          "settings": {
+            "subtext": "Hear From Our Customers",
+            "headtext": "Customer Reviews",
+            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
+            "nametext": "David W",
+            "star-icon": "star-5"
+          }
+        },
+        "review_wN3icj": {
+          "type": "review",
+          "settings": {
+            "subtext": "Hear From Our Customers",
+            "headtext": "Customer Reviews",
+            "richtext": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.<\/p>",
+            "nametext": "David W",
+            "star-icon": "star-5"
+          }
+        }
+      },
+      "block_order": [
+        "review_mcQGF9",
+        "review_NMLTYL",
+        "review_W4EQjL",
+        "review_hz39me",
+        "review_wN3icj"
+      ],
+      "settings": {
+      }
+    },
     "custom_video_bannar_Rgr89x": {
       "type": "custom-video-bannar",
       "settings": {
@@ -287,10 +287,10 @@
     "collection_slider_tk6xhA",
     "collection_tab_nTGYtz",
     "custom_featured_product_FDKEYP",
-    "customer_reviews_yAtBzd",
     "custom_renewal_UHnRLh",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
+    "customer_reviews_yAtBzd",
     "custom_video_bannar_Rgr89x"
   ]
 }
