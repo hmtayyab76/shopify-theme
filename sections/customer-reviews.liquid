@@ -1,0 +1,333 @@
+<style>
+    #shopify-section-{{ section.id }}  * {
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+     }
+
+     #shopify-section-{{ section.id }} .slider-rs-d9 {
+         overflow: hidden;
+         width: 100%;
+         position: relative;
+     }
+
+     #shopify-section-{{ section.id }} .slides-container-rs-d9 {
+         display: flex;
+         transition: transform 0.5s ease;
+     }
+
+     #shopify-section-{{ section.id }} .slide-rs-d9 {
+         min-width: 100%;
+         text-align: center;
+         cursor: grab;
+     }
+
+     #shopify-section-{{ section.id }} .slider-dots-rs-d9 {
+         text-align: center;
+     }
+
+     #shopify-section-{{ section.id }} .dot-rs-d9 {
+         height: 14px;
+         width: 14px;
+         margin: 0 5px;
+         background: #D9D9D9;
+         display: inline-block;
+         border-radius: 50%;
+         cursor: pointer;
+     }
+
+     #shopify-section-{{ section.id }} .active-rs-d9 {
+         background: var(--Color, #FFFFFF);
+     }
+  #shopify-section-{{ section.id }} .main-review-section-d9{
+     width: 100%;
+     padding: 70px 0 50px;
+     background: #FAFAFA;
+   }
+     #shopify-section-{{ section.id }} .main-rs-slider {
+         width: 100%;
+         background: #007DC8;
+         padding: 90px 0 50px;
+     }
+
+     #shopify-section-{{ section.id }} .inner-rs-slider {
+         max-width: 730px;
+         margin: 0 auto;
+     }
+
+     #shopify-section-{{ section.id }} .heading-d9 .subheading-rs-d9 {
+         font-family: Inter;
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 27px;
+         text-align: center;
+         color: #fff;
+         user-select: none;
+     }
+
+     #shopify-section-{{ section.id }} .heading-d9 .review-rs-d9 {
+         font-family: Gilroy;
+         font-size: 48px;
+         font-weight: 700;
+         line-height: 58.03px;
+         letter-spacing: 0.03em;
+         text-align: center;
+         color: #fff;
+         user-select: none;
+     }
+
+     #shopify-section-{{ section.id }} #shopify-section-{{ section.id }} .review-text-d9 p, .review-text-d9 {
+         font-family: Archivo;
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 27px;
+         letter-spacing: 0.03em;
+         text-align: center;
+         color: #fff;
+         user-select: none;
+         margin: 31px 0 !important;
+     }
+
+     #shopify-section-{{ section.id }} .customer-rs-d9 p {
+         font-family: Inter;
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 27px;
+         text-align: center;
+         color: #fff;
+         user-select: none;
+         margin-bottom: 10px;
+     }
+     #shopify-section-{{ section.id }} .star-rs-d9{
+         margin-bottom: 20px;
+     }
+     #shopify-section-{{ section.id }} .star-rs-d9 svg{
+         width: 30px;
+         height: 30px;
+     }
+
+
+     @media(max-width: 768px){
+        #shopify-section-{{ section.id }} .main-review-section-d9{
+        background: #fff;
+          padding-top: 0;
+   }
+        #shopify-section-{{ section.id }} .main-rs-slider {
+          padding: 60px 40px;
+        }
+         #shopify-section-{{ section.id }} .inner-rs-slider{
+             max-width: 300px;
+             margin: 0 auto;
+         }
+         #shopify-section-{{ section.id }} .heading-d9 .subheading-rs-d9{
+             font-size: 16px;
+             line-height: 24px;
+         }
+         #shopify-section-{{ section.id }} .heading-d9 .review-rs-d9{
+             font-size: 32px;
+             line-height: 32px;
+         }
+         #shopify-section-{{ section.id }} .slider-dots-rs-d9{
+             display: none;
+         }
+     }
+</style>
+
+<section class="main-review-section-d9">
+  <div class="main-rs-slider">
+    <div class="inner-rs-slider">
+      <div id="slider-rs-d9" class="slider-rs-d9">
+        <div class="slides-container-rs-d9">
+          {% for block in section.blocks %}
+            <div class="slide-rs-d9">
+              <div class="heading-d9">
+                <p class="subheading-rs-d9">{{ block.settings.subtext }}</p>
+                <h2 class="review-rs-d9">{{ block.settings.headtext }}</h2>
+              </div>
+              <div class="review-text-d9">
+                {{ block.settings.richtext }}
+              </div>
+              <div class="customer-rs-d9">
+                <div class="star-rs-d9">
+                  {% if block.settings['star-icon'] == 'star-1' %}
+                    {% render 'star-icon-d9' %}
+                  {% elsif block.settings['star-icon'] == 'star-2' %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' %}
+
+                  {% elsif block.settings['star-icon'] == 'star-3' %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' -%}
+                    {%- render 'star-icon-d9' %}
+
+                  {% elsif block.settings['star-icon'] == 'star-4' %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' -%}
+                    {%- render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' %}
+
+                  {% else %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' %}
+                    {% render 'star-icon-d9' -%}
+                    {%- render 'star-icon-d9' %}
+                  {% endif %}
+                </div>
+                <p>{{ block.settings.nametext }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="slider-dots-rs-d9"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+      (function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        const slider = document.querySelector('.slides-container-rs-d9');
+        const slides = document.querySelectorAll('.slide-rs-d9');
+        const dotsContainer = document.querySelector('.slider-dots-rs-d9');
+        let currentSlide = 0;
+
+        function createDots() {
+            for (let i = 0; i < slides.length; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot-rs-d9');
+                dotsContainer.appendChild(dot);
+                dot.addEventListener('click', () => {
+                    goToSlide(i);
+                });
+            }
+            updateDots();
+        }
+
+        function updateDots() {
+            const dots = document.querySelectorAll('.dot-rs-d9');
+            dots.forEach(dot => dot.classList.remove('active-rs-d9'));
+            dots[currentSlide].classList.add('active-rs-d9');
+        }
+
+        function goToSlide(n) {
+            slider.style.transform = `translateX(-${n * 100}%)`;
+            currentSlide = n;
+            updateDots();
+        }
+
+        let isDragging = false;
+        let startPos = 0;
+
+        function handleStart(evt) {
+            isDragging = true;
+            startPos = evt.type.includes('mouse') ? evt.clientX : evt.touches[0].clientX;
+            slider.classList.add('grabbing');
+        }
+
+        function handleMove(evt) {
+            if (!isDragging) return;
+            const currentPos = evt.type.includes('mouse') ? evt.clientX : evt.touches[0].clientX;
+            const moveX = currentPos - startPos;
+
+            if (Math.abs(moveX) > 100) { // Minimum drag threshold in pixels
+                if (moveX > 0 && currentSlide > 0) {
+                    goToSlide(currentSlide - 1);
+                } else if (moveX < 0 && currentSlide < slides.length - 1) {
+                    goToSlide(currentSlide + 1);
+                }
+                isDragging = false;
+            }
+        }
+
+        function handleEnd() {
+            isDragging = false;
+            slider.classList.remove('grabbing');
+        }
+
+        slider.addEventListener('mousedown', handleStart);
+        slider.addEventListener('touchstart', handleStart);
+
+        window.addEventListener('mousemove', handleMove);
+        window.addEventListener('touchmove', handleMove);
+
+        window.addEventListener('mouseup', handleEnd);
+        window.addEventListener('touchend', handleEnd);
+
+        createDots();
+    });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Revirew Slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "review",
+      "name":"Review",
+      "settings": [
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "Subtext",
+          "default": "Hear From Our Customers"
+        },
+          {
+          "type": "text",
+          "id": "headtext",
+          "label": "Heading",
+          "default": "Customer Reviews"
+        },
+           {
+          "type": "richtext",
+          "id": "richtext",
+          "label": "Review",
+          "default": "<p>I purchased BPC 157, decided to give them a try because their prices were lower than others. The delivery was quick, and overall, I'm very happy with the experience.</p>"
+        },
+           {
+          "type": "text",
+          "id": "nametext",
+          "label": "Customer Name",
+          "default": "David W"
+        },
+        {
+          "type": "select",
+          "id": "star-icon",
+          "label": "Select Stars",
+          "default": "star-5",
+          "options": [
+            {
+              "value": "star-1",
+              "label": "1 Star"
+            },
+            {
+              "value": "star-2",
+              "label": "2 Star"
+            },
+            {
+              "value": "star-3",
+              "label": "3 Star"
+            },
+            {
+              "value": "star-4",
+              "label": "4 Star"
+            },
+            {
+              "value": "star-5",
+              "label": "5 Star"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Slider"
+    }
+  ]
+}
+{% endschema %}
