@@ -1,9 +1,18 @@
 <style>
+  .tabs-c-pt-14-d10 {
+    
+    transition: opacity 0.3s ease; /* Adjust timing as needed */
+  }
+
+  .tabs-c-pt-14-d10.active {
+    opacity: 1;
+  }
       #shopify-section-{{ section.id }}  *{
            padding: 0;
            margin: 0;
            box-sizing: border-box;
        }
+      
      .img-pt-14-d10{
        width: 249.906px;
        height: 334.521px;
@@ -136,7 +145,6 @@
        padding: 6px 0 10px 0;
      }
    }
- 
 </style>
 
 <div class="main-pt-14-d10">
@@ -156,12 +164,6 @@
                   <div class="img-pt-14-d10">
                     <img src="{{ product.featured_image | image_url}}" alt="" width="" height="">
                   </div>
-                  <!--
-                    <div class="title-pt-14">
-                        <p style="text-align:left;">{{ block.settings.p-14-txt }}</p>
-                        <h4>{{ product.title | truncate:'20' }}</h4>
-                    </div>
-                  -->
                 </div>
                 <div class="price-pt-14-d10">
                   <h4>{{ product.price | money }}</h4>
@@ -186,10 +188,19 @@
 
       tabButton.addEventListener('click', function () {
         tabContents.forEach((tab) => {
-          tab.style.display = 'none';
+          tab.style.opacity = '0'; // Set opacity to 0 before changing display property
+          tab.style.pointerEvents = 'none'; // Disable pointer events during transition
         });
 
-        tabContent.style.display = 'block';
+        setTimeout(() => { // Add a delay before changing display property
+          tabContents.forEach((tab) => {
+            tab.style.display = 'none';
+          });
+
+          tabContent.style.display = 'block';
+          tabContent.style.opacity = '1'; // Set opacity back to 1 after display change
+          tabContent.style.pointerEvents = 'auto'; // Enable pointer events after transition
+        }, 300); // Adjust the delay time as needed (in milliseconds)
 
         document.querySelectorAll('.tab-button-d10').forEach((button) => {
           button.classList.remove('active');
@@ -208,6 +219,7 @@
     });
   });
 </script>
+
 
 {% schema %}
 {
