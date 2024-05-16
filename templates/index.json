@@ -113,6 +113,11 @@
         "selected_main_featured_product": ""
       }
     },
+    "customer_reviews_yAtBzd": {
+      "type": "customer-reviews",
+      "settings": {
+      }
+    },
     "custom_renewal_UHnRLh": {
       "type": "custom-renewal",
       "blocks": {
@@ -148,13 +153,6 @@
         "block_title_main_0": "What Makes us Unique?",
         "side_image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
         "side_image_mobile": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
-      }
-    },
-    "custom_slider_G4gCPG": {
-      "type": "custom-slider",
-      "disabled": true,
-      "settings": {
-        "text_image_text": "Text"
       }
     },
     "171363943290d25185": {
@@ -206,7 +204,6 @@
         "testimonial_iA8bUj",
         "testimonial_4z8YCP"
       ],
-      "disabled": true,
       "settings": {
         "title_text": "Live life in full colors"
       }
@@ -231,8 +228,8 @@
     "collection_slider_tk6xhA",
     "collection_tab_nTGYtz",
     "custom_featured_product_FDKEYP",
+    "customer_reviews_yAtBzd",
     "custom_renewal_UHnRLh",
-    "custom_slider_G4gCPG",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
     "custom_video_bannar_Rgr89x"
