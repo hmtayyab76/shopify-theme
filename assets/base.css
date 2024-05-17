@@ -3526,3 +3526,16 @@ details-disclosure > details {
     --border-offset: 0px; /* Prevent the border from growing on buttons when this effect is on. */
   }
 }
+.zoom-image-parent-d-11 {
+  overflow: hidden;
+}
+
+.zoom-image-d-11 {
+  transition: transform 0.3s ease;
+}
+
+.zoom-image-d-11:hover {
+  transform: scale(
+    1.1
+  ); /* You can adjust the scale factor for the desired zoom level */
+}

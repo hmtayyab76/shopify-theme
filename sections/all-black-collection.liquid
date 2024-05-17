@@ -127,8 +127,8 @@
       {% for product in collection_all_black.products offset: 1 limit: 8 %}
         <div class="collection-item-d-11">
           <a href="{{ product.url }}" style="text-decoration:none;">
-            <div class="img-pt-14">
-              <img src="{{ product.featured_image | image_url}}" alt="" width="100%" height="100%">
+            <div class="img-pt-14 zoom-image-parent-d-11">
+              <img src="{{ product.featured_image | image_url}}" alt="" width="100%" height="100%" class="zoom-image-d-11">
             </div>
           </a>
         </div>
