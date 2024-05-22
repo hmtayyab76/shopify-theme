@@ -5,10 +5,10 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement-bar-0": {
+        "announcement_mpzHYh": {
           "type": "announcement",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "Welcome to Our Store!",
             "link": ""
           }
         },
@@ -23,13 +23,6 @@
           "type": "announcement",
           "settings": {
             "text": "Free Shipping on Orders Over $50",
-            "link": ""
-          }
-        },
-        "announcement_mpzHYh": {
-          "type": "announcement",
-          "settings": {
-            "text": "Welcome to Our Store!",
             "link": ""
           }
         },
@@ -49,10 +42,9 @@
         }
       },
       "block_order": [
-        "announcement-bar-0",
+        "announcement_mpzHYh",
         "announcement_88QiNE",
         "announcement_RxfLHQ",
-        "announcement_mpzHYh",
         "announcement_G6mRxL",
         "announcement_9bPzFV"
       ],
