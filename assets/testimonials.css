@@ -41,7 +41,6 @@
 }
 
 .c-testimonial {
-    display: -ms-flexbox;
     display: flex;
     gap: 80px;
     -ms-flex-align: center;
