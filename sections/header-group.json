@@ -32,13 +32,29 @@
             "text": "Welcome to Our Store!",
             "link": ""
           }
+        },
+        "announcement_G6mRxL": {
+          "type": "announcement",
+          "settings": {
+            "text": "24\/7 Customer Support",
+            "link": ""
+          }
+        },
+        "announcement_9bPzFV": {
+          "type": "announcement",
+          "settings": {
+            "text": "New Arrivals Every Week",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
         "announcement_88QiNE",
         "announcement_RxfLHQ",
-        "announcement_mpzHYh"
+        "announcement_mpzHYh",
+        "announcement_G6mRxL",
+        "announcement_9bPzFV"
       ],
       "settings": {
         "color_scheme": "scheme-1",
