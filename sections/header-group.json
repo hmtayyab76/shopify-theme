@@ -25,12 +25,20 @@
             "text": "Free Shipping on Orders Over $50",
             "link": ""
           }
+        },
+        "announcement_mpzHYh": {
+          "type": "announcement",
+          "settings": {
+            "text": "Welcome to Our Store!",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
         "announcement_88QiNE",
-        "announcement_RxfLHQ"
+        "announcement_RxfLHQ",
+        "announcement_mpzHYh"
       ],
       "settings": {
         "color_scheme": "scheme-1",
