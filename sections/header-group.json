@@ -11,42 +11,10 @@
             "text": "Welcome to Our Store!",
             "link": ""
           }
-        },
-        "announcement_88QiNE": {
-          "type": "announcement",
-          "settings": {
-            "text": "Exclusive Discounts for Members",
-            "link": ""
-          }
-        },
-        "announcement_RxfLHQ": {
-          "type": "announcement",
-          "settings": {
-            "text": "Free Shipping on Orders Over $50",
-            "link": ""
-          }
-        },
-        "announcement_G6mRxL": {
-          "type": "announcement",
-          "settings": {
-            "text": "24\/7 Customer Support",
-            "link": ""
-          }
-        },
-        "announcement_9bPzFV": {
-          "type": "announcement",
-          "settings": {
-            "text": "New Arrivals Every Week",
-            "link": ""
-          }
         }
       },
       "block_order": [
-        "announcement_mpzHYh",
-        "announcement_88QiNE",
-        "announcement_RxfLHQ",
-        "announcement_G6mRxL",
-        "announcement_9bPzFV"
+        "announcement_mpzHYh"
       ],
       "settings": {
         "color_scheme": "scheme-1",
