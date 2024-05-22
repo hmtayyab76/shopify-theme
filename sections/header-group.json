@@ -18,11 +18,19 @@
             "text": "Exclusive Discounts for Members",
             "link": ""
           }
+        },
+        "announcement_RxfLHQ": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping on Orders Over $50",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "announcement-bar-0",
-        "announcement_88QiNE"
+        "announcement_88QiNE",
+        "announcement_RxfLHQ"
       ],
       "settings": {
         "color_scheme": "scheme-1",
