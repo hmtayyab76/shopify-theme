@@ -74,6 +74,13 @@
             "content": "<ul><li>Laver à l'eau froide<\/li><li>Ne pas utiliser de javel<\/li><li>Sèche-linge à basse température<\/li><li>Nettoyage à sec interdit<\/li><li>Ne pas repasser<\/li><\/ul>",
             "page": ""
           }
+        },
+        "vibra_cart_star_rating_67XQnP": {
+          "type": "shopify:\/\/apps\/vibra-cart\/blocks\/star_rating\/5e128382-0d04-4108-a44f-77f81b1af2fb",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
         }
       },
       "block_order": [
@@ -87,7 +94,8 @@
         "description",
         "share",
         "collapsible_tab_zxHbzp",
-        "collapsible_tab_hyyCU4"
+        "collapsible_tab_hyyCU4",
+        "vibra_cart_star_rating_67XQnP"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -112,7 +120,6 @@
           "type": "multi_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp",
-            "text_title": "Accessory",
             "text_content": "This is the content for the accessory. It describes the features and benefits of the accessory.  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nThis is the content for the accessory. It describes the features and benefits of the accessory.",
             "checked": false
           }
@@ -121,7 +128,6 @@
           "type": "multi_block",
           "settings": {
             "image": "shopify:\/\/shop_images\/xproduct-03.jpg.pagespeed.ic.eOHs429Gtb.webp",
-            "text_title": "Accessory 2",
             "text_content": "This is the content for the accessory. It describes the features and benefits of the accessory. Lorem ipsum dolor sit amet, consectetur adipiscing elit.\nThis is the content for the accessory. It describes the features and benefits of the accessory.",
             "checked": true
           }
