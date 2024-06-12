@@ -70,24 +70,40 @@
     "collection_tab_nTGYtz": {
       "type": "collection-tab",
       "blocks": {
-        "tab_KYhb3y": {
+        "tab_LDaHJe": {
           "type": "Tab",
           "settings": {
-            "collection-section-11": "frontpage",
-            "tab-btn": "Tayyab"
+            "collection-section-11": "mens-watches",
+            "tab-btn": ""
           }
         },
-        "tab_NDyNNL": {
+        "tab_ne7hYT": {
+          "type": "Tab",
+          "settings": {
+            "collection-section-11": "womens-collection",
+            "tab-btn": ""
+          }
+        },
+        "tab_MVkBAH": {
+          "type": "Tab",
+          "settings": {
+            "collection-section-11": "couples-collection",
+            "tab-btn": ""
+          }
+        },
+        "tab_Mdqn47": {
           "type": "Tab",
           "settings": {
             "collection-section-11": "top-sale",
-            "tab-btn": "Top Sale"
+            "tab-btn": ""
           }
         }
       },
       "block_order": [
-        "tab_KYhb3y",
-        "tab_NDyNNL"
+        "tab_LDaHJe",
+        "tab_ne7hYT",
+        "tab_MVkBAH",
+        "tab_Mdqn47"
       ],
       "settings": {
       }
