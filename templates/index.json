@@ -50,23 +50,6 @@
       "settings": {
       }
     },
-    "collection_slider_tk6xhA": {
-      "type": "collection-slider",
-      "blocks": {
-        "text_bbb6tY": {
-          "type": "text",
-          "settings": {
-            "collection": "top-sale"
-          }
-        }
-      },
-      "block_order": [
-        "text_bbb6tY"
-      ],
-      "settings": {
-        "title": "New Wholesale Clothings"
-      }
-    },
     "collection_tab_nTGYtz": {
       "type": "collection-tab",
       "blocks": {
@@ -106,6 +89,23 @@
         "tab_Mdqn47"
       ],
       "settings": {
+      }
+    },
+    "collection_slider_tk6xhA": {
+      "type": "collection-slider",
+      "blocks": {
+        "text_bbb6tY": {
+          "type": "text",
+          "settings": {
+            "collection": "top-sale"
+          }
+        }
+      },
+      "block_order": [
+        "text_bbb6tY"
+      ],
+      "settings": {
+        "title": "New Wholesale Clothings"
       }
     },
     "custom_featured_product_FDKEYP": {
@@ -300,8 +300,8 @@
   "order": [
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
-    "collection_slider_tk6xhA",
     "collection_tab_nTGYtz",
+    "collection_slider_tk6xhA",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
     "171363943290d25185",
