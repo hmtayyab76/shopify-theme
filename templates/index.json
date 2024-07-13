@@ -405,11 +405,43 @@
             "faq_question": "How Is Nerve Matrix™ Different?",
             "faq_answer": "<p>Get quick answers to common queries find answers regarding its effectiveness, usage, and more.<\/p>"
           }
+        },
+        "multi_block_Y7HfQ7": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Amplify nerve cell resilience<\/p>"
+          }
+        },
+        "multi_block_gKthqN": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Amplify nerve cell resilience<\/p>"
+          }
+        },
+        "multi_block_kzHWcT": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Amplify nerve cell resilience<\/p>"
+          }
+        },
+        "multi_block_wzQaTE": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Amplify nerve cell resilience<\/p>"
+          }
         }
       },
       "block_order": [
         "multi_block_LN8BaF",
-        "multi_block_9cthAt"
+        "multi_block_9cthAt",
+        "multi_block_Y7HfQ7",
+        "multi_block_gKthqN",
+        "multi_block_kzHWcT",
+        "multi_block_wzQaTE"
       ],
       "settings": {
         "section_title": "FAQ",
