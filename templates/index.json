@@ -137,10 +137,27 @@
             "button_url": "",
             "checked": false
           }
+        },
+        "multi_block_k43pEV": {
+          "type": "multi_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2e06fc6fa3e64862da2678d3f8566940.png",
+            "block_heading": "Revitalize Your Nerves, Reclaim Your Life",
+            "block_content": "<p>Nutrient deficiencies can lead to nerve deterioration and chronic pain. That's why Nerve Matrix™ was meticulously formulated with a complete vitamin and mineral blend essential for protecting and supporting nerve health, such as:<\/p><p><strong>Vitamin D <\/strong>– Vital for nerve growth and repair<\/p><p><strong>Vitamin B Complex<\/strong> – Crucial for efficient neurotransmitter function<\/p>",
+            "button_content": "",
+            "text_1": "",
+            "text_2": "",
+            "text_3": "",
+            "text_4": "",
+            "text_5": "",
+            "button_url": "",
+            "checked": true
+          }
         }
       },
       "block_order": [
-        "multi_block_GnHgrM"
+        "multi_block_GnHgrM",
+        "multi_block_k43pEV"
       ],
       "settings": {
         "section_title": "Science Behind Nerve Matrix™",
