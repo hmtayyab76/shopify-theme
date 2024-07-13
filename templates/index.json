@@ -119,6 +119,35 @@
         "button_url": ""
       }
     },
+    "text_with_image_black_EFCVUF": {
+      "type": "text-with-image-black",
+      "blocks": {
+        "multi_block_GnHgrM": {
+          "type": "multi_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Bio_absorption_Black_1.png",
+            "block_heading": "Revitalize Your Nerves, Reclaim Your Life",
+            "block_content": "<p>Alpha-Lipoic Acid (ALA) is a leading compound in nerve health and pain relief, with extensive research backing its effectiveness. Nerve Matrix™ leverages a Bio-Optimized form of ALA, significantly enhancing absorption by 40x compared to standard supplements. This superior formulation maximizes ALA's benefits, addressing key issues in nerve function and discomfort.<\/p>",
+            "button_content": "Get your today",
+            "text_1": "Boost nerve function",
+            "text_2": "Reduce inflammation",
+            "text_3": "​Lower blood sugar levels and cholesterol",
+            "text_4": "Reduce nerve pain, tingling, & numbness",
+            "text_5": "",
+            "button_url": "",
+            "checked": true
+          }
+        }
+      },
+      "block_order": [
+        "multi_block_GnHgrM"
+      ],
+      "settings": {
+        "section_title": "Science Behind Nerve Matrix™",
+        "image_heading": "shopify:\/\/shop_images\/saasGroup_36482.svg",
+        "discription": "Discover the research and innovation that make Nerve Matrix™ an effective solution for nerve pain."
+      }
+    },
     "collection_slider_tk6xhA": {
       "type": "collection-slider",
       "blocks": {
@@ -332,6 +361,7 @@
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
     "text_with_certered_image_qfY8KY",
+    "text_with_image_black_EFCVUF",
     "collection_slider_tk6xhA",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
