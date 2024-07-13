@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "custom_video_bannar_aAVnzx": {
@@ -91,6 +100,25 @@
       "settings": {
       }
     },
+    "text_with_certered_image_qfY8KY": {
+      "type": "text-with-certered-image",
+      "settings": {
+        "image_heading": "shopify:\/\/shop_images\/props.svg",
+        "block_heading": "Introducing Nerve Matrix",
+        "block_discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean",
+        "image_id": "shopify:\/\/shop_images\/c57784b1e761f8f69d1262f1c928a3a6.png",
+        "left_1_heading": "Introducing Nerve Matrix",
+        "left_1_discp": "Promote your body’s natural nerve repair processes with essential nutrients that \u2028support healing and regeneration.",
+        "left_2_heading": "Introducing Nerve Matrix",
+        "left_2_discp": "Promote your body’s natural nerve repair processes with essential nutrients that \u2028support healing and regeneration.",
+        "right_1_heading": "Introducing Nerve Matrix",
+        "right_1_discp": "Promote your body’s natural nerve repair processes with essential nutrients that \u2028support healing and regeneration.",
+        "right_2_heading": "Introducing Nerve Matrix",
+        "right_2_discp": "Promote your body’s natural nerve repair processes with essential nutrients that \u2028support healing and regeneration.",
+        "button_content": "ADD TO CART",
+        "button_url": ""
+      }
+    },
     "collection_slider_tk6xhA": {
       "type": "collection-slider",
       "blocks": {
@@ -104,6 +132,7 @@
       "block_order": [
         "text_bbb6tY"
       ],
+      "disabled": true,
       "settings": {
         "title": "New Wholesale Clothings"
       }
@@ -122,6 +151,7 @@
       "block_order": [
         "text_Q78JWJ"
       ],
+      "disabled": true,
       "settings": {
         "main-Product-title": "Product",
         "Product_link": "",
@@ -301,6 +331,7 @@
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
+    "text_with_certered_image_qfY8KY",
     "collection_slider_tk6xhA",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
