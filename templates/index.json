@@ -388,6 +388,34 @@
         "design_type": "design_two",
         "design_color": "#d67930"
       }
+    },
+    "faq_multi_block_ezpxpH": {
+      "type": "faq-multi-block",
+      "blocks": {
+        "multi_block_LN8BaF": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Get quick answers to common queries find answers regarding its effectiveness, usage, and more.<\/p>"
+          }
+        },
+        "multi_block_9cthAt": {
+          "type": "multi_block",
+          "settings": {
+            "faq_question": "How Is Nerve Matrix™ Different?",
+            "faq_answer": "<p>Get quick answers to common queries find answers regarding its effectiveness, usage, and more.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "multi_block_LN8BaF",
+        "multi_block_9cthAt"
+      ],
+      "settings": {
+        "section_title": "FAQ",
+        "image_heading": "shopify:\/\/shop_images\/props.svg",
+        "discription": "Get quick answers to common queries find answers regarding its effectiveness, usage, and more."
+      }
     }
   },
   "order": [
@@ -402,6 +430,7 @@
     "171363943290d25185",
     "text_image_slider_fk8AEX",
     "customer_reviews_yAtBzd",
-    "custom_video_bannar_Rgr89x"
+    "custom_video_bannar_Rgr89x",
+    "faq_multi_block_ezpxpH"
   ]
 }
