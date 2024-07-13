@@ -153,11 +153,28 @@
             "button_url": "",
             "checked": true
           }
+        },
+        "multi_block_eLBw9K": {
+          "type": "multi_block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/64aba87b60f7f5f3348d0af2cd2fb554.png",
+            "block_heading": "Revitalize Your Nerves, Reclaim Your Life",
+            "block_content": "<p>Nerve Matrix features Citicoline, a revolutionary ingredient known for its pivotal role in nerve rejuvenation.\"Citicoline fortifies nerve cell structure and function, essential for strengthening membranes and promoting comprehensive nerve cell recovery.\"This powerhouse ingredient supports and enhances nerve health, ensuring sustained comfort and vitality over time. It helps to:<\/p>",
+            "button_content": "Get your Today",
+            "text_1": "Amplify nerve cell resilience",
+            "text_2": "Amplify nerve cell resilience",
+            "text_3": "Reduce nerve pain, tingling, & numbness",
+            "text_4": "​Lower blood sugar levels and cholesterol",
+            "text_5": "Boost nerve function",
+            "button_url": "",
+            "checked": true
+          }
         }
       },
       "block_order": [
         "multi_block_GnHgrM",
-        "multi_block_k43pEV"
+        "multi_block_k43pEV",
+        "multi_block_eLBw9K"
       ],
       "settings": {
         "section_title": "Science Behind Nerve Matrix™",
