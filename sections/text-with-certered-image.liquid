@@ -1,6 +1,462 @@
 {% schema %}
-  {
-    "name": "Section name",
-    "settings": []
-  }
+{
+  "name": "Text With Centered Imaga",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_heading",
+      "label": "Heading Image"
+    },
+    {
+      "type": "text",
+      "id": "block_heading",
+      "label": "Heading",
+      "default":"Introducing Nerve Matrix"
+    },
+
+    {
+      "type": "text",
+      "id": "block_discription",
+      "label": "Discription",
+      "default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_id",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "left_1_heading",
+      "label": "Left Heading 1",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "left_1_discp",
+      "label": "Left Discription 1"
+    },
+    {
+      "type": "text",
+      "id": "left_2_heading",
+      "label": "Left Heading 2",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "left_2_discp",
+      "label": "Left Discription 2"
+    },
+    {
+      "type": "text",
+      "id": "right_1_heading",
+      "label": "Rignt Heading 1",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "right_1_discp",
+      "label": "Rignt Discription 1"
+    },
+    {
+      "type": "text",
+      "id": "right_2_heading",
+      "label": "Rignt Heading 2",
+      "default":"Introducing Nerve Matrix"
+    },
+     {
+      "type": "text",
+      "id": "right_2_discp",
+      "label": "Rignt Discription 2"
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "label": "Button Content"
+    },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+
+  ],
+  "presets": [
+    {
+      "name": "Text With Centered Imaga"
+    }
+  ]
+}
 {% endschema %}
+<div class="container-parent-d11">
+  {% render 'custum-heading',
+    heading: section.settings.block_heading,
+    discription: section.settings.block_discription,
+    image: section.settings.image_heading
+  %}
+  <div class="container">
+    <div class="left">
+      <div class="text-block text-block-left">
+        <div class="text-block-heading-d11">
+          <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_1_heading }}</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svgicon-left-1"
+            width="474"
+            height="64"
+            viewBox="0 0 474 64"
+            fill="none"
+          >
+            <path d="M278 1H383L468.5 58.5" stroke="url(#paint0_linear_833_134)" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="469" cy="59" r="5" fill="white"/>
+
+            <defs>
+            <linearGradient id="paint0_linear_833_134" x1="339.25" y1="-2.50001" x2="417.75" y2="76" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#648291"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <p class="text-block-p-d11 text-align-right-d11">
+          {{ section.settings.left_1_discp }}
+        </p>
+      </div>
+      <div class="text-block text-block-left">
+        <div class="text-block-heading-d11">
+          <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_2_heading }}</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svgicon-left-2"
+            width="470"
+            height="60"
+            viewBox="0 0 470 60"
+            fill="none"
+          >
+            <path d="M278 58L383 59L465.5 4.5" stroke="url(#paint0_linear_833_136)" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="5" cy="5" r="5" transform="matrix(-1 0 0 1 470 0)" fill="white"/>
+
+            <defs>
+            <linearGradient id="paint0_linear_833_136" x1="304.125" y1="39" x2="354.883" y2="-15.5502" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#648291"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <p class="text-block-p-d11 text-align-right-d11">
+          {{ section.settings.left_2_discp }}
+        </p>
+      </div>
+    </div>
+    <div class="center-image desktop-image-d11">
+      <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
+    </div>
+    <div class=" right">
+      <div class="text-block">
+        <div class="text-block-heading-d11">
+          <h3 class="text-block-h3-d11">{{ section.settings.right_1_heading }}</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svgicon-right-1"
+            width="192"
+            height="60"
+            viewBox="0 0 192 60"
+            fill="none"
+          >
+            <path d="M191.875 1.84619H87L4.5 54.8462" stroke="url(#paint0_linear_762_1240)" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="5" cy="54.8462" r="5" fill="white"/>
+            <defs>
+              <linearGradient id="paint0_linear_762_1240" x1="192.125" y1="1.84602" x2="28.4999" y2="72.3461" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#648291"/>
+                <stop offset="0.705464" stop-color="white"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <p class="text-block-p-d11">
+          {{ section.settings.right_1_discp }}
+        </p>
+      </div>
+      <div class="text-block">
+        <div class="text-block-heading-d11">
+          <h3 class="text-block-h3-d11">{{ section.settings.right_2_heading }}</h3>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="svgicon-right-2"
+            width="470"
+            height="60"
+            viewBox="0 0 470 60"
+            fill="none"
+          >
+            <path d="M192 58L87 59L4.5 4.5" stroke="url(#paint0_linear_833_135)" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="5" cy="5" r="5" fill="white"/>
+
+            <defs>
+            <linearGradient id="paint0_linear_833_135" x1="165.875" y1="39" x2="115.117" y2="-15.5502" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#648291"/>
+            <stop offset="1" stop-color="white"/>
+            </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <p class="text-block-p-d11">
+          {{ section.settings.right_2_discp }}
+        </p>
+      </div>
+    </div>
+    <div class="center-image mobile-image-d11">
+      <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
+    </div>
+  </div>
+  <div class="textblock-add-to-cart">
+    <div class="">
+      {% if section.settings.button_content != blank %}
+        <a href="{{ section.settings.button_url }}" class="button">
+          {{ section.settings.button_content }}
+        </a>
+      {% endif %}
+    </div>
+    <p>100% Money Back Guarantee</p>
+  </div>
+</div>
+
+<style>
+              * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+              }
+              .text-block-btn-container{
+                display: flex;
+            width: 360px;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+              }
+              .container-parent-d11{
+                padding: 0 20px;
+                max-width: 1200px;
+                margin: 120px auto;
+              }
+              #shopify-section-{{ section.id }} .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 60px;
+
+              }
+
+              #shopify-section-{{ section.id }} .text-block {
+                text-align: center;
+                max-width: 360px;
+              }
+              #shopify-section-{{ section.id }} .svgicon-left-1 {
+                position: absolute;
+                bottom: -62.5px;
+                right: -200px;
+              }
+              #shopify-section-{{ section.id }} .svgicon-left-2 {
+                position: absolute;
+                bottom: -2px;
+                right: -196px;
+              }
+              #shopify-section-{{ section.id }} .svgicon-right-1 {
+                position: absolute;
+                bottom: -58px;
+                left: -196px;
+              }
+              #shopify-section-{{ section.id }} .svgicon-right-2 {
+                position: absolute;
+                bottom: -2px;
+                left: -196px;
+              }
+              #shopify-section-{{ section.id }} .text-align-right-d11 {
+                text-align: right;
+              }
+              #shopify-section-{{ section.id }} .text-block-heading-d11 {
+                max-width: 277px;
+                position: relative;
+              }
+              #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                color: #000;
+                font-family: "Tenor Sans";
+                font-size: 28px;
+                max-width: 277px;
+                position: relative;
+                font-style: normal;
+                border-bottom: 2px solid #648291;
+                padding-bottom: 8px;
+                font-weight: 400;
+                line-height: normal;
+              }
+              #shopify-section-{{ section.id }} .text-block-p-d11 {
+                color: rgba(0, 0, 0, 0.75);
+                font-family: Nunito;
+                font-size: 16px;
+                padding-top: 8px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 150%; /* 24px */
+                align-self: stretch;
+              }
+
+              #shopify-section-{{ section.id }} .center-image {
+                display: flex;
+                justify-content: center;
+              }
+
+              #shopify-section-{{ section.id }} .center-image img {
+                max-width: 360px;
+                height: 729px;
+                border-radius: 900px;
+                border: 10px solid #d9d9d9;
+                flex-shrink: 0;
+                object-fit: cover;
+              }
+        .text-block-btn-container-add-to-cart-text{
+          text-decoration: none;
+          color: #FFF;
+      font-family: Nunito;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+        }
+            #shopify-section-{{ section.id }} .textblock-add-to-cart{
+              display: flex;
+
+          justify-content: center;
+              flex-direction: column;
+          align-items: center;
+
+          gap: 10px;
+          align-self: stretch;
+                  width: fit-content;
+      margin: 60px auto 0;
+
+            }
+    .textblock-add-to-cart p{
+      color: rgba(0, 0, 0, 0.50);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+      margin: 0;
+    }
+          .text-block-btn-container-add-to-cart{
+            border-radius: 5px;
+    background: #648291;
+            display: flex;
+    padding: 16px 90px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+          }
+              @media (min-width: 1025px) {
+                #shopify-section-{{ section.id }} .container {
+                  flex-direction: row;
+                  justify-content: space-between;
+                  align-items: center;
+                }
+                #shopify-section-{{ section.id }} .mobile-image-d11 {
+                  display: none;
+                }
+                #shopify-section-{{ section.id }} .desktop-image-d11 {
+                  display: block;
+                }
+
+                #shopify-section-{{ section.id }} .left,
+                #shopify-section-{{ section.id }} .right {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 240px;
+                }
+
+                #shopify-section-{{ section.id }} .text-block {
+                  text-align: left;
+                }
+                #shopify-section-{{ section.id }} .text-block-left {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: end;
+                }
+
+              }
+              @media (max-width: 1024px) {
+                .container-parent-d11{
+                  margin: 60px auto;
+                }
+                #shopify-section-{{ section.id }} .mobile-image-d11 {
+                  display: block;
+                }
+                #shopify-section-{{ section.id }} .desktop-image-d11 {
+                  display: none;
+                }
+
+                #shopify-section-{{ section.id }} .right {
+                  text-align: end;
+                  gap: 20px;
+                  display: flex;
+                }
+                #shopify-section-{{ section.id }} .left {
+                  text-align: end;
+                  gap: 20px;
+                  display: flex;
+                }
+                #shopify-section-{{ section.id }} .text-block-p-d11 {
+                  color: rgba(0, 0, 0, 0.75);
+                  text-align: center;
+                  font-family: Nunito;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 120%; /* 16.8px */
+                }
+                #shopify-section-{{ section.id }} .container {
+                  margin: 60px auto;
+                  padding: 0px 20px;
+                  gap: 20px;
+                }
+
+                #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                  max-width: 100%;
+                }
+
+                #shopify-section-{{ section.id }} .text-align-right-d11 {
+                  text-align: center;
+                }
+                #shopify-section-{{ section.id }} .svgicon-left-1,
+                #shopify-section-{{ section.id }} .svgicon-left-2,
+                #shopify-section-{{ section.id }} .svgicon-right-1,
+                #shopify-section-{{ section.id }} .svgicon-right-2 {
+                  display: none;
+                }
+                #shopify-section-{{ section.id }} .text-block {
+                  text-align: center;
+                }
+                #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                  width: 100%;
+                  text-align: center;
+                  font-family: "Tenor Sans";
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+                #shopify-section-{{ section.id }} .center-image img {
+                  max-width: 165.432px;
+                  height: 335px;
+                  border-radius: 900px;
+                  border: 10px solid #d9d9d9;
+                  flex-shrink: 0;
+                  object-fit: cover;
+                }
+              }
+</style>
