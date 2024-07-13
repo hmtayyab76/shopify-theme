@@ -151,7 +151,7 @@
             "text_4": "",
             "text_5": "",
             "button_url": "",
-            "checked": true
+            "checked": false
           }
         },
         "multi_block_eLBw9K": {
@@ -167,7 +167,7 @@
             "text_4": "​Lower blood sugar levels and cholesterol",
             "text_5": "Boost nerve function",
             "button_url": "",
-            "checked": false
+            "checked": true
           }
         }
       },
