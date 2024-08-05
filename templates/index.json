@@ -448,6 +448,16 @@
         "image_heading": "shopify:\/\/shop_images\/props.svg",
         "discription": "Get quick answers to common queries find answers regarding its effectiveness, usage, and more."
       }
+    },
+    "custom_review_grid_nTDpTX": {
+      "type": "custom-review-grid",
+      "settings": {
+        "block_heading": "Introducing Nerve Matrix",
+        "block_discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean",
+        "btn-text-sn": "",
+        "btn-link-sn": "",
+        "sub-text-sn": ""
+      }
     }
   },
   "order": [
@@ -463,6 +473,7 @@
     "text_image_slider_fk8AEX",
     "customer_reviews_yAtBzd",
     "custom_video_bannar_Rgr89x",
-    "faq_multi_block_ezpxpH"
+    "faq_multi_block_ezpxpH",
+    "custom_review_grid_nTDpTX"
   ]
 }
