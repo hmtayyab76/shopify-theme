@@ -1,6 +1,480 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+                                    *{
+                                      margin: 0;
+                                      padding: 0;
+                                      box-sizing: border-box;
+                                    }
+                                    .zero-container-d6{
+                                      width: 100%;
+                                      max-width: 89%;
+                                      margin: 0 auto;
+                                      background: #000;
+                                      border-radius: 16px;
+                                      padding-bottom: 30px;
+                                    }
+
+                                    .zero-first-flex-d6 {
+                            display: flex;
+                            padding: 60px 0;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 0 auto;
+                        }
+                                .zero-left-blocks {
+                display: flex;
+                gap: 64px 0;
+                width: 280px;
+                align-items: center;
+                flex-direction: column;
+                justify-content: end;
+                margin: 0 auto;
+            }
+                                    .left-icon-text-d6 {
+                                      display: flex;
+                                      align-items: center;
+                                      gap: 19px;
+                                  }
+                                  .left-icon-text-d6 p {
+                                      color: #FFF;
+                                      text-align: right;
+                                      font-family: Montserrat;
+                                      font-size: 16px;
+                                      font-style: normal;
+                                      font-weight: 500;
+                                      line-height: 150%;
+                                      width: 172px;
+                                  }
+              .right-icon-text-d6 p{
+                text-align: left;
+              }
+                                    .left-icon-d6{
+                                      width: 48px;
+                                      height: 48px;
+                                    }
+                                    .left-icon-d6 img{
+                                      width: 100%;
+                                      height: 100%;
+                                    }
+                  .zero-sec-title-d6 {
+              width: 100%;
+              max-width: 610px;
+          }
+                                .zero-sec-title-d6 h1 {
+                                  text-align: center;
+                                  font-family: Montserrat;
+                                  font-size: 200px;
+                                  font-style: normal;
+                                  font-weight: 700;
+                                  line-height: 150px;
+                                  color: white;
+                              }
+                             .zero-sec-title-d6 h4 {
+                                color: #FFF;
+                                text-align: center;
+                                font-family: Montserrat;
+                                font-size: 48px;
+                                font-style: normal;
+                                font-weight: 700;
+                                line-height: normal;
+                                letter-spacing: 32.64px;
+                                text-transform: uppercase;
+                            }
+                           .zero-sec-title-d6 p {
+                              color: #FFF;
+                              text-align: center;
+                              font-family: Montserrat;
+                              font-size: 16px;
+                              font-style: normal;
+                              font-weight: 400;
+                              line-height: 150%;
+                          }
+                  .zero-second-flex-d6 {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 30px;
+                    margin: 0 auto;
+                    padding: 30px;
+                }
+                .zero-second-title{
+                  width: 100%;
+                  max-width: 415px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 16px;
+                }
+                .second-row-text-d6{
+                  width: 100%;
+                  max-width: 415px;
+                }
+                        .zero-sec-image-d6{
+                          width: 300px;
+                      height: 300px;
+                        }
+                        .zero-sec-image-d6 img{
+                          width: 300px;
+                      height: 100%;
+                        }
+                      .zero-second-title h3 {
+                        color: #FFF;
+                        text-align: right;
+                        font-family: Montserrat;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        text-transform: capitalize;
+                    }
+                    .second-row-text-d6 p {
+                      color: #FFF;
+                      font-family: Montserrat;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 24px;
+                  }
+                .zero-logo-flex-d6 {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  margin: 0 auto;
+                  gap: 60px;
+                  padding: 30px 60px;
+                  background: #FFF;
+                  border-radius: 8px;
+                  margin: 0 30px 0px 30px;
+              }
+              .zero-logo-d6,
+              .zero-logo-d6 img{
+                width: 100%;
+              }
+             .zero-person-name{
+               display: flex;
+               gap: 12px;
+               align-items: baseline;
+               justify-content: left;
+               padding: 8px 8px;
+               margin: 20px 0 0 0;
+             }
+              .circle-d6{
+                display: block !important;
+                width: 12px;
+                height: 12px;
+                background: white;
+                border-radius: 50%;
+              }
+          p.person-name{
+            color: #FFF;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+          }
+          p.person-detail{
+            color: #FFF;
+      text-align: right;
+      font-family: Montserrat;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-transform: capitalize;
+                padding: 4px 0 0 0;
+          }
+
+      @media (max-width: 769px){
+        .main-zero-d6 {
+        padding: 30px 15px;
+    }
+        .zero-container-d6 {
+        max-width: 100%;
+        padding: 20px 16px;
+        }
+        .zero-first-flex-d6{
+           padding: 0 0;
+          flex-wrap: wrap;
+          gap: 24px;
+        }
+        .zero-sec-title-d6{
+          order: 1;
+          width: 100%;
+          max-width: 100%;
+        }
+        .zero-left-blocks{
+          order: 2;
+          width: 48%;
+          align-items: end;
+                  gap: 16px;
+        }
+        .zero-left-blocks.zero-right-blocks{
+          order: 3;
+          align-items: normal;
+        }
+        .zero-sec-title-d6 h1{
+          font-size: 100px;
+          line-height: 80px;
+        }
+        .zero-sec-title-d6 h4{
+          font-size: 32px;
+          letter-spacing: 11.12px;
+        }
+        .zero-sec-title-d6 p{
+          font-size: 14px;
+        }
+        .left-icon-d6{
+          width: 24px;
+          height: 24px;
+        }
+        .left-icon-text-d6 p{
+          font-size: 14px;
+          line-height: normal;
+          width: 100%;
+        }
+        .left-icon-text-d6{
+          gap: 8px;
+          height: 64px;
+        }
+        .zero-second-flex-d6 {
+      padding: 24px 0 16px 0;
+      flex-wrap: wrap;
+          gap: 24px;
   }
+        .zero-sec-image-d6{
+          order: 1;
+         width: 100%;
+          height: 250px;
+          text-align: center;
+        }
+        .zero-sec-image-d6 img{
+          width: 250px;
+        }
+        .zero-second-title{
+          order: 2;
+          width: 100%;
+          max-width: 100%;
+        }
+        .second-row-text-d6{
+                 order: 3;
+        width: 100%;
+          max-width: 100%;
+          text-align: center;
+        }
+        .zero-second-title h3{
+          text-align: center;
+          font-size: 24px;
+        }
+        .zero-person-name{
+          justify-content: center;
+        }
+        .second-row-text-d6 p,
+        p.person-name{
+          font-size: 14px;
+        }
+        p.person-detail{
+          font-size: 12px;
+        }
+        .zero-logo-flex-d6{
+          padding: 12px 0;
+          margin: 0 0;
+          gap: 0 24px;
+          flex-wrap: wrap;
+          border-radius: 4px;
+        }
+        .zero-logo-d6.zero-logo7{
+          width: 67.116px;
+        }
+        .zero-logo-d6.zero-logo8{
+          width: 73.2px;
+        }
+        .zero-logo-d6.zero-logo9{
+          width: 58.667px;
+        }
+        .zero-logo-d6.zero-logo10{
+          width: 50.568px;
+        }
+        .zero-logo-d6.zero-logo11{
+          width: 84.8px;
+        }
+      }
+
+  @media (max-width: 450px){
+    .zero-left-blocks{
+      width: 46%;
+    }
+  }
+</style>
+<section>
+  <div class="main-zero-d6">
+    <div class="zero-container-d6">
+      <div class="zero-first-flex-d6">
+        <div class="zero-left-blocks">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'left-block' %}
+                <div class="left-icon-text-d6">
+                  <p>{{ block.settings['left-text'] }}</p>
+                  <div class="left-icon-d6">
+                    <img src="{{ block.settings.left-image | img_url: 'master' }}">
+                  </div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+        <div class="zero-sec-title-d6">
+          <h1>{{ section.settings['sec-title'] }}</h1>
+          <h4>{{ section.settings['sub-title'] }}</h4>
+          <p>{{ section.settings['title-text'] }}</p>
+        </div>
+        <div class="zero-left-blocks zero-right-blocks">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'right-block' %}
+                <div class="left-icon-text-d6 right-icon-text-d6">
+                  <div class="left-icon-d6">
+                    <img src="{{ block.settings.right-image | img_url: 'master' }}">
+                  </div>
+                  <p>{{ block.settings['right-text'] }}</p>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="zero-second-flex-d6">
+        <div class="zero-second-title">
+          <h3>{{ section.settings['second-title'] }}</h3>
+          <h3>{{ section.settings['second-title-1'] }}</h3>
+        </div>
+        <div class="zero-sec-image-d6">
+          {% if section.settings['sec-image'] != blank %}
+            <img src="{{ section.settings.sec-image | img_url: 'master'}}">
+          {% endif %}
+        </div>
+        <div class="second-row-text-d6">
+          <p>{{ section.settings['row-text'] }}</p>
+          <div class="zero-person-name">
+            <div class="circle-d6"></div>
+            <div class="name-box-d6">
+              <p class="person-name">{{ section.settings['person-name'] }}</p>
+              <p class="person-detail">{{ section.settings['person-detail'] }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="zero-logo-flex-d6">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'logo' %}
+              <div class="zero-logo-d6 zero-logo{{ forloop.index }}">
+                <img src="{{ block.settings.zero-logo | img_url: 'master' }}">
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Zero Melatonin",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sec-title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": "Sub-title"
+    },
+    {
+      "type": "textarea",
+      "id": "title-text",
+      "label": "Text"
+    },
+    {
+      "type": "text",
+      "id": "second-title",
+      "label": "Second Row Title 1"
+    },
+    {
+      "type": "text",
+      "id": "second-title-1",
+      "label": "Second Row Title 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "sec-image",
+      "label": "Section Image"
+    },
+    {
+      "type": "textarea",
+      "id": "row-text",
+      "label": "Second Row Right Text"
+    },
+    {
+      "type": "text",
+      "id": "person-name",
+      "label": "Name"
+    },
+    {
+      "type": "text",
+      "id": "person-detail",
+      "label": "Name Detail"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left-block",
+      "name": "Top Left Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "left-text",
+          "label": "Add Text"
+        },
+        {
+          "type": "image_picker",
+          "id": "left-image",
+          "label": "Add Icon"
+        }
+      ]
+    },
+     {
+      "type": "right-block",
+      "name": "Top Right Block",
+      "settings": [
+
+        {
+          "type": "image_picker",
+          "id": "right-image",
+          "label": "Add Icon"
+        },
+        {
+          "type": "text",
+          "id": "right-text",
+          "label": "Add Text"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "zero-logo",
+          "label": "Add Logo"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zero Melatonin"
+    }
+  ]
+}
 {% endschema %}
