@@ -456,6 +456,28 @@
         "person-detail": "Professor of Neurobiology"
       }
     },
+    "text_image_text_fazr88": {
+      "type": "text-image-text",
+      "settings": {
+        "block_heading": "Whole Night & All Day",
+        "block_heading-2": "Benefits",
+        "block_discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean",
+        "left_1_heading": "Introducing Nerve Matrix",
+        "left_1_discp": "",
+        "left_2_heading": "Introducing Nerve Matrix",
+        "left_2_discp": "",
+        "left_3_heading": "Introducing Nerve Matrix",
+        "left_3_discp": "",
+        "right_1_heading": "Introducing Nerve Matrix",
+        "right_1_discp": "",
+        "right_2_heading": "Introducing Nerve Matrix",
+        "right_2_discp": "",
+        "right_3_heading": "Introducing Nerve Matrix",
+        "right_3_discp": "",
+        "button_content": "",
+        "button_url": ""
+      }
+    },
     "171363943290d25185": {
       "type": "apps",
       "blocks": {
@@ -669,6 +691,7 @@
     "custom_renewal_UHnRLh",
     "natural_ingredient_qNgJrL",
     "zero_melatonin_yA9D6b",
+    "text_image_text_fazr88",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
     "customer_reviews_yAtBzd",
