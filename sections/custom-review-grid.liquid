@@ -1,6 +1,984 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+          .container-d11-sr-main-0{
+            padding: 80px 0;
+          }
+                .container-d11-sr {
+                  position: relative;
+                  width: 100%;
+
+                  margin: 0px auto;
+                  max-width: 1290px;
+                  padding: 0px;
+                  overflow: hidden;
+
+                }
+                .container-d11-sr *{
+              scrollbar-width: thin; /* "auto" or "thin" depending on your preference */
+              scrollbar-color: transparent transparent; /* thumb and track color */
+            }
+
+            .parent-masonry{
+               max-height: 1320px;
+               position: relative;
+              overflow-y: hidden; /* Initially hide overflow */
+
+          }
+
+                #shopify-section-{{section.id}} .masonry {
+                  -webkit-column-count: 4;
+                  -moz-column-count: 4;
+                  column-count: 4;
+                  border-radius: 10px;
+                  box-shadow: 0px 57.2px rgba(0, 0, 0, 0.10);
+                  align-items: start;
+                  -webkit-column-gap: 1rem;
+                  -moz-column-gap: 1rem;
+                  column-gap: normal;
+                  margin: 2.5em auto;
+                  padding: 0;
+                  font-size: 0.85em;
+                  margin: auto;
+
+
+
+                }
+
+             #shopify-section-{{section.id}} .card-item-s {
+                  display: inline-block;
+                  background: #fff;
+                  padding: 1em;
+                  margin-bottom: 34px;
+                  width: 100%;
+                  transition: 1s ease all;
+                  box-sizing: border-box;
+                  max-width: 285px;
+                  padding: 16px;
+                  font-size: 16px;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 16px;
+                  padding: 16px;
+                  border-radius: 10px;
+                  background: #FFF;
+                }
+                #shopify-section-{{section.id}} .review {
+                  color: rgba(0, 0, 0, 0.75);
+                  font-family: Nunito;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 150%; /* 24px */
+                  padding-bottom: 16px;
+                  text-align: left;
+                  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+                  }
+
+                #shopify-section-{{section.id}} .author-stars {
+                  display: flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  gap: 10px;
+                  margin-top: 16px;
+                }
+
+                #shopify-section-{{section.id}} .author {
+                  font-size: 16px;
+                  font-family: 'Tenor Sans';
+                  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), #648291;
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  text-align: left;
+                  color: #648291;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+              @media screen and (min-width: 769px) {
+
+                #shopify-section-{{section.id}} .masonry {
+                  padding: 0 45px;
+                }
+                .container-d11-sr-main{
+            background: linear-gradient(0deg, rgba(245, 240, 235, 0.00) 0%, #F5F0EB 100%);
+            padding: 60px 0;
+          }
+                .shades{
+                  width: 100%;
+                  height: 150px;
+                  background: linear-gradient(0deg, #FFF -0.09%, rgba(255, 255, 255, 0.00) 100%);
+                  position: sticky;
+                  bottom:0;
+                  left:0;
+                  display: block;
+
+                }
+              #shopify-section-{{section.id}} .card-item-s {
+                  display: inline-block;
+                  background: #fff;
+                  padding: 1em;
+                  margin-bottom: 34px;
+                  width: 100%;
+                  transition: 1s ease all;
+                  box-sizing: border-box;
+                  max-width: 285px;
+                  padding: 16px;
+                  font-size: 16px;
+                  gap: 16px;
+                  border-radius: 10px;
+                  background: #FFF;
+                  box-shadow: 4px 0px 57.2px 0px rgba(0, 0, 0, 0.10);
+                }
+              }
+                @media screen and (max-width: 768px) {
+             .card-item-s {
+      display: none !important;
+      transition: 1s ease all;
+      opacity: 0;
+      position: absolute;
+
+      width: 100%;
   }
+
+  .card-item-s.active {
+      display: block !important;
+      opacity: 1;
+      z-index: 1;
+  }
+                  .card-item-s.slide-in-left {
+        animation: slideInFromLeft .3s forwards;
+    }
+
+    .card-item-s.slide-in-right {
+        animation: slideInFromRight .3s forwards;
+    }
+
+    .card-item-s.slide-out-left {
+        animation: slideOutToLeft .3s forwards;
+    }
+
+    .card-item-s.slide-out-right {
+        animation: slideOutToRight .3s forwards;
+    }
+
+    @keyframes slideInFromLeft {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInFromRight {
+        0% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideOutToLeft {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutToRight {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+                    .container-d11-sr-main-0{
+            padding: 30px 0 0;
+          }
+
+                    #shopify-section-{{section.id}} .masonry {
+                  padding: 30px 0px;
+                      position: relative;
+                      height: 370px;
+                }
+                  .shades{
+                    display: none;
+                  }
+                  #shopify-section-{{section.id}} .card-item-s {
+                    position: absolute;
+                    min-width: 95%;
+                    height: 300px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    text-align: center;
+                    margin-bottom: 0px;
+                    width: 285px;
+      box-shadow: 4px 0px 57.2px 0px rgba(0, 0, 0, 0.10);
+
+                    gap: 16px;
+                    flex-shrink: 0;
+                  }
+
+                  .container-d11-sr {
+                    position: relative;
+                    width: 100%;
+                    margin: 0px auto;
+                    max-width: 1220px;
+                    padding: 0px 20px !important;
+                    overflow: hidden;
+                  }
+
+                  #shopify-section-{{section.id}} .masonry {
+                    display: flex !important;
+                    transition: transform 0.5s ease;
+                    gap: 30px;
+
+                     white-space: nowrap;
+
+            overflow: hidden;
+            justify-content: center;
+            scroll-behavior: smooth;
+                  }
+                  #shopify-section-{{section.id}} .review {
+          color: rgba(0, 0, 0, 0.75);
+          font-family: Nunito, sans-serif;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%; /* 21px */
+          text-align: left;
+          height: 236px;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 11; /* number of lines to show */
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: normal;
+        }
+                  #shopify-section-{{section.id}} .author {
+                    color: #648291;
+                    font-family: "Tenor Sans";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                  }
+                  .dot-d11-1 {
+                    min-width: 6px;
+                    min-height: 6px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                    border: 1px solid #BFBFBF;
+                    cursor: pointer;
+                    display: inline-block !important;
+                  }
+
+                  .dots-d11-1 {
+                    display: flex !important;
+                    padding: 0 10px;
+                    justify-content: center;
+                    margin: auto;
+                    align-items: center;
+                    gap: 10px;
+                  }
+                  .dot-d11-1.active{
+                    background: #648291;
+                  }
+                }
+         .main-r-images-d9 {
+          width: 100%;
+          margin-bottom: 60px;
+        }
+
+        .row-r-images-d9 {
+          display: flex;
+         justify-content: center;
+          gap: 20px;
+        }
+
+        .col-r-videos-d9 {
+          width: 100%;
+          position: relative;
+          aspect-ratio: 285 / 488;
+          overflow: hidden;
+          /* border: 5px solid #fff; */
+          border-radius: 12px;
+        }
+
+        .col-r-videos-d9 video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .r-overlay-d9 {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          pointer-events: none;
+          /* background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%); */
+        }
+
+        .r-conten-d9 {
+          position: absolute;
+          width: 100%;
+          bottom: 64px;
+          text-align: center;
+          color: #fff;
+          pointer-events: none;
+        }
+
+        .r-conten-d9 p.large-txt-d9 {
+          font-family: Tenor Sans;
+          font-size: 24px;
+          font-weight: 400;
+          line-height: 28.08px;
+        }
+
+        .r-conten-d9 p.small-txt-d9 {
+          font-family: Nunito;
+          font-size: 18px;
+          font-weight: 600;
+          line-height: 27px;
+        }
+
+        .custom-center-zoom-out-slider-u4 {
+          display: none;
+        }
+
+        .shopify-video-d9{
+          height: 100%;
+        }
+        @media(max-width: 768px) {
+          .main-container-d9 {
+            background: #fff;
+          }
+
+          .main-r-images-d9 {
+            display: none;
+          }
+
+          .custom-center-zoom-out-slider-u4 {
+            display: block;
+          }
+
+          .custom-center-zoom-out-slider-u4 {
+            width: 100%;
+            display: flex;
+            padding: 0px 0 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            overflow: hidden;
+          }
+         #shopify-section-{{section.id}} .card-item-s{
+            padding: 12px;
+          }
+
+          .custom-center-zoom-out-slider-u4-box-2 {
+            width: 100%;
+          }
+
+          .carousel-container-custom {
+            overflow: hidden;
+            width: 100%;
+          }
+
+          .carousel-track-container-custom {
+            overflow: hidden;
+            width: 100%;
+          }
+
+          .carousel-track-custom {
+            display: flex;
+            transition: transform 0.5s ease;
+            align-items: center;
+          }
+
+          .slide-custom {
+            min-width: 33.33%;
+            box-sizing: border-box;
+            padding: 10px;
+            transition: transform 0.3s ease;
+          }
+
+          .slide-custom.center-slide {
+            transform: scale(1.1); /* Adjust the scale value as needed */
+          }
+
+          .button-container-custom {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
+            gap: 8px;
+            margin: 30px 0 0;
+          }
+
+          .button-container-custom button {
+            background: transparent;
+            cursor: pointer;
+            display: flex;
+            border: none;
+            outline: none;
+          }
+          .carousel-button-left{
+            transform: rotate(180deg);
+          }
+          /* .button-container-custom button:hover {
+            background: #41441c;
+            color: #fff;
+          } */
+
+          .slide-number {
+            font-size: 18px;
+            font-weight: bold;
+            color: #41441c;
+          }
+
+          .slide-custom {
+            min-width: 40%;
+            padding: 0;
+            aspect-ratio: 285/488;
+            overflow: hidden;
+            display: flex;
+            border-radius: 12px;
+          }
+
+          .top-heading-custom {
+            font-size: 20px;
+          }
+
+          .sub-text-custom {
+            font-size: 16px;
+          }
+
+          .slide-custom.current-center-slide {
+            min-width: 50%;
+            transform: translateX(-26%);
+            justify-content: center;
+          }
+
+          .col-r-videos-d9 {
+            max-width: 100%;
+            width: 100%;
+          }
+
+          .slide-custom:has(+ .current-center-slide) {
+            transform: translateX(-33%);
+          }
+
+          .current-center-slide + .slide-custom {
+            transform: translateX(-33%);
+          }
+          .r-conten-d9 {
+            bottom: 26.99px;
+          }
+          .r-conten-d9 p.large-txt-d9{
+            font-size: 16px;
+            line-height: 18.72px;
+          }
+          .r-conten-d9 p.small-txt-d9{
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+        }
+</style>
+<div class="container-d11-sr-main-0">
+  <div class="container-d11-sr-main">
+    <div class="container-d11-sr">
+      <div class="parent-masonry" id="parent-masonry">
+        <div class="masonry">
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "I have nerve damage which causes weakness on my legs my walking / balance is off but I was having some
+              burning in my feet and my legs felt cool. Well I received my jar yesterday after my bath I went to the jar
+              and put the nerve blam on both feet and waited boy I could feel it working. I need that I had a good sleep
+              thank you Sheila."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>S.U.</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "I feel something happening! I'm a serious runner (marathon distances) and have been dealing with foot
+              pins and needles. I've only using Nerve Matrix for a week but I do feel some improvement happening and
+              look forward to that continuing. I don't expect total 'healing' but am happy so far."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>J Hodgkinson</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">"Just finished my first bottle and it seems to be working."</div>
+            <div class="author-stars">
+              <p class="author"><strong>Bob Billings</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "Quite effective - more than most other Rx medications - no any side effects - mostly for neuropathy or
+              any other pain."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Michael Hytros</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "This supplement and the cream has really helped relieve my peripheral neuropathy nerve pain."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Louis Santone</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "I think this is helping. Neuropathy and nerve pain get mitigated. This is the only supplement I've tried
+              that works for my neuropathy, so at this point I am satisfied and will reorder. The other brand triggered
+              a bad GERD reaction from its ingredients so I'm glad I switched to Nerve Matrix. Hoping it's not a placebo
+              effect and will help me in the long term. I am also hoping that a discount will be provided on monthly
+              orders."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Amy B.</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "Was I surprised! Both the cream and the pills started working immediately. The cream especially has
+              solved my neuropathy."
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Anna Coates</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+          <div class="card-item-s">
+            <div class="review">
+              "In two months Nerve Matrix is making a difference in the nerve pain on top of my left foot. I've had that
+              area stepped on by my horses occasionally for 39 years. The pain has been excruciating and a hump appeared
+              on top of my foot. The podiatrist agreed it was from getting my foot stepped on so many times. She only
+              recommended shoe insoles. I'm so glad I found out about Nerve Matrix! Thank you!"
+            </div>
+            <div class="author-stars">
+              <p class="author"><strong>Linda Schwinn</strong></p>
+              <p class="stars">
+                <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {% render 'review-star' %}
+                </svg>
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more review cards as needed -->
+        </div>
+        <div class="shades"></div>
+      </div>
+      <div class="dots-d11-1"></div>
+    </div>
+  </div>
+  {% render 'atc-button-d8',
+    atc_button_link: section.settings['btn-link-sn'],
+    atc_button_label: section.settings['btn-text-sn'],
+    atc_subtext: section.settings['sub-text-sn']
+  %}
+</div>
+{% schema %}
+{
+  "name": "Custom Reviews",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_heading",
+      "label": "Heading Image"
+    },
+    {
+      "type": "text",
+      "id": "block_heading",
+      "label": "Heading",
+      "default":"Introducing Nerve Matrix"
+    },
+
+    {
+      "type": "text",
+      "id": "block_discription",
+      "label": "Discription",
+      "default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean"
+    },
+     {
+      "type": "text",
+      "id": "btn-text-sn",
+      "label": "Button Label"
+    },
+    {
+      "type": "url",
+      "id": "btn-link-sn",
+      "label": "Button Url"
+    },
+    {
+      "type": "text",
+      "id": "sub-text-sn",
+      "label": "Subtext"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "type": "video",
+          "id": "shopify_video",
+          "label": "Video"
+        },
+        {
+          "type": "image_picker",
+          "id": "video-thumbnail",
+          "label": "Video Thumbnail"
+        },
+        {
+          "type": "text",
+          "id": "l-text",
+          "label": "Text"
+        },
+        {
+          "type": "text",
+          "id": "s-text",
+          "label": "Subtext"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Reviews"
+    }
+  ]
+}
 {% endschema %}
+
+<script>
+  const parentMasonry = document.getElementById('parent-masonry');
+  const shades = document.querySelector('.shades');
+  let isScrollEnabled = false;
+
+  function checkScroll() {
+    const parentOffsetTop = parentMasonry.getBoundingClientRect().top;
+    const { scrollTop, scrollHeight, clientHeight } = parentMasonry;
+
+
+
+    // Enable scrolling when parent-masonry is 100px from body top
+    if (parentOffsetTop <= 100 && !isScrollEnabled) {
+      parentMasonry.style.overflowY = 'scroll'; // Enable scrolling
+      isScrollEnabled = true;
+
+    } else if (parentOffsetTop > 100 && isScrollEnabled) {
+      parentMasonry.style.overflowY = 'hidden'; // Disable scrolling
+      isScrollEnabled = false;
+
+    }
+
+    // Hide .shades a few pixels before reaching the bottom of parent-masonry
+    const buffer = 150; // Number of pixels before the bottom
+    if (scrollTop + clientHeight >= scrollHeight - buffer) {
+      shades.style.display = 'none';
+
+    } else {
+      shades.style.display = 'block';
+
+    }
+  }
+
+  // Add event listener for scrolling to parentMasonry
+  window.addEventListener('scroll', checkScroll);
+
+  // Call checkScroll initially to set the initial overflow state
+  document.addEventListener('DOMContentLoaded', () => {
+    checkScroll();
+  });
+
+  // Also, add scroll event listener to parentMasonry to check its scroll position
+  parentMasonry.addEventListener('scroll', checkScroll);
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const slider = document.querySelector(".masonry");
+    const slides = slider.querySelectorAll(".card-item-s");
+    const dotsContainer = document.querySelector(".dots-d11-1");
+
+    if (!dotsContainer) {
+      return;
+    }
+
+    // Show the first slide by default
+    slides[0].classList.add("active");
+
+    slides.forEach((slide, index) => {
+      const dot = document.createElement("div");
+      dot.classList.add("dot-d11-1");
+      if (index === 0) {
+        dot.classList.add("active");
+      }
+      dot.addEventListener("click", () => {
+        const currentIndex = getCurrentSlideIndex();
+        const direction = index > currentIndex ? 'left' : 'right';
+        goToSlide(index, direction);
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    if (window.matchMedia("(max-width: 768px)").matches) {
+      slider.addEventListener("mousedown", dragStart);
+      slider.addEventListener("touchstart", dragStart);
+
+      slider.addEventListener("mouseup", dragEnd);
+      slider.addEventListener("touchend", dragEnd);
+
+      slider.addEventListener("mousemove", drag);
+      slider.addEventListener("touchmove", drag);
+
+      slider.addEventListener("mouseleave", dragEnd); // Added to handle drag end when mouse leaves slider area
+
+      slider.addEventListener("selectstart", function(e) {
+        e.preventDefault();
+      });
+    }
+
+    let isDragging = false;
+    let startPosition = 0;
+    let prevPosition = 0;
+
+    function dragStart(event) {
+      startPosition = event.type === "touchstart" ? event.touches[0].clientX : event.clientX;
+      isDragging = true;
+      prevPosition = startPosition;
+      slider.classList.add("grabbing");
+    }
+
+    function drag(event) {
+      if (!isDragging) return;
+      const currentPosition = event.type === "touchmove" ? event.touches[0].clientX : event.clientX;
+      const positionDiff = currentPosition - prevPosition;
+      if (Math.abs(positionDiff) > 2) { // Threshold set to 2px for triggering slide change
+        if (positionDiff > 0) {
+          // Dragging to the right (previous slide)
+          goToSlide(getCurrentSlideIndex() - 1, 'right');
+        } else {
+          // Dragging to the left (next slide)
+          goToSlide(getCurrentSlideIndex() + 1, 'left');
+        }
+        isDragging = false; // End dragging after a slide change
+      }
+    }
+
+    function dragEnd() {
+      isDragging = false;
+      slider.classList.remove("grabbing");
+    }
+
+    function getCurrentSlideIndex() {
+      return Array.from(slides).findIndex(slide => slide.classList.contains("active"));
+    }
+
+    function updateDots(index) {
+      const activeDot = dotsContainer.querySelector(".dot-d11-1.active");
+      if (activeDot) activeDot.classList.remove("active");
+      dotsContainer.children[index].classList.add("active");
+    }
+
+    function goToSlide(index, direction) {
+      if (index < 0 || index >= slides.length) return;
+
+      const currentIndex = getCurrentSlideIndex();
+      if (currentIndex === index) return;
+
+      const currentSlide = slides[currentIndex];
+      const nextSlide = slides[index];
+
+      slides.forEach(slide => {
+        slide.classList.remove("active", "slide-in-left", "slide-in-right", "slide-out-left", "slide-out-right");
+      });
+
+      if (direction === 'left') {
+        currentSlide.classList.add("slide-out-left");
+        nextSlide.classList.add("slide-in-right");
+      } else {
+        currentSlide.classList.add("slide-out-right");
+        nextSlide.classList.add("slide-in-left");
+      }
+
+      setTimeout(() => {
+        currentSlide.classList.remove("active");
+        nextSlide.classList.add("active");
+      }, 100);
+
+      updateDots(index);
+    }
+  });
+</script>
