@@ -1,0 +1,1253 @@
+<style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .text-block-btn-container{
+      display: flex;
+      width: 360px;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+    .container-parent-d11{
+      max-width: 1260px;
+      margin: 0px auto;
+      padding: 65px 20px;
+    }
+    .button-d8-tit{
+      color: #FFF;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 27px; /* 150% */
+      text-decoration: none;
+    }
+    .container-parent-d11 .heading-container-d11 p{
+      color: rgba(0, 0, 0, 0.50);
+    }
+
+    #shopify-section-{{ section.id }} .heading-and-description {
+        display:flex;
+        flex-direction:column;
+        gap:24px;
+        text-align:center;
+        max-width:772px;
+        margin:auto;
+        margin-bottom: 40px;
+      }
+    #shopify-section-{{ section.id }} .heading-s {
+        font-size: 48px;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: Montserrat;
+        color: #040404;
+        line-height:normal;
+      }
+      #shopify-section-{{ section.id }} .heading-s-color {
+        color: #a48d4f;
+      }
+      #shopify-section-{{ section.id }} .description-s {
+        font-size: 20px;
+        font-family: Montserrat;
+        color: #040404;
+        line-height:normal;
+      }
+      #shopify-section-{{ section.id }} .text-above-button {
+        display: flex;
+        gap: 12px;
+      }
+      #shopify-section-{{ section.id }} .text-above-button .free-us-money-back {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        font-size: 14px;
+        line-height: 27px;
+        font-weight: 500;
+        font-family: Montserrat;
+        color: #040404;
+      }
+      #shopify-section-{{ section.id }} .text-above-button .free-us-money-back div {
+        display:flex;
+      }
+      #shopify-section-{{ section.id }} .left-content-1,
+      #shopify-section-{{ section.id }} .left-content-2,
+      #shopify-section-{{ section.id }} .left-content-3 {
+        display: flex;
+        gap: 22px;
+        /* padding: 25px 0px; */
+      }
+      #shopify-section-{{ section.id }} .right-content-1,
+      #shopify-section-{{ section.id }} .right-content-2,
+      #shopify-section-{{ section.id }} .right-content-3 {
+        display: flex;
+        gap: 22px;
+        /* padding: 25px 0px; */
+      }
+
+    #shopify-section-{{ section.id }} .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+      gap: 0px;
+    }
+
+    #shopify-section-{{ section.id }} .container.desktop {
+      position: relative;
+        overflow-x: hidden;
+        /* overflow-y: unset; */
+        min-height: 504px;
+    }
+
+
+    #shopify-section-{{ section.id }} .text-block {
+      text-align: center;
+      max-width: 360px;
+    }
+    #shopify-section-{{ section.id }} .svgicon-left-1 {
+      position: absolute;
+      bottom: -62.5px;
+      right: -200px;
+    }
+    #shopify-section-{{ section.id }} .svgicon-left-2 {
+      position: absolute;
+      bottom: -2px;
+      right: -196px;
+    }
+    #shopify-section-{{ section.id }} .svgicon-right-1 {
+      position: absolute;
+      bottom: -58px;
+      left: -196px;
+    }
+    #shopify-section-{{ section.id }} .svgicon-right-2 {
+      position: absolute;
+      bottom: -2px;
+      left: -196px;
+    }
+                        #shopify-section-{{ section.id }} .text-align-right-d11 {
+                          text-align: left;
+                        }
+                        #shopify-section-{{ section.id }} .text-block-heading-d11 {
+                          max-width: 277px;
+                          position: relative;
+                        }
+                        #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                          color: #000;
+                          font-family: "Montserrat";
+                          font-size: 24px;
+                          max-width: 277px;
+                          position: relative;
+                          font-style: normal;
+                          /* border-bottom: 2px solid #648291; */
+                          padding-bottom: 0px;
+                          font-weight: 400;
+                          line-height: normal;
+                        }
+                        #shopify-section-{{ section.id }} .text-block-p-d11 {
+                          letter-spacing: normal;
+                          color: rgba(0, 0, 0, 0.75);
+                          font-family: Montserrat;
+                          font-size: 16px;
+                          padding-top: 0px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 150%; / 24px /
+                          align-self: stretch;
+                        }
+
+                        #shopify-section-{{ section.id }} .center-image {
+                          display: flex;
+                          justify-content: center;
+                        }
+
+
+    .center-image.desktop-image-d11 {
+        background-image: url('https://cdn.shopify.com/s/files/1/0593/7358/4564/files/Ellipse_background.png?v=1722281018');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        min-width: 454px;
+        display: flex;
+        max-height: 454px;
+        height: 454px;
+    }
+
+
+    #shopify-section-{{ section.id }} .center-image img {
+        max-width: 360px;
+        height: 504px;
+        border-radius: 0px;
+        border: 0px solid #d9d9d9;
+        flex-shrink: 0;
+        object-fit: cover;
+
+        position: absolute;
+        top: 0px;
+                        }
+    .text-block-btn-container-add-to-cart-text{
+      text-decoration: none;
+      color: #FFF;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+    #shopify-section-{{ section.id }} .textblock-add-to-cart{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      width: 100%;
+      max-width:485px;
+      margin: 60px auto 0;
+    }
+
+    .text-block-btn-container-add-to-cart{
+      border-radius: 5px;
+      background: #d3a221;
+      display: flex;
+      padding: 9px 0px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+    }
+
+    .text-block-btn-container-add-to-cart .button{
+      background: #d3a221;
+      border:none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .text-block-btn-container-add-to-cart .button:after {
+      box-shadow:none;
+    }
+
+    #shopify-section-{{ section.id }} .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+                          #shopify-section-{{ section.id }} .left,
+                          #shopify-section-{{ section.id }} .right {
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0px;
+                          }
+
+    #shopify-section-{{ section.id }} .text-block {
+      text-align: left;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    #shopify-section-{{ section.id }} .text-block-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      /* gap: 6px; */
+    }
+    @media screen and (min-width:767px) {
+
+
+    #shopify-section-{{ section.id }} .left-content-1 {
+        min-height:175px;
+        max-height: 175px;
+      }
+
+    #shopify-section-{{ section.id }} .left-content-1 .left-content-1-icon {
+      display: contents;
+    }
+    #shopify-section-{{ section.id }} .text-block-left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    #shopify-section-{{ section.id }} .left-content-1 .text-block.text-block-left  {
+        justify-content: end;
+    }
+    #shopify-section-{{ section.id }} .left-content-2 {
+        display: flex;
+        gap: 22px;
+        min-height:175px;
+        max-height: 175px;
+        position: relative;
+      }
+    #shopify-section-{{ section.id }} .left-content-2 .hr-top-s {
+      position:absolute;
+      width: 1192px;
+      margin-bottom: 0;
+      margin-top: 0;
+      top:0px;
+      background: gray;
+    }
+    #shopify-section-{{ section.id }} .left-content-2 .hr-bottom-s {
+      position:absolute;
+      width: 1192px;
+      margin-bottom: 0;
+      margin-top: 0;
+      bottom:0px;
+      background: gray;
+    }
+
+
+    #shopify-section-{{ section.id }} .right-content-1 {
+        min-height:175px;
+        max-height: 175px;
+      }
+    #shopify-section-{{ section.id }} .right-content-2 {
+        display: flex;
+        gap: 22px;
+        min-height:175px;
+        max-height: 175px;
+        position: relative;
+      }
+    /* #shopify-section-{{ section.id }} .right-content-2 .hr-top-s {
+      position:absolute;
+      width: 200px;
+      margin-bottom: 0;
+      margin-top: 0;
+      top:0px;
+      background: gray;
+    }
+    #shopify-section-{{ section.id }} .right-content-2 .hr-bottom-s {
+      position:absolute;
+      width: 200px;
+      margin-bottom: 0;
+      margin-top: 0;
+      bottom:0px;
+      background: gray;
+    } */
+
+    #shopify-section-{{ section.id }} .left-content-1,
+    #shopify-section-{{ section.id }} .left-content-2,
+    #shopify-section-{{ section.id }} .left-content-3 {
+        display: flex;
+        gap: 22px;
+        padding: 25px 0px;
+      }
+    #shopify-section-{{ section.id }} .right-content-1,
+    #shopify-section-{{ section.id }} .right-content-2,
+    #shopify-section-{{ section.id }} .right-content-3 {
+        display: flex;
+        gap: 22px;
+        padding: 25px 0px;
+      }
+
+
+
+    }
+
+
+
+
+    @media screen and (min-width:767px) and (max-width:1060px) {
+    .container.desktop {
+      border:2px solid red;
+    }
+
+    #shopify-section-{{ section.id }} .text-block-h3-d11 {
+      font-size: 18px;
+      max-width: 277px;
+      font-weight: 400;
+    }
+    #shopify-section-{{ section.id }} .text-block-p-d11 {
+      font-size: 12px;
+    }
+    .center-image.desktop-image-d11 {
+        min-width: 300px;
+        max-height: 300px;
+        height: 300px;
+    }
+    #shopify-section-{{section.id}} .center-image img {
+        max-width: 379px;
+        height: 360px;
+        border-radius: 0px;
+        border: 0px solid #d9d9d9;
+        flex-shrink: 0;
+        object-fit: cover;
+        position: absolute;
+        top: 80px;
+    }
+    #shopify-section-{{section.id}} .right-content-1 .right-content-1-icon {
+      display:contents;
+    }
+    #shopify-section-{{section.id}} .right-content-1 .text-block {
+      justify-content:end;
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (min-width:767px) {
+    #shopify-section-{{ section.id }} .container.mobile {
+      display:none;
+    }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+    @media screen and (min-width:575px) and (max-width:767px) {
+    #shopify-section-{{ section.id }} .container.desktop {
+      display:none;
+    }
+
+    #shopify-section-{{ section.id }} .container.mobile {
+      display:flex;
+      flex-direction:column;
+    }
+
+    #shopify-section-{{ section.id }} .heading-and-description {
+        gap:16px;
+        max-width:300px;
+        margin-bottom: 32px;
+    }
+
+    #shopify-section-{{section.id}} .heading-s {
+        font-size: 30px;
+        padding: 0px 30px;
+    }
+    #shopify-section-{{section.id}} .description-s {
+        font-size: 16px;
+    }
+
+    #shopify-section-{{section.id}} .container {
+        gap: 32px;
+    }
+
+    #shopify-section-{{section.id}} .text-block-heading-d11 {
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        align-items: end;
+        border-bottom: 1px solid rgba(4, 4, 4, 0.1);
+    }
+
+    #shopify-section-{{section.id}} .text-block-heading-d11 div {
+        width: 36px;
+        height: 32px;
+    }
+    #shopify-section-{{section.id}} .text-block-heading-d11 div img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #shopify-section-{{section.id}} .text-block-h3-d11 {
+        font-size: 20px;
+        max-width: 277px;
+        position: relative;
+        font-style: normal;
+        /* border-bottom: 2px solid #648291; */
+        padding-bottom: 0px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #shopify-section-{{section.id}} .text-block-p-d11 {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+
+    #shopify-section-{{section.id}} .content12,
+    #shopify-section-{{section.id}} .content34,
+    #shopify-section-{{section.id}} .content56 {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    #shopify-section-{{section.id}} .left-content-1,
+    #shopify-section-{{section.id}} .left-content-2,
+    #shopify-section-{{section.id}} .left-content-3,
+    #shopify-section-{{section.id}} .right-content-1,
+    #shopify-section-{{section.id}} .right-content-2,
+    #shopify-section-{{section.id}} .right-content-3  {
+      border: 1px solid #a48d4f;
+      border-radius: 12px;
+      border-right: 4px solid #a48d4f;
+      border-bottom: 4px solid #a48d4f;
+
+    }
+
+
+
+
+
+
+    #shopify-section-{{ section.id }} .text-above-button {
+      gap: 6px;
+      width: max-content;
+    }
+    #shopify-section-{{ section.id }} .text-above-button .free-us-money-back {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+
+    #shopify-section-{{section.id}} .textblock-add-to-cart {
+        gap: 8px;
+        max-width: 343px;
+        margin: 20px auto 0;
+    }
+
+
+    .text-block-btn-container-add-to-cart {
+        border-radius: 5px;
+        padding: 3px 0px;
+    }
+
+    .text-block-btn-container-add-to-cart .button{
+      background: #d3a221;
+      border:none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .slider-container-s {
+        /* display: flex; */
+        position: relative;
+        width: 560px;
+        height: 400px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .slider-s {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .card-s {
+        min-width: 560px;
+        height: 400px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .controls-s {
+        /* position: absolute; */
+        width: 100%;
+        /* bottom: -20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .arrow-s {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .dots-s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dot-s {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: white;
+        border: 1px solid #a48d4f;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot-s.active {
+        background-color: #a48d4f;
+    }
+    }
+    @media screen and (max-width:769px) {
+       .container-parent-d11{
+
+      padding: 30px 20px;
+    }
+    }
+    @media screen and (max-width:575px) {
+    #shopify-section-{{ section.id }} .container.desktop {
+      display:none;
+    }
+
+    #shopify-section-{{ section.id }} .container.mobile {
+      display:flex;
+      flex-direction:column;
+    }
+
+    #shopify-section-{{ section.id }} .heading-and-description {
+        gap:16px;
+        max-width:300px;
+        margin-bottom: 32px;
+    }
+
+    #shopify-section-{{section.id}} .heading-s {
+        font-size: 30px;
+        padding: 0px 30px;
+    }
+    #shopify-section-{{section.id}} .description-s {
+        font-size: 16px;
+    }
+
+    #shopify-section-{{section.id}} .container {
+        gap: 32px;
+    }
+
+    #shopify-section-{{section.id}} .text-block-heading-d11 {
+        max-width: 100%;
+        min-width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px;
+        align-items: end;
+        border-bottom: 1px solid rgba(4, 4, 4, 0.1);
+    }
+
+    #shopify-section-{{section.id}} .text-block-heading-d11 div {
+        width: 36px;
+        height: 32px;
+    }
+    #shopify-section-{{section.id}} .text-block-heading-d11 div img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    #shopify-section-{{section.id}} .text-block-h3-d11 {
+        font-size: 20px;
+        max-width: 277px;
+        position: relative;
+        font-style: normal;
+        /* border-bottom: 2px solid #648291; */
+        padding-bottom: 0px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    #shopify-section-{{section.id}} .text-block-p-d11 {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+
+    #shopify-section-{{section.id}} .content12,
+    #shopify-section-{{section.id}} .content34,
+    #shopify-section-{{section.id}} .content56 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #shopify-section-{{section.id}} .left-content-1,
+    #shopify-section-{{section.id}} .left-content-2,
+    #shopify-section-{{section.id}} .left-content-3,
+    #shopify-section-{{section.id}} .right-content-1,
+    #shopify-section-{{section.id}} .right-content-2,
+    #shopify-section-{{section.id}} .right-content-3  {
+      border: 1px solid #a48d4f;
+      border-radius: 12px;
+      border-right: 4px solid #a48d4f;
+      border-bottom: 4px solid #a48d4f;
+
+    }
+
+
+
+
+
+
+    #shopify-section-{{ section.id }} .text-above-button {
+      gap: 6px;
+      width: max-content;
+    }
+    #shopify-section-{{ section.id }} .text-above-button .free-us-money-back {
+        gap: 4px;
+        font-size: 10px;
+    }
+
+
+    #shopify-section-{{section.id}} .textblock-add-to-cart {
+        gap: 8px;
+        max-width: 343px;
+        margin: 20px auto 0;
+    }
+
+
+    .text-block-btn-container-add-to-cart {
+        border-radius: 5px;
+        padding: 3px 0px;
+    }
+
+    .text-block-btn-container-add-to-cart .button{
+      background: #d3a221;
+      border:none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .slider-container-s {
+        /* display: flex; */
+        position: relative;
+        width: 300px;
+        height: 400px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .slider-s {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+
+    .card-s {
+        min-width: 300px;
+        height: 400px;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .controls-s {
+        /* position: absolute; */
+        width: 100%;
+        /* bottom: -20px; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    .arrow-s {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin: 0 10px;
+    }
+
+    .dots-s {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dot-s {
+        height: 10px;
+        width: 10px;
+        margin: 0 5px;
+        background-color: white;
+        border: 1px solid #a48d4f;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot-s.active {
+        background-color: #a48d4f;
+    }
+
+    }
+</style>
+
+<div class="container-parent-d11">
+  <div class="heading-and-description">
+    <div class="heading-s text-animation-d8">
+      {{ section.settings.block_heading }}
+      <span class="heading-s-color">{{ section.settings['block_heading-2'] }}</span>
+    </div>
+    <div class="description-s text-animation-d8">{{ section.settings.block_discription }}</div>
+  </div>
+
+  <div class="container desktop">
+    <div class="left">
+      <div class="left-content-1">
+        {% if section.settings['left-icon-1'] != blank %}
+          <div class="left-content-1-icon">
+            <img src="{{ section.settings.left-icon-1 | img_url:"1440x" }}" width="" height="">
+          </div>
+        {% endif %}
+        <div class="text-block text-block-left">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_1_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11 text-align-right-d11">
+            {{ section.settings.left_1_discp }}
+          </p>
+        </div>
+      </div>
+
+      <div class="left-content-2">
+        <hr class="hr-top-s">
+        {% if section.settings['left-icon-2'] != blank %}
+          <div><img src="{{ section.settings.left-icon-2 | img_url:"1440x" }}" width="" height=""></div>
+        {% endif %}
+        <div class="text-block text-block-left">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_2_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11 text-align-right-d11">
+            {{ section.settings.left_2_discp }}
+          </p>
+        </div>
+        <hr class="hr-bottom-s">
+      </div>
+
+      <div class="left-content-3">
+        {% if section.settings['left-icon-3'] != blank %}
+          <div><img src="{{ section.settings.left-icon-3 | img_url:"1440x" }}" width="" height=""></div>
+        {% endif %}
+        <div class="text-block text-block-left">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_3_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11 text-align-right-d11">
+            {{ section.settings.left_3_discp }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="center-image desktop-image-d11">
+      <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
+    </div>
+    <div class=" right">
+      <div class="right-content-1">
+        {% if section.settings['right-icon-1'] != blank %}
+          <div class="right-content-1-icon">
+            <img src="{{ section.settings.right-icon-1 | img_url:"1440x" }}" width="" height="">
+          </div>
+        {% endif %}
+        <div class="text-block">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11">{{ section.settings.right_1_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11">
+            {{ section.settings.right_1_discp }}
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content-2">
+        {% if section.settings['right-icon-2'] != blank %}
+          <div><img src="{{ section.settings.right-icon-2 | img_url:"1440x" }}" width="" height=""></div>
+        {% endif %}
+        <div class="text-block">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11">{{ section.settings.right_2_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11">
+            {{ section.settings.right_2_discp }}
+          </p>
+        </div>
+      </div>
+
+      <div class="right-content-3">
+        {% if section.settings['right-icon-3'] != blank %}
+          <div><img src="{{ section.settings.right-icon-3 | img_url:"1440x" }}" width="" height=""></div>
+        {% endif %}
+        <div class="text-block">
+          <div class="text-block-heading-d11">
+            <h3 class="text-block-h3-d11">{{ section.settings.right_3_heading }}</h3>
+          </div>
+
+          <p class="text-block-p-d11">
+            {{ section.settings.right_3_discp }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mobile">
+    <div class="my-mobile-img">
+      <img src="{{ section.settings.image_id_mobile | image_url }}" alt="" height="" width="">
+    </div>
+
+    <div class="slider-container-s">
+      <div class="mobile-all-content slider-s">
+        <div class="content12 card-s">
+          <div class="left-content-1">
+            <div class="text-block text-block-left">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_1_heading }}</h3>
+                {% if section.settings['left-icon-1'] != blank %}
+                  <div><img src="{{ section.settings.left-icon-1 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11 text-align-right-d11">
+                {{ section.settings.left_1_discp }}
+              </p>
+            </div>
+          </div>
+          <div class="left-content-2">
+            <div class="text-block text-block-left">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_2_heading }}</h3>
+                {% if section.settings['left-icon-2'] != blank %}
+                  <div><img src="{{ section.settings.left-icon-2 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11 text-align-right-d11">
+                {{ section.settings.left_2_discp }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content34 card-s">
+          <div class="left-content-3">
+            <div class="text-block text-block-left">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_3_heading }}</h3>
+                {% if section.settings['left-icon-3'] != blank %}
+                  <div><img src="{{ section.settings.left-icon-3 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11 text-align-right-d11">
+                {{ section.settings.left_3_discp }}
+              </p>
+            </div>
+          </div>
+          <div class="right-content-1">
+            <div class="text-block">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11">{{ section.settings.right_1_heading }}</h3>
+                {% if section.settings['right-icon-1'] != blank %}
+                  <div><img src="{{ section.settings.right-icon-1 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11">
+                {{ section.settings.right_1_discp }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content56 card-s">
+          <div class="right-content-2">
+            <div class="text-block">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11">{{ section.settings.right_2_heading }}</h3>
+                {% if section.settings['right-icon-2'] != blank %}
+                  <div><img src="{{ section.settings.right-icon-2 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11">
+                {{ section.settings.right_2_discp }}
+              </p>
+            </div>
+          </div>
+          <div class="right-content-3">
+            <div class="text-block">
+              <div class="text-block-heading-d11">
+                <h3 class="text-block-h3-d11">{{ section.settings.right_3_heading }}</h3>
+                {% if section.settings['right-icon-3'] != blank %}
+                  <div><img src="{{ section.settings.right-icon-3 | img_url:"1440x" }}" width="" height=""></div>
+                {% endif %}
+              </div>
+
+              <p class="text-block-p-d11">
+                {{ section.settings.right_3_discp }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls-s">
+        <button class="arrow-s left-s" onclick="prevSlide()">{% render 'left-arrow' %}</button>
+        <div class="dots-s">
+          <span class="dot-s" onclick="currentSlide(0)"></span>
+          <span class="dot-s" onclick="currentSlide(1)"></span>
+          <span class="dot-s" onclick="currentSlide(2)"></span>
+        </div>
+        <button class="arrow-s right-s" onclick="nextSlide()">{% render 'right-arrow' %}</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="textblock-add-to-cart">
+    <div class="text-above-button">
+      <div class="free-us-money-back">
+        <div>
+          {% render 'free-us' %}
+        </div>
+        <p>Free U.S. & CDN Shipping Options</p>
+      </div>
+      <div>|</div>
+      <div class="free-us-money-back">
+        <div>
+          {% render 'money-back' %}
+        </div>
+        <p>Money Back Guarantee</p>
+      </div>
+    </div>
+    <div class="text-block-btn-container-add-to-cart">
+      {% if section.settings.button_content != blank %}
+        <a href="{{ section.settings.button_url }}" class="button-d8-tit">
+          {{ section.settings.button_content }}
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Text Image Text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "block_heading",
+      "label": "Heading",
+      "default":"Whole Night & All Day"
+    },
+    {
+      "type": "text",
+      "id": "block_heading-2",
+      "label": "Heading with color",
+      "default":"Benefits"
+    },
+    {
+      "type": "text",
+      "id": "block_discription",
+      "label": "Discription",
+      "default":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat odio nunc magna aenean"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_id",
+      "label": "Product Image"
+    },
+    {
+      "type":"image_picker",
+      "id":"image_id_mobile",
+      "label":"Product mobile image"
+    },
+    {
+      "type": "image_picker",
+      "id": "left-icon-1",
+      "label": "Left icon 1"
+    },
+    {
+      "type": "text",
+      "id": "left_1_heading",
+      "label": "Left Heading 1",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "left_1_discp",
+      "label": "Left Discription 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "left-icon-2",
+      "label": "Left icon 2"
+    },
+    {
+      "type": "text",
+      "id": "left_2_heading",
+      "label": "Left Heading 2",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "left_2_discp",
+      "label": "Left Discription 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "left-icon-3",
+      "label": "Left icon 3"
+    },
+    {
+      "type": "text",
+      "id": "left_3_heading",
+      "label": "Left Heading 3",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "left_3_discp",
+      "label": "Left Discription 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-icon-1",
+      "label": "Right icon 1"
+    },
+    {
+      "type": "text",
+      "id": "right_1_heading",
+      "label": "Rignt Heading 1",
+      "default":"Introducing Nerve Matrix"
+    },
+      {
+      "type": "text",
+      "id": "right_1_discp",
+      "label": "Rignt Discription 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-icon-2",
+      "label": "Right icon 2"
+    },
+    {
+      "type": "text",
+      "id": "right_2_heading",
+      "label": "Rignt Heading 2",
+      "default":"Introducing Nerve Matrix"
+    },
+     {
+      "type": "text",
+      "id": "right_2_discp",
+      "label": "Rignt Discription 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "right-icon-3",
+      "label": "Right icon 3"
+    },
+    {
+      "type": "text",
+      "id": "right_3_heading",
+      "label": "Rignt Heading 3",
+      "default":"Introducing Nerve Matrix"
+    },
+     {
+      "type": "text",
+      "id": "right_3_discp",
+      "label": "Rignt Discription 3"
+    },
+    {
+      "type": "text",
+      "id": "button_content",
+      "label": "Button Content"
+    },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+
+  ],
+  "presets": [
+    {
+      "name": "Text Image Text"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  let currentIndex = 0;
+
+function showSlide(index) {
+    const slider = document.querySelector('.slider-s');
+    const dots = document.querySelectorAll('.dot-s');
+    const totalSlides = document.querySelectorAll('.card-s').length;
+
+    if (index >= totalSlides) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentIndex + 1);
+}
+
+function prevSlide() {
+    showSlide(currentIndex - 1);
+}
+
+function currentSlide(index) {
+    showSlide(index);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    showSlide(currentIndex);
+
+    let startX;
+    const sliderContainer = document.querySelector('.slider-container-s');
+
+    sliderContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    sliderContainer.addEventListener('touchmove', (e) => {
+        if (!startX) return;
+
+        let moveX = e.touches[0].clientX;
+        let diffX = startX - moveX;
+
+        if (diffX > 50) {
+            nextSlide();
+            startX = null;
+        } else if (diffX < -50) {
+            prevSlide();
+            startX = null;
+        }
+    });
+});
+</script>
