@@ -102,8 +102,39 @@
     },
     "three_image_text_KkqhFj": {
       "type": "three-image-text",
+      "blocks": {
+        "block_UXUG9b": {
+          "type": "block",
+          "settings": {
+            "step-heading": "Lorem ipsum dolor",
+            "step-iamge-1": "shopify:\/\/shop_images\/ce107bc9a37745e25ae3485722760553.png",
+            "step-discp": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu ante finibus, lobortis nisi id, dapibus erat. Donec a tellus euismod, consequat tortor at, suscipit arcu. In et porttitor dui donec dignissim."
+          }
+        },
+        "block_7rPyrH": {
+          "type": "block",
+          "settings": {
+            "step-heading": "Lorem ipsum dolor",
+            "step-iamge-1": "shopify:\/\/shop_images\/42e1f658c1aadc50a60e917e6271bec5_1.png",
+            "step-discp": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu ante finibus, lobortis nisi id, dapibus erat. Donec a tellus euismod, consequat tortor at, suscipit arcu. In et porttitor dui donec dignissim."
+          }
+        },
+        "block_6fqcBj": {
+          "type": "block",
+          "settings": {
+            "step-heading": "Lorem ipsum dolor",
+            "step-iamge-1": "shopify:\/\/shop_images\/888aab03d094ffd088d92af1a8498cf0.png",
+            "step-discp": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eu ante finibus, lobortis nisi id, dapibus erat. Donec a tellus euismod, consequat tortor at, suscipit arcu. In et porttitor dui donec dignissim."
+          }
+        }
+      },
+      "block_order": [
+        "block_UXUG9b",
+        "block_7rPyrH",
+        "block_6fqcBj"
+      ],
       "settings": {
-        "block_heading": "",
+        "block_heading": "<p>Create Winning Ads in Just <strong>3 Steps!<\/strong><\/p>",
         "button_heading": "Be Fast or be Last - take action now!",
         "btn_text": "Boost Your Brand Now!",
         "btn_link": ""
