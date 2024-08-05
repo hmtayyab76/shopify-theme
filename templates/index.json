@@ -320,6 +320,7 @@
         },
         "icon_block_rEJFQG": {
           "type": "icon-block",
+          "disabled": true,
           "settings": {
             "icon-image": "shopify:\/\/shop_images\/Group_1000006061.png",
             "icon-text": "3rd Party\u2028Tested"
@@ -327,6 +328,7 @@
         },
         "icon_block_LjG3eU": {
           "type": "icon-block",
+          "disabled": true,
           "settings": {
             "icon-image": "shopify:\/\/shop_images\/Vectdsaor.png",
             "icon-text": "Contamiant free."
@@ -334,6 +336,7 @@
         },
         "icon_block_LKy8FB": {
           "type": "icon-block",
+          "disabled": true,
           "settings": {
             "icon-image": "shopify:\/\/shop_images\/asdGroup_1000006058.png",
             "icon-text": "Contamiant free."
@@ -341,6 +344,7 @@
         },
         "icon_block_xJKYNN": {
           "type": "icon-block",
+          "disabled": true,
           "settings": {
             "icon-image": "shopify:\/\/shop_images\/asGroup.png",
             "icon-text": "Accurately dosed."
