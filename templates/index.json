@@ -142,6 +142,21 @@
     },
     "boost_your_sleep_quality_rDp3Kg": {
       "type": "boost-your-sleep-quality",
+      "blocks": {
+        "list_mobile_XkeQwR": {
+          "type": "list-mobile",
+          "settings": {
+            "m_title": "Sleep Quality Impact",
+            "mob_heading": "First Night",
+            "mob_list_items": "Expect better, longer sleep from the very first night.\\n\nMany report increased and more vivid dreaming.",
+            "mob_texture": "A BETTER MORNING",
+            "mob_text_img_cone": "shopify:\/\/shop_images\/Group_1000006058.svg"
+          }
+        }
+      },
+      "block_order": [
+        "list_mobile_XkeQwR"
+      ],
       "settings": {
         "header_image": "shopify:\/\/shop_images\/Rectangle_9000.png",
         "desktop_title": "Boost Your Sleep Quality",
