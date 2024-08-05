@@ -140,6 +140,17 @@
         "btn_link": ""
       }
     },
+    "boost_your_sleep_quality_rDp3Kg": {
+      "type": "boost-your-sleep-quality",
+      "settings": {
+        "header_image": "shopify:\/\/shop_images\/Rectangle_9000.png",
+        "desktop_title": "Boost Your Sleep Quality",
+        "mob_heading": "First Night",
+        "tri": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" width=\"33\" height=\"23\" viewbox=\"0 0 33 23\" fill=\"none\">\n<rect width=\"33\" height=\"23\" fill=\"#141414\"><\/rect>\n<g id=\"27 July\">\n<path d=\"M-1689 -9138C-1689 -9139.11 -1688.1 -9140 -1687 -9140H2539C2540.1 -9140 2541 -9139.1 2541 -9138V6289C2541 6290.11 2540.1 6291 2539 6291H-1687C-1688.1 6291 -1689 6290.1 -1689 6289V-9138Z\" fill=\"#444444\"><\/path>\n<path d=\"M-1687 -9139H2539V-9141H-1687V-9139ZM2540 -9138V6289H2542V-9138H2540ZM2539 6290H-1687V6292H2539V6290ZM-1688 6289V-9138H-1690V6289H-1688ZM-1687 6290C-1687.55 6290 -1688 6289.55 -1688 6289H-1690C-1690 6290.66 -1688.66 6292 -1687 6292V6290ZM2540 6289C2540 6289.55 2539.55 6290 2539 6290V6292C2540.66 6292 2542 6290.66 2542 6289H2540ZM2539 -9139C2539.55 -9139 2540 -9138.55 2540 -9138H2542C2542 -9139.66 2540.66 -9141 2539 -9141V-9139ZM-1687 -9141C-1688.66 -9141 -1690 -9139.66 -1690 -9138H-1688C-1688 -9138.55 -1687.55 -9139 -1687 -9139V-9141Z\" fill=\"white\" fill-opacity=\"0.1\"><\/path>\n<g id=\"16 July\">\n<rect width=\"1440\" height=\"14982\" transform=\"translate(-144 -8997)\" fill=\"white\"><\/rect>\n<g id=\"Frame 1410110670\">\n<g id=\"Frame 1410110730\">\n<g id=\"Frame 1410110780\">\n<g id=\"V1\">\n<rect id=\"Rectangle 8983\" x=\"-144\" y=\"-95.6826\" width=\"1440\" height=\"929\" fill=\"#F7F7F7\"><\/rect>\n<g id=\"Frame 1410110726\">\n<g id=\"Frame 1410110724\">\n<g id=\"Frame 1410110722\">\n<rect x=\"-64\" y=\"-140.526\" width=\"1280\" height=\"143.27\" rx=\"8\" fill=\"#A48D4F\"><\/rect>\n<\/g>\n<g id=\"Frame 1410110827\">\n<g id=\"Group 1000006082\">\n<g id=\"Group 1000006081\">\n<path id=\"Vector 2\" d=\"M16.7031 20.6733L16.7031 448.896\" stroke=\"#A48D4F\" stroke-width=\"2\"><\/path>\n<path id=\"Vector 134\" d=\"M32.9807 0.74353H0L16.4903 22.3664L32.9807 0.74353Z\" fill=\"#A48D4F\"><\/path>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/g>\n<\/svg>",
+        "pole": "",
+        "circle": ""
+      }
+    },
     "text_with_certered_image_qfY8KY": {
       "type": "text-with-certered-image",
       "settings": {
@@ -697,6 +708,7 @@
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
     "three_image_text_KkqhFj",
+    "boost_your_sleep_quality_rDp3Kg",
     "text_with_certered_image_qfY8KY",
     "text_with_image_black_EFCVUF",
     "collection_slider_tk6xhA",
