@@ -430,6 +430,7 @@
         },
         "logo_ChDNRJ": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "zero-logo": "shopify:\/\/shop_images\/adfafGroup.png"
           }
