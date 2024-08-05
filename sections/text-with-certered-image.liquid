@@ -96,9 +96,9 @@
   %}
   <div class="container-d8">
     <div class="left-d8">
-      <div class="text-block text-block-left-d8">
+      <div class="text-block-d8 text-block-left-d8">
         <div class="text-block-heading-d11-d8">
-          <h3 class="text-block-h3-d11 text-align-right-d11-d8">{{ section.settings.left_1_heading }}</h3>
+          <h3 class="text-block-h3-d11-d8 text-align-right-d11-d8">{{ section.settings.left_1_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="svgicon-left-1-d8"
@@ -119,13 +119,13 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11 text-align-right-d11-d8">
+        <p class="text-block-p-d11-d8 text-align-right-d11-d8">
           {{ section.settings.left_1_discp }}
         </p>
       </div>
-      <div class="text-block text-block-left-d8">
+      <div class="text-block-d8 text-block-left-d8">
         <div class="text-block-heading-d11-d8">
-          <h3 class="text-block-h3-d11 text-align-right-d11-d8">{{ section.settings.left_2_heading }}</h3>
+          <h3 class="text-block-h3-d11-d8 text-align-right-d11-d8">{{ section.settings.left_2_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="svgicon-left-2-d8"
@@ -146,7 +146,7 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11 text-align-right-d11-d8">
+        <p class="text-block-p-d11-d8 text-align-right-d11-d8">
           {{ section.settings.left_2_discp }}
         </p>
       </div>
@@ -160,7 +160,7 @@
           <h3 class="text-block-h3-d11-d8">{{ section.settings.right_1_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="svgicon-right-1"
+            class="svgicon-right-1-d8"
             width="192"
             height="60"
             viewBox="0 0 192 60"
@@ -181,7 +181,7 @@
           {{ section.settings.right_1_discp }}
         </p>
       </div>
-      <div class="text-block">
+      <div class="text-block-d8">
         <div class="text-block-heading-d11-d8">
           <h3 class="text-block-h3-d11-d8">{{ section.settings.right_2_heading }}</h3>
           <svg
@@ -216,7 +216,7 @@
   <div class="textblock-add-to-cart-d8">
     <div class="">
       {% if section.settings.button_content != blank %}
-        <a href="{{ section.settings.button_url }}" class="button">
+        <a href="{{ section.settings.button_url }}" class="button-d8">
           {{ section.settings.button_content }}
         </a>
       {% endif %}
