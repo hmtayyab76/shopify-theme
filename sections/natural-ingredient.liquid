@@ -1,6 +1,584 @@
-{% schema %}
-  {
-    "name": "Section name",
-    "settings": []
+<style>
+                                                                      *{
+                                                                        margin: 0;
+                                                                        padding: 0;
+                                                                        box-sizing: border-box;
+                                                                       }
+                                                                      .main-ingredient-d6{
+                                                                        width: 100%;
+                                                                        max-width: 89%;
+                                                                        margin: 0 auto;
+                                                                        padding: 70px 0;
+                                                                      }
+                                                                      .ingredient-title-d6{
+                                                                        color: #040404;
+                                                                    text-align: center;
+                                                                    font-family: Montserrat;
+                                                                    font-size: 48px;
+                                                                    font-style: normal;
+                                                                    font-weight: 600;
+                                                                    line-height: normal;
+                                                                    text-transform: capitalize;
+                                                                      }
+                                                                  .ingredient-title-d6 span{
+                                                                    color: #A48D4F;
+                                                                  }
+                                                                    .ingredient-sub-title{
+                                                                      color: #040404;
+                                                                  text-align: center;
+                                                                  font-family: Montserrat;
+                                                                  font-size: 24px;
+                                                                  font-style: normal;
+                                                                  font-weight: 400;
+                                                                  line-height: normal;
+                                                                      padding-top: 24px;
+                                                                    }
+                                                                  .supplement-fact-block{
+                                                                    border-radius: 16px;
+                                                                border: 4px solid #A48D4F;
+                                                                    padding: 20px 24px;
+                                                                    height: 100%;
+                                                                  }
+                                                                .supplement-details-d6 img {
+                                                width: 110px;
+                                                height: 110px;
+                                                border: 3px solid #A48D4F;
+                                                border-radius: 50%;
+                                            }
+                                                              .ingredient-details-blocks {
+                                                    display: flex;
+                                                    align-items: center;
+                                                    gap: 48px;
+                                                    padding: 40px 0;
+                                                }
+                                                              .supp-fact-title{
+                                                                padding: 0 0 20px 0;
+                                                                border-bottom: 8px solid #040404;
+                                                              }
+                                                              .supp-fact-title h2{
+                                                                color: #040404;
+                                                            font-family: Montserrat;
+                                                            font-size: 36px;
+                                                            font-style: normal;
+                                                            font-weight: 600;
+                                                            line-height: normal;
+                                                            text-transform: capitalize;
+                                                              }
+                                                            .supp-fact-title p{
+                                                              color: #040404;
+                                                          font-family: Montserrat;
+                                                          font-size: 16px;
+                                                          font-style: normal;
+                                                          font-weight: 600;
+                                                          line-height: normal;
+                                                          text-transform: capitalize;
+                                                              padding: 8px 0 0 0;
+                                                            }
+                                                              .ingredient-values-d6{
+                                                                display: flex;
+                                                                gap: 72px;
+                                                                align-items: center;
+                                                                border-bottom: 1px solid #040404;
+                                                                    padding: 8px 0 10px 0;
+                                                              }
+                                                            .ingredient-values-d6 p{
+                                                              color: #040404;
+                                                        font-family: Montserrat;
+                                                        font-size: 16px;
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        line-height: normal;
+                                                        text-transform: capitalize;
+                                                            }
+                                                        #value{
+                                                          text-align: right;
+                                                          width: 100px;
+                                                          text-transform: lowercase;
+                                                        }
+                                                              #value-d6{
+                                                                width: 220px;
+                                                                text-align: left;
+                                                              }
+                                                              .border-bottom{
+                                                                border-bottom: 0px;
+                                                              }
+                                                              .border-width{
+                                                                border-width: 10px;
+                                                                    margin: 0 0 16px 0;
+                                                              }
+                                                .supplement-block-d6 {
+                                                  display: flex;
+                                                  flex-direction: column;
+                                                  gap: 40px 0;
+                                              }
+                                                        .supplement-details-d6 {
+                                                          display: flex;
+                                                          align-items: center;
+                                                          gap: 24px;
+                                                      }
+                                                      .supp-name-detail h3 {
+                                                        color: #040404;
+                                                        font-family: Montserrat;
+                                                        font-size: 24px;
+                                                        font-style: normal;
+                                                        font-weight: 600;
+                                                        line-height: normal;
+                                                    }
+                                                    .supp-name-detail p {
+                                                      color: rgba(4, 4, 4, 0.75);
+                                                      font-family: Montserrat;
+                                                      font-size: 16px;
+                                                      font-style: normal;
+                                                      font-weight: 400;
+                                                      line-height: normal;
+                                                      padding-top: 8px;
+                                                  }
+                                            .main-ingredient-icons{
+                                              border-radius: 10px;
+                                          border: 4px solid #A48D4F;
+                                          background: #F7F7F7;
+                                              padding: 30px 56px;
+                                              display: flex;
+                                              align-items: center;
+                                                  gap: 24px;
+                                                  margin: 0 0 40px 0;
+                                            }
+                                          .ing-icon-text-d6 {
+                                          display: flex;
+                                          align-items: center;
+                                          gap: 24px;
+                                      }
+                                         .ing-icon-text-d6.ing-icon5 img.ing-icon-d6 {
+                                            width: 100px;
+                                            height: 100px;
+                                            object-fit: cover;
+                                        }
+                                     .ing-icon-text-d6 p {
+                                      color: #A48D4F;
+                                      font-family: Montserrat;
+                                      font-size: 24px;
+                                      font-style: normal;
+                                      font-weight: 400;
+                                      line-height: normal;
+                                  }
+                                      .ing-icon-text-d6.ing-icon5 p {
+                                        color: #A48D4F;
+                                        font-family: Montserrat;
+                                        font-size: 32px;
+                                        font-style: normal;
+                                        font-weight: 700;
+                                        line-height: normal;
+                                        text-transform: uppercase;
+                                    }
+                                    .ing-icon-text-d6.ing-icon6 img.ing-icon-d6{
+                                      width: 60px;
+                                      height: 57px;
+                                    }
+                                  .ing-icon-text-d6.ing-icon7 img.ing-icon-d6{
+                                    width: 60px;
+                                    height: 60px;
+                                  }
+                                  .ing-icon-text-d6.ing-icon8 img.ing-icon-d6{
+                                    width: 60px;
+                                    height: 63px;
+                                  }
+                                .ing-icon-text-d6.ing-icon6 {
+                                  margin: 0 0 0 60px;
+                              }
+                          .shipping-gurantee-d6 {
+                            display: flex;
+                            align-items: center;
+                            /* margin: 0 auto; */
+                            justify-content: center;
+                            gap: 12px;
+                        }
+                      .ing-button-d6 {
+                        text-align: center;
+                    }
+                            .ing-shipping-d6 {
+                              display: flex;
+                              align-items: center;
+                              gap: 5px;
+                          }
+                              .ing-shipping-d6 img{
+                                width: 19px;
+                                height: 14px;
+                              }
+                          .money-gurantee-d6{
+                            display: flex;
+                              align-items: center;
+                              gap: 5px;
+                          }
+                          .money-gurantee-d6 img{
+                            width: 14px;
+                            height: 14px;
+                          }
+                              .ing-shipping-d6 p,
+                          .money-gurantee-d6 p{
+                                color: #040404;
+                            font-family: Montserrat;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: 27px;
+                              }
+                        a.ing-button-d6 {
+                          display: inline-block;
+                          text-decoration: none;
+                          padding: 13px 32px;
+                          border-radius: 5px;
+                          background: #D3A221;
+                          color: #FFF;
+                          font-family: Montserrat;
+                          font-size: 18px;
+                          font-style: normal;
+                          font-weight: 700;
+                          line-height: 27px;
+                          margin: 8px 0 0 0;
+                          width: 490px;
+                          text-align: center;
+                      }
+                      .shipping-gurantee-d6 hr{
+                        height: 14px;
+                        margin: 0 0;
+                            width: 1px;
+                      }
+
+                    @media (max-width: 920px){
+                      .main-ingredient-d6{
+                        max-width: 94%;
+                      }
+                      .ingredient-details-blocks{
+                        gap: 25px;
+                      }
+                      .ingredient-values-d6{
+                        gap: 20px;
+                      }
+                      #value-d6{
+                        width: 170px;
+                      }
+                    }
+
+                    @media (max-width: 1150px){
+                      .main-ingredient-icons{
+                        flex-wrap: wrap;
+                      }
+                    }
+
+                    @media (max-width: 768px){
+                      .main-ingredient-d6{
+                        max-width: 100%;
+                        padding: 30px 15px;
+                      }
+                      h1.ingredient-title-d6 {
+                      font-size: 30px;
+                  }
+                      .ingredient-sub-title{
+                        padding-top: 16px;
+                        font-size: 16px;
+                      }
+                      .ingredient-details-blocks{
+                        padding: 16px 0;
+                        flex-direction: column;
+                        gap: 0;
+                      }
+                      .supplement-fact-block {
+                    border-radius: 8px 8px 0px 0px;
+                    border: 2px solid #A48D4F;
+                    background: #FFF;
+                    padding: 20px 10px;
+                    width: 100%;
+                }
+                      .supp-fact-title h2{
+                        font-size: 24px;
+                      }
+                      .supp-fact-title p{
+                        font-size: 14px;
+                      }
+                      .ingredient-values-d6{
+                        justify-content: space-between;
+                      }
+                      .ingredient-values-d6 p{
+                        font-size: 14px;
+                      }
+                      #value-d6{
+                        width: 100%;
+                      }
+                      .supplement-block-d6 {
+                  border-radius: 0px 0px 8px 8px;
+                  border-right: 2px solid #A48D4F;
+                  border-bottom: 2px solid #A48D4F;
+                  border-left: 2px solid #A48D4F;
+                  padding: 20px 15px;
+                        gap: 20px;
+              }
+                      .supplement-details-d6 img{
+                        width: 70px;
+                        height: 70px;
+                      }
+                      .supp-name-detail h3{
+                        font-size: 16px;
+                      }
+                      .supp-name-detail p{
+                        font-size: 14px;
+                      }
+                      .main-ingredient-icons {
+                border-radius: 5px;
+                border: 2px solid #A48D4F;
+                background: #F7F7F7;
+                        padding: 20px 16px;
+                flex-direction: column;
+                                align-items: normal;
+                        gap: 8px;
+                        margin: 0 0 24px 0;
+            }
+                      .ing-icon-text-d6{
+                        gap: 18px;
+                      }
+                      .ing-icon-text-d6.ing-icon5{
+                        gap: 12px;
+                      }
+                      .ing-icon-text-d6.ing-icon5 img.ing-icon-d6{
+                        width: 40px;
+                        height: 40px;
+                      }
+                      .ing-icon-text-d6 p{
+                        font-size: 20px;
+                      }
+                      .ing-icon-text-d6.ing-icon5 p{
+                        font-size: 24px;
+                      }
+                      .ing-icon-text-d6.ing-icon6 img.ing-icon-d6 {
+              width: 25px;
+              height: 24px;
+          }
+                      .ing-icon-text-d6.ing-icon6{
+                        margin: 8px 0 0 0;
+                      }
+                      .ing-icon-text-d6.ing-icon7 img.ing-icon-d6 {
+            width: 24px;
+            height: 24px;
+        }
+                      .ing-icon-text-d6.ing-icon8 img.ing-icon-d6 {
+          width: 23px;
+          height: 24px;
+      }
+                      .shipping-gurantee-d6{
+                        gap: 6px;
+                      }
+                      .ing-shipping-d6 img{
+                        width: 18px;
+                        height: 12px;
+                      }
+                      .money-gurantee-d6 img {
+        width: 18px;
+        height: 18px;
+    }
+                      .ing-shipping-d6 p, .money-gurantee-d6 p{
+                        font-size: 10px;
+                      }
+                      a.ing-button-d6 {
+      width: 100%;
+      font-size: 14px;
   }
+                    }
+  .ing-icon-text-d6 ing-icon{
+    width: 100px;
+height: 100px;
+  }
+  .ing-icon-text-d6 ing-icon img{
+    width: 100%;
+
+  }
+</style>
+<section>
+  <div class="main-ingredient-d6">
+    <div class="ingredient-container-d6">
+      <div class="ingredient-title-d6">
+        <h1 class="ingredient-title-d6">{{ section.settings.title }}</h1>
+        <p class="ingredient-sub-title">{{ section.settings['sub-title'] }}</p>
+      </div>
+      <div class="ingredient-details-blocks">
+        <div class="supplement-fact-block">
+          <div class="supp-fact-title">
+            <h2>{{ section.settings['supplement-title'] }}</h2>
+            <p>Serving Size 1 Scoop (14.2)</p>
+            <p>Serving Per Container 30</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Calories</p>
+            <p id="value">35</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Protein</p>
+            <p id="value">9 g</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Calcium</p>
+            <p id="value">15 g</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Iron</p>
+            <p id="value">0.19 mg</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Magnesium Bisglycinate</p>
+            <p id="value">250 mg</p>
+          </div>
+          <div class="ingredient-values-d6 border-width">
+            <p id="value-d6">Sodium</p>
+            <p id="value">25 mg</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">Hydrolyzed Collagen</p>
+            <p id="value">10.000 mg</p>
+          </div>
+          <div class="ingredient-values-d6">
+            <p id="value-d6">GABA</p>
+            <p id="value">300 mg</p>
+          </div>
+          <div class="ingredient-values-d6 border-bottom">
+            <p id="value-d6">L-Theanine</p>
+            <p id="value">200 mg</p>
+          </div>
+        </div>
+        <div class="supplement-block-d6">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'Supplement-block' %}
+                <div class="supplement-details-d6">
+                  <img src="{{ block.settings.supp-image | img_url: 'master' }}">
+                  <div class="supp-name-detail">
+                    <h3>{{ block.settings['supp-name'] }}</h3>
+                    <p>{{ block.settings['supp-detail'] }}</p>
+                  </div>
+                </div>
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="main-ingredient-icons">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'icon-block' %}
+              <div class="ing-icon-text-d6 ing-icon{{ forloop.index }}">
+                <img class="ing-icon-d6" src="{{ block.settings.icon-image | img_url: 'master' }}">
+                <p>{{ block.settings['icon-text'] }}</p>
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+      <div class="ing-button-d6">
+        <div class="shipping-gurantee-d6">
+          <div class="ing-shipping-d6">
+            <img src="{{ section.settings.shipping-image | img_url: 'master' }}">
+            <p>{{ section.settings['shipping-text'] }}</p>
+          </div>
+          <hr>
+          <div class="money-gurantee-d6">
+            <img src="{{ section.settings.gurantee-image | img_url: 'master' }}">
+            <p>{{ section.settings['gurantee-text'] }}</p>
+          </div>
+        </div>
+        <a class="ing-button-d6 button" href="{{ section.settings.url }}">{{ section.settings['ing-button'] }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% schema %}
+{
+  "name": "Natural Ingredients",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "sub-title",
+      "label": "Sub Title"
+    },
+    {
+      "type": "text",
+      "id": "supplement-title",
+      "label": "Supplement Title"
+    },
+    {
+      "type": "image_picker",
+      "id": "shipping-image",
+      "label": "Shipping Truck"
+    },
+    {
+      "type": "text",
+      "id": "shipping-text",
+      "label": "Shipping Text"
+    },
+    {
+      "type": "image_picker",
+      "id": "gurantee-image",
+      "label": "Dollar Image"
+    },
+    {
+      "type": "text",
+      "id": "gurantee-text",
+      "label": "Money Text"
+    },
+    {
+      "type": "text",
+      "id": "ing-button",
+      "label": "Button"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "Supplement-block",
+      "name": "Supplement Block",
+      "settings": [
+        {
+      "type": "image_picker",
+      "id": "supp-image",
+      "label": "Supplement Image"
+    },
+    {
+      "type": "text",
+      "id": "supp-name",
+      "label": "Supplement Name"
+    },
+    {
+      "type": "textarea",
+      "id": "supp-detail",
+      "label": "Supplement Detail"
+    }
+      ]
+    },
+    {
+      "type": "icon-block",
+      "name": "Icon Text Block",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon-image",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "icon-text",
+          "label": "Icon Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Natural Ingredients"
+    }
+  ]
+}
 {% endschema %}
