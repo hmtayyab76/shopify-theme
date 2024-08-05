@@ -100,6 +100,15 @@
       "settings": {
       }
     },
+    "three_image_text_KkqhFj": {
+      "type": "three-image-text",
+      "settings": {
+        "block_heading": "",
+        "button_heading": "Be Fast or be Last - take action now!",
+        "btn_text": "Boost Your Brand Now!",
+        "btn_link": ""
+      }
+    },
     "text_with_certered_image_qfY8KY": {
       "type": "text-with-certered-image",
       "settings": {
@@ -464,6 +473,7 @@
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
+    "three_image_text_KkqhFj",
     "text_with_certered_image_qfY8KY",
     "text_with_image_black_EFCVUF",
     "collection_slider_tk6xhA",
