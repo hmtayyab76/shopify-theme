@@ -324,12 +324,54 @@
             "icon-image": "shopify:\/\/shop_images\/Group_1000006061.png",
             "icon-text": "3rd Party\u2028Tested"
           }
+        },
+        "icon_block_LjG3eU": {
+          "type": "icon-block",
+          "settings": {
+            "icon-image": "shopify:\/\/shop_images\/Vectdsaor.png",
+            "icon-text": "Contamiant free."
+          }
+        },
+        "icon_block_LKy8FB": {
+          "type": "icon-block",
+          "settings": {
+            "icon-image": "shopify:\/\/shop_images\/asdGroup_1000006058.png",
+            "icon-text": "Contamiant free."
+          }
+        },
+        "icon_block_xJKYNN": {
+          "type": "icon-block",
+          "settings": {
+            "icon-image": "shopify:\/\/shop_images\/asGroup.png",
+            "icon-text": "Accurately dosed."
+          }
+        },
+        "supplement_block_idWyVV": {
+          "type": "Supplement-block",
+          "settings": {
+            "supp-image": "shopify:\/\/shop_images\/a1bacb2793e990918a23e82ac1850163.png",
+            "supp-name": "Collagen",
+            "supp-detail": "A protein that aids in the repair of muscles, bones, joints, tendons, ligaments, and skin, while also supporting sleep quality."
+          }
+        },
+        "supplement_block_fLMFRc": {
+          "type": "Supplement-block",
+          "settings": {
+            "supp-image": "shopify:\/\/shop_images\/c8356c5cfbb5e41c5ac31ba4e3123f5c.png",
+            "supp-name": "Magnesium",
+            "supp-detail": "A protein that aids in the repair of muscles, bones, joints, tendons, ligaments, and skin, while also supporting sleep quality."
+          }
         }
       },
       "block_order": [
         "supplement_block_TGPeUb",
         "supplement_block_44HpEm",
-        "icon_block_rEJFQG"
+        "icon_block_rEJFQG",
+        "icon_block_LjG3eU",
+        "icon_block_LKy8FB",
+        "icon_block_xJKYNN",
+        "supplement_block_idWyVV",
+        "supplement_block_fLMFRc"
       ],
       "settings": {
         "title": "4 Clinically Researched Natural Ingredients",
