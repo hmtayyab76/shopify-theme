@@ -383,6 +383,20 @@
         "url": ""
       }
     },
+    "zero_melatonin_yA9D6b": {
+      "type": "zero-melatonin",
+      "settings": {
+        "sec-title": "ZERO",
+        "sub-title": "Melatonin",
+        "title-text": "Thirdzy excludes melatonin because the latest research shows that it can disrupt your hormones and metabolism. Instead we count on natural solutions that promote sustainable, healthy sleep patterns without dependency risks associated with melatonin.",
+        "second-title": "We agree with World Renowned Experts:",
+        "second-title-1": "Melatonin is Not For Great Sleep.",
+        "sec-image": "shopify:\/\/shop_images\/c2a3f6c9c0119dbe2fbfd7a355f7efde.png",
+        "row-text": "“Most people don’t need melatonin. Melatonin is a hormone that is naturally produced by the pineal gland, and when you take it in supplement form, it can disrupt your body’s natural rhythms. In many cases, it can make sleep issues even worse.”",
+        "person-name": "Dr. Andrew Huberman",
+        "person-detail": "Professor of Neurobiology"
+      }
+    },
     "171363943290d25185": {
       "type": "apps",
       "blocks": {
@@ -595,6 +609,7 @@
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
     "natural_ingredient_qNgJrL",
+    "zero_melatonin_yA9D6b",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
     "customer_reviews_yAtBzd",
