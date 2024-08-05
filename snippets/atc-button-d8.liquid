@@ -1,21 +1,63 @@
+<style>
+          .atc-sn-main-d8{
+            width: 100%;
+            margin: 60px 0 90px !important;
+            margin: auto;
+            text-align: center;
+            gap: 8px;
+              display: flex;
+        justify-content: center;
+          }
+      .atc-sn-inner-d8{
+        display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+      }
+          .button-sn-d8{
+            display: flex;
+        padding: 16px 120px;
+        justify-content: center;
+            width: fit-content;
+        align-items: center;
+        gap: 10px;
+            border-radius: 5px;
+        background: #151A23;
+            color: #FFF;
+      font-family: Raleway;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+          }
+    .subtext-sn-d8{
+      color: rgba(0, 0, 0, 0.50);
+  font-family: Nunito;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+    }
+</style>
 {% if atc_button_label or atc_subtext %}
+  {% comment %}
+    {% render 'atc-button-d9', atc_button_link: section.settings.btn-link-sn, atc_button_label: section.settings.btn-text-sn, atc_subtext: section.settings.sub-text-sn  %}
+  {% endcomment %}
 
-{% comment %}
-  {% render 'atc-button-d9', atc_button_link: section.settings.btn-link-sn, atc_button_label: section.settings.btn-text-sn, atc_subtext: section.settings.sub-text-sn  %}  
-{% endcomment %}
-  
-<div class="atc-sn-main-d9">
-  <div class="atc-sn-inner-d9">
-    {% if atc_button_label %}
-    <div class="atc-sn-col-d9 btn-sn-d9">
-      <a class="button-sn-d9 button" href="{{ atc_button_link | default: '#d9-scroller' }}">{{ atc_button_label | default: 'ADD TO CART' }}</a>
+  <div class="atc-sn-main-d8">
+    <div class="atc-sn-inner-d8">
+      {% if atc_button_label %}
+        <div class="atc-sn-col-d9 btn-sn-d9">
+          <a class="button-sn-d8" href="{{ atc_button_link | default: '#d9-scroller' }}">
+            {{- atc_button_label | default: 'ADD TO CART' -}}
+          </a>
+        </div>
+      {% endif %}
+      {% if atc_subtext %}
+        <div class="atc-sn-col-d8 subtext-sn-d8">
+          <p>{{ atc_subtext | default: '100% Money Back Guarantee' }}</p>
+        </div>
+      {% endif %}
     </div>
-    {% endif %}
-    {% if atc_subtext %}
-    <div class="atc-sn-col-d9 subtext-sn-d9">
-      <p>{{ atc_subtext | default: '100% Money Back Guarantee' }}</p>
-    </div>
-    {% endif %}
   </div>
-</div>
 {% endif %}
