@@ -88,20 +88,20 @@
   ]
 }
 {% endschema %}
-<div class="container-parent-d11">
+<div class="container-parent-d11-d8">
   {% render 'custum-heading',
     heading: section.settings.block_heading,
     discription: section.settings.block_discription,
     image: section.settings.image_heading
   %}
-  <div class="container">
-    <div class="left">
-      <div class="text-block text-block-left">
-        <div class="text-block-heading-d11">
-          <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_1_heading }}</h3>
+  <div class="container-d8">
+    <div class="left-d8">
+      <div class="text-block text-block-left-d8">
+        <div class="text-block-heading-d11-d8">
+          <h3 class="text-block-h3-d11 text-align-right-d11-d8">{{ section.settings.left_1_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="svgicon-left-1"
+            class="svgicon-left-1-d8"
             width="474"
             height="64"
             viewBox="0 0 474 64"
@@ -119,16 +119,16 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11 text-align-right-d11">
+        <p class="text-block-p-d11 text-align-right-d11-d8">
           {{ section.settings.left_1_discp }}
         </p>
       </div>
-      <div class="text-block text-block-left">
-        <div class="text-block-heading-d11">
-          <h3 class="text-block-h3-d11 text-align-right-d11">{{ section.settings.left_2_heading }}</h3>
+      <div class="text-block text-block-left-d8">
+        <div class="text-block-heading-d11-d8">
+          <h3 class="text-block-h3-d11 text-align-right-d11-d8">{{ section.settings.left_2_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="svgicon-left-2"
+            class="svgicon-left-2-d8"
             width="470"
             height="60"
             viewBox="0 0 470 60"
@@ -146,18 +146,18 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11 text-align-right-d11">
+        <p class="text-block-p-d11 text-align-right-d11-d8">
           {{ section.settings.left_2_discp }}
         </p>
       </div>
     </div>
-    <div class="center-image desktop-image-d11">
+    <div class="center-image desktop-image-d11-d8">
       <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
     </div>
-    <div class=" right">
-      <div class="text-block">
-        <div class="text-block-heading-d11">
-          <h3 class="text-block-h3-d11">{{ section.settings.right_1_heading }}</h3>
+    <div class=" right-d8">
+      <div class="text-block-d8">
+        <div class="text-block-heading-d11-d8">
+          <h3 class="text-block-h3-d11-d8">{{ section.settings.right_1_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="svgicon-right-1"
@@ -177,16 +177,16 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11">
+        <p class="text-block-p-d11-d8">
           {{ section.settings.right_1_discp }}
         </p>
       </div>
       <div class="text-block">
-        <div class="text-block-heading-d11">
-          <h3 class="text-block-h3-d11">{{ section.settings.right_2_heading }}</h3>
+        <div class="text-block-heading-d11-d8">
+          <h3 class="text-block-h3-d11-d8">{{ section.settings.right_2_heading }}</h3>
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            class="svgicon-right-2"
+            class="svgicon-right-2-d8"
             width="470"
             height="60"
             viewBox="0 0 470 60"
@@ -204,16 +204,16 @@
           </svg>
         </div>
 
-        <p class="text-block-p-d11">
+        <p class="text-block-p-d11-d8">
           {{ section.settings.right_2_discp }}
         </p>
       </div>
     </div>
-    <div class="center-image mobile-image-d11">
+    <div class="center-image mobile-image-d11-d8">
       <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
     </div>
   </div>
-  <div class="textblock-add-to-cart">
+  <div class="textblock-add-to-cart-d8">
     <div class="">
       {% if section.settings.button_content != blank %}
         <a href="{{ section.settings.button_url }}" class="button">
@@ -231,19 +231,19 @@
                 margin: 0;
                 padding: 0;
               }
-              .text-block-btn-container{
+              .text-block-btn-container-d8{
                 display: flex;
             width: 360px;
             flex-direction: column;
             align-items: center;
             gap: 8px;
               }
-              .container-parent-d11{
+              .container-parent-d11-d8{
                 padding: 0 20px;
                 max-width: 1200px;
                 margin: 120px auto;
               }
-              #shopify-section-{{ section.id }} .container {
+              #shopify-section-{{ section.id }} .container-d8 {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -251,38 +251,38 @@
 
               }
 
-              #shopify-section-{{ section.id }} .text-block {
+              #shopify-section-{{ section.id }} .text-block-d8 {
                 text-align: center;
                 max-width: 360px;
               }
-              #shopify-section-{{ section.id }} .svgicon-left-1 {
+              #shopify-section-{{ section.id }} .svgicon-left-1-d8 {
                 position: absolute;
                 bottom: -62.5px;
                 right: -200px;
               }
-              #shopify-section-{{ section.id }} .svgicon-left-2 {
+              #shopify-section-{{ section.id }} .svgicon-left-2-d8 {
                 position: absolute;
                 bottom: -2px;
                 right: -196px;
               }
-              #shopify-section-{{ section.id }} .svgicon-right-1 {
+              #shopify-section-{{ section.id }} .svgicon-right-1-d8 {
                 position: absolute;
                 bottom: -58px;
                 left: -196px;
               }
-              #shopify-section-{{ section.id }} .svgicon-right-2 {
+              #shopify-section-{{ section.id }} .svgicon-right-2-d8 {
                 position: absolute;
                 bottom: -2px;
                 left: -196px;
               }
-              #shopify-section-{{ section.id }} .text-align-right-d11 {
+              #shopify-section-{{ section.id }} .text-align-right-d11-d8 {
                 text-align: right;
               }
-              #shopify-section-{{ section.id }} .text-block-heading-d11 {
+              #shopify-section-{{ section.id }} .text-block-heading-d11-d8 {
                 max-width: 277px;
                 position: relative;
               }
-              #shopify-section-{{ section.id }} .text-block-h3-d11 {
+              #shopify-section-{{ section.id }} .text-block-h3-d11-d8 {
                 color: #000;
                 font-family: "Tenor Sans";
                 font-size: 28px;
@@ -294,7 +294,7 @@
                 font-weight: 400;
                 line-height: normal;
               }
-              #shopify-section-{{ section.id }} .text-block-p-d11 {
+              #shopify-section-{{ section.id }} .text-block-p-d11-d8 {
                 color: rgba(0, 0, 0, 0.75);
                 font-family: Nunito;
                 font-size: 16px;
@@ -305,12 +305,12 @@
                 align-self: stretch;
               }
 
-              #shopify-section-{{ section.id }} .center-image {
+              #shopify-section-{{ section.id }} .center-image-d8 {
                 display: flex;
                 justify-content: center;
               }
 
-              #shopify-section-{{ section.id }} .center-image img {
+              #shopify-section-{{ section.id }} .center-image-d8 img {
                 max-width: 360px;
                 height: 729px;
                 border-radius: 900px;
@@ -318,7 +318,7 @@
                 flex-shrink: 0;
                 object-fit: cover;
               }
-        .text-block-btn-container-add-to-cart-text{
+        .text-block-btn-container-add-to-cart-text-d8{
           text-decoration: none;
           color: #FFF;
       font-family: Nunito;
@@ -327,7 +327,7 @@
       font-weight: 600;
       line-height: normal;
         }
-            #shopify-section-{{ section.id }} .textblock-add-to-cart{
+            #shopify-section-{{ section.id }} .textblock-add-to-cart-d8{
               display: flex;
 
           justify-content: center;
@@ -340,7 +340,7 @@
       margin: 60px auto 0;
 
             }
-    .textblock-add-to-cart p{
+    .textblock-add-to-cart-d8 p{
       color: rgba(0, 0, 0, 0.50);
   font-family: Nunito;
   font-size: 16px;
@@ -349,7 +349,7 @@
   line-height: normal;
       margin: 0;
     }
-          .text-block-btn-container-add-to-cart{
+          .text-block-btn-container-add-to-cart-d8{
             border-radius: 5px;
     background: #648291;
             display: flex;
@@ -360,29 +360,29 @@
     align-self: stretch;
           }
               @media (min-width: 1025px) {
-                #shopify-section-{{ section.id }} .container {
+                #shopify-section-{{ section.id }} .container-d8 {
                   flex-direction: row;
                   justify-content: space-between;
                   align-items: center;
                 }
-                #shopify-section-{{ section.id }} .mobile-image-d11 {
+                #shopify-section-{{ section.id }} .mobile-image-d11-d8 {
                   display: none;
                 }
-                #shopify-section-{{ section.id }} .desktop-image-d11 {
+                #shopify-section-{{ section.id }} .desktop-image-d11-d8 {
                   display: block;
                 }
 
-                #shopify-section-{{ section.id }} .left,
-                #shopify-section-{{ section.id }} .right {
+                #shopify-section-{{ section.id }} .left-d8,
+                #shopify-section-{{ section.id }} .right-d8 {
                   display: flex;
                   flex-direction: column;
                   gap: 240px;
                 }
 
-                #shopify-section-{{ section.id }} .text-block {
+                #shopify-section-{{ section.id }} .text-block-d8 {
                   text-align: left;
                 }
-                #shopify-section-{{ section.id }} .text-block-left {
+                #shopify-section-{{ section.id }} .text-block-left-d8 {
                   display: flex;
                   flex-direction: column;
                   align-items: end;
@@ -390,27 +390,27 @@
 
               }
               @media (max-width: 1024px) {
-                .container-parent-d11{
+                .container-parent-d11-d8{
                   margin: 60px auto;
                 }
-                #shopify-section-{{ section.id }} .mobile-image-d11 {
+                #shopify-section-{{ section.id }} .mobile-image-d11-d8 {
                   display: block;
                 }
-                #shopify-section-{{ section.id }} .desktop-image-d11 {
+                #shopify-section-{{ section.id }} .desktop-image-d11-d8 {
                   display: none;
                 }
 
-                #shopify-section-{{ section.id }} .right {
+                #shopify-section-{{ section.id }} .right-d8 {
                   text-align: end;
                   gap: 20px;
                   display: flex;
                 }
-                #shopify-section-{{ section.id }} .left {
+                #shopify-section-{{ section.id }} .left-d8 {
                   text-align: end;
                   gap: 20px;
                   display: flex;
                 }
-                #shopify-section-{{ section.id }} .text-block-p-d11 {
+                #shopify-section-{{ section.id }} .text-block-p-d11-d8 {
                   color: rgba(0, 0, 0, 0.75);
                   text-align: center;
                   font-family: Nunito;
@@ -419,29 +419,29 @@
                   font-weight: 400;
                   line-height: 120%; /* 16.8px */
                 }
-                #shopify-section-{{ section.id }} .container {
+                #shopify-section-{{ section.id }} .container-d8 {
                   margin: 60px auto;
                   padding: 0px 20px;
                   gap: 20px;
                 }
 
-                #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                #shopify-section-{{ section.id }} .text-block-h3-d11-d8 {
                   max-width: 100%;
                 }
 
-                #shopify-section-{{ section.id }} .text-align-right-d11 {
+                #shopify-section-{{ section.id }} .text-align-right-d11-d8 {
                   text-align: center;
                 }
-                #shopify-section-{{ section.id }} .svgicon-left-1,
-                #shopify-section-{{ section.id }} .svgicon-left-2,
-                #shopify-section-{{ section.id }} .svgicon-right-1,
-                #shopify-section-{{ section.id }} .svgicon-right-2 {
+                #shopify-section-{{ section.id }} .svgicon-left-1-d8,
+                #shopify-section-{{ section.id }} .svgicon-left-2-d8,
+                #shopify-section-{{ section.id }} .svgicon-right-1-d8,
+                #shopify-section-{{ section.id }} .svgicon-right-2-d8 {
                   display: none;
                 }
-                #shopify-section-{{ section.id }} .text-block {
+                #shopify-section-{{ section.id }} .text-block-d8 {
                   text-align: center;
                 }
-                #shopify-section-{{ section.id }} .text-block-h3-d11 {
+                #shopify-section-{{ section.id }} .text-block-h3-d11-d8 {
                   width: 100%;
                   text-align: center;
                   font-family: "Tenor Sans";
@@ -450,7 +450,7 @@
                   font-weight: 400;
                   line-height: normal;
                 }
-                #shopify-section-{{ section.id }} .center-image img {
+                #shopify-section-{{ section.id }} .center-image-d8 img {
                   max-width: 165.432px;
                   height: 335px;
                   border-radius: 900px;
