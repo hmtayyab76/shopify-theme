@@ -1,0 +1,21 @@
+{% if atc_button_label or atc_subtext %}
+
+{% comment %}
+  {% render 'atc-button-d9', atc_button_link: section.settings.btn-link-sn, atc_button_label: section.settings.btn-text-sn, atc_subtext: section.settings.sub-text-sn  %}  
+{% endcomment %}
+  
+<div class="atc-sn-main-d9">
+  <div class="atc-sn-inner-d9">
+    {% if atc_button_label %}
+    <div class="atc-sn-col-d9 btn-sn-d9">
+      <a class="button-sn-d9 button" href="{{ atc_button_link | default: '#d9-scroller' }}">{{ atc_button_label | default: 'ADD TO CART' }}</a>
+    </div>
+    {% endif %}
+    {% if atc_subtext %}
+    <div class="atc-sn-col-d9 subtext-sn-d9">
+      <p>{{ atc_subtext | default: '100% Money Back Guarantee' }}</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}
