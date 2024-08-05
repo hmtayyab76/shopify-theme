@@ -213,16 +213,12 @@
       <img src="{{ section.settings.image_id | image_url }}" alt="Nerve Matrix Bottle" height="" width="">
     </div>
   </div>
-  <div class="textblock-add-to-cart-d8">
-    <div class="">
-      {% if section.settings.button_content != blank %}
-        <a href="{{ section.settings.button_url }}" class="button">
-          {{ section.settings.button_content }}
-        </a>
-      {% endif %}
-    </div>
-    <p>100% Money Back Guarantee</p>
-  </div>
+  
+               {% render 'atc-button-d8',
+    atc_button_link: section.settings.button_url,
+    atc_button_label: section.settings.button_content,
+    atc_subtext: section.settings.button_content
+  %}
 </div>
 
 <style>
