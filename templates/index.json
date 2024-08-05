@@ -299,6 +299,48 @@
         "side_image_mobile": "shopify:\/\/shop_images\/xproduct-01.jpg.pagespeed.ic.6WHvZRJRuO.webp"
       }
     },
+    "natural_ingredient_qNgJrL": {
+      "type": "natural-ingredient",
+      "blocks": {
+        "supplement_block_TGPeUb": {
+          "type": "Supplement-block",
+          "settings": {
+            "supp-image": "shopify:\/\/shop_images\/cf150ec14a53ced0b04d7e6d6db1814c.png",
+            "supp-name": "Magnesium",
+            "supp-detail": "A natural mineral that regulates the nervous system, relaxes muscles, and promotes normal levels of melatonin."
+          }
+        },
+        "supplement_block_44HpEm": {
+          "type": "Supplement-block",
+          "settings": {
+            "supp-image": "shopify:\/\/shop_images\/c8356c5cfbb5e41c5ac31ba4e3123f5c.png",
+            "supp-name": "Collagen",
+            "supp-detail": "A protein that aids in the repair of muscles, bones, joints, tendons, ligaments, and skin, while also supporting sleep quality."
+          }
+        },
+        "icon_block_rEJFQG": {
+          "type": "icon-block",
+          "settings": {
+            "icon-image": "shopify:\/\/shop_images\/Group_1000006061.png",
+            "icon-text": "3rd Party\u2028Tested"
+          }
+        }
+      },
+      "block_order": [
+        "supplement_block_TGPeUb",
+        "supplement_block_44HpEm",
+        "icon_block_rEJFQG"
+      ],
+      "settings": {
+        "title": "4 Clinically Researched Natural Ingredients",
+        "sub-title": "Every scoop includes the highest integrity ingredients in doses that actually work.",
+        "supplement-title": "Supplement Facts",
+        "shipping-text": "Free U.S. & CDN Shipping Options",
+        "gurantee-text": "Money Back Guarantee",
+        "ing-button": "Get the 4-in-1 Natural Sleep Fuel",
+        "url": ""
+      }
+    },
     "171363943290d25185": {
       "type": "apps",
       "blocks": {
@@ -510,6 +552,7 @@
     "collection_slider_tk6xhA",
     "custom_featured_product_FDKEYP",
     "custom_renewal_UHnRLh",
+    "natural_ingredient_qNgJrL",
     "171363943290d25185",
     "text_image_slider_fk8AEX",
     "customer_reviews_yAtBzd",
