@@ -413,6 +413,59 @@
         "circle": ""
       }
     },
+    "scrolling_testimonial_DcPyjw": {
+      "type": "scrolling-testimonial",
+      "blocks": {
+        "logo_FBFcNM": {
+          "type": "logo",
+          "settings": {
+            "star-rate": "5-star",
+            "buy-img": "shopify:\/\/shop_images\/c2a3f6c9c0119dbe2fbfd7a355f7efde.png",
+            "name": "John Doe",
+            "review": "<p>“Owner.com has almost everything need to run your restaurant online. An awesome partner to have for restaurants”<\/p>",
+            "verified": true
+          }
+        },
+        "logo_BnfH8b": {
+          "type": "logo",
+          "settings": {
+            "star-rate": "5-star",
+            "buy-img": "shopify:\/\/shop_images\/TayyabPicture.png",
+            "name": "John Doe",
+            "review": "<p>“Owner.com has almost everything need to run your restaurant online. An awesome partner to have for restaurants”<\/p>",
+            "verified": true
+          }
+        }
+      },
+      "block_order": [
+        "logo_FBFcNM",
+        "logo_BnfH8b"
+      ],
+      "settings": {
+        "heading": "",
+        "head-size": 22,
+        "head-size-m": 22,
+        "head-color": "#222",
+        "head-weight": "bold",
+        "veri-text": "Verified Buyer",
+        "direction": "ltor",
+        "box-shadow": false,
+        "smooth_speed": 62,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "padding_left": 0,
+        "padding_right": 0,
+        "logos_gap": 40,
+        "name-size": 14,
+        "text-size": 12,
+        "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
+        "card-color": "#292929",
+        "color-1": "#ffffff",
+        "color-2": "#B1B1B1",
+        "border-color": "#292929",
+        "shade-color": "rgba(115,114,114,0.15)"
+      }
+    },
     "text_with_certered_image_qfY8KY": {
       "type": "text-with-certered-image",
       "settings": {
@@ -973,6 +1026,7 @@
     "three_image_text_KkqhFj",
     "hero_d8_VJV8EQ",
     "boost_your_sleep_quality_rDp3Kg",
+    "scrolling_testimonial_DcPyjw",
     "text_with_certered_image_qfY8KY",
     "text_with_image_black_EFCVUF",
     "collection_slider_tk6xhA",
