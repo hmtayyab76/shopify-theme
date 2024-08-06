@@ -167,20 +167,11 @@
             "slide-head": "Stunning Impact",
             "description": "<p>The dramatic pattern and lush texture of the rug created a stunning visual impact that changed the room's vibe entirely. It’s now the focal point that draws everyone’s attention. Well done guys!<\/p>"
           }
-        },
-        "slide_Hyimhc": {
-          "type": "slide",
-          "settings": {
-            "star-rate": "five",
-            "slide-head": "",
-            "description": ""
-          }
         }
       },
       "block_order": [
         "slide_JrYkWb",
-        "slide_4RR9Be",
-        "slide_Hyimhc"
+        "slide_4RR9Be"
       ],
       "settings": {
         "af-text": "To This",
