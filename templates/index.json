@@ -9,6 +9,26 @@
 */
 {
   "sections": {
+    "custom_ad_template_Ey8kr9": {
+      "type": "custom-ad-template",
+      "settings": {
+        "sub_title": "<p>Our Social Ads are Trusted by<\/p>",
+        "sub_title_clr": "1,000+ Brands",
+        "block_heading": "<p>100 Ready-Made High-Converting <strong>Ad Templates<\/strong><\/p>",
+        "block_discription": "Make & test ads 10x faster. No guesswork needed.",
+        "benefits_txt_1": "Drag & drop edit",
+        "benefits_txt_2": "Let's you test 10x faster",
+        "benefits_txt_3": "100x design templates",
+        "benefits_txt_4": "lifetime access",
+        "side_txt_1": "<p>Deal Ends on <strong>June 30, 2024<\/strong><\/p>",
+        "side_txt_2": "WHEN YOU BUY THE BUNDLE",
+        "side_txt_3": "$119.95",
+        "side_txt_4": "$0.97 Per Ad",
+        "side_txt_5": "Lorem ipsum dolor \u2028consectetur adipiscing elit",
+        "btn_txt": "ADD TO CART",
+        "btn-link": ""
+      }
+    },
     "custom_video_bannar_aAVnzx": {
       "type": "custom-video-bannar",
       "settings": {
@@ -719,6 +739,7 @@
     }
   },
   "order": [
+    "custom_ad_template_Ey8kr9",
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
