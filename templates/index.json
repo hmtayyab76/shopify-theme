@@ -287,6 +287,36 @@
         "btn_link": ""
       }
     },
+    "hero_d8_VJV8EQ": {
+      "type": "hero-d8",
+      "settings": {
+        "position": "row",
+        "heading_text": "Throw rugs you'll own for a lifetime",
+        "text_content": "NTL creates products that inspire conscious living. It rejects mindless consumerism, choosing not to participate in seasonal sales. NTL ships globally, delivering to more than 40 countries. Thanks for being here.",
+        "heading_font_size": 48,
+        "heading_line_height": 1.2,
+        "text_font_size": 17,
+        "text_line_height": 1.7,
+        "button_url": "",
+        "button_text": "Shop Now",
+        "button_font_size": 16,
+        "button_padding": 10,
+        "button_margin_top": 20,
+        "button_border_radius": 5,
+        "button_border_thickness": 1,
+        "otherdata_width": "30%",
+        "sliderdata_width": "70%",
+        "background_color": "#000000",
+        "heading_color": "#FFFFFF",
+        "text_color": "#FFFFFF",
+        "button_border_color": "#000000",
+        "button_bg_color": "#ffffff",
+        "button_text_color": "#000000",
+        "padding_top": 20,
+        "padding_sides": 50,
+        "padding_bottom": 50
+      }
+    },
     "boost_your_sleep_quality_rDp3Kg": {
       "type": "boost-your-sleep-quality",
       "blocks": {
@@ -871,6 +901,7 @@
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
     "three_image_text_KkqhFj",
+    "hero_d8_VJV8EQ",
     "boost_your_sleep_quality_rDp3Kg",
     "text_with_certered_image_qfY8KY",
     "text_with_image_black_EFCVUF",
