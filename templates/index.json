@@ -387,6 +387,75 @@
         "padding_bottom": 50
       }
     },
+    "product_ingredients_gnjLVm": {
+      "type": "product-ingredients",
+      "blocks": {
+        "slide_4DfzFM": {
+          "type": "slide",
+          "settings": {
+            "ingredient_name": "Pea Protein",
+            "content-text": "<p>comes from dried peas that are processed into\u2028    a powder form. They’re high in essential\u2028amino acids, and the perfect choice for vegans<br\/>  and vegeterians looking for an alternative to                       \u2028whey or say protien. <\/p>",
+            "content-img": "shopify:\/\/shop_images\/MissDinoFaceMask_46c550e4-1b0f-481e-b8e6-c48fe06cb6f3.jpg"
+          }
+        },
+        "slide_xDTK3H": {
+          "type": "slide",
+          "settings": {
+            "ingredient_name": "Rice Protein",
+            "content-text": "<p>comes from dried peas that are processed into\u2028    a powder form. They’re high in essential\u2028amino acids, and the perfect choice for vegans<br\/>  and vegeterians looking for an alternative to                       \u2028whey or say protien. <\/p>",
+            "content-img": "shopify:\/\/shop_images\/RiceberryGoldFaceMask.jpg"
+          }
+        },
+        "slide_WF9qpa": {
+          "type": "slide",
+          "settings": {
+            "ingredient_name": "Arabica Instant Cofee",
+            "content-text": "<p>comes from dried peas that are processed into\u2028    a powder form. They’re high in essential\u2028amino acids, and the perfect choice for vegans<br\/>  and vegeterians looking for an alternative to                       \u2028whey or say protien. <\/p>",
+            "content-img": "shopify:\/\/shop_images\/RicemintyLittleLight1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "slide_4DfzFM",
+        "slide_xDTK3H",
+        "slide_WF9qpa"
+      ],
+      "settings": {
+        "heading": "High quality ingredients",
+        "subtext": "<p>We carefully selected plant-based ingredients to create the world's healthiest protein coffee that's low in sugar, high in protein, and tastes delicious.<\/p>",
+        "btn-text-1": "Pre Order Now",
+        "btn-link-1": "",
+        "btn-1-style": "btn-2",
+        "btn-text-2": "Button",
+        "btn-link-2": "",
+        "btn-2-style": "btn-1",
+        "padding-top-d": 2,
+        "padding-left-d": 0,
+        "heading-size-d": 35,
+        "heading-weight-d": "bold",
+        "text-size-d": 16,
+        "btn-size-d": 18,
+        "btn-weight-d": "bold",
+        "dots-d": true,
+        "arrows-d": true,
+        "arrow-position": "bottom",
+        "padding-top-m": 1,
+        "padding-left-m": 0,
+        "heading-size-m": 25,
+        "heading-weight-m": "bold",
+        "text-size-m": 14,
+        "btn-size-m": 14,
+        "dots-m": true,
+        "arrows-m": true,
+        "btn-weight-m": "bold",
+        "img-color": "#a68f8f",
+        "main-color": "#1c161a",
+        "second-color": "#fff",
+        "text-color": "#1c161a",
+        "subtext-color": "#222",
+        "bg-color": "#FCF8F5"
+      }
+    },
     "boost_your_sleep_quality_rDp3Kg": {
       "type": "boost-your-sleep-quality",
       "blocks": {
@@ -1025,6 +1094,7 @@
     "scrolling_logos_ijyUWK",
     "three_image_text_KkqhFj",
     "hero_d8_VJV8EQ",
+    "product_ingredients_gnjLVm",
     "boost_your_sleep_quality_rDp3Kg",
     "scrolling_testimonial_DcPyjw",
     "text_with_certered_image_qfY8KY",
