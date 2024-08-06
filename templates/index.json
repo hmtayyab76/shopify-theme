@@ -145,6 +145,66 @@
         "btn-link": ""
       }
     },
+    "after_before_slider_xmgjLT": {
+      "type": "after-before-slider",
+      "blocks": {
+        "slide_JrYkWb": {
+          "type": "slide",
+          "settings": {
+            "af-image": "shopify:\/\/shop_images\/RiceberryGoldFaceMask.jpg",
+            "bf-image": "shopify:\/\/shop_images\/MissDinoFaceMask_46c550e4-1b0f-481e-b8e6-c48fe06cb6f3.jpg",
+            "star-rate": "five",
+            "slide-head": "No Really. It’s That Good.",
+            "description": "<p>This throw rug brought an unmatched elegance and warmth, completely revitalizing the room's atmosphere. It became the centerpiece that tied all other decor elements together.<\/p>"
+          }
+        },
+        "slide_4RR9Be": {
+          "type": "slide",
+          "settings": {
+            "af-image": "shopify:\/\/shop_images\/RicepuffyLittleLight1.jpg",
+            "bf-image": "shopify:\/\/shop_images\/RicemintyLittleLight1.jpg",
+            "star-rate": "five",
+            "slide-head": "Stunning Impact",
+            "description": "<p>The dramatic pattern and lush texture of the rug created a stunning visual impact that changed the room's vibe entirely. It’s now the focal point that draws everyone’s attention. Well done guys!<\/p>"
+          }
+        },
+        "slide_Hyimhc": {
+          "type": "slide",
+          "settings": {
+            "star-rate": "five",
+            "slide-head": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_JrYkWb",
+        "slide_4RR9Be",
+        "slide_Hyimhc"
+      ],
+      "settings": {
+        "af-text": "To This",
+        "bf-text": "From This",
+        "p-top": 3,
+        "p-bottom": 3,
+        "p-right": 1,
+        "p-left": 1,
+        "gap-d": 100,
+        "h-size": 45,
+        "t-size": 18,
+        "font-w-d": true,
+        "p-top-m": 3,
+        "p-bottom-m": 3,
+        "p-right-m": 1,
+        "p-left-m": 1,
+        "h-size-m": 45,
+        "t-size-m": 18,
+        "font-w-m": true,
+        "bg-color": "#f3f0ea",
+        "text-color": "#000000",
+        "sec-color": "#bd9a5b"
+      }
+    },
     "custom_video_bannar_aAVnzx": {
       "type": "custom-video-bannar",
       "settings": {
@@ -856,6 +916,7 @@
   },
   "order": [
     "custom_ad_template_Ey8kr9",
+    "after_before_slider_xmgjLT",
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
     "collection_tab_nTGYtz",
