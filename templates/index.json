@@ -57,11 +57,55 @@
         "slider_image_PmeLP6": {
           "type": "Slider-Image",
           "settings": {
+            "side_image": "shopify:\/\/shop_images\/f273205046e0c0e29fe1070e9dbe1ef9.png"
           }
         },
         "slider_image_raY3EY": {
           "type": "Slider-Image",
           "settings": {
+            "side_image": "shopify:\/\/shop_images\/f68f32d2ae8e04a118d6196631810494.png"
+          }
+        },
+        "slider_image_YcfyqQ": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/9e0d3b49a60e9e01ce063dc352e5074c.png"
+          }
+        },
+        "logo_image_KX7NwH": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110635.svg"
+          }
+        },
+        "logo_image_hqp4qf": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110637.svg"
+          }
+        },
+        "logo_image_KinTcc": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110636.svg"
+          }
+        },
+        "logo_image_6naGbE": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110638.svg"
+          }
+        },
+        "logo_image_FFWGDg": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110633.svg"
+          }
+        },
+        "logo_image_NiGVYp": {
+          "type": "Logo-Image",
+          "settings": {
+            "logo_image": "shopify:\/\/shop_images\/Frame_1410110632.svg"
           }
         }
       },
@@ -74,7 +118,14 @@
         "slider_image_pm6Qr6",
         "slider_image_H6Ckr3",
         "slider_image_PmeLP6",
-        "slider_image_raY3EY"
+        "slider_image_raY3EY",
+        "slider_image_YcfyqQ",
+        "logo_image_KX7NwH",
+        "logo_image_hqp4qf",
+        "logo_image_KinTcc",
+        "logo_image_6naGbE",
+        "logo_image_FFWGDg",
+        "logo_image_NiGVYp"
       ],
       "settings": {
         "sub_title": "<p>Our Social Ads are Trusted by<\/p>",
