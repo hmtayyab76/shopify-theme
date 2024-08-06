@@ -289,6 +289,76 @@
     },
     "hero_d8_VJV8EQ": {
       "type": "hero-d8",
+      "blocks": {
+        "left_box_image_Xnw6jp": {
+          "type": "Left-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/f7abd56fada7ffdf544a8d967649135b.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        },
+        "right_box_image_aVhqaq": {
+          "type": "Right-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/111567a5f02bbf12388f77b86f2bb50d.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        },
+        "left_box_image_KKb8Ce": {
+          "type": "Left-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/19201abe1b45079e64a155a581deb2e8.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        },
+        "right_box_image_Xb8rmk": {
+          "type": "Right-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/9e0d3b49a60e9e01ce063dc352e5074c.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        },
+        "left_box_image_KhmMxA": {
+          "type": "Left-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/85716368b933d748e4874e6f011ab137.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        },
+        "right_box_image_hnNKhL": {
+          "type": "Right-Box-image",
+          "settings": {
+            "image_data": "shopify:\/\/shop_images\/f273205046e0c0e29fe1070e9dbe1ef9.png",
+            "image_width": "100%",
+            "image_height": "auto",
+            "image_fit": "cover",
+            "border_radius": "20px"
+          }
+        }
+      },
+      "block_order": [
+        "left_box_image_Xnw6jp",
+        "right_box_image_aVhqaq",
+        "left_box_image_KKb8Ce",
+        "right_box_image_Xb8rmk",
+        "left_box_image_KhmMxA",
+        "right_box_image_hnNKhL"
+      ],
       "settings": {
         "position": "row",
         "heading_text": "Throw rugs you'll own for a lifetime",
