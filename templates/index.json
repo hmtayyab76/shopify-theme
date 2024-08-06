@@ -198,6 +198,7 @@
     },
     "custom_video_bannar_aAVnzx": {
       "type": "custom-video-bannar",
+      "disabled": true,
       "settings": {
         "banner_text_title_1": "Discover Your Perfect Timepiece",
         "banner_text_title_2": "Timeless Elegance Awaits",
@@ -242,47 +243,6 @@
         "block_TektNe",
         "block_DGrHxT",
         "block_Gb96AX"
-      ],
-      "settings": {
-      }
-    },
-    "collection_tab_nTGYtz": {
-      "type": "collection-tab",
-      "blocks": {
-        "tab_LDaHJe": {
-          "type": "Tab",
-          "settings": {
-            "collection-section-11": "mens-watches",
-            "tab-btn": ""
-          }
-        },
-        "tab_ne7hYT": {
-          "type": "Tab",
-          "settings": {
-            "collection-section-11": "womens-collection",
-            "tab-btn": ""
-          }
-        },
-        "tab_MVkBAH": {
-          "type": "Tab",
-          "settings": {
-            "collection-section-11": "couples-collection",
-            "tab-btn": ""
-          }
-        },
-        "tab_Mdqn47": {
-          "type": "Tab",
-          "settings": {
-            "collection-section-11": "top-sale",
-            "tab-btn": ""
-          }
-        }
-      },
-      "block_order": [
-        "tab_LDaHJe",
-        "tab_ne7hYT",
-        "tab_MVkBAH",
-        "tab_Mdqn47"
       ],
       "settings": {
       }
@@ -910,7 +870,6 @@
     "after_before_slider_xmgjLT",
     "custom_video_bannar_aAVnzx",
     "scrolling_logos_ijyUWK",
-    "collection_tab_nTGYtz",
     "three_image_text_KkqhFj",
     "boost_your_sleep_quality_rDp3Kg",
     "text_with_certered_image_qfY8KY",
