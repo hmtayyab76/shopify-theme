@@ -11,6 +11,71 @@
   "sections": {
     "custom_ad_template_Ey8kr9": {
       "type": "custom-ad-template",
+      "blocks": {
+        "slider_image_cCYqF3": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/111567a5f02bbf12388f77b86f2bb50d.png"
+          }
+        },
+        "slider_image_CjceL8": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/f7abd56fada7ffdf544a8d967649135b.png"
+          }
+        },
+        "slider_image_x8nfcE": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/28870bbb66fc4c1ae682591036352876.png"
+          }
+        },
+        "slider_image_4CidNN": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/19201abe1b45079e64a155a581deb2e8.png"
+          }
+        },
+        "slider_image_fcYymi": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/85716368b933d748e4874e6f011ab137.png"
+          }
+        },
+        "slider_image_pm6Qr6": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/fe9351d1be4336e02a8ce17c889d23c6_1.png"
+          }
+        },
+        "slider_image_H6Ckr3": {
+          "type": "Slider-Image",
+          "settings": {
+            "side_image": "shopify:\/\/shop_images\/adb6a8fd42e7412c61a28bf23045257e.png"
+          }
+        },
+        "slider_image_PmeLP6": {
+          "type": "Slider-Image",
+          "settings": {
+          }
+        },
+        "slider_image_raY3EY": {
+          "type": "Slider-Image",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "slider_image_cCYqF3",
+        "slider_image_CjceL8",
+        "slider_image_x8nfcE",
+        "slider_image_4CidNN",
+        "slider_image_fcYymi",
+        "slider_image_pm6Qr6",
+        "slider_image_H6Ckr3",
+        "slider_image_PmeLP6",
+        "slider_image_raY3EY"
+      ],
       "settings": {
         "sub_title": "<p>Our Social Ads are Trusted by<\/p>",
         "sub_title_clr": "1,000+ Brands",
