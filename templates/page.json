@@ -27,16 +27,26 @@
             "redirect_to": "",
             "block_title_0": "Embrace Renewal with Every Sip"
           }
-        },
-        "bright_link_sign_in_QaB4cx": {
+        }
+      },
+      "block_order": [
+        "bright_link_request_qoute_zDnGc7"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "17250442388a811807": {
+      "type": "apps",
+      "blocks": {
+        "bright_link_sign_in_ANjHBT": {
           "type": "shopify:\/\/apps\/bright-link\/blocks\/sign-in\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
           "settings": {
           }
         }
       },
       "block_order": [
-        "bright_link_request_qoute_zDnGc7",
-        "bright_link_sign_in_QaB4cx"
+        "bright_link_sign_in_ANjHBT"
       ],
       "settings": {
         "include_margins": true
@@ -45,6 +55,7 @@
   },
   "order": [
     "main",
-    "1725043126e95efbb8"
+    "1725043126e95efbb8",
+    "17250442388a811807"
   ]
 }
