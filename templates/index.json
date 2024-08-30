@@ -367,7 +367,7 @@
         "heading_line_height": 1.2,
         "text_font_size": 17,
         "text_line_height": 1.7,
-        "button_url": "",
+        "button_url": "shopify:\/\/products\/age-defying-face-cream",
         "button_text": "Shop Now",
         "button_font_size": 16,
         "button_padding": 10,
@@ -450,10 +450,10 @@
         "btn-weight-m": "bold",
         "img-color": "#a68f8f",
         "main-color": "#1c161a",
-        "second-color": "#fff",
+        "second-color": "#ffffff",
         "text-color": "#1c161a",
-        "subtext-color": "#222",
-        "bg-color": "#FCF8F5"
+        "subtext-color": "#222222",
+        "bg-color": "#fcf8f5"
       }
     },
     "boost_your_sleep_quality_rDp3Kg": {
@@ -514,7 +514,7 @@
         "heading": "",
         "head-size": 22,
         "head-size-m": 22,
-        "head-color": "#222",
+        "head-color": "#222222",
         "head-weight": "bold",
         "veri-text": "Verified Buyer",
         "direction": "ltor",
@@ -530,7 +530,7 @@
         "background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1) 100%)",
         "card-color": "#292929",
         "color-1": "#ffffff",
-        "color-2": "#B1B1B1",
+        "color-2": "#b1b1b1",
         "border-color": "#292929",
         "shade-color": "rgba(115,114,114,0.15)"
       }
