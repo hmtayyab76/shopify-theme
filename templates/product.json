@@ -53,7 +53,7 @@
           "type": "shopify:\/\/apps\/bright-link\/blocks\/request-qoute\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
           "settings": {
             "call_to_action": "call_to_action",
-            "redirect_to": "",
+            "redirect_to": "\/pages\/quotes",
             "block_title_0": "Embrace Renewal with Every Sip"
           }
         },
