@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -62,13 +71,40 @@
         "faq_block_hJL4Qf",
         "faq_block_wfcXVy"
       ],
+      "disabled": true,
       "settings": {
         "section_title": "Frequently Asked Questions"
+      }
+    },
+    "1725043126e95efbb8": {
+      "type": "apps",
+      "blocks": {
+        "bright_link_request_qoute_zDnGc7": {
+          "type": "shopify:\/\/apps\/bright-link\/blocks\/request-qoute\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
+          "settings": {
+            "call_to_action": "page",
+            "redirect_to": "",
+            "block_title_0": "Embrace Renewal with Every Sip"
+          }
+        },
+        "bright_link_sign_in_QaB4cx": {
+          "type": "shopify:\/\/apps\/bright-link\/blocks\/sign-in\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "bright_link_request_qoute_zDnGc7",
+        "bright_link_sign_in_QaB4cx"
+      ],
+      "settings": {
+        "include_margins": true
       }
     }
   },
   "order": [
     "main",
-    "custom_faq_section_6JxyYD"
+    "custom_faq_section_6JxyYD",
+    "1725043126e95efbb8"
   ]
 }
