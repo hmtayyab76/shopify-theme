@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
@@ -21,9 +21,9 @@
       "type": "apps",
       "blocks": {
         "bright_link_request_qoute_zDnGc7": {
-          "type": "shopify:\/\/apps\/bright-link\/blocks\/request-qoute\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
+          "type": "shopify://apps/brightlinktest/blocks/request-qoute/a94490dd-9ee9-4466-8231-d04b351bc2c3",
           "settings": {
-            "call_to_action": "page",
+            "call_to_action": "call_to_action",
             "redirect_to": "",
             "block_title_0": "Embrace Renewal with Every Sip"
           }
@@ -40,9 +40,9 @@
       "type": "apps",
       "blocks": {
         "bright_link_sign_in_ANjHBT": {
-          "type": "shopify:\/\/apps\/bright-link\/blocks\/sign-in\/a94490dd-9ee9-4466-8231-d04b351bc2c3",
-          "settings": {
-          }
+          "type": "shopify://apps/brightlinktest/blocks/sign-in/a94490dd-9ee9-4466-8231-d04b351bc2c3",
+          "disabled": true,
+          "settings": {}
         }
       },
       "block_order": [
